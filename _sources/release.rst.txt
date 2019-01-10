@@ -1,1 +1,1 @@
-.. mdinclude:: ../RELEASE.md
+.. mdinclude:: ../../RELEASE.md
