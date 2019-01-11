@@ -20,6 +20,7 @@
 ./_sources/ADCore/medm.rst.txt
 ./_sources/ADCore/overview.rst.txt
 ./_sources/index.rst.txt
+./_sources/install_guide.rst.txt
 ./_sources/readme.rst.txt
 ./_sources/release.rst.txt
 ./_static/ajax-loader.gif
@@ -112,6 +113,7 @@
 ./_static/websupport.js
 ./genindex.html
 ./index.html
+./install_guide.html
 ./objects.inv
 ./readme.html
 ./release.html
