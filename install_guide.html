@@ -76,22 +76,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">areaDetector: Installation Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#marty-kraimer-brookhaven-national-laboratory">Marty Kraimer, Brookhaven National Laboratory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mark-rivers-university-of-chicago">Mark Rivers, University of Chicago</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#installing-and-building-from-source-code">Installing and Building from Source Code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#epics-products-required-for-building-areadetector">EPICS Products Required for Building areaDetector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#external-products-required-for-building-areadetector">External Products Required for Building areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#display-managers">Display Managers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#configuration">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#running-the-ioc-application">Running the IOC Application</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#image-viewers">Image Viewers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#display-managers">Display Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ADCore/areaDetector.html">areaDetector: EPICS software for area detectors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ADCore/areaDetector.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ADCore/areaDetector.html#where-to-find-it">Where to find it</a></li>
@@ -124,14 +120,10 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">areaDetector: Installation Guide</a><ul>
-<li><a class="reference internal" href="#marty-kraimer-brookhaven-national-laboratory">Marty Kraimer, Brookhaven National Laboratory</a></li>
-<li><a class="reference internal" href="#mark-rivers-university-of-chicago">Mark Rivers, University of Chicago</a></li>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#installing-and-building-from-source-code">Installing and Building from Source Code</a><ul>
 <li><a class="reference internal" href="#epics-products-required-for-building-areadetector">EPICS Products Required for Building areaDetector</a></li>
-<li><a class="reference internal" href="#external-products-required-for-building-areadetector">External Products Required for Building areaDetector</a><ul>
+<li><a class="reference internal" href="#external-products-required-for-building-areadetector">External Products Required for Building areaDetector</a></li>
 <li><a class="reference internal" href="#tiff-jpeg-xml2-and-z">TIFF, JPEG, XML2, and Z</a><ul>
 <li><a class="reference internal" href="#tiff">TIFF</a></li>
 <li><a class="reference internal" href="#zlib">ZLIB</a></li>
@@ -151,7 +143,7 @@
 <li><a class="reference internal" href="#release-and-config-files">RELEASE* and CONFIG* files</a></li>
 <li><a class="reference internal" href="#edit-release-support-local">Edit RELEASE_SUPPORT.local</a></li>
 <li><a class="reference internal" href="#optionally-create-release-support-local-epics-host-arch">Optionally create RELEASE_SUPPORT.local.$(EPICS_HOST_ARCH)</a></li>
-<li><a class="reference internal" href="#optionally-create-release-base-local-epics-host-arch">Optionally create RELEASE_BASE.local.$(EPICS_HOST_ARCH)</a></li>
+<li><a class="reference internal" href="#optionally-create-release-base-local-epics-host-arch">Optionally create <code class="docutils literal notranslate"><span class="pre">RELEASE_BASE.local.$(EPICS_HOST_ARCH)</span></code></a></li>
 <li><a class="reference internal" href="#edit-release-libs-local">Edit RELEASE_LIBS.local</a></li>
 <li><a class="reference internal" href="#edit-release-prods-local">Edit RELEASE_PRODS.local</a></li>
 <li><a class="reference internal" href="#edit-config-site-local-and-optionally-config-site-local-epics-host-arch">Edit CONFIG_SITE.local and optionally CONFIG_SITE.local.$(EPICS_HOST_ARCH)</a></li>
@@ -163,11 +155,19 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
-<li><a class="reference internal" href="#display-managers">Display Managers</a></li>
+<li><a class="reference internal" href="#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a><ul>
+<li><a class="reference internal" href="#display-managers">Display Managers</a><ul>
+<li><a class="reference internal" href="#medm">MEDM</a></li>
+<li><a class="reference internal" href="#edm">EDM</a></li>
+<li><a class="reference internal" href="#css">CSS</a></li>
+<li><a class="reference internal" href="#caqtdm">caQtDM</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#configuration">Configuration</a></li>
 <li><a class="reference internal" href="#running-the-ioc-application">Running the IOC Application</a></li>
 <li><a class="reference internal" href="#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -217,14 +217,10 @@
       
   <div class="section" id="areadetector-installation-guide">
 <h1>areaDetector: Installation Guide<a class="headerlink" href="#areadetector-installation-guide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="marty-kraimer-brookhaven-national-laboratory">
-<h2>Marty Kraimer, Brookhaven National Laboratory<a class="headerlink" href="#marty-kraimer-brookhaven-national-laboratory" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="mark-rivers-university-of-chicago">
-<h2>Mark Rivers, University of Chicago<a class="headerlink" href="#mark-rivers-university-of-chicago" title="Permalink to this headline">¶</a></h2>
+<p><em>Marty Kraimer, Brookhaven National Laboratory</em>
+<em>Mark Rivers, University of Chicago</em></p>
 <p>This product is made available subject to acceptance of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector/blob/master/LICENSE">areaDetector license</a></p>
-</div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This is a guide for installing and building R3-0 and later of the EPICS
@@ -244,13 +240,12 @@ the required
 <li>Installing and running a pre-built binary distribution.</li>
 </ul>
 </div>
-</div>
 <div class="section" id="installing-and-building-from-source-code">
-<h1>Installing and Building from Source Code<a class="headerlink" href="#installing-and-building-from-source-code" title="Permalink to this headline">¶</a></h1>
+<h2>Installing and Building from Source Code<a class="headerlink" href="#installing-and-building-from-source-code" title="Permalink to this headline">¶</a></h2>
 <p>The build process attempts to make the build process easy for typical cases but
 allow site specific overrides. areaDetector uses many other products.</p>
 <div class="section" id="epics-products-required-for-building-areadetector">
-<h2>EPICS Products Required for Building areaDetector<a class="headerlink" href="#epics-products-required-for-building-areadetector" title="Permalink to this headline">¶</a></h2>
+<h3>EPICS Products Required for Building areaDetector<a class="headerlink" href="#epics-products-required-for-building-areadetector" title="Permalink to this headline">¶</a></h3>
 <p>areaDetector requires
 <a class="reference external" href="http://www.aps.anl.gov/epics/base/index.php">EPICS base</a>.
 R3.14.12.4 or higher, any 3.15 release should work.</p>
@@ -269,7 +264,7 @@ The most recent release of the synApps modules is recommended.</p>
 areaDetector.</p>
 </div>
 <div class="section" id="external-products-required-for-building-areadetector">
-<h2>External Products Required for Building areaDetector<a class="headerlink" href="#external-products-required-for-building-areadetector" title="Permalink to this headline">¶</a></h2>
+<h3>External Products Required for Building areaDetector<a class="headerlink" href="#external-products-required-for-building-areadetector" title="Permalink to this headline">¶</a></h3>
 <p>areaDetector optionally uses the NETCDF, TIFF, ZLIB, JPEG, SZIP, HDF5,
 NEXUS, GRAPHICSMAGIC, OPENCV, and EPICS PVA (formerly V4) libraries. These are used for plugins and
 drivers and are not required.  The XML2 library is required.</p>
@@ -335,6 +330,7 @@ WITH_SZIP, WITH_HDF5, and WITH_NEXUS must be set to NO</li>
 </ul>
 <p>The following instructions can be used for installing these libraries externally
 to areaDetector if that is desired.</p>
+</div>
 <div class="section" id="tiff-jpeg-xml2-and-z">
 <h3>TIFF, JPEG, XML2, and Z<a class="headerlink" href="#tiff-jpeg-xml2-and-z" title="Permalink to this headline">¶</a></h3>
 <p>On Linux and Darwin the libtiff, libjpeg, libxml2, and libz libraries often come already
@@ -348,13 +344,9 @@ as follows.</p>
 build.</p>
 <p>Each site provides some combination of .zip, .tar, .tar.gz, etc. If the file is
 a zip file then just execute:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>unzip file.zip
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">file.zip</span></code></p>
 <p>If the file is any flavor of tar just execute:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>tar xf file
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xf</span> <span class="pre">file</span></code></p>
 <p>All of the following products put the result of unzip or tar into a
 sub-directory. cd to that directory and follow the instructions for the
 appropriate sub-section.</p>
@@ -467,26 +459,20 @@ sudo make install
 <p>The areaDetector source code is kept on
 <a class="reference external" href="https://github.com/areaDetector">gitub.com/areaDetector</a>.</p>
 <p>It can be downloaded 2 ways:</p>
-<ol class="arabic">
-<li><p class="first">Via the “git clone” command:</p>
-<blockquote>
-<div><p><span class="raw-html-m2r"><code>git clone --recursive https://github.com/areaDetector/areaDetector.git</code></span></p>
-</div></blockquote>
-</li>
-</ol>
+<p><em>Via the “git clone” command</em></p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>git clone --recursive https://github.com/areaDetector/areaDetector.git
+</pre></div>
+</div>
 <p>After downloading with git clone –recursive each submodule will be in a “detached HEAD” state.  This means
 that its state will be that of the last time that module was committed to the top-level areaDetector repository.
 This is normally not the desired state for each submodule.  Rather, one should cd to each submodule and type either
-<span class="raw-html-m2r"><code>git checkout master</code></span> to work on the master branch, or <span class="raw-html-m2r"><code>git checkout RX-Y</code></span> to use release
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code> to work on the master branch, or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">RX-Y</span></code> to use release
 RX-Y of that submodule.</p>
-<ol class="arabic">
-<li><p class="first">By downloading tar.gz or zip files for a specific release of each module
-through a Web browser or by the wget command:</p>
-<blockquote>
-<div><p><span class="raw-html-m2r"><code>wget https://github.com/areaDetector/areaDetector/archive/R2-6.tar.gz</code></span></p>
-</div></blockquote>
-</li>
-</ol>
+<p><em>By downloading tar.gz or zip file</em></p>
+<p>A specific release of each module can be downloaded through a Web browser or by the wget command:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>wget https://github.com/areaDetector/areaDetector/archive/R2-6.tar.gz
+</pre></div>
+</div>
 <p>If downloading tar files then each repository must be downloaded separately. To
 build the “core” of areaDetector the following repositories must be downloaded:</p>
 <ul class="simple">
@@ -529,7 +515,7 @@ path syntax is different for Linux and Windows.</li>
 <li>Allows using the top-level <a class="reference external" href="https://github.com/epics-synApps/support">synApps/support</a> and
 <a class="reference external" href="https://github.com/epics-synApps/support/configure">synApps/support/configure</a> directories.
 If these are used then one can edit synApps/support/configure/RELEASE to set the locations of
-EPICS_BASE and the versions of asyn, calc, etc.  Typing <span class="raw-html-m2r"><code>make release</code></span> in the top-level
+EPICS_BASE and the versions of asyn, calc, etc.  Typing <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">release</span></code> in the top-level
 synApps/support directory will update the RELEASE* files in all modules defined in that RELEASE file,
 including those in areaDetector/configure.</li>
 <li>Allows using the Debian EPICS package for EPICS_BASE and the support modules (asyn, calc, etc.).  It is also
@@ -579,15 +565,15 @@ for IPAC and SNCSEQ in asyn/configure/RELEASE.</li>
 different development machines in the same directory tree on a file server.  In
 this case the path to SUPPORT may be different for each architecture.
 For example SUPPORT on Linux might be
-<span class="raw-html-m2r"><code>/home/epics/epics/support</code></span>, while on a Windows machine using the same copy
-of support the path might be <span class="raw-html-m2r"><code>J:/epics/support</code></span>.  In this case
-RELEASE_SUPPORT.local could specify the path for Linux while
-RELEASE_SUPPORT.local.win32-x86 could specify the path for the win32-x86 build host.
-RELEASE_SUPPORT.local is read first, and then any definitions there will be replaced by
-RELEASE_SUPPORT.local.$(EPICS_HOST_ARCH) if it exists.</p>
+<code class="docutils literal notranslate"><span class="pre">/home/epics/epics/support</span></code>, while on a Windows machine using the same copy
+of support the path might be <code class="docutils literal notranslate"><span class="pre">J:/epics/support</span></code>.  In this case
+<code class="docutils literal notranslate"><span class="pre">RELEASE_SUPPORT.local</span></code> could specify the path for Linux while
+<code class="docutils literal notranslate"><span class="pre">RELEASE_SUPPORT.local.win32-x86</span></code> could specify the path for the win32-x86 build host.
+<code class="docutils literal notranslate"><span class="pre">RELEASE_SUPPORT.local</span></code> is read first, and then any definitions there will be replaced by
+<code class="docutils literal notranslate"><span class="pre">RELEASE_SUPPORT.local.$(EPICS_HOST_ARCH)</span></code> if it exists.</p>
 </div>
 <div class="section" id="optionally-create-release-base-local-epics-host-arch">
-<h3>Optionally create RELEASE_BASE.local.$(EPICS_HOST_ARCH)<a class="headerlink" href="#optionally-create-release-base-local-epics-host-arch" title="Permalink to this headline">¶</a></h3>
+<h3>Optionally create <code class="docutils literal notranslate"><span class="pre">RELEASE_BASE.local.$(EPICS_HOST_ARCH)</span></code><a class="headerlink" href="#optionally-create-release-base-local-epics-host-arch" title="Permalink to this headline">¶</a></h3>
 <p>If the path to EPICS_BASE is different for a specific EPICS_HOST_ARCH from the one
 defined in RELEASE_LIBS.local and RELEASE_PRODS.local then it can be defined in this
 file.  This is typically used only if building Windows and Linux in the same directory tree.</p>
@@ -794,9 +780,7 @@ of the account that is normally used to run the detector software, e.g. marccd o
 a marCCD detector, mar345 on a mar345 detector, det on a Pilatus detector, etc.</p>
 </li>
 <li><p class="first">Place the distribution file in this directory. Then issue the commands (Unix style)</p>
-<blockquote>
-<div><p><span class="raw-html-m2r"><code>tar xvzf ADPilatus_RX-Y.tgz</code></span></p>
-</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xvzf</span> <span class="pre">ADPilatus_RX-Y.tgz</span></code></p>
 <p>On Windows it is more convenient to download the zip file and extract it using
 Windows Explorer.</p>
 </li>
@@ -816,15 +800,16 @@ when using the prebuilt version this must be manually edited. Do not worry about
 to EPICS_BASE, it is not required.</p>
 </li>
 </ul>
-</div>
 <div class="section" id="display-managers">
-<h1>Display Managers<a class="headerlink" href="#display-managers" title="Permalink to this headline">¶</a></h1>
+<h2>Display Managers<a class="headerlink" href="#display-managers" title="Permalink to this headline">¶</a></h2>
 <p>A display manager is needed to view the areaDetector control screens. Control screens are
 provided for the following display managers: MEDM, EDM, CSS, and caQtDM. The native screens
 are created manually using MEDM.  The EDM, CSS and caQtDM screens are converted from the MEDM
 screens using conversion utilities. These are discussed in a later section.</p>
 <p>In order to control the detectors and the plugins you should install one or more of
 MEDM, EDM, CSS, caQtDM.</p>
+<div class="section" id="medm">
+<h3>MEDM<a class="headerlink" href="#medm" title="Permalink to this headline">¶</a></h3>
 <p>The source code for medm can be downloaded from:
 <a class="reference external" href="http://www.aps.anl.gov/epics/extensions/medm/index.php">medm</a></p>
 <p>This requires <a class="reference external" href="http://motif.ics.com/">Motif</a>.  medm can be built from source on Linux if the Motif library is
@@ -832,15 +817,25 @@ available (which it is not for some new releases, such as Fedora 20).</p>
 <p>It is available for Windows as via an
 <a class="reference external" href="http://www.aps.anl.gov/epics/distributions/win32/index.php">EPICS Windows Tools MSI installer
 package</a>.</p>
+</div>
+<div class="section" id="edm">
+<h3>EDM<a class="headerlink" href="#edm" title="Permalink to this headline">¶</a></h3>
 <p>This can be downloaded through links on the
 <a class="reference external" href="http://ics-web.sns.ornl.gov/edm">EDM home page</a>.</p>
+</div>
+<div class="section" id="css">
+<h3>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h3>
 <p>This can be downloaded through links on the
 <a class="reference external" href="http://controlsystemstudio.org">CSS home page</a>.</p>
+</div>
+<div class="section" id="caqtdm">
+<h3>caQtDM<a class="headerlink" href="#caqtdm" title="Permalink to this headline">¶</a></h3>
 <p>This can be downloaded through links on the
 <a class="reference external" href="http://epics.web.psi.ch/software/caqtdm">caQtDM home page</a>.</p>
 </div>
+</div>
 <div class="section" id="configuration">
-<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>Before running an areaDetector application it is usually necessary to configure</dt>
 <dd>a number of items.</dd>
@@ -860,8 +855,8 @@ local LAN. If the default value of these variables is used then EPICS clients (e
 medm) running on the detector host computer will generate many errors because each
 EPICS PV will appear to be coming from both networks. The solution is to set these
 variables as follows:</p>
-<p><span class="raw-html-m2r"><code>setenv EPICS_CA_AUTO_ADDR_LIST NO</code></span></p>
-<p><span class="raw-html-m2r"><code>setenv EPICS_CA_ADDR_LIST localhost:XX.YY.ZZ.255</code></span></p>
+<p><code class="docutils literal notranslate"><span class="pre">setenv</span> <span class="pre">EPICS_CA_AUTO_ADDR_LIST</span> <span class="pre">NO</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">setenv</span> <span class="pre">EPICS_CA_ADDR_LIST</span> <span class="pre">localhost:XX.YY.ZZ.255</span></code></p>
 <p>where XX.YY.ZZ.255 should be replaced with the broadcast address for the public
 network on this computer.</p>
 </li>
@@ -876,7 +871,7 @@ with 1024x1024 pixels and 4-bytes per pixel (waveform record FTVL=LONG) then
 EPICS_CA_MAX_ARRAY_BYTES would need to be at least 1024 * 1024 * 4 = 4153344.<span class="raw-html-m2r"><br></span>
 In practice it should be set at least 100 bytes larger than this because there
 is some overhead.  For example:</p>
-<p><span class="raw-html-m2r"><code>setenv EPICS_CA_MAX_ARRAY_BYTES 4154000</code></span></p>
+<p><code class="docutils literal notranslate"><span class="pre">setenv</span> <span class="pre">EPICS_CA_MAX_ARRAY_BYTES</span> <span class="pre">4154000</span></code></p>
 <p>Do not simply set EPICS_CA_MAX_ARRAY_BYTES to a very large number like 100MB or 1GB.
 EPICS Channel Access allocates buffers of exactly EPICS_CA_MAX_ARRAY bytes whenever
 the required buffer size exceeds 16 kB, and one does not want unnecessarily large
@@ -886,7 +881,7 @@ buffers to be allocated.</p>
 If the recommendation below is followed to copy all adl files to a single directory,
 then this environment variable should be defined to point to that directory. For
 example:</p>
-<p><span class="raw-html-m2r"><code>setenv EPICS_DISPLAY_PATH /home/det/epics/adls</code></span></p>
+<p><code class="docutils literal notranslate"><span class="pre">setenv</span> <span class="pre">EPICS_DISPLAY_PATH</span> <span class="pre">/home/det/epics/adls</span></code></p>
 </li>
 </ul>
 </li>
@@ -898,7 +893,7 @@ distributions, which is harder to maintain. On the Pilatus, for example, create 
 directory called /home/det/epics/adls, and put all of the adl files there. To simplify
 copying the adl files to that location use the following one-line script, which can be
 placed in /home/det/bin/sync_adls.</p>
-<p><span class="raw-html-m2r"><code>find /home/det/epics/support -name '*.adl' -exec cp -fv {} /home/det/epics/adls \;</code></span></p>
+<p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">/home/det/epics/support</span> <span class="pre">-name</span> <span class="pre">'*.adl'</span> <span class="pre">-exec</span> <span class="pre">cp</span> <span class="pre">-fv</span> <span class="pre">{}</span> <span class="pre">/home/det/epics/adls</span> <span class="pre">\;</span></code></p>
 <p>This script finds all adl files in the epics/support tree and copies them to /home/det/epics/adls.
 That directory must be created before running this script. Similar scripts can be
 used for other Linux detectors (marCCD, mar345, etc.) and can be used on Windows
@@ -909,7 +904,7 @@ and then run this script to install the latest medm files.</p>
 </ul>
 </div>
 <div class="section" id="running-the-ioc-application">
-<h1>Running the IOC Application<a class="headerlink" href="#running-the-ioc-application" title="Permalink to this headline">¶</a></h1>
+<h2>Running the IOC Application<a class="headerlink" href="#running-the-ioc-application" title="Permalink to this headline">¶</a></h2>
 <p>Each example IOC directory comes with a Linux script (start_epics) or a Windows
 batch file (start_epics.bat) or both depending on the architectures that the detector
 runs on. These scripts provide simple examples of how to start medm and the EPICS
@@ -938,13 +933,14 @@ PATH (e.g. /home/mar345/bin/start_epics). Add a command like</p>
 <p>from any directory to start the EPICS IOC.</p>
 </div>
 <div class="section" id="image-viewers">
-<h1>Image Viewers<a class="headerlink" href="#image-viewers" title="Permalink to this headline">¶</a></h1>
+<h2>Image Viewers<a class="headerlink" href="#image-viewers" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="https://github.com/areaDetector/ADViewers">areaDetector/ADViewers repository</a>
 comes with tools to display images over EPICS Channel Access using ImageJ and
 IDL. These viewers are described in
 <a class="reference external" href="http://cars.uchicago.edu/software/epics/areaDetectorViewers.html">areaDetectorViewers.html</a>.</p>
 <p>HDFView can be used to view files saved with the HDF5 file writing plugins. ImageJ can
 also be used to view files saved with the TIFF, JPEG, and netCDF plugins.</p>
+</div>
 </div>
 
 
