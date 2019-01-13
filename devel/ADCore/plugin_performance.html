@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Performance example &#8212; areaDetector  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MEDM screens" href="medm.html" />
+    <link rel="prev" title="commonPlugins.cmd" href="common_plugins.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          areaDetector</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#licsense">Licsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../detectors.html">Supported Detectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#commuinity-supported-detectors">Commuinity Supported Detectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../legacy_versions.html">Legacy Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#required-modules">Required Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#installation-and-building">Installation and Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arch.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asynPortDriver.html">asynPortDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NDArray.html">NDArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="medm.html">MEDM screens</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Performance example</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="common_plugins.html" title="Previous Chapter: commonPlugins.cmd"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; commonPlugins.cmd</span>
+    </a>
+  </li>
+  <li>
+    <a href="medm.html" title="Next Chapter: MEDM screens"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">MEDM screens &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ADCore/plugin_performance.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="performance-example">
+<h1>Performance example<a class="headerlink" href="#performance-example" title="Permalink to this headline">¶</a></h1>
+<p>The following example shows how increasing the number of threads from 1
+to 5 in the NDPluginStats statistics plugins allows it to keep up with
+the simDetector running at about 485 frames/s. It also demonstrates the
+effect of changing SortMode=Sorted and SortMode=Unsorted.</p>
+<p>The images were generated by simDetector generating 1024x1024 Float32
+images at about 485 frames/s as shown in the following 2 medm screens.</p>
+<img alt="../_images/NDPluginDriverExample_simDetector.png" class="align-center" src="../_images/NDPluginDriverExample_simDetector.png" />
+<p>The NDPluginStats plugin was configured to perform all of the statistics
+calculations (centroid, histogram, etc.) to maximize the time required
+to process each array, as shown in the following medm screen.</p>
+<img alt="../_images/NDPluginDriverExample_NDStats.png" class="align-center" src="../_images/NDPluginDriverExample_NDStats.png" />
+<p>The statistics plugin was first run with just one thread, as shown in
+the NDPluginBaseFull.adl screen. This screen can be opened with the More
+related display from the NDPluginBase.adl screen, which is embedded on
+the left hand side of all plugin medm screens. Note the following on
+this screen:</p>
+<ul class="simple">
+<li>The execution time is 8 ms.</li>
+<li>The frame rate is 120 frames/s, which is consistent with the
+execution time.</li>
+<li>The queue free size is 0, and the number of dropped frames is large
+because the plugin cannot keep up with the rate at which the
+simDetector is sending frames (485 frames/s).</li>
+<li>SortedMode=Sorted is selected. Because there is only 1 thread
+SortMode does not really matter, the order of the output NDArrays
+will be the same whether SortMode is Sorted or Unsorted.</li>
+</ul>
+<img alt="../_images/NDPluginDriverExample_StatsFull_1thread.png" class="align-center" src="../_images/NDPluginDriverExample_StatsFull_1thread.png" />
+<p>The following show the Linux “top” program when the plugin is running
+with 1 thread as above. Note that the STATS5_Plugin_1 thread is using
+almost 100% of a core. The simDetector is using about 58% of a core.</p>
+<img alt="../_images/NDPluginDriverExample_top_1thread.png" class="align-center" src="../_images/NDPluginDriverExample_top_1thread.png" />
+<p>The NumThreads PV in the statistics plugin was then changed from 1 to 3,
+as shown in the following NDPluginBaseFull.adl screen. Note the
+following:</p>
+<ul class="simple">
+<li>The execution time is still 8 ms.</li>
+<li>The frame rate is now 384 frames/s, which is just over 3 times the
+value with 1 thread above.</li>
+<li>The queue free size is 0, and the number of dropped frames is large
+because the plugin still cannot keep up with the rate at which the
+simDetector is sending frames (485 frames/s).</li>
+<li>SortedMode=Sorted is selected. Because there are now 3 threads
+SortMode does matter, because the 3 threads could be producing output
+NDArrays in the wrong order. However, the number of disordered frames
+is still large, because dropped input frames will lead to missing
+values of NDArray::uniqueId on the output arrays, which is counted in
+the Disordered arrays.</li>
+</ul>
+<img alt="../_images/NDPluginDriverExample_StatsFull_3thread.png" class="align-center" src="../_images/NDPluginDriverExample_StatsFull_3thread.png" />
+<p>The following show the Linux “top” program when the plugin is running
+with 3 threads as above. Note that there are now 3 STATS5_Plugin_N
+threads, each using almost 100% of a core.</p>
+<img alt="../_images/NDPluginDriverExample_top_3thread.png" class="align-center" src="../_images/NDPluginDriverExample_top_3thread.png" />
+<p>The NumThreads PV in the statistics plugin was then changed from 3 to 5,
+as shown in the following NDPluginBaseFull.adl screen. Note the
+following:</p>
+<ul class="simple">
+<li>The execution time is still about 8 ms.</li>
+<li>The frame rate is now 482 frames/s, which is just over 4 times the
+value with 1 thread above.</li>
+<li>The queue free size is 200, and the number of dropped frames is 0
+because the plugin can now keep up with the rate at which the
+simDetector is sending frames (482 frames/s).</li>
+<li>SortedMode=Sorted is selected. Because there are now 5 threads
+SortMode does matter, because the 5 threads could be producing output
+NDArrays in the wrong order. Now the number of disordered frames is
+0, because there are no dropped input frames and the SortSize (50)
+and SortTime (0.05 sec) are sufficient to allow the output frames to
+be sorted without dropping any output frames (DroppedOutputArrays=0).</li>
+</ul>
+<img alt="../_images/NDPluginDriverExample_StatsFull_5thread.png" class="align-center" src="../_images/NDPluginDriverExample_StatsFull_5thread.png" />
+<p>The following show the Linux “top” program when the plugin is running
+with 5 threads as above. Note that there are now 5 STATS5_Plugin_N
+threads, each using about 87% of a core.</p>
+<img alt="../_images/NDPluginDriverExample_top_5thread.png" class="align-center" src="../_images/NDPluginDriverExample_top_5thread.png" />
+<p>To test sorting of output NDArrays the simDetector was configured to
+generate 100 arrays in Multiple mode, and the NDFileNetCDF plugin was
+configured to save 100 arrays in Stream mode. The netCDF plugin received
+its NDArrays from the STATS5 plugin running with 5 threads as shown
+above. The test was done 2 times, once with SortMode=Sorted, and then
+with SortMode=Unsorted. The files are were then read into IDL, using the
+read_nd_netcdf.pro file that can be found in ADCore/Viewers/IDL.</p>
+<p>The following shows the output when reading the file that was written
+when SortMode=Sorted. attr[0].pvalue is the value of the UniqueId
+attribute for all 100 NDArrays. Note that the arrays are all in the
+correct UniqueId order.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IDL&gt; t = read_nd_netcdf(&#39;thread_test_5_sorted_001.nc&#39;, attr=attr)
+IDL&gt; u=*attr[0].pvalue
+IDL&gt; print, u
+      479298      479299      479300      479301      479302      479303      479304      479305      479306      479307
+      479308      479309      479310      479311      479312      479313      479314      479315      479316      479317
+      479318      479319      479320      479321      479322      479323      479324      479325      479326      479327
+      479328      479329      479330      479331      479332      479333      479334      479335      479336      479337
+      479338      479339      479340      479341      479342      479343      479344      479345      479346      479347
+      479348      479349      479350      479351      479352      479353      479354      479355      479356      479357
+      479358      479359      479360      479361      479362      479363      479364      479365      479366      479367
+      479368      479369      479370      479371      479372      479373      479374      479375      479376      479377
+      479378      479379      479380      479381      479382      479383      479384      479385      479386      479387
+      479388      479389      479390      479391      479392      479393      479394      479395      479396      479397
+</pre></div>
+</div>
+<p>The following shows the output when reading the file that was written
+when SortMode=Unsorted. Note that the arrays are not in the correct
+UniqueId order.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IDL&gt; t = read_nd_netcdf(&#39;thread_test_5_unsorted_001.nc&#39;, attr=attr)
+IDL&gt; u=*attr[0].pvalue
+IDL&gt; print, u
+      479398      479399      479400      479401      479402      479403      479404      479405      479406      479407
+      479408      479409      479410      479411      479412      479414      479413      479415      479416      479417
+      479418      479419      479420      479421      479423      479422      479424      479425      479426      479427
+      479429      479428      479430      479432      479431      479435      479433      479434      479436      479437
+      479438      479440      479439      479441      479443      479442      479446      479445      479444      479447
+      479448      479449      479450      479452      479451      479453      479454      479456      479455      479457
+      479459      479458      479460      479461      479463      479462      479464      479465      479466      479467
+      479469      479468      479470      479471      479472      479473      479475      479474      479476      479477
+      479478      479479      479480      479481      479482      479483      479484      479485      479486      479487
+      479488      479489      479490      479491      479492      479493      479494      479495      479496      479497
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Mark Rivers.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
