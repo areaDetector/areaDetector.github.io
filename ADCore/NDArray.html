@@ -77,6 +77,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install_guide.html">areaDetector: Installation Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#licsense">Licsense</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
 </ul>
@@ -88,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">areaDetector License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="areaDetector.html">areaDetector: EPICS software for area detectors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="areaDetector.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="areaDetector.html#where-to-find-it">Where to find it</a></li>
@@ -358,7 +360,7 @@ desired to eliminate all existing attributes from NDArrays each time a
 new one is allocated then the global variable <code class="docutils literal notranslate"><span class="pre">eraseNDAttributes</span></code>
 should be set to 1. This can be done at the iocsh prompt with the
 command:</p>
-<div class="code c highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">eraseNDAttributes</span> <span class="mi">1</span>
+<div class="code c highlight-none notranslate"><div class="highlight"><pre><span></span>var eraseNDAttributes 1
 </pre></div>
 </div>
 <p>The <a class="reference external" href="areaDetectorDoxygenHTML/class_n_d_attribute_list.html">NDAttributeList class
@@ -443,22 +445,22 @@ EPICS clients will typically need to convert such long strings from a
 string to an integer or byte array before sending the path name to
 EPICS. In IDL this is done as follows:</li>
 </ul>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Convert</span> <span class="n">a</span> <span class="n">string</span> <span class="n">to</span> <span class="n">a</span> <span class="n">null</span><span class="o">-</span><span class="n">terminated</span> <span class="n">byte</span> <span class="n">array</span> <span class="ow">and</span> <span class="n">write</span> <span class="k">with</span> <span class="n">caput</span>
-<span class="n">IDL</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">caput</span><span class="p">(</span><span class="s1">&#39;13PS1:TIFF1:FilePath&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">byte</span><span class="p">(</span><span class="s1">&#39;/home/epics/scratch&#39;</span><span class="p">),</span><span class="mi">0</span><span class="n">B</span><span class="p">])</span>
-<span class="p">;</span> <span class="n">Read</span> <span class="n">a</span> <span class="n">null</span> <span class="n">terminated</span> <span class="n">byte</span> <span class="n">array</span>
-<span class="n">IDL</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">caget</span><span class="p">(</span><span class="s1">&#39;13PS1:TIFF1:FilePath&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-<span class="p">;</span> <span class="n">Convert</span> <span class="n">to</span> <span class="n">a</span> <span class="n">string</span>
-<span class="n">IDL</span><span class="o">&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">string</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>; Convert a string to a null-terminated byte array and write with caput
+IDL&gt; t = caput(&#39;13PS1:TIFF1:FilePath&#39;, [byte(&#39;/home/epics/scratch&#39;),0B])
+; Read a null terminated byte array
+IDL&gt; t = caget(&#39;13PS1:TIFF1:FilePath&#39;, v)
+; Convert to a string
+IDL&gt; s = string(v)
 </pre></div>
 </div>
 <p>In SPEC this is done as follows:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span> <span class="n">_temp</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span>
-<span class="c1"># Setting the array to &quot;&quot; will zero-fill it</span>
-<span class="n">_temp</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="c1"># Copy the string to the array.  Note, this does not null terminate, so if array already contains</span>
-<span class="c1"># a longer string it needs to first be zeroed by setting it to &quot;&quot;.</span>
-<span class="n">_temp</span> <span class="o">=</span> <span class="s2">&quot;/home/epics/scratch&quot;</span>
-<span class="n">epics_put</span><span class="p">(</span><span class="s2">&quot;13PS1:TIFF1:FilePath&quot;</span><span class="p">,</span> <span class="n">_temp</span><span class="p">)</span>
+<div class="code highlight-none notranslate"><div class="highlight"><pre><span></span>array _temp[256]
+# Setting the array to &quot;&quot; will zero-fill it
+_temp = &quot;&quot;
+# Copy the string to the array.  Note, this does not null terminate, so if array already contains
+# a longer string it needs to first be zeroed by setting it to &quot;&quot;.
+_temp = &quot;/home/epics/scratch&quot;
+epics_put(&quot;13PS1:TIFF1:FilePath&quot;, _temp)
 </pre></div>
 </div>
 <p>Note that for parameters whose values are defined by enum values (e.g

@@ -21,6 +21,7 @@
 ./_sources/ADCore/overview.rst.txt
 ./_sources/index.rst.txt
 ./_sources/install_guide.rst.txt
+./_sources/license.rst.txt
 ./_sources/readme.rst.txt
 ./_sources/release.rst.txt
 ./_static/ajax-loader.gif
@@ -114,6 +115,7 @@
 ./genindex.html
 ./index.html
 ./install_guide.html
+./license.html
 ./objects.inv
 ./readme.html
 ./release.html
