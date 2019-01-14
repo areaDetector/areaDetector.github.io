@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NDPluginAttrPlot &#8212; areaDetector  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NDPluginAttribute" href="NDPluginAttribute.html" />
+    <link rel="prev" title="Performance example" href="plugin_performance.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          areaDetector</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#licsense">Licsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../detectors.html">Supported Detectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#commuinity-supported-detectors">Commuinity Supported Detectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../legacy_versions.html">Legacy Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#required-modules">Required Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#installation-and-building">Installation and Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arch.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asynPortDriver.html">asynPortDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NDArray.html">NDArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="plugins.html">areaDetector Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="medm.html">MEDM screens</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">NDPluginAttrPlot</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#comparison-to-ndpluginattribute">Comparison to NDPluginAttribute</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#screenshots">Screenshots</a></li>
+<li><a class="reference internal" href="#developer-notes">Developer Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="plugin_performance.html" title="Previous Chapter: Performance example"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Performance example</span>
+    </a>
+  </li>
+  <li>
+    <a href="NDPluginAttribute.html" title="Next Chapter: NDPluginAttribute"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">NDPluginAttribute &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ADCore/NDPluginAttrPlot.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="ndpluginattrplot">
+<h1><a class="toc-backref" href="#id5">NDPluginAttrPlot</a><a class="headerlink" href="#ndpluginattrplot" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Bla Kranjc, Cosylab</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ndpluginattrplot" id="id5">NDPluginAttrPlot</a><ul>
+<li><a class="reference internal" href="#overview" id="id6">Overview</a></li>
+<li><a class="reference internal" href="#comparison-to-ndpluginattribute" id="id7">Comparison to NDPluginAttribute</a></li>
+<li><a class="reference internal" href="#configuration" id="id8">Configuration</a></li>
+<li><a class="reference internal" href="#screenshots" id="id9">Screenshots</a></li>
+<li><a class="reference internal" href="#developer-notes" id="id10">Developer Notes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id6">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This plugin is aimed for drivers that expose data as NDAttributes. The
+main use case for the plugin is to retrieve NDAttribute values, cache
+them and expose them as a waveform. This enables easy plotting of
+real-time values of the attributes in OPIs. Graphical representation of
+the use case is depicted in Figure 1.</p>
+<p>The plugin is similar to the
+<a class="reference internal" href="NDPluginAttribute.html"><span class="doc">NDPluginAttribute</span></a>, the differences are
+described in the section <a class="reference internal" href="#comparison-to-ndpluginattribute">Comparison to
+NDPluginAttribute</a>. All configuration options and
+instructions are contained in the section <a class="reference internal" href="#configuration">Configuration</a>. A
+real world example of the plugin usage and EDM GUI can be found in the
+section <a class="reference internal" href="#screenshots">Screenshots</a>. Details of added parameters for this
+plugin and other development details can be found in the section
+<a class="reference internal" href="#developer-notes">Developer Notes</a>.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/NDPluginAttrPlot-usecase.png" src="../_images/NDPluginAttrPlot-usecase.png" />
+<p class="caption"><span class="caption-text">Typical use case that can make use of the NDPluginAttrPlot.</span></p>
+</div>
+<p>The plugin is initialized when the first NDArray is passed to it and
+reinitialized whenever the <code class="docutils literal notranslate"><span class="pre">$(P)$(R)Reset</span></code> is processed or the
+unique ID of the received NDArray has decreased. The names of the
+attributes that are saved are not part of the plugin configuration but
+are extracted from the NDArray. Unique ID of the NDArray is always
+tracked as if it was an attribute. During initialization the list of
+NDAttributes in the NDAttributeList of the NDArray is traversed and a
+preconfigured number of NDAttribute names and their values are saved on
+the first come first served basis.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that only numerical
+attributes are supported by the plugin. String attributes are skipped
+and all numerical attribute values are converted to <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+</div>
+<p>The values are saved internally in the plugin in a circular buffer. The
+length of this buffer is configured at the plugin load and cannot be
+configured during runtime. Also all attributes use the same value for
+the circular buffer length.</p>
+<p>The names of the NDAttributes that are saved by the plugin are exposed
+to the EPICS layer in <code class="docutils literal notranslate"><span class="pre">$(P)$(R)Attr$(ATTR_IND)</span></code> records. To reduce
+the strain on the channel access interface not all circular buffers are
+exposed at all times, but only a preconfigured number of waveform
+records are available. The records are named
+<code class="docutils literal notranslate"><span class="pre">$(P)$(R)$(AXIS):Data$(DATA_IND)</span></code>. Additional macro <code class="docutils literal notranslate"><span class="pre">AXIS</span></code> is
+added to clearly name the plot’s X or Y axis if required. As the main
+purpose of the plugin is live plotting the data records are processed
+periodically with 1 Hz and is not tied to the acquisition period. The
+data that is exposed to the waveforms is selected by writing the index
+(<code class="docutils literal notranslate"><span class="pre">ATTR_IND</span></code>) of desired attribute to the
+<code class="docutils literal notranslate"><span class="pre">$(P)$(R)$(AXIS):DataSelect$(DATA_IND)</span></code> record. Magic numbers are
+used for selection of Unique ID field (value of -1) and a selection of
+“None” - array of all zeros (value of -2). The readback of index and the
+name of the attribute name are then exposed on
+<code class="docutils literal notranslate"><span class="pre">$(P)$(R)$(AXIS):DataSelect$(DATA_IND)_RBV</span></code> and
+<code class="docutils literal notranslate"><span class="pre">$(P)$(R)$(AXIS):DataLabel$(DATA_IND)</span></code> respectively. Current length
+of the internal circular buffer is provided to the user via
+<code class="docutils literal notranslate"><span class="pre">$(P)$(R)NPts</span></code> record.</p>
+<p>Additional notes about this plugin:</p>
+<ul class="simple">
+<li>If the value for an attribute that is being saved is not present in
+the NDArray a 0 is written for that value in the circular buffer;</li>
+<li>Exposed attributes are preserved among re-initializations if
+possible.</li>
+</ul>
+</div>
+<div class="section" id="comparison-to-ndpluginattribute">
+<h2><a class="toc-backref" href="#id7">Comparison to NDPluginAttribute</a><a class="headerlink" href="#comparison-to-ndpluginattribute" title="Permalink to this headline">¶</a></h2>
+<p>NDPluginAttrPlot is different from NDPluginAttribute in the following
+ways:</p>
+<ul class="simple">
+<li>Attributes are not selected by name but rather a list of first N
+attributes is extracted from the first NDArray of an acquisition;</li>
+<li>Circular buffer is used for attribute values;</li>
+<li>The attribute values are written to the waveforms periodically (1Hz),
+decoupled from the callbacks;</li>
+<li>Only exposes raw attribute values;</li>
+<li>All numerical attributes are supported but the values are converted
+to <code class="docutils literal notranslate"><span class="pre">double</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#id8">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The NDPluginAttribute plugin is created with the NDAttrConfigure
+command, either from C/C++ or from the EPICS IOC shell. The prototype of
+its constructor is</p>
+<div class="code cpp highlight-none notranslate"><div class="highlight"><pre><span></span>NDPluginAttrPlot(const char * portName, int n_attributes,         int cache_size, int n_data_blocks, const char * NDArrayPort, int NDArrayAddr,         int queueSize, int blockingCallbacks, int priority, int stackSize)
+</pre></div>
+</div>
+<p>Parameters <code class="docutils literal notranslate"><span class="pre">NDArrayPort</span></code>, <code class="docutils literal notranslate"><span class="pre">NDArrayAddr</span></code>, <code class="docutils literal notranslate"><span class="pre">portName</span></code>,
+<code class="docutils literal notranslate"><span class="pre">queueSize</span></code>, <code class="docutils literal notranslate"><span class="pre">blockingCallbacks</span></code>, <code class="docutils literal notranslate"><span class="pre">priority</span></code> and <code class="docutils literal notranslate"><span class="pre">stackSize</span></code> are
+arguments common to all plugins.</p>
+<p>Configuration of the driver instance is tightly coupled to instantiation
+of EPICS dbs and macro substitution. Unfortunately this tight coupling
+must be managed manually</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">n_attributes</span></code> defines the maximum number of attributes that are
+saved by the driver. <code class="docutils literal notranslate"><span class="pre">n_attributes</span></code> instances of
+<code class="docutils literal notranslate"><span class="pre">NDAttrPlotAttr.template</span></code> must be loaded with <code class="docutils literal notranslate"><span class="pre">ATTR_IND</span></code> macro
+ranging from 0 to <code class="docutils literal notranslate"><span class="pre">n_attributes</span> <span class="pre">-</span> <span class="pre">1</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">n_data_blocks</span></code> defines the number of data exposing waveforms.
+<code class="docutils literal notranslate"><span class="pre">n_data_blocks</span></code> instances of <code class="docutils literal notranslate"><span class="pre">NDAttrPlotData.template</span></code> must be
+loaded with <code class="docutils literal notranslate"><span class="pre">DATA_ADDR</span></code> macro ranging from 0 to
+<code class="docutils literal notranslate"><span class="pre">n_data_blocks</span> <span class="pre">-</span> <span class="pre">1</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cache_size</span></code> defines the max length of circular buffers that are
+used to save values of the attributes. The macro <code class="docutils literal notranslate"><span class="pre">N_CACHE</span></code> in
+<code class="docutils literal notranslate"><span class="pre">NDAttrPlotData.template</span></code> must be set to the same value.</li>
+</ul>
+<p>For further details please refer to the documentation in the source file
+<code class="docutils literal notranslate"><span class="pre">NDPluginAttrPlot.cpp</span></code>.</p>
+</div>
+<div class="section" id="screenshots">
+<h2><a class="toc-backref" href="#id9">Screenshots</a><a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../_images/NDPluginAttrPlot.png" src="../_images/NDPluginAttrPlot.png" />
+<p class="caption"><span class="caption-text">Main plugin screen of the NDPluginAttrPlot plugin</span></p>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="../_images/NDPluginAttrPlot_Plot.png" src="../_images/NDPluginAttrPlot_Plot.png" />
+<p class="caption"><span class="caption-text">Plot screen showing two parameters plotted against their
+Unique ID</span></p>
+</div>
+<div class="figure align-center" id="id4">
+<img alt="../_images/NDPluginAttrPlot_Select.png" src="../_images/NDPluginAttrPlot_Select.png" />
+<p class="caption"><span class="caption-text">Attributes to plot are selected on the select screen</span></p>
+</div>
+</div>
+<div class="section" id="developer-notes">
+<h2><a class="toc-backref" href="#id10">Developer Notes</a><a class="headerlink" href="#developer-notes" title="Permalink to this headline">¶</a></h2>
+<p>NDPluginAttrPlot inherits from <a class="reference internal" href="NDPluginDriver.html"><span class="doc">NDPluginDriver</span></a>. The NDPluginAttribute
+class documentation describes this class in detail.</p>
+<p>NDPluginAttrPlot defines the following parameters. It also implements
+all of the standard plugin parameters from NDPluginDriver.</p>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td align="center" colspan="6,">
+        <b>Parameter Definitions in <code>NDPluginAttrPlot.h</code> and EPICS Record Definitions in <code>NDAttrPlot.template</code></b>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        drvInfo string</th>
+      <th>
+        asyn interface</th>
+      <th>
+        Access</th>
+      <th>
+        Description</th>
+      <th>
+        EPICS record name</th>
+      <th>
+        EPICS record type</th>
+    </tr>
+    <tr>
+      <td>
+        AP_Reset</td>
+      <td>
+        asynInt32</td>
+      <td>
+        w</td>
+      <td>
+        Write to this record forces reinitialization of the plugin on the next callback.</td>
+      <td>
+        $(P)$(R)Reset</td>
+      <td>
+        ao</td>
+    </tr>
+    <tr>
+      <td>
+        AP_NPts</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r</td>
+      <td>
+        Number of saved cached points.</td>
+      <td>
+        $(P)$(R)NPts</td>
+      <td>
+        ai</td>
+    </tr>
+    <tr>
+      <td align="center" colspan="6,">
+        <b>Parameter Definitions in <code>NDPluginAttrPlot.h</code> and EPICS Record Definitions in <code>NDAttrPlotAttr.template</code></b></td>
+    </tr>
+    <tr>
+      <th>
+        drvInfo string</th>
+      <th>
+        asyn interface</th>
+      <th>
+        Access</th>
+      <th>
+        Description</th>
+      <th>
+        EPICS record name</th>
+      <th>
+        EPICS record type</th>
+    </tr>
+    <tr>
+      <td>
+        AP_Attribute</td>
+      <td>
+        asynOctetRead</td>
+      <td>
+        r</td>
+      <td>
+        Attribute name.</td>
+      <td>
+        $(P)$(R)Attr$(ATTR_IND)</td>
+      <td>
+        stringin</td>
+    </tr>
+    <tr>
+      <td align="center" colspan="6,">
+        <b>Parameter Definitions in <code>NDPluginAttrPlot.h</code> and EPICS Record Definitions in <code>NDAttrPlotData.template</code></b></td>
+    </tr>
+    <tr>
+      <th>
+        drvInfo string</th>
+      <th>
+        asyn interface</th>
+      <th>
+        Access</th>
+      <th>
+        Description</th>
+      <th>
+        EPICS record name</th>
+      <th>
+        EPICS record type</th>
+    </tr>
+    <tr>
+      <td>
+        AP_Data</td>
+      <td>
+        asynFloat64ArrayIn</td>
+      <td>
+        r</td>
+      <td>
+        Exposed data for $(DATA_ADDR).</td>
+      <td>
+        $(P)$(R)$(AXIS):Data$(DATA_IND)</td>
+      <td>
+        waveform</td>
+    </tr>
+    <tr>
+      <td>
+        AP_DataSelect</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Index of selected attribute for $(DATA_ADDR).</td>
+      <td>
+        $(P)$(R)$(AXIS):DataSelect$(DATA_IND)</br>$(P)$(R)$(AXIS):DataSelect$(DATA_IND)_RBV</td>
+      <td>
+        ao</br>ai</td>
+    </tr>
+    <tr>
+      <td>
+        AP_DataLabel</td>
+      <td>
+        asynOctetRead</td>
+      <td>
+        r</td>
+      <td>
+        Attribute name for $(DATA_ADDR).</td>
+      <td>
+        $(P)$(R)$(AXIS):DataLabel$(DATA_IND)</td>
+      <td>
+        stringin</td>
+    </tr>
+  </tbody>
+</table><p>If the array data contains more than 16K bytes then in order for EPICS
+clients to the environment variable <code class="docutils literal notranslate"><span class="pre">EPICS_CA_MAX_ARRAY_BYTES</span></code> on both the
+EPICS IOC computer and EPICS client computer must be set to a value at
+least as large as the array size in bytes.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Mark Rivers.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
