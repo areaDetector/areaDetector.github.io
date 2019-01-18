@@ -89,8 +89,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../ADCore/asynPortDriver.html">asynPortDriver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore/NDArray.html">NDArray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/plugins.html">areaDetector Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore/medm.html">MEDM screens</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ADCore/medm.html#acknowledgements-and-licenses">Acknowledgements and licenses</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">areaDetector Viewers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
 </ul>
@@ -232,13 +232,13 @@ image sequences (movies) saved with the NDFileNetCDF plugin.</p>
 <div class="section" id="epics-ad-viewer-java">
 <h3><a class="toc-backref" href="#id16">EPICS_AD_Viewer.java</a><a class="headerlink" href="#epics-ad-viewer-java" title="Permalink to this headline">¶</a></h3>
 <p>This plugin uses EPICS Channel Access to display images via waveform
-records that the <span class="xref std std-doc">NDPluginStdArrays</span> sends
+records that the <a class="reference internal" href="../ADCore/NDPluginStdArrays.html"><span class="doc">NDPluginStdArrays</span></a> sends
 to EPICS.</p>
 </div>
 <div class="section" id="epics-ntnda-viewer-java">
 <h3><a class="toc-backref" href="#id17">EPICS_NTNDA_Viewer.java</a><a class="headerlink" href="#epics-ntnda-viewer-java" title="Permalink to this headline">¶</a></h3>
 <p>This plugin uses EPICS V4 pvAccess to display NTNDArrays that the
-<span class="xref std std-doc">../ADCore/NDPluginPva</span> sends to EPICS. The
+<a class="reference internal" href="../ADCore/NDPluginPva.html"><span class="doc">NDPluginPva</span></a> sends to EPICS. The
 EPICS_NTNDA_Viewer has a number of significant advantages compared to
 the EPICS_AD_Viewer:</p>
 <ul class="simple">
@@ -567,7 +567,7 @@ shown above in the EPICS_AD_Controller image</span></p>
 <p>There is an IDL procedure called
 <a class="reference external" href="http://cars.uchicago.edu/software/idl/imaging_routines.html#epics_ad_display">epics_ad_display</a>
 that can be used to display 2-dimensional array data that the
-<span class="xref std std-doc">NDPluginStdArrays</span> sends to EPICS. This IDL
+<a class="reference internal" href="../ADCore/NDPluginStdArrays.html"><span class="doc">NDPluginStdArrays</span></a> sends to EPICS. This IDL
 client is available as source code (which requires an IDL license), and
 also as a pre-built IDL .sav file that can be run for free under the IDL
 Virtual Machine. This IDL program can run on any machine that IDL runs
@@ -653,8 +653,8 @@ an image from the simulation detector.</p>
 <p class="last">Update link for file handlers</p>
 </div>
 <p>The Viewers/IDL directory also contains an IDL function to read the
-areaDetector netCDF files. This is described in the <a class="reference external" href="NDPluginFile.html#netCDF">NDPluginFile
-netCDF</a> documentation.</p>
+areaDetector netCDF files. This is described in the <a class="reference internal" href="../ADCore/NDFileNetCDF.html#ndfilenetcdf"><span class="std std-ref">NDFileNetCDF</span></a>
+documentation.</p>
 </div>
 <div class="section" id="troubleshooting">
 <h2><a class="toc-backref" href="#id21">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NDPluginROIStat &#8212; areaDetector  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NDPluginScatter" href="NDPluginScatter.html" />
+    <link rel="prev" title="NDPluginROI" href="NDPluginROI.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          areaDetector</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#licsense">Licsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../detectors.html">Supported Detectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#commuinity-supported-detectors">Commuinity Supported Detectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../legacy_versions.html">Legacy Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#required-modules">Required Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#installation-and-building">Installation and Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arch.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asynPortDriver.html">asynPortDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NDArray.html">NDArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="plugins.html">areaDetector Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="medm.html">MEDM screens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADViewers/ad_viewers.html">areaDetector Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">NDPluginROIStat</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#screen-shots">Screen shots</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="NDPluginROI.html" title="Previous Chapter: NDPluginROI"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; NDPluginROI</span>
+    </a>
+  </li>
+  <li>
+    <a href="NDPluginScatter.html" title="Next Chapter: NDPluginScatter"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">NDPluginScatter &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ADCore/NDPluginROIStat.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="ndpluginroistat">
+<h1><a class="toc-backref" href="#id1">NDPluginROIStat</a><a class="headerlink" href="#ndpluginroistat" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Matt Pearson, Mark Rivers</td>
+</tr>
+<tr class="field-even field"><th class="field-name">affiliation:</th><td class="field-body">Oak Ridge National Lab, University of Chicago</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ndpluginroistat" id="id1">NDPluginROIStat</a><ul>
+<li><a class="reference internal" href="#overview" id="id2">Overview</a></li>
+<li><a class="reference internal" href="#configuration" id="id3">Configuration</a></li>
+<li><a class="reference internal" href="#screen-shots" id="id4">Screen shots</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id2">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This plugin provides multiple regions-of-interest (ROIs) on 1-D and 2-D
+data and calculates basic statistics (min, max, mean, total, and net
+counts). It also can accumulate time-series arrays of these statistics.
+The asyn address parameter is used to identify the ROIs, and so a large
+number of ROIs can be dealt with in a single thread. The purpose of this
+plugin is to make it easy for IOC application developers to do simple
+ROI calculations, without having to use multiple traditional ROI and
+separate statistics plugins. The plugin can optionally do callbacks on
+an NDArray object, appending an attribute list. This makes it possible
+to append the ROI statistic data to the output NDArray.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This plugin only supports 1-D and 2-D arrays. The NDPluginStats plugin
+can compute statistics on N-dimensional arrays, but it is less efficient
+for these simple statistics on 1-D and 2-D arrays.</p>
+</div>
+<p>Several database template files are provided:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Template File Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">NDROIStat.template</span></code></td>
+<td>This needs to be instantiated
+once for each instance of the
+plugin. It provides records that
+apply to the whole plugin or to
+all ROIs.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">NDROIStatN.template</span></code></td>
+<td>This needs to be instantiated
+once for each ROI in the plugin
+(the number must equal the number
+of ROIs specified in the IOC
+shell function). The template
+provides records that apply to
+each ROI.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">NDROIStat8.template</span></code></td>
+<td>This is provided as a
+convenience. It instantiates 8
+ROIs by including
+<code class="docutils literal notranslate"><span class="pre">NDROIStat.template</span></code> once and
+<code class="docutils literal notranslate"><span class="pre">NDROIStatN.template</span></code> 8 times.</td>
+</tr>
+</tbody>
+</table>
+<p><cite>NDPluginROIStat</cite> inherits from <cite>NDPluginDriver</cite>.</p>
+<p><cite>NDPluginROIStat</cite> defines the following parameters. It also implements all
+of the standard plugin parameters from
+<a class="reference internal" href="NDPluginDriver.html"><span class="doc">NDPluginDriver</span></a>. The template files
+listed above provide access to these parameters, listed in the following
+tables.</p>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td align="center" colspan="7">
+        <b>Parameter Definitions in NDPluginROIStat.h and EPICS Record Definitions in NDROIStat.template</b>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Parameter index variable</th>
+      <th>
+        asyn interface</th>
+      <th>
+        Access</th>
+      <th>
+        Description</th>
+      <th>
+        drvInfo string</th>
+      <th>
+        EPICS record name</th>
+      <th>
+        EPICS record type</th>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatResetAll</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Reset the statistics data for all the configured ROIs.</td>
+      <td>
+        ROISTAT_RESETALL</td>
+      <td>
+        $(P)$(R)ResetAll </td>
+      <td>
+        bo </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <b>Time-Series data</b></td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStat<br />
+        TSControl</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Controls time-series data collection. The enum choices are:
+        <ul>
+          <li>Erase/Start: Clears all time-series arrays, sets ROISTAT_TS_CURRENT_POINT=0, and
+            starts time-series data collection.</li>
+          <li>Start: Starts time-series data collection without clearing arrays or modifying
+            ROISTAT_TS_CURRENT_POINT. Used to restart collection after a Stop operation.</li>
+          <li>Stop: Stops times-series data collection. Performs callbacks on all time-series
+            waveform records.</li>
+          <li>Read: Performs callbacks on all time-series waveform records, updating the values.</li>
+        </ul>
+      </td>
+      <td>
+        ROISTAT_TS_CONTROL</td>
+      <td>
+        $(P)$(R)TSControl</td>
+      <td>
+        mbbo</td>
+    </tr>
+    <tr>
+      <td>
+        N.A.</td>
+      <td>
+        N.A.</td>
+      <td>
+        r/w</td>
+      <td>
+        Sends the "Read" command to the TSControl record above. This record can be periodically
+        processed to update the time-series waveform records. It is scan disabled if TSAcquiring=Done,
+        so that updates are only performed when time-series acquisition is in progress.
+      </td>
+      <td>
+        N.A.</td>
+      <td>
+        $(P)$(R)TSRead</td>
+      <td>
+        longout</td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStat<br />
+        TSNumPoints</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Controls the number of time-series points to collect. There is no maximum value,
+        the time-series arrays in the plugin are freed and reallocated each time this value
+        is changed. However, the size of the waveform records is fixed when the IOC is started,
+        so NELM in those records must be large enough for the largest time-series needed.
+      </td>
+      <td>
+        ROISTAT_TS_NUM_POINTS</td>
+      <td>
+        $(P)$(R)TSNumPoints</td>
+      <td>
+        longout</td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStat<br />
+        TSCurrentPoint</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/o</td>
+      <td>
+        The current time-series point. If TSCurrentPoint reaches TSNumPoints then time-series
+        acquisition is automatically stopped, and callbacks are done on all time-series
+        waveform records, updating the values. This means that even if TSRead has SCAN=Passive
+        that the waveform records will update when time-series acquisition is complete.
+      </td>
+      <td>
+        ROISTAT_TS_CURRENT_POINT</td>
+      <td>
+        $(P)$(R)TSCurrentPoint</td>
+      <td>
+        longin</td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStat<br />
+        TSAcquiring</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/o</td>
+      <td>
+        Indicates status of time-series data acquisition. Values are 0=Done and 1=Acquiring.
+      </td>
+      <td>
+        ROISTAT_TS_ACQUIRING</td>
+      <td>
+        $(P)$(R)TSAcquiring</td>
+      <td>
+        bi</td>
+    </tr>
+  </tbody>
+</table>
+<table border="1" cellpadding="2" cellspacing="2" style="text-align: left">
+  <tbody>
+    <tr>
+      <td align="center" colspan="7">
+        <b>ROI Specific Parameters.
+          <br />
+          Parameter Definitions in NDPluginROIStat.h and EPICS Record Definitions in NDROIStatN.template</b>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Parameter index variable</th>
+      <th>
+        asyn interface</th>
+      <th>
+        Access</th>
+      <th>
+        Description</th>
+      <th>
+        drvInfo string</th>
+      <th>
+        EPICS record name</th>
+      <th>
+        EPICS record type</th>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatName</td>
+      <td>
+        asynOctet</td>
+      <td>
+        r/w</td>
+      <td>
+        The name of the plugin.</td>
+      <td>
+        ROISTAT_NAME</td>
+      <td>
+        $(P)$(R)Name<br />
+        $(P)$(R)Name_RBV</td>
+      <td>
+        stringout</td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatUse</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Set this to 1 to use this ROI, which will mean the statistics will be calculated
+        for this ROI.</td>
+      <td>
+        ROISTAT_USE</td>
+      <td>
+        $(P)$(R)Use<br />
+        $(P)$(R)Use_RBV</td>
+      <td>
+        bo<br />
+        bi </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatReset</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Reset the statistics data for this ROI.</td>
+      <td>
+        ROISTAT_RESET</td>
+      <td>
+        $(P)$(R)Reset </td>
+      <td>
+        bo </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatBgdWidth</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        The background width for the net counts calculation. The average background counts
+        in a border of this width around the ROI are computed. The border begins at the
+        outer edge of the defined ROI and progresses inward by the BgdWidth.</td>
+      <td>
+        ROISTAT_BGD_WIDTH</td>
+      <td>
+        $(P)$(R)BgdWidth<br />
+        $(P)$(R)BgdWidth_RBV </td>
+      <td>
+        longout
+        <br />
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatDim0Min</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Start element in the X dimension.</td>
+      <td>
+        ROISTAT_DIM0_MIN</td>
+      <td>
+        $(P)$(R)MinX<br />
+        $(P)$(R)MinX_RBV </td>
+      <td>
+        longout<br />
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatDim0Size</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        The ROI size in the X dimension.</td>
+      <td>
+        ROISTAT_DIM0_SIZE</td>
+      <td>
+        $(P)$(R)SizeX<br />
+        $(P)$(R)SizeX_RBV </td>
+      <td>
+        longout<br />
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatDim0MaxSize</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/o</td>
+      <td>
+        Max size of the ROI in the X dimension.</td>
+      <td>
+        ROISTAT_DIM0_MAX_SIZE</td>
+      <td>
+        $(P)$(R)MaxSizeX<br />
+        $(P)$(R)MaxSizeX_RBV </td>
+      <td>
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatDim1Min</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        Start element in the Y dimension.</td>
+      <td>
+        ROISTAT_DIM1_MIN</td>
+      <td>
+        $(P)$(R)MinY<br />
+        $(P)$(R)MinY_RBV </td>
+      <td>
+        longout<br />
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatDim1Size</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/w</td>
+      <td>
+        The ROI size in the Y dimension.</td>
+      <td>
+        ROISTAT_DIM1_SIZE</td>
+      <td>
+        $(P)$(R)SizeY<br />
+        $(P)$(R)SizeY_RBV </td>
+      <td>
+        longout<br />
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatDim1MaxSize</td>
+      <td>
+        asynInt32</td>
+      <td>
+        r/o</td>
+      <td>
+        Max size of the ROI in the Y dimension.</td>
+      <td>
+        ROISTAT_DIM1_MAX_SIZE</td>
+      <td>
+        $(P)$(R)MaxSizeY<br />
+        $(P)$(R)MaxSizeY_RBV </td>
+      <td>
+        longin </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatMinValue</td>
+      <td>
+        asynFloat64</td>
+      <td>
+        r/o</td>
+      <td>
+        Minimum count value in the ROI.</td>
+      <td>
+        ROISTAT_MIN_VALUE</td>
+      <td>
+        $(P)$(R)MinValue_RBV </td>
+      <td>
+        ai </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatMaxValue</td>
+      <td>
+        asynFloat64</td>
+      <td>
+        r/o</td>
+      <td>
+        Maximum count value in the ROI.</td>
+      <td>
+        ROISTAT_MAX_VALUE</td>
+      <td>
+        $(P)$(R)MaxValue_RBV </td>
+      <td>
+        ai </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatMeanValue</td>
+      <td>
+        asynFloat64</td>
+      <td>
+        r/o</td>
+      <td>
+        Mean counts value in the ROI.</td>
+      <td>
+        ROISTAT_MEAN_VALUE</td>
+      <td>
+        $(P)$(R)MeanValue_RBV </td>
+      <td>
+        ai </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatTotal</td>
+      <td>
+        asynFloat64</td>
+      <td>
+        r/o</td>
+      <td>
+        Total counts in the ROI.</td>
+      <td>
+        ROISTAT_TOTAL</td>
+      <td>
+        $(P)$(R)Total_RBV </td>
+      <td>
+        ai </td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStatNet</td>
+      <td>
+        asynFloat64</td>
+      <td>
+        r/o</td>
+      <td>
+        Net (background subtracted) counts in the ROI.</td>
+      <td>
+        ROISTAT_NET</td>
+      <td>
+        $(P)$(R)Net_RBV </td>
+      <td>
+        ai </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7">
+        <b>Time-Series data</b></td>
+    </tr>
+    <tr>
+      <td>
+        NDPluginROIStat<br />
+        TSXXX</td>
+      <td>
+        asynFloat64Array</td>
+      <td>
+        r/o</td>
+      <td>
+        The time series data arrays. XXX is one of the following, corresponding to each
+        of the basic statistics and centroid and sigma statistics described above:
+        <ul>
+          <li>MinValue</li>
+          <li>MaxValue</li>
+          <li>MeanValue</li>
+          <li>Total</li>
+          <li>Net</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>ROISTAT_TS_MIN_VALUE</li>
+          <li>ROISTAT_TS_MAX_VALUE</li>
+          <li>ROISTAT_TS_MEAN_VALUE</li>
+          <li>ROISTAT_TS_TOTAL</li>
+          <li>ROISTAT_TS_NET</li>
+        </ul>
+      </td>
+      <td>
+        $(P)$(R)TSXXX</td>
+      <td>
+        waveform</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#id3">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The NDPluginROIStat plugin is created with the <code class="docutils literal notranslate"><span class="pre">NDROIStatConfigure</span></code>
+function, either from C/C++ or from the EPICS IOC shell.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>NDROIStatConfigure(const char *portName, int queueSize, int blockingCallbacks,
+                          const char *NDArrayPort, int NDArrayAddr, int maxROIs, int maxBuffers,
+                          size_t maxMemory, int priority, int stackSize)
+</pre></div>
+</div>
+<p>All but the <code class="docutils literal notranslate"><span class="pre">maxROIs</span></code> parameter are common to all plugins. This
+defines how many ROIs this plugin will deal with. Usually this will
+match the number of NDROIStatN templates have been instantiated. For
+example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>NDROIStatConfigure(&quot;DET1.ROI&quot;, 100, 0, &quot;DET1&quot;, 0, 8, -1, -1, 0, 0)
+</pre></div>
+</div>
+</div>
+<div class="section" id="screen-shots">
+<h2><a class="toc-backref" href="#id4">Screen shots</a><a class="headerlink" href="#screen-shots" title="Permalink to this headline">¶</a></h2>
+<p>The following MEDM screen provides access to the parameters in
+NDPluginDriver.h and NDPluginROIStat.h through records in
+NDPluginBase.template, and NDROIStat.template.</p>
+<div class="figure align-center">
+<img alt="../_images/NDROIStat.png" src="../_images/NDROIStat.png" />
+</div>
+<p>The following MEDM screen provides access to the parameters in
+NDPluginROIStat.h through records in NDROIStatN.template.</p>
+<div class="figure align-center">
+<img alt="../_images/NDROIStatN.png" src="../_images/NDROIStatN.png" />
+</div>
+<p>The following MEDM screen provides access to 8 ROIs at once.</p>
+<div class="figure align-center">
+<img alt="../_images/NDROIStat8.png" src="../_images/NDROIStat8.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/NDROIStatTimeSeriesMean.png" src="../_images/NDROIStatTimeSeriesMean.png" />
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Mark Rivers.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
