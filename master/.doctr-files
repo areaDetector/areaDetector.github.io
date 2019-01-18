@@ -207,6 +207,7 @@ master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/acknowledgements.rst.txt
 master/_sources/detector_drivers.rst.txt
 master/_sources/detectors.rst.txt
+master/_sources/doxygen.rst.txt
 master/_sources/index.rst.txt
 master/_sources/install_guide.rst.txt
 master/_sources/legacy_versions.rst.txt
@@ -1514,6 +1515,7 @@ master/areaDetectorDoxygenHTML/union_n_d_attr_value-members.html
 master/areaDetectorDoxygenHTML/union_n_d_attr_value.html
 master/detector_drivers.html
 master/detectors.html
+master/doxygen.html
 master/genindex.html
 master/index.html
 master/install_guide.html
