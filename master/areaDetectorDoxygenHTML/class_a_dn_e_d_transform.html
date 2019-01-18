@@ -214,8 +214,8 @@ Additional Inherited Members</h2></td></tr>
 <p>ADNED_TRANSFORM_TYPE1 - multiply the TOF by a pixel ID lookup in doubleArray[0]. Can be used for fixed geometry instruments to calculate dspace. Can be used on Vulcan for example.</p>
 <p>ADNED_TRANSFORM_TYPE2 - calculate dspace where the theta angle changes. Used for direct geometry instruments like Hyspec. NOTE: not sure how this works yet.</p>
 <p>ADNED_TRANSFORM_TYPE3 - calculate deltaE for indirect geometry instruments for their inelastic detectors. This uses an equation which depends on the mass of the neutron, L1, an array of L2 and an array of Ef. The final energy per-pixelID, Ef, is known because of the use of mirrors to select energy. We can calculate incident energy using the known final energy and the TOF. So we are calculating energy transfer for each event.</p>
-<p>deltaE = (1/2)Mn * (L1 / (TOF - (L2*sqrt(Mn/(2*Ef))) ) )**2 - Ef where: Mn = mass of neutron in 1.674954 Ã 10-27 L1 = constant (in meters) Ef and L2 are double arrays based on pixelID. The Ef input array must be in units of MeV. The L2 array is in meters. TOF = time of flight (in seconds)</p>
-<p>Energy must be in Joules (1 eV = 1.602176565(35) Ã 10â19 J)</p>
+<p>deltaE = (1/2)Mn * (L1 / (TOF - (L2*sqrt(Mn/(2*Ef))) ) )**2 - Ef where: Mn = mass of neutron in 1.674954 × 10-27 L1 = constant (in meters) Ef and L2 are double arrays based on pixelID. The Ef input array must be in units of MeV. The L2 array is in meters. TOF = time of flight (in seconds)</p>
+<p>Energy must be in Joules (1 eV = 1.602176565(35) × 10−19 J)</p>
 <p>Once the deltaE has been obtained in Joules, it is converted back to MeV. </p>
 
 <p>Implements <a class="el" href="class_a_dn_e_d_transform_base.html#a5408c9bb026b902610d14b97fb700d17">ADnEDTransformBase</a>.</p>
