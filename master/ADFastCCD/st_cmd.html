@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Example st.cmd Startup File &#8212; areaDetector 3-4-133-g1cea4a3 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon_t.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MEDM screens" href="medm.html" />
+    <link rel="prev" title="Configuration" href="configuration.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          areaDetector</a>
+        <span class="navbar-text navbar-version pull-left"><b>3-4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#licsense">Licsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../detectors.html">Supported Detectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#commuinity-supported-detectors">Commuinity Supported Detectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../legacy_versions.html">Legacy Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#required-modules">Required Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#installation-and-building">Installation and Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/arch.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/asynPortDriver.html">asynPortDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/NDArray.html">NDArray</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/plugins.html">areaDetector Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/medm.html">MEDM screens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADViewers/ad_viewers.html">areaDetector Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Source Code Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Example st.cmd Startup File</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="configuration.html" title="Previous Chapter: Configuration"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Configuration</span>
+    </a>
+  </li>
+  <li>
+    <a href="medm.html" title="Next Chapter: MEDM screens"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">MEDM screens &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ADFastCCD/st_cmd.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="example-st-cmd-startup-file">
+<h1>Example st.cmd Startup File<a class="headerlink" href="#example-st-cmd-startup-file" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!../../bin/linux-x86_64/FastCCDApp
+&lt; envPaths
+
+epicsEnvSet(&quot;ADCORE&quot;, &quot;$(AREA_DETECTOR)/ADCore&quot;)
+
+errlogInit(20000)
+
+epicsEnvSet(&quot;EPICS_CA_AUTO_ADDR_LIST&quot; , &quot;NO&quot;)
+epicsEnvSet(&quot;EPICS_CA_ADDR_LIST&quot;      , &quot;10.23.0.255&quot;)
+epicsEnvSet(&quot;EPICS_CA_MAX_ARRAY_BYTES&quot;, &quot;10000000&quot;)
+
+dbLoadDatabase(&quot;$(TOP)/dbd/FastCCDApp.dbd&quot;)
+FastCCDApp_registerRecordDeviceDriver(pdbbase) 
+
+epicsEnvSet(&quot;PREFIX&quot;, &quot;XF:23ID1-ES{FCCD}&quot;)
+epicsEnvSet(&quot;PORT&quot;,   &quot;FASTCCD&quot;)
+epicsEnvSet(&quot;QSIZE&quot;,  &quot;20&quot;)
+epicsEnvSet(&quot;XSIZE&quot;,  &quot;2048&quot;)
+epicsEnvSet(&quot;YSIZE&quot;,  &quot;2048&quot;)
+epicsEnvSet(&quot;NCHANS&quot;, &quot;2048&quot;)
+epicsEnvSet(&quot;CBUFFS&quot;, &quot;500&quot;)
+epicsEnvSet(&quot;EPICS_DB_INCLUDE_PATH&quot;, &quot;$(ADCORE)/db&quot;)
+
+# FastCCDConfig(const char *portName, int maxBuffers, size_t maxMemory, 
+#               int priority, int stackSize, int packetBuffer, int imageBuffer,
+#				const char *baseIP, const char *fabricIP, const char *fabricMAC))
+
+FastCCDConfig(&quot;$(PORT)&quot;, 0, 0, 0, 100000, 2000, 200, &quot;&quot;, &quot;10.23.4.127&quot;, &quot;&quot;)
+
+# Load Records
+
+dbLoadRecords(&quot;$(ADFASTCCD)/db/FastCCD.template&quot;,   &quot;P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1&quot;)
+
+# Create a standard arrays plugin
+NDStdArraysConfigure(&quot;Image1&quot;, 5, 0, &quot;FASTCCD&quot;, 0, 0)
+dbLoadRecords(&quot;NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,NDARRAY_PORT=FASTCCD,ADDR=0,TIMEOUT=1,TYPE=Int16,FTVL=SHORT,NELEMENTS=2361600&quot;)
+
+# Load all other plugins using commonPlugins.cmd
+&lt; $(ADCORE)/iocBoot/commonPlugins.cmd
+
+# Load the FastCCD Plugin
+NDFastCCDConfigure(&quot;FastCCD1&quot;, $(QSIZE), 0, &quot;PROC1&quot;, 0, 0, 0, 0, 0, $(MAX_THREADS=5))
+dbLoadRecords(&quot;$(ADFASTCCD)/db/NDFastCCD.template&quot;, &quot;P=$(PREFIX),R=FastCCD1:, PORT=FastCCD1, NDARRAY_PORT=FASTCCD, ADDR=0, TIMEOUT=1&quot;)
+
+set_requestfile_path(&quot;$(ADFASTCCD)/FastCCDApp/Db&quot;)
+set_requestfile_path(&quot;$(ADFASTCCD)/FastCCDPlugin/Db&quot;)
+set_requestfile_path(&quot;$(ADCORE)&quot;,&quot;ADApp/Db&quot;)
+
+iocInit()
+
+# save things every thirty seconds
+create_monitor_set(&quot;auto_settings.req&quot;, 30,&quot;P=$(PREFIX),D=cam1:&quot;)
+dbl &gt; $(TOP)/records.dbl
+dbl &gt; /cf-update/xf23id1-ioc2.es-fccd.dbl
+
+dbpf $(PREFIX)cam1:NDAttributesFile FastCCDDetectorAttributes.xml
+dbpf $(PREFIX)Stats1:NDAttributesFile StatsAttributes.xml
+dbpf $(PREFIX)ROIStat1:NDAttributesFile ROIStatAttributes.xml
+
+
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Mark Rivers.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
