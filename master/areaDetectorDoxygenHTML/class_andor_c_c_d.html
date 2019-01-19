@@ -72,9 +72,9 @@ Inheritance diagram for AndorCCD:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abfd8aecfb5d6350d9e6a392ba9d49766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#abfd8aecfb5d6350d9e6a392ba9d49766">AndorCCD</a> (const char *portName, const char *installPath, int shamrockID, int maxBuffers, size_t maxMemory, int priority, int stackSize)</td></tr>
-<tr class="memdesc:abfd8aecfb5d6350d9e6a392ba9d49766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Andor driver; most parameters are simply passed to <a class="el" href="class_a_d_driver.html#acc898497d3369c2f6f6ab1d83effdd25" title="All of the arguments are simply passed to the constructor for the asynNDArrayDriver base class...">ADDriver::ADDriver</a>.  <a href="#abfd8aecfb5d6350d9e6a392ba9d49766">More...</a><br/></td></tr>
-<tr class="separator:abfd8aecfb5d6350d9e6a392ba9d49766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87b12e5be187937897191f2e3e3b36f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#ac87b12e5be187937897191f2e3e3b36f">AndorCCD</a> (const char *portName, const char *installPath, int cameraSerial, int shamrockID, int maxBuffers, size_t maxMemory, int priority, int stackSize)</td></tr>
+<tr class="memdesc:ac87b12e5be187937897191f2e3e3b36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Andor driver; most parameters are simply passed to <a class="el" href="class_a_d_driver.html#acc898497d3369c2f6f6ab1d83effdd25" title="All of the arguments are simply passed to the constructor for the asynNDArrayDriver base class...">ADDriver::ADDriver</a>.  <a href="#ac87b12e5be187937897191f2e3e3b36f">More...</a><br/></td></tr>
+<tr class="separator:ac87b12e5be187937897191f2e3e3b36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e0e87f670b1b8500eb694b256b94dc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#a00e0e87f670b1b8500eb694b256b94dc">~AndorCCD</a> ()</td></tr>
 <tr class="memdesc:a00e0e87f670b1b8500eb694b256b94dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a00e0e87f670b1b8500eb694b256b94dc">More...</a><br/></td></tr>
 <tr class="separator:a00e0e87f670b1b8500eb694b256b94dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -390,7 +390,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Driver for Andor CCD cameras using version 2 of their SDK; inherits from <a class="el" href="class_a_d_driver.html" title="Class from which areaDetector drivers are directly derived. ">ADDriver</a> class in ADCore. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="abfd8aecfb5d6350d9e6a392ba9d49766"></a>
+<a class="anchor" id="ac87b12e5be187937897191f2e3e3b36f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -405,6 +405,12 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>installPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cameraSerial</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -450,6 +456,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">portName</td><td>The name of the asyn port driver to be created. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">installPath</td><td>The path to the Andor directory containing the detector INI files, etc. This can be specified as an empty string ("") for new detectors that don't use the INI files on Windows, but must be a valid path on Linux. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraSerial</td><td>The serial number of the desired camera. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">shamrockID</td><td>The index number of the Shamrock spectrograph, if installed. 0 is the first Shamrock in the system. Ignored if there are no Shamrocks. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">maxBuffers</td><td>The maximum number of <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data...">NDArray</a> buffers that the <a class="el" href="class_n_d_array_pool.html" title="The NDArrayPool class manages a free list (pool) of NDArray objects. ">NDArrayPool</a> for this driver is allowed to allocate. Set this to -1 to allow an unlimited number of buffers. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">maxMemory</td><td>The maximum amount of memory that the <a class="el" href="class_n_d_array_pool.html" title="The NDArrayPool class manages a free list (pool) of NDArray objects. ">NDArrayPool</a> for this driver is allowed to allocate. Set this to -1 to allow an unlimited amount of memory. </td></tr>
