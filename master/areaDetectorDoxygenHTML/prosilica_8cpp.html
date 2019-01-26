@@ -115,11 +115,19 @@ Macros</h2></td></tr>
 <tr class="separator:af93443b1e359510362103842fb3c5bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2efe169ce5ea85990d359252164efcd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a2efe169ce5ea85990d359252164efcd3">NUM_STROBE_MODES</a>&#160;&#160;&#160;(int)(sizeof(PSStrobeModes) / sizeof(PSStrobeModes[0]))</td></tr>
 <tr class="separator:a2efe169ce5ea85990d359252164efcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1ec4a8ceaf2c6fa8c83c0793502aff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a9d1ec4a8ceaf2c6fa8c83c0793502aff">NUM_EXPOSURE_MODES</a>&#160;&#160;&#160;(int)(sizeof(PSExposureModes) / sizeof(PSExposureModes[0]))</td></tr>
+<tr class="separator:a9d1ec4a8ceaf2c6fa8c83c0793502aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba91d3b6430b574170a91d101c87c4a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#aba91d3b6430b574170a91d101c87c4a8">NUM_GAIN_MODES</a>&#160;&#160;&#160;(int)(sizeof(PSGainModes) / sizeof(PSGainModes[0]))</td></tr>
+<tr class="separator:aba91d3b6430b574170a91d101c87c4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde52b8c0dbe160d4e8c905ff4790f00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#acde52b8c0dbe160d4e8c905ff4790f00">PSReadStatisticsString</a>&#160;&#160;&#160;&quot;PS_READ_STATISTICS&quot;      /* (asynInt32,    r/w) Write to read statistics  */</td></tr>
 <tr class="memdesc:acde52b8c0dbe160d4e8c905ff4790f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver-specific parameters for the Prosilica driver.  <a href="#acde52b8c0dbe160d4e8c905ff4790f00">More...</a><br /></td></tr>
 <tr class="separator:acde52b8c0dbe160d4e8c905ff4790f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bc7fae7f979abe8f8aab7f58cf9157"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#ac8bc7fae7f979abe8f8aab7f58cf9157">PSBayerConvertString</a>&#160;&#160;&#160;&quot;PS_BAYER_CONVERT&quot;        /* (asynInt32,    r/w) Convert Bayer to another format */</td></tr>
 <tr class="separator:ac8bc7fae7f979abe8f8aab7f58cf9157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87d499ed1a5a2d58a8713dcc38d6faa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#ae87d499ed1a5a2d58a8713dcc38d6faa">PSGainModeString</a>&#160;&#160;&#160;&quot;PS_GAIN_MODE&quot;            /* (asynInt32,    r/w) Camera gain mode, manual or auto */</td></tr>
+<tr class="separator:ae87d499ed1a5a2d58a8713dcc38d6faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e262a1b2fd6e95d64c6059039cfb15"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#af1e262a1b2fd6e95d64c6059039cfb15">PSExposureModeString</a>&#160;&#160;&#160;&quot;PS_EXPOSURE_MODE&quot;        /* (asynInt32,    r/w) Camera exposure mode, manual or auto */</td></tr>
+<tr class="separator:af1e262a1b2fd6e95d64c6059039cfb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9b025ac5335122bbcc79d11dfb7b32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a3e9b025ac5335122bbcc79d11dfb7b32">PSDriverTypeString</a>&#160;&#160;&#160;&quot;PS_DRIVER_TYPE&quot;          /* (asynOctet,    r/o) Ethernet driver type */</td></tr>
 <tr class="separator:a3e9b025ac5335122bbcc79d11dfb7b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d7dab34199079e664f9070d1f1525e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a0d7dab34199079e664f9070d1f1525e5">PSFilterVersionString</a>&#160;&#160;&#160;&quot;PS_FILTER_VERSION&quot;       /* (asynOctet,    r/o) Ethernet packet filter version */</td></tr>
@@ -356,6 +364,34 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d1ec4a8ceaf2c6fa8c83c0793502aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1ec4a8ceaf2c6fa8c83c0793502aff">&#9670;&nbsp;</a></span>NUM_EXPOSURE_MODES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_EXPOSURE_MODES&#160;&#160;&#160;(int)(sizeof(PSExposureModes) / sizeof(PSExposureModes[0]))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba91d3b6430b574170a91d101c87c4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba91d3b6430b574170a91d101c87c4a8">&#9670;&nbsp;</a></span>NUM_GAIN_MODES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_GAIN_MODES&#160;&#160;&#160;(int)(sizeof(PSGainModes) / sizeof(PSGainModes[0]))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab0ac219a3166f9bea4df3e872909372e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0ac219a3166f9bea4df3e872909372e">&#9670;&nbsp;</a></span>NUM_PS_PARAMS</h2>
 
@@ -496,6 +532,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af1e262a1b2fd6e95d64c6059039cfb15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e262a1b2fd6e95d64c6059039cfb15">&#9670;&nbsp;</a></span>PSExposureModeString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSExposureModeString&#160;&#160;&#160;&quot;PS_EXPOSURE_MODE&quot;        /* (asynInt32,    r/w) Camera exposure mode, manual or auto */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0d7dab34199079e664f9070d1f1525e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d7dab34199079e664f9070d1f1525e5">&#9670;&nbsp;</a></span>PSFilterVersionString</h2>
 
@@ -546,6 +596,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define PSFramesDroppedString&#160;&#160;&#160;&quot;PS_FRAMES_DROPPED&quot;       /* (asynInt32,    r/o) Frames dropped */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae87d499ed1a5a2d58a8713dcc38d6faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87d499ed1a5a2d58a8713dcc38d6faa">&#9670;&nbsp;</a></span>PSGainModeString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSGainModeString&#160;&#160;&#160;&quot;PS_GAIN_MODE&quot;            /* (asynInt32,    r/w) Camera gain mode, manual or auto */</td>
         </tr>
       </table>
 </div><div class="memdoc">

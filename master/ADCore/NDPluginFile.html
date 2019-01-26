@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>NDPluginFile &#8212; areaDetector 3-4-138-gcc17e9a documentation</title>
+    <title>NDPluginFile &#8212; areaDetector 3-4-143-g9ec0e7f documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -57,7 +57,24 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../release.html">Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-4-january-xxx-2018">R3-4 (January XXX, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-4-december-3-2018">R3-4 (December 3, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-2-july-9-2018">R3-3-2 (July 9, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-1-july-1-2018">R3-3-1 (July 1, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-june-27-2018">R3-3 (June 27, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-2-january-28-2018">R3-2 (January 28, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-1-july-3-2017">R3-1 (July 3, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-0-may-5-2017">R3-0 (May 5, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-6-february-22-2017">R2-6 (February 22, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-5-october-28-2016">R2-5 (October 28, 2016)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-4-september-18-2015">R2-4 (September 18, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-3-july-24-2015">R2-3 (July 24, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-2-march-23-2015">R2-2 (March 23, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-0-april-4-2014">R2-0 (April 4, 2014)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r1-9-1-and-earlier">R1-9-1 and earlier</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
@@ -65,10 +82,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#licsense">Licsense</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#epics-products-required-for-building-areadetector">EPICS Products Required for Building areaDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#external-products-required-for-building-areadetector">External Products Required for Building areaDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#tiff-jpeg-xml2-and-z">TIFF, JPEG, XML2, and Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#hdf5-szip-and-graphics-magick">HDF5, SZIP, and GRAPHICS_MAGICK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#release-and-config-files">RELEASE* and CONFIG* files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-support-local">Edit RELEASE_SUPPORT.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#optionally-create-release-support-local-epics-host-arch">Optionally create RELEASE_SUPPORT.local.$(EPICS_HOST_ARCH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#optionally-create-release-base-local-epics-host-arch">Optionally create RELEASE_BASE.local.$(EPICS_HOST_ARCH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-libs-local">Edit RELEASE_LIBS.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-prods-local">Edit RELEASE_PRODS.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-config-site-local-and-optionally-config-site-local-epics-host-arch">Edit CONFIG_SITE.local and optionally CONFIG_SITE.local.$(EPICS_HOST_ARCH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-local">Edit RELEASE.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#make">make</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#example-files-in-adcore-iocboot">Example files in ADCore/iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#run-simdetector">Run SimDetector</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#medm">MEDM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edm">EDM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#css">CSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#caqtdm">caQtDM</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
@@ -88,11 +130,63 @@
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arch.html">Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asynPortDriver.html">asynPortDriver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDArray.html">NDArray</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="plugins.html">areaDetector Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NDArray.html">NDArray</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#id1">NDArray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#ndarraypool">NDArrayPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#ndattribute">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#ndattributelist">NDAttributeList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#pvattribute">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#paramattribute">paramAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#functattribute">functAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDArray.html#asynndarraydriver">asynNDArrayDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADDriver.html">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guidelines.html">Guidelines and rules for drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADFastCCD/index.html">areaDetector FastCCD driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADProsilica/ADProsilica.html">areaDetector Prosilica driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="plugins.html">areaDetector Plugins</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="plugin_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginDriver.html">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_guidelines.html">Guidelines and rules for plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_medm.html">Base class medm screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common_plugins.html">commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_performance.html">Performance example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginAttrPlot.html">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginAttribute.html">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginCircularBuff.html">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginCodec.html">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginColorConvert.html">NDPluginColorConvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginFFT.html">NDPluginFFT</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginGather.html">NDPluginGather</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginOverlay.html">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginProcess.html">NDPluginProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginPva.html">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginROI.html">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginROIStat.html">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginScatter.html">NDPluginScatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginStats.html">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginStdArrays.html">NDPluginStdArrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginTimeSeries.html">NDPluginTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginTransform.html">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NDPluginPos.html">NDPosPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ffmpegServer.html">ffmpegServer</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="medm.html">MEDM screens</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ADViewers/ad_viewers.html">areaDetector Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADViewers/ad_viewers.html">areaDetector Viewers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-viewers">ImageJ Viewers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-controller-epics-ad-controller-java">ImageJ Controller (EPICS_AD_Controller.java)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-gaussian-profiler-gaussianprofiler-java">ImageJ Gaussian Profiler (GaussianProfiler.java)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#idl-viewer">IDL Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
 </ul>
 </li>

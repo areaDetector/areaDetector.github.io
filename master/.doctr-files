@@ -47,6 +47,8 @@ master/ADFastCCD/plugin_introduction.html
 master/ADFastCCD/readme.html
 master/ADFastCCD/release.html
 master/ADFastCCD/st_cmd.html
+master/ADProsilica/ADProsilica.html
+master/ADProsilica/st_cmd.html
 master/ADViewers/ad_viewers.html
 master/_images/ADBase.png
 master/_images/ADEpicsShutter.png
@@ -144,6 +146,9 @@ master/_images/NDTransform.png
 master/_images/areaDetectorArchitecture.png
 master/_images/commonPlugins.png
 master/_images/fccd1.png
+master/_images/prosilica.png
+master/_images/prosilicaMore.png
+master/_images/prosilica_tvscl.jpg
 master/_images/scatterGatherExample_NDFileNetCDF.png
 master/_images/scatterGatherExample_NDGather.png
 master/_images/scatterGatherExample_NDGatherFull.png
@@ -203,6 +208,8 @@ master/_sources/ADFastCCD/plugin_introduction.rst.txt
 master/_sources/ADFastCCD/readme.rst.txt
 master/_sources/ADFastCCD/release.rst.txt
 master/_sources/ADFastCCD/st_cmd.rst.txt
+master/_sources/ADProsilica/ADProsilica.rst.txt
+master/_sources/ADProsilica/st_cmd.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/acknowledgements.rst.txt
 master/_sources/detector_drivers.rst.txt
