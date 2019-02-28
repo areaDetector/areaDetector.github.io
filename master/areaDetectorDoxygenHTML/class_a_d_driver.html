@@ -74,6 +74,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abef6916bb90d032a1aeb6894adef12a6"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#abef6916bb90d032a1aeb6894adef12a6">writeInt32</a> (asynUser *pasynUser, epicsInt32 value)</td></tr>
 <tr class="memdesc:abef6916bb90d032a1aeb6894adef12a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an int32 parameter.  <a href="#abef6916bb90d032a1aeb6894adef12a6">More...</a><br /></td></tr>
 <tr class="separator:abef6916bb90d032a1aeb6894adef12a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa928f672804747e41aeb8b1368d158c5"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#aa928f672804747e41aeb8b1368d158c5">setIntegerParam</a> (int index, int value)</td></tr>
+<tr class="memdesc:aa928f672804747e41aeb8b1368d158c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for an integer in the parameter library.  <a href="#aa928f672804747e41aeb8b1368d158c5">More...</a><br /></td></tr>
+<tr class="separator:aa928f672804747e41aeb8b1368d158c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29beef3f72a62d73b36d5255282fecd"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#ac29beef3f72a62d73b36d5255282fecd">setIntegerParam</a> (int list, int index, int value)</td></tr>
+<tr class="memdesc:ac29beef3f72a62d73b36d5255282fecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for an integer in the parameter library.  <a href="#ac29beef3f72a62d73b36d5255282fecd">More...</a><br /></td></tr>
+<tr class="separator:ac29beef3f72a62d73b36d5255282fecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05bfd5d3c6bc63910d6fbd4fb909d50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#ac05bfd5d3c6bc63910d6fbd4fb909d50">setShutter</a> (int open)</td></tr>
 <tr class="memdesc:ac05bfd5d3c6bc63910d6fbd4fb909d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the shutter position.  <a href="#ac05bfd5d3c6bc63910d6fbd4fb909d50">More...</a><br /></td></tr>
 <tr class="separator:ac05bfd5d3c6bc63910d6fbd4fb909d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad55549fca656bc01cbe0e3c92e4d29e3 inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc2afad33faf8e45d6f21e251133ed94 inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#acc2afad33faf8e45d6f21e251133ed94">decrementQueuedArrayCount</a> ()</td></tr>
 <tr class="separator:acc2afad33faf8e45d6f21e251133ed94 inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a369bc9b605bba000f782c69429622b inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a1a369bc9b605bba000f782c69429622b">getQueuedArrayCount</a> ()</td></tr>
+<tr class="separator:a1a369bc9b605bba000f782c69429622b inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688578d794900c0671da8dfaf771912b inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a688578d794900c0671da8dfaf771912b">updateQueuedArrayCount</a> ()</td></tr>
 <tr class="separator:a688578d794900c0671da8dfaf771912b inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -185,6 +193,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae191abe1436e6dd02510fcbbac59dbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9523514a1966d10c9b690c395fca649"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#ad9523514a1966d10c9b690c395fca649">ADAcquire</a></td></tr>
 <tr class="separator:ad9523514a1966d10c9b690c395fca649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7dcae6afc457b37911c3583961bb275"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#ac7dcae6afc457b37911c3583961bb275">ADAcquireBusy</a></td></tr>
+<tr class="separator:ac7dcae6afc457b37911c3583961bb275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8c590fa204e0847606194abce0aa56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#a1d8c590fa204e0847606194abce0aa56">ADWaitForPlugins</a></td></tr>
+<tr class="separator:a1d8c590fa204e0847606194abce0aa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba1af712aed9f9374e5fea5dfc8c1bbd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#aba1af712aed9f9374e5fea5dfc8c1bbd">ADShutterControl</a></td></tr>
 <tr class="separator:aba1af712aed9f9374e5fea5dfc8c1bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec7d41ff8a2b3059270450275160092f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#aec7d41ff8a2b3059270450275160092f">ADShutterControlEPICS</a></td></tr>
@@ -421,6 +433,103 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa928f672804747e41aeb8b1368d158c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa928f672804747e41aeb8b1368d158c5">&#9670;&nbsp;</a></span>setIntegerParam() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asynStatus ADDriver::setIntegerParam </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value for an integer in the parameter library. </p>
+<p>Calls setIntegerParam(0, index, value) i.e. for parameter list 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>The parameter number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac29beef3f72a62d73b36d5255282fecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29beef3f72a62d73b36d5255282fecd">&#9670;&nbsp;</a></span>setIntegerParam() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asynStatus ADDriver::setIntegerParam </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value for an integer in the parameter library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>The parameter list number. Must be &lt; maxAddr passed to asynPortDriver::asynPortDriver. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>The parameter number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to set. This function was added to trap the driver setting ADAcquire to 0 and <a class="el" href="classasyn_n_d_array_driver.html" title="This is the class from which NDArray drivers are derived; implements the asynGenericPointer functions...">asynNDArrayDriver</a> setting NumQueuedArrays. It implements the logic of setting ADAcquireBusy to reflect whether acquisition is done. If WaitForPlugins is true then this includes waiting for NumQueuedArrays to be 0. When ADAcquire goes to 0 it must use getQueuedArrayCount rather then NumQueuedArrays from the parameter library, because NumQueuedArrays is updated in a separate thread and might not have been set yet. getQueuedArrayCount updates immediately. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac05bfd5d3c6bc63910d6fbd4fb909d50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac05bfd5d3c6bc63910d6fbd4fb909d50">&#9670;&nbsp;</a></span>setShutter()</h2>
 
@@ -519,6 +628,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ADDriver::ADAcquire</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7dcae6afc457b37911c3583961bb275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7dcae6afc457b37911c3583961bb275">&#9670;&nbsp;</a></span>ADAcquireBusy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ADDriver::ADAcquireBusy</td>
         </tr>
       </table>
   </td>
@@ -1377,6 +1508,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ADDriver::ADTriggerMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d8c590fa204e0847606194abce0aa56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8c590fa204e0847606194abce0aa56">&#9670;&nbsp;</a></span>ADWaitForPlugins</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ADDriver::ADWaitForPlugins</td>
         </tr>
       </table>
   </td>

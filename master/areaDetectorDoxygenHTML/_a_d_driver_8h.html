@@ -149,6 +149,12 @@ Macros</h2></td></tr>
 <tr class="memitem:aacad881a8f19cbb4602ce8284cb5bb03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_driver_8h.html#aacad881a8f19cbb4602ce8284cb5bb03">ADAcquireString</a>&#160;&#160;&#160;&quot;ACQUIRE&quot;</td></tr>
 <tr class="memdesc:aacad881a8f19cbb4602ce8284cb5bb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">(asynInt32, r/w) Start(1) or Stop(0) acquisition  <a href="#aacad881a8f19cbb4602ce8284cb5bb03">More...</a><br /></td></tr>
 <tr class="separator:aacad881a8f19cbb4602ce8284cb5bb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fd4660ec5698f2cd1f5d261139eef1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_driver_8h.html#a30fd4660ec5698f2cd1f5d261139eef1">ADAcquireBusyString</a>&#160;&#160;&#160;&quot;ACQUIRE_BUSY&quot;</td></tr>
+<tr class="memdesc:a30fd4660ec5698f2cd1f5d261139eef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(asynInt32, r/w) 0 when acquire done including plugins  <a href="#a30fd4660ec5698f2cd1f5d261139eef1">More...</a><br /></td></tr>
+<tr class="separator:a30fd4660ec5698f2cd1f5d261139eef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b4940767df40f1e0d1c42a1ba94ab5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_driver_8h.html#a86b4940767df40f1e0d1c42a1ba94ab5">ADWaitForPluginsString</a>&#160;&#160;&#160;&quot;WAIT_FOR_PLUGINS&quot;</td></tr>
+<tr class="memdesc:a86b4940767df40f1e0d1c42a1ba94ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(asynInt32, r/w) Wait for plugins before AcquireBusy goes to 0  <a href="#a86b4940767df40f1e0d1c42a1ba94ab5">More...</a><br /></td></tr>
+<tr class="separator:a86b4940767df40f1e0d1c42a1ba94ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ac8d35ac9e432c0cb0c38ab8e97cead"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_driver_8h.html#a8ac8d35ac9e432c0cb0c38ab8e97cead">ADShutterControlString</a>&#160;&#160;&#160;&quot;SHUTTER_CONTROL&quot;</td></tr>
 <tr class="memdesc:a8ac8d35ac9e432c0cb0c38ab8e97cead"><td class="mdescLeft">&#160;</td><td class="mdescRight">(asynInt32, r/w) (ADShutterStatus_t) Open (1) or Close(0) shutter  <a href="#a8ac8d35ac9e432c0cb0c38ab8e97cead">More...</a><br /></td></tr>
 <tr class="separator:a8ac8d35ac9e432c0cb0c38ab8e97cead"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +252,22 @@ Enumerations</h2></td></tr>
 <tr class="separator:ab0b114b63ad5e0f7c44f370579916032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a30fd4660ec5698f2cd1f5d261139eef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30fd4660ec5698f2cd1f5d261139eef1">&#9670;&nbsp;</a></span>ADAcquireBusyString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADAcquireBusyString&#160;&#160;&#160;&quot;ACQUIRE_BUSY&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(asynInt32, r/w) 0 when acquire done including plugins </p>
+
+</div>
+</div>
 <a id="a4c92cd92372bb5d063925c726f293236"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c92cd92372bb5d063925c726f293236">&#9670;&nbsp;</a></span>ADAcquirePeriodString</h2>
 
@@ -884,6 +906,22 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(asynInt32, r/w) Trigger mode (ADTriggerMode_t) </p>
+
+</div>
+</div>
+<a id="a86b4940767df40f1e0d1c42a1ba94ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b4940767df40f1e0d1c42a1ba94ab5">&#9670;&nbsp;</a></span>ADWaitForPluginsString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADWaitForPluginsString&#160;&#160;&#160;&quot;WAIT_FOR_PLUGINS&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(asynInt32, r/w) Wait for plugins before AcquireBusy goes to 0 </p>
 
 </div>
 </div>

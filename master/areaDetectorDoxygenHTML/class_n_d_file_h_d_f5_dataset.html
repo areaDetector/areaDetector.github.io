@@ -80,6 +80,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a45521e10e2877f97b96247af0846828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae13dad62a5b13924ed6083c745256f3e"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#ae13dad62a5b13924ed6083c745256f3e">flushDataset</a> ()</td></tr>
 <tr class="separator:ae13dad62a5b13924ed6083c745256f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3602d9418866c6b73288ccc41d0a51e"><td class="memItemLeft" align="right" valign="top">hsize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#ad3602d9418866c6b73288ccc41d0a51e">getDim</a> (int index)</td></tr>
+<tr class="memdesc:ad3602d9418866c6b73288ccc41d0a51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the requested dimension size.  <a href="#ad3602d9418866c6b73288ccc41d0a51e">More...</a><br /></td></tr>
+<tr class="separator:ad3602d9418866c6b73288ccc41d0a51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856f68fafd5ec3991c1e6705f86a15c3"><td class="memItemLeft" align="right" valign="top">hsize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#a856f68fafd5ec3991c1e6705f86a15c3">getMaxDim</a> (int index)</td></tr>
+<tr class="memdesc:a856f68fafd5ec3991c1e6705f86a15c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the requested max dimension size.  <a href="#a856f68fafd5ec3991c1e6705f86a15c3">More...</a><br /></td></tr>
+<tr class="separator:a856f68fafd5ec3991c1e6705f86a15c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35c397d9c114538f1b0806195f9ea33"><td class="memItemLeft" align="right" valign="top">hsize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#aa35c397d9c114538f1b0806195f9ea33">getOffset</a> (int index)</td></tr>
+<tr class="memdesc:aa35c397d9c114538f1b0806195f9ea33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the requested offset size.  <a href="#aa35c397d9c114538f1b0806195f9ea33">More...</a><br /></td></tr>
+<tr class="separator:aa35c397d9c114538f1b0806195f9ea33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229f667c10c06809560aae3ba2835604"><td class="memItemLeft" align="right" valign="top">hsize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#a229f667c10c06809560aae3ba2835604">getVirtualDim</a> (int index)</td></tr>
+<tr class="memdesc:a229f667c10c06809560aae3ba2835604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the requested virtual dimension size.  <a href="#a229f667c10c06809560aae3ba2835604">More...</a><br /></td></tr>
+<tr class="separator:a229f667c10c06809560aae3ba2835604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used for writing a Dataset with the <a class="el" href="class_n_d_file_h_d_f5.html" title="Writes NDArrays in the HDF5 file format; an XML file can control the structure of the HDF5 file.">NDFileHDF5</a> plugin. </p>
@@ -284,6 +296,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad3602d9418866c6b73288ccc41d0a51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3602d9418866c6b73288ccc41d0a51e">&#9670;&nbsp;</a></span>getDim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hsize_t NDFileHDF5Dataset::getDim </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the requested dimension size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a45521e10e2877f97b96247af0846828c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45521e10e2877f97b96247af0846828c">&#9670;&nbsp;</a></span>getHandle()</h2>
 
@@ -301,6 +340,87 @@ Public Member Functions</h2></td></tr>
 
 <p>getHandle. </p>
 <p>Returns the HDF5 handle to this dataset. </p>
+
+</div>
+</div>
+<a id="a856f68fafd5ec3991c1e6705f86a15c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856f68fafd5ec3991c1e6705f86a15c3">&#9670;&nbsp;</a></span>getMaxDim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hsize_t NDFileHDF5Dataset::getMaxDim </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the requested max dimension size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa35c397d9c114538f1b0806195f9ea33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35c397d9c114538f1b0806195f9ea33">&#9670;&nbsp;</a></span>getOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hsize_t NDFileHDF5Dataset::getOffset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the requested offset size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of offset </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a229f667c10c06809560aae3ba2835604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229f667c10c06809560aae3ba2835604">&#9670;&nbsp;</a></span>getVirtualDim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hsize_t NDFileHDF5Dataset::getVirtualDim </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the requested virtual dimension size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
