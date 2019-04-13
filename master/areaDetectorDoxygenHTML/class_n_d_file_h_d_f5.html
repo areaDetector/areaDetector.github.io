@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">areaDetector
-   &#160;<span id="projectnumber">3-4-0</span>
+   &#160;<span id="projectnumber">3-5-0</span>
    </div>
    <div id="projectbrief">EPICS areaDetector framework</div>
   </td>
@@ -94,6 +94,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fa826f0152ca52e084a63c58f9004b3"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a2fa826f0152ca52e084a63c58f9004b3">writeOctet</a> (asynUser *pasynUser, const char *value, size_t nChars, size_t *nActual)</td></tr>
 <tr class="memdesc:a2fa826f0152ca52e084a63c58f9004b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when asyn clients call pasynOctet-&gt;write().  <a href="#a2fa826f0152ca52e084a63c58f9004b3">More...</a><br /></td></tr>
 <tr class="separator:a2fa826f0152ca52e084a63c58f9004b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948a7be09bc7cc6e5cc4f4c27a074e98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a948a7be09bc7cc6e5cc4f4c27a074e98">flushTask</a> ()</td></tr>
+<tr class="memdesc:a948a7be09bc7cc6e5cc4f4c27a074e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function for flush now command Waits for flush events, and upon receiving one, flushes all datasets and attributes, ensuring that the unique ID attribute is the last attribute flushed.  <a href="#a948a7be09bc7cc6e5cc4f4c27a074e98">More...</a><br /></td></tr>
+<tr class="separator:a948a7be09bc7cc6e5cc4f4c27a074e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50075f608972e73a6976a505f78b9533"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a50075f608972e73a6976a505f78b9533">startSWMR</a> ()</td></tr>
 <tr class="separator:a50075f608972e73a6976a505f78b9533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89aea3c6d7355f576fccfb6780f6b607"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a89aea3c6d7355f576fccfb6780f6b607">flushCallback</a> ()</td></tr>
@@ -379,6 +382,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a0a9960546e378fb418cd6f6309ed3d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ef2b31bc75a2cb4af64c0deada3b7aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a6ef2b31bc75a2cb4af64c0deada3b7aa">NDFileHDF5_fillValue</a></td></tr>
 <tr class="separator:a6ef2b31bc75a2cb4af64c0deada3b7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20c06502d1e599aaa4cbdd58c623890"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#ad20c06502d1e599aaa4cbdd58c623890">NDFileHDF5_SWMRFlushNow</a></td></tr>
+<tr class="separator:ad20c06502d1e599aaa4cbdd58c623890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437ef33597c57512b0474724577e2e6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a437ef33597c57512b0474724577e2e6f">NDFileHDF5_SWMRCbCounter</a></td></tr>
 <tr class="separator:a437ef33597c57512b0474724577e2e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f7b79171f9f95e9b3f9474e5537279a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5.html#a6f7b79171f9f95e9b3f9474e5537279a">NDFileHDF5_SWMRSupported</a></td></tr>
@@ -866,6 +871,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a948a7be09bc7cc6e5cc4f4c27a074e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948a7be09bc7cc6e5cc4f4c27a074e98">&#9670;&nbsp;</a></span>flushTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDFileHDF5::flushTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread function for flush now command Waits for flush events, and upon receiving one, flushes all datasets and attributes, ensuring that the unique ID attribute is the last attribute flushed. </p>
+
+</div>
+</div>
 <a id="a3dc750db831771225ffad5a3e825ff10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3dc750db831771225ffad5a3e825ff10">&#9670;&nbsp;</a></span>fromHdfToHidDatatype()</h2>
 
@@ -906,10 +930,10 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the dimension </dd></dl>
 
 </div>
 </div>
@@ -933,10 +957,10 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the dimension </dd></dl>
 
 </div>
 </div>
@@ -960,10 +984,10 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the dimension </dd></dl>
 
 </div>
 </div>
@@ -987,10 +1011,10 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of offset </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the offset </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the offset </dd></dl>
 
 </div>
 </div>
@@ -1014,10 +1038,10 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>of dimension </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>of the dimension </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the dimension </dd></dl>
 
 </div>
 </div>
@@ -1185,7 +1209,7 @@ Protected Attributes</h2></td></tr>
 <p>Set the multi frame parameter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">boolean</td><td>to set the writer frame mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">multi</td><td>boolean to set the writer frame mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2426,6 +2450,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int NDFileHDF5::NDFileHDF5_SWMRCbCounter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad20c06502d1e599aaa4cbdd58c623890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20c06502d1e599aaa4cbdd58c623890">&#9670;&nbsp;</a></span>NDFileHDF5_SWMRFlushNow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NDFileHDF5::NDFileHDF5_SWMRFlushNow</td>
         </tr>
       </table>
   </td>

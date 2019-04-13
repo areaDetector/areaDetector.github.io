@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">areaDetector
-   &#160;<span id="projectnumber">3-4-0</span>
+   &#160;<span id="projectnumber">3-5-0</span>
    </div>
    <div id="projectbrief">EPICS areaDetector framework</div>
   </td>
@@ -45,7 +45,12 @@ $(function() {
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>name
 : <a class="el" href="struct_codec__t.html#aabba1f877495ef20dc66822e1947d9fc">Codec_t</a>
+, <a class="el" href="structfile__t.html#a353dcdbaf62f8e7767baa966c5305b02">file_t</a>
 , <a class="el" href="classhdf5_1_1_element.html#ab0b11b3ae3395b46832251d222308aef">hdf5::Element</a>
+, <a class="el" href="classpco_edge_plugin.html#a070dc8b6627aa87ed3b70f680548129c">pcoEdgePlugin</a>
+</li>
+<li>names
+: <a class="el" href="struct_file_list.html#aa680ff617d08d064a399812ef5992bdd">FileList</a>
 </li>
 <li>NDADCoreVersion
 : <a class="el" href="classasyn_n_d_array_driver.html#ad472f633149cd560959721e589d9ea54">asynNDArrayDriver</a>
@@ -82,6 +87,9 @@ $(function() {
 </li>
 <li>NDArraySizeZ
 : <a class="el" href="classasyn_n_d_array_driver.html#a72fac0fbaa730672f9a3a6da8c1d1a97">asynNDArrayDriver</a>
+</li>
+<li>nDataFiles
+: <a class="el" href="structacquisition__t.html#acdc91927070f3fac883b79693e75ac06">acquisition_t</a>
 </li>
 <li>NDAttribute()
 : <a class="el" href="class_n_d_attribute.html#a2149d8125448ccfe29e74879b8334b89">NDAttribute</a>
@@ -222,6 +230,9 @@ $(function() {
 <li>NDDimensions
 : <a class="el" href="classasyn_n_d_array_driver.html#a23727b6252a78b74fc40868f15e656dc">asynNDArrayDriver</a>
 </li>
+<li>NDDriverStdArrays()
+: <a class="el" href="class_n_d_driver_std_arrays.html#a2faea31a29a5a4355c33c898fad7be00">NDDriverStdArrays</a>
+</li>
 <li>NDDriverVersion
 : <a class="el" href="classasyn_n_d_array_driver.html#a2be0f672f139c59f942bedfd7d94ff0f">asynNDArrayDriver</a>
 </li>
@@ -338,6 +349,9 @@ $(function() {
 </li>
 <li>NDFileHDF5_SWMRCbCounter
 : <a class="el" href="class_n_d_file_h_d_f5.html#a437ef33597c57512b0474724577e2e6f">NDFileHDF5</a>
+</li>
+<li>NDFileHDF5_SWMRFlushNow
+: <a class="el" href="class_n_d_file_h_d_f5.html#ad20c06502d1e599aaa4cbdd58c623890">NDFileHDF5</a>
 </li>
 <li>NDFileHDF5_SWMRMode
 : <a class="el" href="class_n_d_file_h_d_f5.html#a988d86412d8e70accfb1a544a523e03e">NDFileHDF5</a>
@@ -463,21 +477,6 @@ $(function() {
 <li>NDPluginAttributeReset
 : <a class="el" href="class_n_d_plugin_attribute.html#a52fd85e60c59f72444b274281277d35b">NDPluginAttribute</a>
 </li>
-<li>NDPluginAttributeTSAcquiring
-: <a class="el" href="class_n_d_plugin_attribute.html#a5ae0f83be783c67fc795ad6395c78ffc">NDPluginAttribute</a>
-</li>
-<li>NDPluginAttributeTSArrayValue
-: <a class="el" href="class_n_d_plugin_attribute.html#a0ca6153b3bac52b2cd853c976bc067a5">NDPluginAttribute</a>
-</li>
-<li>NDPluginAttributeTSControl
-: <a class="el" href="class_n_d_plugin_attribute.html#aa9941797f47189ef128d99a1f681eeab">NDPluginAttribute</a>
-</li>
-<li>NDPluginAttributeTSCurrentPoint
-: <a class="el" href="class_n_d_plugin_attribute.html#abc9648c340291d960cd8293147e6bb7e">NDPluginAttribute</a>
-</li>
-<li>NDPluginAttributeTSNumPoints
-: <a class="el" href="class_n_d_plugin_attribute.html#aef415c6ccdd6148648e95a9e801d8fc7">NDPluginAttribute</a>
-</li>
 <li>NDPluginAttributeVal
 : <a class="el" href="class_n_d_plugin_attribute.html#af0e5fd919c0cbb9d34112c3c2ef58ee5">NDPluginAttribute</a>
 </li>
@@ -565,6 +564,57 @@ $(function() {
 <li>NDPluginDriverSortTime
 : <a class="el" href="class_n_d_plugin_driver.html#adc03a67c19691e7d6f7f647c7bbb87ac">NDPluginDriver</a>
 </li>
+<li>NDPluginEdge()
+: <a class="el" href="class_n_d_plugin_edge.html#a4d3f8d4c0e6075b8aedf26ca6d05d284">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeBottomEdgeFound
+: <a class="el" href="class_n_d_plugin_edge.html#a74cccb35c8562b5862de8ba989af0414">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeBottomPixel
+: <a class="el" href="class_n_d_plugin_edge.html#adecc68cc1c1d0befa4a71deb6ab65b9a">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeHorizontalCenter
+: <a class="el" href="class_n_d_plugin_edge.html#a6062f29dd27d92fff52ce9b9fd73073f">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeHorizontalFound
+: <a class="el" href="class_n_d_plugin_edge.html#acd0932f73cabbcfe876d13827b71cecc">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeHorizontalSize
+: <a class="el" href="class_n_d_plugin_edge.html#ad2592fcea8bcc674a4b3ef0aa87e396e">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeLeftEdgeFound
+: <a class="el" href="class_n_d_plugin_edge.html#a07c6c00ff3c2a35e75ccedf1d15b14be">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeLeftPixel
+: <a class="el" href="class_n_d_plugin_edge.html#aca4d259f6a064bca51bb87dd483151f6">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeLowThreshold
+: <a class="el" href="class_n_d_plugin_edge.html#aa4a4737c94129f1e2c1257fede76630f">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeRightEdgeFound
+: <a class="el" href="class_n_d_plugin_edge.html#a210f46321e07169695f4b2b9284f8de7">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeRightPixel
+: <a class="el" href="class_n_d_plugin_edge.html#aae3583d3b64bba67e3575b47333f2c06">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeThresholdRatio
+: <a class="el" href="class_n_d_plugin_edge.html#aec3237957fb6f5ef2eac31b8e2cd07df">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeTopEdgeFound
+: <a class="el" href="class_n_d_plugin_edge.html#a4ed2dd2fc28f134087e89fc172df8188">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeTopPixel
+: <a class="el" href="class_n_d_plugin_edge.html#a00a14f582209661a4a27c680a6306b68">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeVerticalCenter
+: <a class="el" href="class_n_d_plugin_edge.html#a74260ef7b2ea7fb7399c0418eab10da6">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeVerticalFound
+: <a class="el" href="class_n_d_plugin_edge.html#a208532a557e5ae2aa2dfd2f598fefc52">NDPluginEdge</a>
+</li>
+<li>NDPluginEdgeVerticalSize
+: <a class="el" href="class_n_d_plugin_edge.html#a69fe1516343f2245bb498d2528785dfe">NDPluginEdge</a>
+</li>
 <li>NDPluginFFT()
 : <a class="el" href="class_n_d_plugin_f_f_t.html#afd5a6c255bea607a18b0198dd01bb172">NDPluginFFT</a>
 </li>
@@ -573,6 +623,45 @@ $(function() {
 </li>
 <li>NDPluginGather()
 : <a class="el" href="class_n_d_plugin_gather.html#af22df064fd9a5387ac37715c536d1336">NDPluginGather</a>
+</li>
+<li>NDPluginMask()
+: <a class="el" href="class_n_d_plugin_mask.html#ac058f6a4a1eca52909f588cf61de8b3b">NDPluginMask</a>
+</li>
+<li>NDPluginMaskFirst
+: <a class="el" href="class_n_d_plugin_mask.html#ad88deee2cf6f1e0b99c8f0a6ee75c6fc">NDPluginMask</a>
+</li>
+<li>NDPluginMaskLast
+: <a class="el" href="class_n_d_plugin_mask.html#af9e93cee613bde29a88d2e2b5f73e2de">NDPluginMask</a>
+</li>
+<li>NDPluginMaskMaxSizeX
+: <a class="el" href="class_n_d_plugin_mask.html#ac4d58e4342df9d4c16ff3d30dfe27266">NDPluginMask</a>
+</li>
+<li>NDPluginMaskMaxSizeY
+: <a class="el" href="class_n_d_plugin_mask.html#a9b84a6c9a92bc16d066c29723bff2e92">NDPluginMask</a>
+</li>
+<li>NDPluginMaskName
+: <a class="el" href="class_n_d_plugin_mask.html#a601cb22150fac46e815d74e8890d6837">NDPluginMask</a>
+</li>
+<li>NDPluginMaskPosX
+: <a class="el" href="class_n_d_plugin_mask.html#aebaee0e1baa4e514c2a7eeb118052f47">NDPluginMask</a>
+</li>
+<li>NDPluginMaskPosY
+: <a class="el" href="class_n_d_plugin_mask.html#a1a1d2fccd49497f56ef7e90a2ebb84a1">NDPluginMask</a>
+</li>
+<li>NDPluginMaskSizeX
+: <a class="el" href="class_n_d_plugin_mask.html#a24a660643cc7f39c1c2043d04a3bd6f2">NDPluginMask</a>
+</li>
+<li>NDPluginMaskSizeY
+: <a class="el" href="class_n_d_plugin_mask.html#a76da8ab4836c921db9d751fb1b25a98a">NDPluginMask</a>
+</li>
+<li>NDPluginMaskType
+: <a class="el" href="class_n_d_plugin_mask.html#ababf9631f72c26c5f1ad80775846fc14">NDPluginMask</a>
+</li>
+<li>NDPluginMaskUse
+: <a class="el" href="class_n_d_plugin_mask.html#a458abcc2d7098444752f9bdd1c6a01da">NDPluginMask</a>
+</li>
+<li>NDPluginMaskVal
+: <a class="el" href="class_n_d_plugin_mask.html#a8bf637940892478e5bf0d03efd296b6c">NDPluginMask</a>
 </li>
 <li>NDPluginOverlay()
 : <a class="el" href="class_n_d_plugin_overlay.html#aacf3b6e79ac86ca57bd68d5a49c0a8b3">NDPluginOverlay</a>
@@ -1183,6 +1272,36 @@ $(function() {
 <li>NDReadFile
 : <a class="el" href="classasyn_n_d_array_driver.html#acdf9d2f3575481f29544c56c9fe46c5c">asynNDArrayDriver</a>
 </li>
+<li>NDSA_AppendMode_
+: <a class="el" href="class_n_d_driver_std_arrays.html#a482c2e6d1107a5c0af219f380441bc66">NDDriverStdArrays</a>
+</li>
+<li>NDSA_ArrayComplete_
+: <a class="el" href="class_n_d_driver_std_arrays.html#a61534fc6244b71a75e7f572da7f72a3d">NDDriverStdArrays</a>
+</li>
+<li>NDSA_ArrayData_
+: <a class="el" href="class_n_d_driver_std_arrays.html#a16bf49091b9b3b61a22d69711486b966">NDDriverStdArrays</a>
+</li>
+<li>NDSA_CallbackMode_
+: <a class="el" href="class_n_d_driver_std_arrays.html#a9d4782e7c5f2b0fa7ec451aca7d676b8">NDDriverStdArrays</a>
+</li>
+<li>NDSA_DoCallbacks_
+: <a class="el" href="class_n_d_driver_std_arrays.html#aed50a5f37b30fbc0d4e8958526242665">NDDriverStdArrays</a>
+</li>
+<li>NDSA_FillValue_
+: <a class="el" href="class_n_d_driver_std_arrays.html#aed71c7fc7c704ccc56c27989d99b6b36">NDDriverStdArrays</a>
+</li>
+<li>NDSA_NewArray_
+: <a class="el" href="class_n_d_driver_std_arrays.html#aa4dcbf84b20dd9f6a3bc5389db9daad5">NDDriverStdArrays</a>
+</li>
+<li>NDSA_NextElement_
+: <a class="el" href="class_n_d_driver_std_arrays.html#abb886a7ec283c468e79b4f140b5a89f9">NDDriverStdArrays</a>
+</li>
+<li>NDSA_NumElements_
+: <a class="el" href="class_n_d_driver_std_arrays.html#a091c367ebe20d511cf3ee9fd42c76be3">NDDriverStdArrays</a>
+</li>
+<li>NDSA_Stride_
+: <a class="el" href="class_n_d_driver_std_arrays.html#a9a48ef44c2ff3ec5e1648cc8ead88e64">NDDriverStdArrays</a>
+</li>
 <li>NDTimeStamp
 : <a class="el" href="classasyn_n_d_array_driver.html#a9b5492ae014f21d0843658f19e955dc1">asynNDArrayDriver</a>
 </li>
@@ -1191,6 +1310,12 @@ $(function() {
 </li>
 <li>NDWriteFile
 : <a class="el" href="classasyn_n_d_array_driver.html#a5d1ec3e763ea9aef2f3fd576611baeb5">asynNDArrayDriver</a>
+</li>
+<li>nEDChannelRequester()
+: <a class="el" href="classn_e_d_channel_1_1n_e_d_channel_requester.html#a0165320560af6305883e5d2e4397132f">nEDChannel::nEDChannelRequester</a>
+</li>
+<li>nEDMonitorRequester()
+: <a class="el" href="classn_e_d_channel_1_1n_e_d_monitor_requester.html#a539ad79a681f88c599c26e30b8461197">nEDChannel::nEDMonitorRequester</a>
 </li>
 <li>nElements
 : <a class="el" href="struct_n_d_array_info.html#a60783541b9eda5a6222e5cdad797c387">NDArrayInfo</a>
@@ -1208,13 +1333,26 @@ $(function() {
 : <a class="el" href="classhdf5_1_1_group.html#a865d0f35e7f476d7cad30676b84498fa">hdf5::Group</a>
 </li>
 <li>new_group()
-: <a class="el" href="classhdf5_1_1_group.html#aef257191133112673676d9c406693ad3">hdf5::Group</a>
+: <a class="el" href="classhdf5_1_1_group.html#a0340cfa3c14c94414d5d5c6e6ff5ee8e">hdf5::Group</a>
 </li>
 <li>new_hardlink()
 : <a class="el" href="classhdf5_1_1_group.html#af891f593665f3ab1b6a7317f614a2bd5">hdf5::Group</a>
 </li>
-<li>next()
-: <a class="el" href="class_n_d_attribute_list.html#a42963179e3d97278f4323bdef78f37e5">NDAttributeList</a>
+<li>newFrameCallback()
+: <a class="el" href="class_dexela.html#a0ff1a8c25c25b6e1881d27dc188b817a">Dexela</a>
+</li>
+<li>newguid
+: <a class="el" href="structcam_node__t.html#a16c7f35c2459f23fd7742541ce654980">camNode_t</a>
+</li>
+<li>next
+: <a class="el" href="structcam_linked_list.html#af086a420b2d26321e584c869201bbefd">camLinkedList</a>
+, <a class="el" href="class_n_d_attribute_list.html#a42963179e3d97278f4323bdef78f37e5">NDAttributeList</a>
+</li>
+<li>nextCbEvent
+: <a class="el" href="structstream__worker__t.html#aef75c164c3997ab8d275aab62d464d2f">stream_worker_t</a>
+</li>
+<li>nextRecord
+: <a class="el" href="classpco_edge_plugin.html#a5004b532b9227ebcf9c125623e6260da">pcoEdgePlugin</a>
 </li>
 <li>nFreqX
 : <a class="el" href="structfft_pvt__t.html#a74ea3f68dfc25d5550a497b03847d728">fftPvt_t</a>
@@ -1224,7 +1362,22 @@ $(function() {
 </li>
 <li>node
 : <a class="el" href="structcamera_node.html#a7456d4c8526c4c74b5439a4e1d6d7050">cameraNode</a>
+, <a class="el" href="structcam_list__t.html#aaf365edbcc7d2329ca527f231d95ccfd">camList_t</a>
+, <a class="el" href="structcam_node__t.html#a4c30544ea112ed924d3bcad3c1ba95c8">camNode_t</a>
 , <a class="el" href="struct_n_d_attribute_list_node.html#af5c54387535cac72417aa6e2a11c75d0">NDAttributeListNode</a>
+, <a class="el" href="structsetting_map.html#a06403e481dd4dd2e904b59eff32c297a">settingMap</a>
+</li>
+<li>noscan
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a31ba99395aeed6a3310d48fdbf860eba">tagCSMAHEAD</a>
+</li>
+<li>not_implemented
+: <a class="el" href="classccd__exception.html#acb31d561f65921fda2020303378ce751a84a0f49bf3589781575d12679d869d7b">ccd_exception</a>
+</li>
+<li>notAvailable
+: <a class="el" href="class_a_d_p_i_cam.html#af8b537cfb7ff5c5a64fb694080d9a44f">ADPICam</a>
+</li>
+<li>npi_mode
+: <a class="el" href="struct_s_e_n_s_o_r.html#a18816dbd70c6485296ff419b8e0859fb">SENSOR</a>
 </li>
 <li>nTimeX
 : <a class="el" href="structfft_pvt__t.html#a1be1e623d647b2d55a653fb8308fc14e">fftPvt_t</a>
@@ -1241,14 +1394,44 @@ $(function() {
 <li>NTNDArrayConverter()
 : <a class="el" href="class_n_t_n_d_array_converter.html#a83c9928c80ff8808d4278f3dd58c8436">NTNDArrayConverter</a>
 </li>
+<li>num_coreco_buffers
+: <a class="el" href="class_a_d_cameralink.html#a197281743c95792e0f3c5b626a311c5d">ADCameralink</a>
+</li>
 <li>num_datasets()
 : <a class="el" href="classhdf5_1_1_group.html#a36bbca99ae5b8bed8d32c3a5b4db09b5">hdf5::Group</a>
 </li>
 <li>num_groups()
 : <a class="el" href="classhdf5_1_1_group.html#ad44a1c2497a79c468e49f6117eeca5b0">hdf5::Group</a>
 </li>
+<li>num_saved_files
+: <a class="el" href="classlog__file.html#a57bfd8c2a890af56e22bf702cac6ac9ead45fd0af56347b6026d22d948063b822">log_file</a>
+</li>
+<li>numAttributes
+: <a class="el" href="classpco_edge_plugin.html#a49f5919499fb677f714a4711097a81f0">pcoEdgePlugin</a>
+</li>
 <li>numAverage
 : <a class="el" href="structfft_pvt__t.html#a8424be6b473eacfab8cbfb1fdd671598">fftPvt_t</a>
+</li>
+<li>NumExpAccums
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a30f796ca0fd464a7aa0b00867af56957">tagCSMAHEAD</a>
+</li>
+<li>NumExpRepeats
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a9c13f817f8b46c79513db15e4ba2db12">tagCSMAHEAD</a>
+</li>
+<li>NumFrames
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a3a1390cc5d78a728d0516289df534745">tagCSMAHEAD</a>
+</li>
+<li>numminblk
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#ab6fa0bc94f6967dfa8e39c4f2c7c4442">tagCSMAHEAD</a>
+</li>
+<li>NumROI
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a5b5d0e543331c806f2d9ae6d80c1d5ae">tagCSMAHEAD</a>
+</li>
+<li>NumROIsInExperiment
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a807db0e12b61e1d27943f765f98fae2a">tagCSMAHEAD</a>
+</li>
+<li>NumSkpPerCln
+: <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#ab26ebd358ea207c95340ee3c78c59b54">tagCSMAHEAD</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">areaDetector
-   &#160;<span id="projectnumber">3-4-0</span>
+   &#160;<span id="projectnumber">3-5-0</span>
    </div>
    <div id="projectbrief">EPICS areaDetector framework</div>
   </td>
@@ -46,7 +46,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">NDPluginAttribute.cpp File Reference</div>  </div>
@@ -56,6 +55,7 @@ $(function() {
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;epicsTypes.h&gt;</code><br />
 <code>#include &lt;epicsMessageQueue.h&gt;</code><br />
 <code>#include &lt;epicsThread.h&gt;</code><br />
@@ -71,15 +71,6 @@ $(function() {
 Macros</h2></td></tr>
 <tr class="memitem:a96ffc35d728f7c0747171b09be5021ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_d_plugin_attribute_8cpp.html#a96ffc35d728f7c0747171b09be5021ec">DEFAULT_NUM_TSPOINTS</a>&#160;&#160;&#160;2048</td></tr>
 <tr class="separator:a96ffc35d728f7c0747171b09be5021ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a7d56a98d7ec265253a809a190af3fa4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_d_plugin_attribute_8cpp.html#a7d56a98d7ec265253a809a190af3fa4c">NDAttributeTSControl_t</a> { <a class="el" href="_n_d_plugin_attribute_8cpp.html#a7d56a98d7ec265253a809a190af3fa4ca83a98a25e4f6ad30a19b1bc6c2b77bb1">TSEraseStart</a>, 
-<a class="el" href="_n_d_plugin_attribute_8cpp.html#a7d56a98d7ec265253a809a190af3fa4ca18de992f816324775165787680eed808">TSStart</a>, 
-<a class="el" href="_n_d_plugin_attribute_8cpp.html#a7d56a98d7ec265253a809a190af3fa4ca62cb52a6ce227f5960a02a56b52c61da">TSStop</a>, 
-<a class="el" href="_n_d_plugin_attribute_8cpp.html#a7d56a98d7ec265253a809a190af3fa4ca18d721bb4ef294414db818bae73fc83c">TSRead</a>
- }</td></tr>
-<tr class="separator:a7d56a98d7ec265253a809a190af3fa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -103,27 +94,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a7d56a98d7ec265253a809a190af3fa4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d56a98d7ec265253a809a190af3fa4c">&#9670;&nbsp;</a></span>NDAttributeTSControl_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_n_d_plugin_attribute_8cpp.html#a7d56a98d7ec265253a809a190af3fa4c">NDAttributeTSControl_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7d56a98d7ec265253a809a190af3fa4ca83a98a25e4f6ad30a19b1bc6c2b77bb1"></a>TSEraseStart&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d56a98d7ec265253a809a190af3fa4ca18de992f816324775165787680eed808"></a>TSStart&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d56a98d7ec265253a809a190af3fa4ca62cb52a6ce227f5960a02a56b52c61da"></a>TSStop&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7d56a98d7ec265253a809a190af3fa4ca18d721bb4ef294414db818bae73fc83c"></a>TSRead&#160;</td><td class="fielddoc"></td></tr>
-</table>
 
 </div>
 </div>
