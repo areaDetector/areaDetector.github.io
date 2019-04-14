@@ -38,6 +38,7 @@ master/ADCore/plugin_medm.html
 master/ADCore/plugin_overview.html
 master/ADCore/plugin_performance.html
 master/ADCore/plugins.html
+master/ADCore_release.html
 master/ADFastCCD/configuration.html
 master/ADFastCCD/index.html
 master/ADFastCCD/introduction.html
@@ -203,6 +204,7 @@ master/_sources/ADCore/plugin_medm.rst.txt
 master/_sources/ADCore/plugin_overview.rst.txt
 master/_sources/ADCore/plugin_performance.rst.txt
 master/_sources/ADCore/plugins.rst.txt
+master/_sources/ADCore_release.rst.txt
 master/_sources/ADFastCCD/configuration.rst.txt
 master/_sources/ADFastCCD/index.rst.txt
 master/_sources/ADFastCCD/introduction.rst.txt
