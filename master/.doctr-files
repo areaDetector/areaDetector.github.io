@@ -228,6 +228,10 @@ master/_sources/legacy_versions.rst.txt
 master/_sources/license.rst.txt
 master/_sources/readme.rst.txt
 master/_sources/release.rst.txt
+master/_sources/specsAnalyser/index.rst.txt
+master/_sources/specsAnalyser/introduction.rst.txt
+master/_sources/specsAnalyser/readme.rst.txt
+master/_sources/specsAnalyser/release.rst.txt
 master/_sources/user_guide.rst.txt
 master/_static/ajax-loader.gif
 master/_static/basic.css
@@ -1534,4 +1538,8 @@ master/readme.html
 master/release.html
 master/search.html
 master/searchindex.js
+master/specsAnalyser/index.html
+master/specsAnalyser/introduction.html
+master/specsAnalyser/readme.html
+master/specsAnalyser/release.html
 master/user_guide.html
