@@ -60,9 +60,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad526acdcd18ad8fb7070f6e3abaec8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66803d3a8aa3c1989998bfc9c44c1207"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#a66803d3a8aa3c1989998bfc9c44c1207">~NDFileHDF5Dataset</a> ()</td></tr>
 <tr class="separator:a66803d3a8aa3c1989998bfc9c44c1207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac201481cf4a8a7b9094a2095aac8ecd0"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#ac201481cf4a8a7b9094a2095aac8ecd0">configureDims</a> (<a class="el" href="class_n_d_array.html">NDArray</a> *pArray, bool multiframe, int extradimensions, int *extra_dims, int *user_chunking)</td></tr>
-<tr class="memdesc:ac201481cf4a8a7b9094a2095aac8ecd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">configureDims.  <a href="#ac201481cf4a8a7b9094a2095aac8ecd0">More...</a><br /></td></tr>
-<tr class="separator:ac201481cf4a8a7b9094a2095aac8ecd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6cd0c5bd5a2c36cf70809229d006fb"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#a3a6cd0c5bd5a2c36cf70809229d006fb">configureDims</a> (<a class="el" href="class_n_d_array.html">NDArray</a> *pArray, bool multiframe, int extradimensions, int *extra_dims, int *extra_dim_chunking, int *user_chunking)</td></tr>
+<tr class="memdesc:a3a6cd0c5bd5a2c36cf70809229d006fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">configureDims.  <a href="#a3a6cd0c5bd5a2c36cf70809229d006fb">More...</a><br /></td></tr>
+<tr class="separator:a3a6cd0c5bd5a2c36cf70809229d006fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b45b8e724df97ae69e6da77c7d9fccd"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_file_h_d_f5_dataset.html#a4b45b8e724df97ae69e6da77c7d9fccd">extendDataSet</a> (int extradims)</td></tr>
 <tr class="memdesc:a4b45b8e724df97ae69e6da77c7d9fccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">extendDataSet.  <a href="#a4b45b8e724df97ae69e6da77c7d9fccd">More...</a><br /></td></tr>
 <tr class="separator:a4b45b8e724df97ae69e6da77c7d9fccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,8 +194,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac201481cf4a8a7b9094a2095aac8ecd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac201481cf4a8a7b9094a2095aac8ecd0">&#9670;&nbsp;</a></span>configureDims()</h2>
+<a id="a3a6cd0c5bd5a2c36cf70809229d006fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6cd0c5bd5a2c36cf70809229d006fb">&#9670;&nbsp;</a></span>configureDims()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,6 +223,12 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int *&#160;</td>
           <td class="paramname"><em>extra_dims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>extra_dim_chunking</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

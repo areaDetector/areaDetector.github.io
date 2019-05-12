@@ -1,3 +1,5 @@
+master/ADCompVision/ADCompVision.html
+master/ADCompVision/ADCompVisionManual.html
 master/ADCore/ADDriver.html
 master/ADCore/NDArray.html
 master/ADCore/NDFileHDF5.html
@@ -51,10 +53,13 @@ master/ADFastCCD/st_cmd.html
 master/ADPointGrey/PointGreyDoc.html
 master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
+master/ADSupport_release.html
 master/ADViewers/ad_viewers.html
 master/_images/ADBase.png
 master/_images/ADEpicsShutter.png
 master/_images/ADTop.png
+master/_images/Canny2.png
+master/_images/Centroid.png
 master/_images/HDFView-screenshot.png
 master/_images/HDFmultiple-dimensions.png
 master/_images/IDL_epics_ad_display.png
@@ -68,6 +73,8 @@ master/_images/ImageJ_EPICS_NTNDA_Viewer.png
 master/_images/ImageJ_EPICS_NTNDA_Viewer_Decompress.png
 master/_images/ImageJ_GaussianProfiler.png
 master/_images/ImageJ_Main_Screen.png
+master/_images/Laplacian.png
+master/_images/MainCVScreen.png
 master/_images/NDCircularBuff.png
 master/_images/NDCodec.png
 master/_images/NDCodec_Performance.png
@@ -146,8 +153,11 @@ master/_images/NDStdArrays.png
 master/_images/NDTimeSeriesPlot.png
 master/_images/NDTransform.png
 master/_images/areaDetectorArchitecture.png
+master/_images/canny_menu.png
+master/_images/centroid_menu.png
 master/_images/commonPlugins.png
 master/_images/fccd1.png
+master/_images/laplacian_menu.png
 master/_images/pointGrey.png
 master/_images/pointGreyFrameRate.png
 master/_images/pointGreyPixelFormat.png
@@ -164,6 +174,10 @@ master/_images/scatterGatherExample_simDetector.png
 master/_images/scatterGatherExample_simDetectorSetup.png
 master/_images/scatterGatherExample_top_threads.png
 master/_images/simDetector_image_display.png
+master/_images/threshold.png
+master/_images/threshold_menu.png
+master/_sources/ADCompVision/ADCompVision.rst.txt
+master/_sources/ADCompVision/ADCompVisionManual.rst.txt
 master/_sources/ADCore/ADDriver.rst.txt
 master/_sources/ADCore/NDArray.rst.txt
 master/_sources/ADCore/NDFileHDF5.rst.txt
@@ -217,8 +231,10 @@ master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
 master/_sources/ADProsilica/st_cmd.rst.txt
+master/_sources/ADSupport_release.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/acknowledgements.rst.txt
+master/_sources/additional_plugins.rst.txt
 master/_sources/detector_drivers.rst.txt
 master/_sources/detectors.rst.txt
 master/_sources/doxygen.rst.txt
@@ -323,6 +339,7 @@ master/_static/up-pressed.png
 master/_static/up.png
 master/_static/websupport.js
 master/acknowledgements.html
+master/additional_plugins.html
 master/areaDetectorDoxygenHTML/_a_d_c_sim_detector_8cpp.html
 master/areaDetectorDoxygenHTML/_a_d_c_sim_detector_8h.html
 master/areaDetectorDoxygenHTML/_a_d_c_sim_detector_8h_source.html

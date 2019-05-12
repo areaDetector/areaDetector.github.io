@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADCore Releases &#8212; areaDetector 3-5-26-gdb2355b documentation</title>
+    <title>ADCore Releases &#8212; areaDetector 3-5-38-gfba70c3 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="_static/favicon_t.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="areaDetector" href="readme.html" />
+    <link rel="next" title="ADSupport Releases" href="ADSupport_release.html" />
     <link rel="prev" title="areaDetector Releases" href="release.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -79,6 +79,14 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r3-6-may-xxx-2019"><strong>R3-6 (May XXX, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ndfilehdf5">NDFileHDF5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1"><strong>R3-6 (May XXX, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ndfiletiff">NDFileTIFF</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-5-april-12-2019"><strong>R3-5 (April 12, 2019)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#addriver-asynndarraydriver">ADDriver, asynNDArrayDriver</a></li>
@@ -86,7 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#ndplugincodec">NDPluginCodec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginattribute">NDPluginAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commondrivermakefile">commonDriverMakefile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ndfilehdf5">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndfilehdf5-template">NDFileHDF5.template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#asynndarraydriver-ndplugindriver-ndarraybase-template-ndpluginbasefull-adl">asynNDArrayDriver, NDPluginDriver, NDArrayBase.template, NDPluginBaseFull.adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginbase-template">NDPluginBase.template</a></li>
@@ -95,10 +103,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-4-december-3-2018"><strong>R3-4 (December 3, 2018)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#adsrc-asynndarraydriver-h-asynndarraydriver-cpp">ADSrc/asynNDArrayDriver.h, asynNDArrayDriver.cpp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">NDPluginCodec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndplugindriver-ndpluginpva-ndpluginstdarrays">NDPluginDriver, NDPluginPva, NDPluginStdArrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndplugincircularbuff">NDPluginCircularBuff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ndfiletiff">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginstats">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#opi-files">OPI files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-commonplugins-cmd">EXAMPLE_commonPlugins.cmd</a></li>
@@ -109,7 +117,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-3-1-july-1-2018"><strong>R3-3-1 (July 1, 2018)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">ADApp/commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">ADApp/commonDriverMakefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adapp-adsrc">ADApp/ADSrc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adapp-adsrc-makefile-adapp-pluginsrc-makefile-adapp-plugintests-makefile">ADApp/ADSrc/Makefile, ADApp/pluginSrc/Makefile, ADApp/pluginTests/Makefile</a></li>
 </ul>
@@ -121,9 +129,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginpva">NDPluginPva</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ntndarrayconverter-cpp">ntndArrayConverter.cpp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginfile">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginprocess">NDPluginProcess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adapp-db">ADApp/Db/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adapp-op-adl">ADApp/op/adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adapp-op-edl-autoconvert">ADApp/op/edl/autoconvert</a></li>
@@ -131,14 +139,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-2-january-28-2018"><strong>R3-2 (January 28, 2018)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">NDPluginStats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginoverlay">NDPluginOverlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#asynndarraydriver">asynNDArrayDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#operator-displays-medm-edm-caqtdm-css-boy">Operator displays (medm, edm, caQtDM, CSS-BOY)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">commonDriverMakefile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginattrplot">NDPluginAttrPlot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginroistat">NDPluginROIStat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ntndarrayconvert-cpp">ntndArrayConvert.cpp</a></li>
@@ -152,10 +160,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#r3-1-july-3-2017"><strong>R3-1 (July 3, 2017)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#graphicsmagick">GraphicsMagick</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pluginsrc-makefile-plugintests-makefile">pluginSrc/Makefile, pluginTests/Makefile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">NDPluginDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adtop-adl">ADTop.adl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">NDPluginAttrPlot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">NDPluginPva</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#asynndarraydriver-h">asynNDArrayDriver.h</a></li>
 </ul>
 </li>
@@ -165,10 +173,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#multiple-threads-in-single-plugins-ndplugindriver-ndpluginbase-template-ndpluginbase-adl-many-plugins">Multiple threads in single plugins (NDPluginDriver, NDPluginBase.template, NDPluginBase.adl, many plugins)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginscatter">NDPluginScatter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndplugingather">NDPluginGather</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">NDPluginAttrPlot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#asynndarraydriver-ndfilenexus">asynNDArrayDriver, NDFileNexus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pvattribute">PVAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#plugin-internals">Plugin internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commonlibrarymakefile-commondrivermakefile">commonLibraryMakefile, commonDriverMakefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndoverlayn-template">NDOverlayN.template</a></li>
@@ -180,17 +188,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#ndarraybase-template">NDArrayBase.template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginsupport-dbd">NDPluginSupport.dbd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginroi">NDPluginROI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">pluginTests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">pluginTests</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndplugintransform">NDPluginTransform</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">NDPluginOverlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginpos">NDPluginPos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id18">NDPluginPva</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id20">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndattribute">NDAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#paramattribute">paramAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id21">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">PVAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#asynndarraydriver-ndarraybase-template-ndpluginbase-adl-adsetup-adl-all-plugin-adl-files">asynNDArrayDriver, NDArrayBase.template, NDPluginBase.adl, ADSetup.adl, all plugin adl files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#addriver-adbase-template-adsetup-adl">ADDriver, ADBase.template, ADSetup.adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pvadriver">pvaDriver</a></li>
@@ -202,19 +210,19 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r2-5-october-28-2016"><strong>R2-5 (October 28, 2016)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#adsupport">ADSupport</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id22">NDPluginPva</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id23">pvaDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id24">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndposplugin">NDPosPlugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id25">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">NDPluginDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndplugintimeseries">NDPluginTimeSeries</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginfft">NDPluginFFT</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginstats-and-ndpluginroistat">NDPluginStats and NDPluginROIStat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id27">NDPluginCircularBuff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id28">asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">asynNDArrayDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndarraybase-template-ndplugindriver-cpp">NDArrayBase.template, NDPluginDriver.cpp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id29">NDPluginBase.template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id30">ADApp/op/adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">NDPluginBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">ADApp/op/adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nexussrc-makefile">nexusSrc/Makefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#iocboot">iocBoot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#imagej-epics-adviewer">ImageJ EPICS_ADViewer</a></li>
@@ -222,32 +230,32 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r2-4-september-21-2015"><strong>R2-4 (September 21, 2015)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#removed-simdetector-and-iocs-directory">Removed simDetector and iocs directory.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id31">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">NDAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndroistat-adl-edl-ui-opi">NDRoiStat[.adl, .edl, ui, .opi]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id32">ADApp/pluginTests/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">ADApp/pluginTests/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#xml-schema">XML schema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id33">iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">iocBoot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adapp">ADApp</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r2-3-july-23-2015"><strong>R2-3 (July 23, 2015)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deviocstats-and-alive-modules">devIocStats and alive modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id34">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id35">NDPluginROIStat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">NDFileHDF5</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id37">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">commonDriverMakefile</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r2-2-march-23-2015"><strong>R2-2 (March 23, 2015)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#compatibility">Compatibility</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id38">NDPluginROIStat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id39">NDPluginCircularBuff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id40">NDPluginAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id41">NDPluginStats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id42">NDPluginROI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id43">NDPluginOverlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id44">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id45">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#version-information">Version information</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#plugins-general">Plugins general</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#netcdfsupport">netCDFSupport</a></li>
@@ -260,28 +268,41 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r2-1-october-17-2014"><strong>R2-1 (October 17, 2014)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id46">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id47">NDFileHDF5</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id48">NDFileTiff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id49">NDPluginOverlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id50">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id51">NDFileTiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id52">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">NDPluginTransform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r2-0-april-4-2014"><strong>R2-0 (April 4, 2014)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndarray-and-asynndarraydriver">NDArray and asynNDArrayDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id51">NDAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id52">NDPluginDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id53">NDPluginOverlay.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id54">NDPluginROI.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id55">NDPluginStats.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id54">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id55">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">NDPluginOverlay.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">NDPluginROI.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id58">NDPluginStats.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndfilenetcdf">NDFileNetCDF.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id56">NDFileTIFF.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id57">NDPluginAttribute.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id59">NDFileTIFF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id60">NDPluginAttribute.</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r1-9-1-and-earlier"><strong>R1-9-1 and earlier</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ADSupport_release.html">ADSupport Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-8-may-xxx-2019"><strong>R1-8 (May XXX, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-7-april-12-2019"><strong>R1-7 (April 12, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-6-december-3-2018"><strong>R1-6 (December 3, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-5-november-12-2018"><strong>R1-5 (November 12, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-4-january-27-2018"><strong>R1-4 (January 27, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-3-july-3-2017"><strong>R1-3 (July 3, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-2-may-5-2017"><strong>R1-2 (May 5, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-1-february-19-2017"><strong>R1-1 (February 19, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADSupport_release.html#r1-0-october-28-2016"><strong>R1-0 (October 28, 2016)</strong></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a></li>
@@ -344,6 +365,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ADFastCCD/index.html">areaDetector FastCCD driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADProsilica/ADProsilica.html">areaDetector Prosilica driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADPointGrey/PointGreyDoc.html">Point Grey areaDetector driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="specsAnalyser/index.html">specsAnalyser areaDetector driver</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ADCore/plugins.html">areaDetector Plugins</a><ul>
@@ -373,6 +395,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ADCore/NDPluginTransform.html">NDPluginTransform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADCore/NDPluginPos.html">NDPosPlugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADCore/ffmpegServer.html">ffmpegServer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="additional_plugins.html">Additional plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADCompVision/ADCompVision.html">ADCompVision Documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ADCore/medm.html">MEDM screens</a></li>
@@ -414,6 +440,14 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ADCore Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#r3-6-may-xxx-2019"><strong>R3-6 (May XXX, 2019)</strong></a><ul>
+<li><a class="reference internal" href="#ndfilehdf5">NDFileHDF5</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1"><strong>R3-6 (May XXX, 2019)</strong></a><ul>
+<li><a class="reference internal" href="#ndfiletiff">NDFileTIFF</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#r3-5-april-12-2019"><strong>R3-5 (April 12, 2019)</strong></a><ul>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>
 <li><a class="reference internal" href="#addriver-asynndarraydriver">ADDriver, asynNDArrayDriver</a></li>
@@ -421,7 +455,7 @@
 <li><a class="reference internal" href="#ndplugincodec">NDPluginCodec</a></li>
 <li><a class="reference internal" href="#ndpluginattribute">NDPluginAttribute</a></li>
 <li><a class="reference internal" href="#commondrivermakefile">commonDriverMakefile</a></li>
-<li><a class="reference internal" href="#ndfilehdf5">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id2">NDFileHDF5</a></li>
 <li><a class="reference internal" href="#ndfilehdf5-template">NDFileHDF5.template</a></li>
 <li><a class="reference internal" href="#asynndarraydriver-ndplugindriver-ndarraybase-template-ndpluginbasefull-adl">asynNDArrayDriver, NDPluginDriver, NDArrayBase.template, NDPluginBaseFull.adl</a></li>
 <li><a class="reference internal" href="#ndpluginbase-template">NDPluginBase.template</a></li>
@@ -430,10 +464,10 @@
 </li>
 <li><a class="reference internal" href="#r3-4-december-3-2018"><strong>R3-4 (December 3, 2018)</strong></a><ul>
 <li><a class="reference internal" href="#adsrc-asynndarraydriver-h-asynndarraydriver-cpp">ADSrc/asynNDArrayDriver.h, asynNDArrayDriver.cpp</a></li>
-<li><a class="reference internal" href="#id1">NDPluginCodec</a></li>
+<li><a class="reference internal" href="#id3">NDPluginCodec</a></li>
 <li><a class="reference internal" href="#ndplugindriver-ndpluginpva-ndpluginstdarrays">NDPluginDriver, NDPluginPva, NDPluginStdArrays</a></li>
 <li><a class="reference internal" href="#ndplugincircularbuff">NDPluginCircularBuff</a></li>
-<li><a class="reference internal" href="#ndfiletiff">NDFileTIFF</a></li>
+<li><a class="reference internal" href="#id4">NDFileTIFF</a></li>
 <li><a class="reference internal" href="#ndpluginstats">NDPluginStats</a></li>
 <li><a class="reference internal" href="#opi-files">OPI files</a></li>
 <li><a class="reference internal" href="#example-commonplugins-cmd">EXAMPLE_commonPlugins.cmd</a></li>
@@ -444,7 +478,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#r3-3-1-july-1-2018"><strong>R3-3-1 (July 1, 2018)</strong></a><ul>
-<li><a class="reference internal" href="#id2">ADApp/commonDriverMakefile</a></li>
+<li><a class="reference internal" href="#id5">ADApp/commonDriverMakefile</a></li>
 <li><a class="reference internal" href="#adapp-adsrc">ADApp/ADSrc</a></li>
 <li><a class="reference internal" href="#adapp-adsrc-makefile-adapp-pluginsrc-makefile-adapp-plugintests-makefile">ADApp/ADSrc/Makefile, ADApp/pluginSrc/Makefile, ADApp/pluginTests/Makefile</a></li>
 </ul>
@@ -456,9 +490,9 @@
 <li><a class="reference internal" href="#ndpluginpva">NDPluginPva</a></li>
 <li><a class="reference internal" href="#ntndarrayconverter-cpp">ntndArrayConverter.cpp</a></li>
 <li><a class="reference internal" href="#ndpluginfile">NDPluginFile</a></li>
-<li><a class="reference internal" href="#id3">NDFileTIFF</a></li>
+<li><a class="reference internal" href="#id6">NDFileTIFF</a></li>
 <li><a class="reference internal" href="#ndpluginprocess">NDPluginProcess</a></li>
-<li><a class="reference internal" href="#id4">NDPluginStats</a></li>
+<li><a class="reference internal" href="#id7">NDPluginStats</a></li>
 <li><a class="reference internal" href="#adapp-db">ADApp/Db/</a></li>
 <li><a class="reference internal" href="#adapp-op-adl">ADApp/op/adl</a></li>
 <li><a class="reference internal" href="#adapp-op-edl-autoconvert">ADApp/op/edl/autoconvert</a></li>
@@ -466,14 +500,14 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#r3-2-january-28-2018"><strong>R3-2 (January 28, 2018)</strong></a><ul>
-<li><a class="reference internal" href="#id5">NDPluginStats</a></li>
-<li><a class="reference internal" href="#id6">NDPluginFile</a></li>
-<li><a class="reference internal" href="#id7">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id8">NDPluginStats</a></li>
+<li><a class="reference internal" href="#id9">NDPluginFile</a></li>
+<li><a class="reference internal" href="#id10">NDFileHDF5</a></li>
 <li><a class="reference internal" href="#ndpluginoverlay">NDPluginOverlay</a></li>
 <li><a class="reference internal" href="#asynndarraydriver">asynNDArrayDriver</a></li>
 <li><a class="reference internal" href="#operator-displays-medm-edm-caqtdm-css-boy">Operator displays (medm, edm, caQtDM, CSS-BOY)</a></li>
-<li><a class="reference internal" href="#id8">commonDriverMakefile</a></li>
-<li><a class="reference internal" href="#id9">NDFileTIFF</a></li>
+<li><a class="reference internal" href="#id11">commonDriverMakefile</a></li>
+<li><a class="reference internal" href="#id12">NDFileTIFF</a></li>
 <li><a class="reference internal" href="#ndpluginattrplot">NDPluginAttrPlot</a></li>
 <li><a class="reference internal" href="#ndpluginroistat">NDPluginROIStat</a></li>
 <li><a class="reference internal" href="#ntndarrayconvert-cpp">ntndArrayConvert.cpp</a></li>
@@ -487,10 +521,10 @@
 <li><a class="reference internal" href="#r3-1-july-3-2017"><strong>R3-1 (July 3, 2017)</strong></a><ul>
 <li><a class="reference internal" href="#graphicsmagick">GraphicsMagick</a></li>
 <li><a class="reference internal" href="#pluginsrc-makefile-plugintests-makefile">pluginSrc/Makefile, pluginTests/Makefile</a></li>
-<li><a class="reference internal" href="#id10">NDPluginDriver</a></li>
+<li><a class="reference internal" href="#id13">NDPluginDriver</a></li>
 <li><a class="reference internal" href="#adtop-adl">ADTop.adl</a></li>
-<li><a class="reference internal" href="#id11">NDPluginAttrPlot</a></li>
-<li><a class="reference internal" href="#id12">NDPluginPva</a></li>
+<li><a class="reference internal" href="#id14">NDPluginAttrPlot</a></li>
+<li><a class="reference internal" href="#id15">NDPluginPva</a></li>
 <li><a class="reference internal" href="#asynndarraydriver-h">asynNDArrayDriver.h</a></li>
 </ul>
 </li>
@@ -500,10 +534,10 @@
 <li><a class="reference internal" href="#multiple-threads-in-single-plugins-ndplugindriver-ndpluginbase-template-ndpluginbase-adl-many-plugins">Multiple threads in single plugins (NDPluginDriver, NDPluginBase.template, NDPluginBase.adl, many plugins)</a></li>
 <li><a class="reference internal" href="#ndpluginscatter">NDPluginScatter</a></li>
 <li><a class="reference internal" href="#ndplugingather">NDPluginGather</a></li>
-<li><a class="reference internal" href="#id13">NDPluginAttrPlot</a></li>
+<li><a class="reference internal" href="#id16">NDPluginAttrPlot</a></li>
 <li><a class="reference internal" href="#asynndarraydriver-ndfilenexus">asynNDArrayDriver, NDFileNexus</a></li>
 <li><a class="reference internal" href="#pvattribute">PVAttribute</a></li>
-<li><a class="reference internal" href="#id14">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id17">NDFileHDF5</a></li>
 <li><a class="reference internal" href="#plugin-internals">Plugin internals</a></li>
 <li><a class="reference internal" href="#commonlibrarymakefile-commondrivermakefile">commonLibraryMakefile, commonDriverMakefile</a></li>
 <li><a class="reference internal" href="#ndoverlayn-template">NDOverlayN.template</a></li>
@@ -515,17 +549,17 @@
 <li><a class="reference internal" href="#ndarraybase-template">NDArrayBase.template</a></li>
 <li><a class="reference internal" href="#ndpluginsupport-dbd">NDPluginSupport.dbd</a></li>
 <li><a class="reference internal" href="#ndpluginroi">NDPluginROI</a></li>
-<li><a class="reference internal" href="#id15">pluginTests</a></li>
+<li><a class="reference internal" href="#id18">pluginTests</a></li>
 <li><a class="reference internal" href="#ndplugintransform">NDPluginTransform</a></li>
-<li><a class="reference internal" href="#id16">NDPluginOverlay</a></li>
-<li><a class="reference internal" href="#id17">NDPluginStats</a></li>
+<li><a class="reference internal" href="#id19">NDPluginOverlay</a></li>
+<li><a class="reference internal" href="#id20">NDPluginStats</a></li>
 <li><a class="reference internal" href="#ndpluginpos">NDPluginPos</a></li>
-<li><a class="reference internal" href="#id18">NDPluginPva</a></li>
-<li><a class="reference internal" href="#id19">NDPluginFile</a></li>
-<li><a class="reference internal" href="#id20">NDFileTIFF</a></li>
+<li><a class="reference internal" href="#id21">NDPluginPva</a></li>
+<li><a class="reference internal" href="#id22">NDPluginFile</a></li>
+<li><a class="reference internal" href="#id23">NDFileTIFF</a></li>
 <li><a class="reference internal" href="#ndattribute">NDAttribute</a></li>
 <li><a class="reference internal" href="#paramattribute">paramAttribute</a></li>
-<li><a class="reference internal" href="#id21">PVAttribute</a></li>
+<li><a class="reference internal" href="#id24">PVAttribute</a></li>
 <li><a class="reference internal" href="#asynndarraydriver-ndarraybase-template-ndpluginbase-adl-adsetup-adl-all-plugin-adl-files">asynNDArrayDriver, NDArrayBase.template, NDPluginBase.adl, ADSetup.adl, all plugin adl files</a></li>
 <li><a class="reference internal" href="#addriver-adbase-template-adsetup-adl">ADDriver, ADBase.template, ADSetup.adl</a></li>
 <li><a class="reference internal" href="#pvadriver">pvaDriver</a></li>
@@ -537,19 +571,19 @@
 </li>
 <li><a class="reference internal" href="#r2-5-october-28-2016"><strong>R2-5 (October 28, 2016)</strong></a><ul>
 <li><a class="reference internal" href="#adsupport">ADSupport</a></li>
-<li><a class="reference internal" href="#id22">NDPluginPva</a></li>
-<li><a class="reference internal" href="#id23">pvaDriver</a></li>
-<li><a class="reference internal" href="#id24">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id25">NDPluginPva</a></li>
+<li><a class="reference internal" href="#id26">pvaDriver</a></li>
+<li><a class="reference internal" href="#id27">NDFileHDF5</a></li>
 <li><a class="reference internal" href="#ndposplugin">NDPosPlugin</a></li>
-<li><a class="reference internal" href="#id25">NDPluginDriver</a></li>
+<li><a class="reference internal" href="#id28">NDPluginDriver</a></li>
 <li><a class="reference internal" href="#ndplugintimeseries">NDPluginTimeSeries</a></li>
 <li><a class="reference internal" href="#ndpluginfft">NDPluginFFT</a></li>
 <li><a class="reference internal" href="#ndpluginstats-and-ndpluginroistat">NDPluginStats and NDPluginROIStat</a></li>
-<li><a class="reference internal" href="#id27">NDPluginCircularBuff</a></li>
-<li><a class="reference internal" href="#id28">asynNDArrayDriver</a></li>
+<li><a class="reference internal" href="#id30">NDPluginCircularBuff</a></li>
+<li><a class="reference internal" href="#id31">asynNDArrayDriver</a></li>
 <li><a class="reference internal" href="#ndarraybase-template-ndplugindriver-cpp">NDArrayBase.template, NDPluginDriver.cpp</a></li>
-<li><a class="reference internal" href="#id29">NDPluginBase.template</a></li>
-<li><a class="reference internal" href="#id30">ADApp/op/adl</a></li>
+<li><a class="reference internal" href="#id32">NDPluginBase.template</a></li>
+<li><a class="reference internal" href="#id33">ADApp/op/adl</a></li>
 <li><a class="reference internal" href="#nexussrc-makefile">nexusSrc/Makefile</a></li>
 <li><a class="reference internal" href="#iocboot">iocBoot</a></li>
 <li><a class="reference internal" href="#imagej-epics-adviewer">ImageJ EPICS_ADViewer</a></li>
@@ -557,32 +591,32 @@
 </li>
 <li><a class="reference internal" href="#r2-4-september-21-2015"><strong>R2-4 (September 21, 2015)</strong></a><ul>
 <li><a class="reference internal" href="#removed-simdetector-and-iocs-directory">Removed simDetector and iocs directory.</a></li>
-<li><a class="reference internal" href="#id31">NDAttribute</a></li>
+<li><a class="reference internal" href="#id34">NDAttribute</a></li>
 <li><a class="reference internal" href="#ndroistat-adl-edl-ui-opi">NDRoiStat[.adl, .edl, ui, .opi]</a></li>
-<li><a class="reference internal" href="#id32">ADApp/pluginTests/</a></li>
+<li><a class="reference internal" href="#id35">ADApp/pluginTests/</a></li>
 <li><a class="reference internal" href="#xml-schema">XML schema</a></li>
-<li><a class="reference internal" href="#id33">iocBoot</a></li>
+<li><a class="reference internal" href="#id36">iocBoot</a></li>
 <li><a class="reference internal" href="#adapp">ADApp</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#r2-3-july-23-2015"><strong>R2-3 (July 23, 2015)</strong></a><ul>
 <li><a class="reference internal" href="#deviocstats-and-alive-modules">devIocStats and alive modules</a></li>
-<li><a class="reference internal" href="#id34">NDPluginFile</a></li>
-<li><a class="reference internal" href="#id35">NDPluginROIStat</a></li>
-<li><a class="reference internal" href="#id36">NDFileHDF5</a></li>
-<li><a class="reference internal" href="#id37">commonDriverMakefile</a></li>
+<li><a class="reference internal" href="#id37">NDPluginFile</a></li>
+<li><a class="reference internal" href="#id38">NDPluginROIStat</a></li>
+<li><a class="reference internal" href="#id39">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id40">commonDriverMakefile</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#r2-2-march-23-2015"><strong>R2-2 (March 23, 2015)</strong></a><ul>
 <li><a class="reference internal" href="#compatibility">Compatibility</a></li>
-<li><a class="reference internal" href="#id38">NDPluginROIStat</a></li>
-<li><a class="reference internal" href="#id39">NDPluginCircularBuff</a></li>
-<li><a class="reference internal" href="#id40">NDPluginAttribute</a></li>
-<li><a class="reference internal" href="#id41">NDPluginStats</a></li>
-<li><a class="reference internal" href="#id42">NDPluginROI</a></li>
-<li><a class="reference internal" href="#id43">NDPluginOverlay</a></li>
-<li><a class="reference internal" href="#id44">NDPluginFile</a></li>
-<li><a class="reference internal" href="#id45">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id41">NDPluginROIStat</a></li>
+<li><a class="reference internal" href="#id42">NDPluginCircularBuff</a></li>
+<li><a class="reference internal" href="#id43">NDPluginAttribute</a></li>
+<li><a class="reference internal" href="#id44">NDPluginStats</a></li>
+<li><a class="reference internal" href="#id45">NDPluginROI</a></li>
+<li><a class="reference internal" href="#id46">NDPluginOverlay</a></li>
+<li><a class="reference internal" href="#id47">NDPluginFile</a></li>
+<li><a class="reference internal" href="#id48">NDFileHDF5</a></li>
 <li><a class="reference internal" href="#version-information">Version information</a></li>
 <li><a class="reference internal" href="#plugins-general">Plugins general</a></li>
 <li><a class="reference internal" href="#netcdfsupport">netCDFSupport</a></li>
@@ -595,25 +629,25 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#r2-1-october-17-2014"><strong>R2-1 (October 17, 2014)</strong></a><ul>
-<li><a class="reference internal" href="#id46">NDPluginFile</a></li>
-<li><a class="reference internal" href="#id47">NDFileHDF5</a></li>
-<li><a class="reference internal" href="#id48">NDFileTiff</a></li>
-<li><a class="reference internal" href="#id49">NDPluginOverlay</a></li>
-<li><a class="reference internal" href="#id50">NDPluginTransform</a></li>
+<li><a class="reference internal" href="#id49">NDPluginFile</a></li>
+<li><a class="reference internal" href="#id50">NDFileHDF5</a></li>
+<li><a class="reference internal" href="#id51">NDFileTiff</a></li>
+<li><a class="reference internal" href="#id52">NDPluginOverlay</a></li>
+<li><a class="reference internal" href="#id53">NDPluginTransform</a></li>
 <li><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#r2-0-april-4-2014"><strong>R2-0 (April 4, 2014)</strong></a><ul>
 <li><a class="reference internal" href="#general">General</a></li>
 <li><a class="reference internal" href="#ndarray-and-asynndarraydriver">NDArray and asynNDArrayDriver</a></li>
-<li><a class="reference internal" href="#id51">NDAttribute</a></li>
-<li><a class="reference internal" href="#id52">NDPluginDriver</a></li>
-<li><a class="reference internal" href="#id53">NDPluginOverlay.</a></li>
-<li><a class="reference internal" href="#id54">NDPluginROI.</a></li>
-<li><a class="reference internal" href="#id55">NDPluginStats.</a></li>
+<li><a class="reference internal" href="#id54">NDAttribute</a></li>
+<li><a class="reference internal" href="#id55">NDPluginDriver</a></li>
+<li><a class="reference internal" href="#id56">NDPluginOverlay.</a></li>
+<li><a class="reference internal" href="#id57">NDPluginROI.</a></li>
+<li><a class="reference internal" href="#id58">NDPluginStats.</a></li>
 <li><a class="reference internal" href="#ndfilenetcdf">NDFileNetCDF.</a></li>
-<li><a class="reference internal" href="#id56">NDFileTIFF.</a></li>
-<li><a class="reference internal" href="#id57">NDPluginAttribute.</a></li>
+<li><a class="reference internal" href="#id59">NDFileTIFF.</a></li>
+<li><a class="reference internal" href="#id60">NDPluginAttribute.</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#r1-9-1-and-earlier"><strong>R1-9-1 and earlier</strong></a></li>
@@ -632,7 +666,7 @@
     </a>
   </li>
   <li>
-    <a href="readme.html" title="Next Chapter: areaDetector"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">areaDetector &raquo;</span>
+    <a href="ADSupport_release.html" title="Next Chapter: ADSupport Releases"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ADSupport Releases &raquo;</span>
     </a>
   </li>
               
@@ -681,6 +715,49 @@ in the areaDetector releases available via links at
 the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE_PRODS.local
 files respectively, in the configure/ directory of the appropriate release of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector">top-level areaDetector</a> repository.</p>
+</div>
+<div class="section" id="r3-6-may-xxx-2019">
+<h2><strong>R3-6 (May XXX, 2019)</strong><a class="headerlink" href="#r3-6-may-xxx-2019" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ndfilehdf5">
+<h3>NDFileHDF5<a class="headerlink" href="#ndfilehdf5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed issues with chunking.<ul>
+<li>User-defined chunking only supported 2-D arrays, plus the dimension for multiple arrays.
+This is insufficient, we need to be able to support N-dimensional arrays in a general manner.</li>
+<li>Direct chunk write only worked with 1-D or 2-D arrays. This prevented it from working with RGB images, for example.</li>
+<li>New records have been added for NDArray dimensions 2-9 (ChunkSize2, ChunkSize3, … ChunkSize9).</li>
+<li>The labels on the OPI screen for NumColsChunks and NumRowsChunks changes “Dim0 chunk size” and “Dim1 chunk size”,
+added “Dim2 chunk size” to this screen as well.</li>
+<li>Added a new NDFileHDF5_ChunkingFull screen that shows all 12 chunking related records (10 dimensions, NumFramesChunks, ChunkSizeAuto).</li>
+<li>Previously the documentation said that if nColChunks and nRowChunks were configured by the user to the special value 0,
+they will default to the dimensions of the incoming frames. However, this was not really true, setting to 0 only worked once.
+If they were set to 0 and a 512x512 array was saved then the chunking was set to 512x512.
+If the user then disabled binning and saved a 1024x1024 array the chunking remained at 512x512, which was not desirable.</li>
+<li>Added new ChunkSizeAuto bo record to allow always setting the chunking to automatic or manual.
+If ChunkSizeAuto=Yes then the chunking in each dimension is automatically set to that dimension of the NDArray, so
+the chunking is one complete NDArray. The automatic control does not affect NumFramesChunks.</li>
+<li>Fixed a problem in NDFiileHDF5::calcNumFrames(), it was setting NumCapture to 1 if numExtraDims=0, which is incorrect.
+This caused the autosaved value to be replaced by 1 each time the IOC restarted.</li>
+</ul>
+</li>
+<li>Added support for JPEG compression.  There is a new JPEGQuality record (1-100) to control the compression quality.
+This requires ADSupport R1-8 which adds HDF5 JPEG codec filter and plugin.
+JPEG compression can be done in the NDFileHDF5 plugin itself, or in NDPluginCodec writing pre-compressed NDArrays with
+HDF5 direct chunk write.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><strong>R3-6 (May XXX, 2019)</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ndfiletiff">
+<h3>NDFileTIFF<a class="headerlink" href="#ndfiletiff" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Increased the last used defined tag (TIFFTAG_LAST_ATTRIBUTE) from 65500 to 65535,
+which is the maximum allowed by TIFF specification.</li>
+<li>The last usable tag is now TIFFTAG_LAST_ATTRIBUTE, while previously it was TIFFTAG_LAST_ATTRIBUTE-1.</li>
+<li>Fixed bug in memory allocation for user-defined tags that could lead to access violation.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="r3-5-april-12-2019">
 <h2><strong>R3-5 (April 12, 2019)</strong><a class="headerlink" href="#r3-5-april-12-2019" title="Permalink to this headline">¶</a></h2>
@@ -746,8 +823,8 @@ so the local commonPlugins.cmd file must be updated.</li>
 To use it set WITH_BITSHUFFLE=YES in areaDetector/configure/CONFIG_SITE.local.</li>
 </ul>
 </div>
-<div class="section" id="ndfilehdf5">
-<h3>NDFileHDF5<a class="headerlink" href="#ndfilehdf5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>NDFileHDF5<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added support for Direct Chunk Write.  This allows the plugin to directly write compressed NDArrays from
 NDPluginCodec or from the detector driver (e.g. ADEiger).
@@ -804,8 +881,8 @@ This problem was introduced in R3-3.</li>
 This was causing occasional failures in the Travis unit tests.</li>
 </ul>
 </div>
-<div class="section" id="id1">
-<h3>NDPluginCodec<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>NDPluginCodec<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin written by Bruno Martins to support compressing and decompressing NDArrays.</li>
 <li>Compressors currently supported are JPEG (lossy) and Blosc (lossless).</li>
@@ -860,8 +937,8 @@ Now if the array is in the correct order it is output immediately.</li>
 or Immediately when a software trigger is received.  Thanks to Slava Isaev for this.</li>
 </ul>
 </div>
-<div class="section" id="ndfiletiff">
-<h3>NDFileTIFF<a class="headerlink" href="#ndfiletiff" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>NDFileTIFF<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Allow saving NDArrays with a single dimension.</li>
 </ul>
@@ -910,8 +987,8 @@ as long as WITH_QSRV=NO.</li>
 </div>
 <div class="section" id="r3-3-1-july-1-2018">
 <h2><strong>R3-3-1 (July 1, 2018)</strong><a class="headerlink" href="#r3-3-1-july-1-2018" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3>ADApp/commonDriverMakefile<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>ADApp/commonDriverMakefile<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added qsrv dbd and lib files so that areaDetector IOCs can serve normal EPICS PVs using pvAccess.
 Thanks to Pete Jemian for this.</li>
@@ -1053,8 +1130,8 @@ timestamps shown by pvGet were incorrect for the NTNDArrays.</li>
 <li>Return an error if Capture mode is enabled in NDFileModeSingle.</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3>NDFileTIFF<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>NDFileTIFF<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added support for readFile() so it is now possible to read a TIFF file into an NDArray using this plugin and
 do callbacks to downstream plugins.<ul>
@@ -1088,8 +1165,8 @@ background or flatfield TIFF files.</li>
 above, except that in step 5 it loads the NDArray into the flatfile image.</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h3>NDPluginStats<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>NDPluginStats<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Changed the time series to use NDPluginTimeSeries, rather than having the time series logic in NDPluginStats.
 This reduced the code by 240 lines, while adding the capability of running in Circular Buffer mode,
@@ -1131,8 +1208,8 @@ creating an NDArrayPool.</li>
 </div>
 <div class="section" id="r3-2-january-28-2018">
 <h2><strong>R3-2 (January 28, 2018)</strong><a class="headerlink" href="#r3-2-january-28-2018" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
-<h3>NDPluginStats<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>NDPluginStats<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Previously the X axis for the histogram plot was just the histogram bin number.
 Added code to compute an array of intensity values and a new HistHistogramX_RBV waveform record which
@@ -1140,8 +1217,8 @@ contains the intensity values for the X axis of the histogram plot.
 This uses a new NDPlotXY.adl medm screen which accepts both X and Y waveform records to plot.</li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h3>NDPluginFile<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h3>NDPluginFile<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Changed the way that capture mode is implemented.
 Previously it created NumCapture NDArrays using the “new” operator.
@@ -1163,8 +1240,8 @@ this would not have been required.  It may thus require some changes to startup 
 </li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h3>NDFileHDF5<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>NDFileHDF5<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added support for blosc compression library.  The compressors include blosclz, lz4, lz4hc, snappy, zlib, and zstd.
 There is also support for ByteSuffle and BitShuffle.
@@ -1235,8 +1312,8 @@ they are obsolete and the new autoconverted files are better.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h3>commonDriverMakefile<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>commonDriverMakefile<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The variable PROD_NAME has been replaced with DBD_NAME.  This makes it clear that this variable is used to
 specify the name of the application DBD file.  It allows different architectures to use different DBD file
@@ -1244,8 +1321,8 @@ names.  For backwards compatibility if PROD_NAME is specified and DBD_NAME is no
 set to PROD_NAME.</li>
 </ul>
 </div>
-<div class="section" id="id9">
-<h3>NDFileTIFF<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h3>NDFileTIFF<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Improved asynTrace debugging.</li>
 </ul>
@@ -1318,8 +1395,8 @@ system library (GRAPHICSMAGIC_EXTERNAL=YES).</li>
 <li>Fixed some problems with XXX_INCLUDE definitions (XXX=HDF5, XML2, SZIP, GRAPHICSMAGICK, BOOST).</li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h3>NDPluginDriver<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>NDPluginDriver<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed limitation where the ArrayPort string was limited to 20 characters.  There is now no limit.</li>
 <li>Fixed problem with the value of the QueueFree record at startup and when the queue size was changed.
@@ -1332,14 +1409,14 @@ The queue size logic was OK but the displayed value of QueueFree was wrong.</li>
 <li>Add PhotonII detector.</li>
 </ul>
 </div>
-<div class="section" id="id11">
-<h3>NDPluginAttrPlot<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3>NDPluginAttrPlot<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added documentation.</li>
 </ul>
 </div>
-<div class="section" id="id12">
-<h3>NDPluginPva<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h3>NDPluginPva<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added performance measurements to documentation.</li>
 </ul>
@@ -1533,8 +1610,8 @@ The EXAMPLE_commonPlugins.cmd and medm files in ADCore allow up to 8 upstream pl
 easily be changed by editing the startup script and operator display file.</li>
 </ul>
 </div>
-<div class="section" id="id13">
-<h3>NDPluginAttrPlot<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>NDPluginAttrPlot<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin that caches NDAttribute values for an acquisition and exposes values of the selected ones to the EPICS
 layer periodically.  Written by Blaz Kranjc from Cosylab.  No documentation yet, but it should be coming soon.</li>
@@ -1565,8 +1642,8 @@ to occur for local PVs in the areaDetector IOC where the connection callback wou
 code had been initialized to handle the callback. The race condition was introduced in R2-6.</li>
 </ul>
 </div>
-<div class="section" id="id14">
-<h3>NDFileHDF5<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>NDFileHDF5<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed a problem with PVAttributes that were not connected to a PV.  Previously this generated errors from the HDF5
 library because an invalid datatype of -1 was used.  Now the data type for such disconnected attributes is set to
@@ -1660,8 +1737,8 @@ For example an output array that would normally have dimensions [1, 256, 256] wo
 [256, 256] if CollapseDims=Enable.</li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>pluginTests<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3>pluginTests<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added ROIPluginWrapper.cpp to test the CollapseDims behavior in NDPluginROI.</li>
 </ul>
@@ -1674,8 +1751,8 @@ by the ROI plugin, and is convenient for clients to see the sizes, since the tra
 swap the X and Y dimensions.</li>
 </ul>
 </div>
-<div class="section" id="id16">
-<h3>NDPluginOverlay<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h3>NDPluginOverlay<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added new Ellipse shape to draw elliptical or circular overlays.</li>
 <li>Improved efficiency by only computing the coordinates of the overlay pixels when the overlay
@@ -1697,8 +1774,8 @@ size of the overlay was SizeX and SizeY.  Now it is SizeX+1 and SizeY+1, i.e. th
 and the previous behavior is difficult to duplicate for the Ellipse shape.</li>
 </ul>
 </div>
-<div class="section" id="id17">
-<h3>NDPluginStats<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h3>NDPluginStats<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Extensions to compute Centroid<ul>
 <li>Added calculations of 3rd and 4th order image moments, this provides skewness and kurtosis.</li>
@@ -1726,23 +1803,23 @@ the entropy calculation, and also make histogram plots hard to scale nicely.</li
 <li>Removed NDPosPlugin.dbd from NDPluginSupport.dbd because it can only be built if WITH_XML2 is set.</li>
 </ul>
 </div>
-<div class="section" id="id18">
-<h3>NDPluginPva<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id21">
+<h3>NDPluginPva<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The pvaServer is no longer started in the plugin code, because that would result in running multiple servers
 if multiple NDPluginPva plugins were loaded.  Now the command “startPVAServer” must be added to the IOC startup
 script if any NDPluginPva plugins are being used.</li>
 </ul>
 </div>
-<div class="section" id="id19">
-<h3>NDPluginFile<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h3>NDPluginFile<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>If the NDArray contains an attribute named FilePluginClose and the attribute value is non-zero then
 the current file will be closed.</li>
 </ul>
 </div>
-<div class="section" id="id20">
-<h3>NDFileTIFF<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3>NDFileTIFF<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>If there is an NDAttribute of type NDAttrString named TIFFImageDescription then this attribute is written
 to the TIFFTAG_IMAGEDESCRIPTION tag in the TIFF file.  Note that it will also be written to a user
@@ -1795,8 +1872,8 @@ method that was added in asyn R4-31.  This removes the requirement that paramAtt
 string parameters size, there is now no limit.</li>
 </ul>
 </div>
-<div class="section" id="id21">
-<h3>PVAttribute<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h3>PVAttribute<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed problem where a PV that disconnected and reconnected would cause multiple CA subscriptions.
 Note that if the data type of the PV changes on reconnect that the data may not be correct because
@@ -1922,8 +1999,8 @@ These dbd and libraries are now only included if they are defined in a RELEASE
 file.</li>
 </ul>
 </div>
-<div class="section" id="id22">
-<h3>NDPluginPva<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id25">
+<h3>NDPluginPva<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin for exporting NDArrays as EPICS V4 NTNDArrays.  It has an embedded EPICSv4 server to serve the NTNDArrays
 to V4 clients.
@@ -1931,8 +2008,8 @@ When used with pvaDriver it provides a mechanism for distributing plugin process
 and multiple machines. Thanks to Bruno Martins for this.</li>
 </ul>
 </div>
-<div class="section" id="id23">
-<h3>pvaDriver<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id26">
+<h3>pvaDriver<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New driver for importing an EPICS V4 NTNDArray into areaDetector.  It works by creating a monitor on the
 specified PV and doing plugin callbacks each time the array changes.<span class="raw-html-m2r"><br></span>
@@ -1940,8 +2017,8 @@ When used with NDPluginPva it provides a mechanism for distributing plugin proce
 and multiple machines.  Thanks to Bruno Martins for this.</li>
 </ul>
 </div>
-<div class="section" id="id24">
-<h3>NDFileHDF5<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h3>NDFileHDF5<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Added support for Single Writer Multiple Reader (SWMR).  This allows HDF5 files to be read while they are still be
 written.  This feature was added in HDF5 1.10.0-patch1, so this release or higher is required to use the
@@ -1991,8 +2068,8 @@ attaching position data.  When used in conjunction with the HDF5
 writer it is possible to store NDArrays in an arbitrary pattern within a multi-dimensional dataset.</li>
 </ul>
 </div>
-<div class="section" id="id25">
-<h3>NDPluginDriver<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h3>NDPluginDriver<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added the ability to change the QueueSize of a plugin at run-time. This can be very useful,
 particularly for file plugins where an acquisition of N frames is overflowing the queue,
@@ -2059,15 +2136,15 @@ This application is useful for testing and demonstrating the NDPluginFFT plugin.
 Stuart Wilkins for this.</li>
 </ul>
 </div>
-<div class="section" id="id27">
-<h3>NDPluginCircularBuff<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id30">
+<h3>NDPluginCircularBuff<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Initialize the TriggerCalc string to “0” in the constructor to avoid error messages during iocInit
 if the string has not been set to a valid value that is stored with autosave.</li>
 </ul>
 </div>
-<div class="section" id="id28">
-<h3>asynNDArrayDriver<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id31">
+<h3>asynNDArrayDriver<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed bug in FilePath handling on Windows. If the file path ended in “/” then it would incorrectly
 report that the directory did not exist when it did.</li>
@@ -2081,8 +2158,8 @@ report that the directory did not exist when it did.</li>
 <li>Set ArrayCallbacks.VAL to 1 so array callbacks are enabled by default.</li>
 </ul>
 </div>
-<div class="section" id="id29">
-<h3>NDPluginBase.template<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id32">
+<h3>NDPluginBase.template<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Changed QueueSize from longin to longout, because the plugin queue size can now be changed at runtime.
 Added longin QueueSize_RBV.</li>
@@ -2091,8 +2168,8 @@ but default remains Disable.</li>
 <li>Set the default value of the NDARRAY_ADDR macro to 0 so it does not need to be defined in most cases.</li>
 </ul>
 </div>
-<div class="section" id="id30">
-<h3>ADApp/op/adl<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id33">
+<h3>ADApp/op/adl<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed many medm adl files so text fields have correct string/decimal, width and aligmnent attributes to
 improve autoconversion to other display managers.</li>
@@ -2140,8 +2217,8 @@ called ADExample.  This repository is just like any other detector repository.
 This solves problem 1 above because the optional plugins can now be built after ADCore
 but before ADExample.</p>
 </div>
-<div class="section" id="id31">
-<h3>NDAttribute<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id34">
+<h3>NDAttribute<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed problem that the sourceType property was never set.</li>
 </ul>
@@ -2152,8 +2229,8 @@ but before ADExample.</p>
 <li>Fixed problem with ROI numbers when calling related displays.</li>
 </ul>
 </div>
-<div class="section" id="id32">
-<h3>ADApp/pluginTests/<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id35">
+<h3>ADApp/pluginTests/<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New directory with unit tests.</li>
 </ul>
@@ -2164,8 +2241,8 @@ but before ADExample.</p>
 <li>Moved the XML schema files from the iocBoot directory to a new XML_schema directory.</li>
 </ul>
 </div>
-<div class="section" id="id33">
-<h3>iocBoot<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h3>iocBoot<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Moved commonPlugin_settings.req from ADApp/Db to iocBoot.<span class="raw-html-m2r"><br></span>
 Renamed commonPlugins.cmd to EXAMPLE_commonPlugins.cmd and commonPlugin_settings.req to
@@ -2204,8 +2281,8 @@ areaDetector/configure/EXAMPLE_RELEASE_PRODS.local.  areaDetector/INSTALL_GUIDE.
 updated to describe what needs to be done to enable or disable these optional modules.</li>
 </ul>
 </div>
-<div class="section" id="id34">
-<h3>NDPluginFile<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id37">
+<h3>NDPluginFile<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed a serious performance problem.  The calls to openFile() and closeFile() in the derived file
 writing classes were being done with the asynPortDriver mutex locked.
@@ -2218,15 +2295,15 @@ in Single mode.  This required locking the mutex in the derived file writing cla
 they access the parameter library.</li>
 </ul>
 </div>
-<div class="section" id="id35">
-<h3>NDPluginROIStat<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h3>NDPluginROIStat<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added time-series support for each of the statistics in each ROI.  This is the same as the
 time-series support in the NDPluginStats and NDPluginAttribute plugins.</li>
 </ul>
 </div>
-<div class="section" id="id36">
-<h3>NDFileHDF5<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id39">
+<h3>NDFileHDF5<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Bug fixes:<ul>
 <li>When writing files in Single mode if NumCapture was 0 then the chunking was computed
@@ -2236,8 +2313,8 @@ incorrectly and the files could be much larger than they should be.</li>
 </li>
 </ul>
 </div>
-<div class="section" id="id37">
-<h3>commonDriverMakefile<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id40">
+<h3>commonDriverMakefile<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Include SNCSEQ libraries if SNCSEQ is defined.  This must be defined if the CALC module
 was built with SNCSEQ support.</li>
@@ -2279,53 +2356,53 @@ dbLoadRecords("NDStdArrays.template", "P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,
 </li>
 </ul>
 </div>
-<div class="section" id="id38">
-<h3>NDPluginROIStat<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id41">
+<h3>NDPluginROIStat<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin that supports multiple regions-of-interest with simple statistics on each.
 It is more efficient and convenient than the existing NDPluginROI and NDPluginStats when many
 regions of interest with simple statistics are needed.  Written by Matthew Pearson.</li>
 </ul>
 </div>
-<div class="section" id="id39">
-<h3>NDPluginCircularBuff<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id42">
+<h3>NDPluginCircularBuff<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin that implements a circular buffer.  NDArrays are stored in the buffer until a trigger
 is received.  When a trigger is received it outputs a configurable number of pre-trigger and post-trigger
 NDArrays.  The trigger is based on NDArray attributes using a user-defined calculation.  Written by Edmund Warrick.</li>
 </ul>
 </div>
-<div class="section" id="id40">
-<h3>NDPluginAttribute<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id43">
+<h3>NDPluginAttribute<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin that exports attributes of NDArrays as EPICS PVs.  Both scalar (ai records) and time-series
 arrays (waveform records) are exported.  Written by Matthew Pearson.</li>
 </ul>
 </div>
-<div class="section" id="id41">
-<h3>NDPluginStats<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id44">
+<h3>NDPluginStats<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added capability to reset the statistics to 0 (or other user-defined values) with a new
 $(P)$(R)Reset sseq records in NDStats.template.  The reset behavior can be changed by
 configuring these records.</li>
 </ul>
 </div>
-<div class="section" id="id42">
-<h3>NDPluginROI<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id45">
+<h3>NDPluginROI<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Remember the requested ROI size and offset.  If the requested values cannot be satisfied due
 to constraints such as binning or the input array size, then use the requested values when the
 constraints no longer apply.</li>
 </ul>
 </div>
-<div class="section" id="id43">
-<h3>NDPluginOverlay<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id46">
+<h3>NDPluginOverlay<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Bug fix: the vertical line in the cross overlay was not drawn correctly if WidthX was greater than 1.</li>
 </ul>
 </div>
-<div class="section" id="id44">
-<h3>NDPluginFile<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id47">
+<h3>NDPluginFile<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Created the NDFileCreateDir parameter. This allows file writers to create a controlled number
 of directories in the path of the output file.</li>
@@ -2336,8 +2413,8 @@ is atomic from a filesystem view and can be used by monitoring applications like
 to kick off processing applications.</li>
 </ul>
 </div>
-<div class="section" id="id45">
-<h3>NDFileHDF5<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id48">
+<h3>NDFileHDF5<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Created a separate NDFileHDF5.h file so the class can be exported to other applications.</li>
 <li>Updated the HDF5 library for Windows in ADBinaries from 1.8.7 to 1.8.14.  The names of the libraries has changed,
@@ -2454,16 +2531,16 @@ on libCom and asyn.</li>
 </div>
 <div class="section" id="r2-1-october-17-2014">
 <h2><strong>R2-1 (October 17, 2014)</strong><a class="headerlink" href="#r2-1-october-17-2014" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id46">
-<h3>NDPluginFile<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id49">
+<h3>NDPluginFile<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added new optional feature “LazyOpen” which, when enabled and in “Stream” mode, will defer
 file creation until the first frame arrives in the plugin. This removes the need to initialise
 the plugin with a dummy frame before starting capture.</li>
 </ul>
 </div>
-<div class="section" id="id47">
-<h3>NDFileHDF5<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id50">
+<h3>NDFileHDF5<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added support for defining the layout of the HDF5 file groups, dataset and attributes in an XML
 definition file. This was a collaboration between DLS and APS: Ulrik Pedersen, Alan Greer,
@@ -2472,23 +2549,23 @@ Nicholas Schwarz, and Arthur Glowacki. See project pages:
 <a class="reference external" href="https://confluence.aps.anl.gov/x/d4GG">HDF5 Writer Plugin</a></li>
 </ul>
 </div>
-<div class="section" id="id48">
-<h3>NDFileTiff<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id51">
+<h3>NDFileTiff<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>All NDArray attributes are now written as TIFF ASCII file tags, up to a maximum of 490 tags.
 Thanks to Matt Pearson for this.</li>
 </ul>
 </div>
-<div class="section" id="id49">
-<h3>NDPluginOverlay<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id52">
+<h3>NDPluginOverlay<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added support for text overlays. Thanks to Keith Brister for this.</li>
 <li>Added support for line width in rectangle and cross overlays.  Thanks to Matt Pearson for this.</li>
 <li>Fixed problem with DrawMode=XOR. This stopped working back in 2010 when color support was added.</li>
 </ul>
 </div>
-<div class="section" id="id50">
-<h3>NDPluginTransform<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id53">
+<h3>NDPluginTransform<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Complete rewrite to greatly improve simplicity and efficiency.  It now supports 8 transformations
 including the null transformation.  Performance improved by a factor of 13 to 85 depending
@@ -2559,8 +2636,8 @@ epicsTimeStamp epicsTS;  /**> The epicsTimeStamp; this is set with
 </li>
 </ul>
 </div>
-<div class="section" id="id51">
-<h3>NDAttribute<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id54">
+<h3>NDAttribute<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added new attribute type, NDAttrSourceFunct.
 This type of attribute gets its value from a user-defined C++ function.
@@ -2584,8 +2661,8 @@ only copied it to the value field when updateValue() is called.</li>
 <li>Changed constructor to have 6 required paramters, added sourceType and pSource.</li>
 </ul>
 </div>
-<div class="section" id="id52">
-<h3>NDPluginDriver<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id55">
+<h3>NDPluginDriver<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">This is the base class from which all plugins derive. Added the following calls
 to the NDPluginDriver::processCallbacks() method:</p>
@@ -2605,21 +2682,21 @@ if TSE is not -2.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id53">
-<h3>NDPluginOverlay.<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id56">
+<h3>NDPluginOverlay.<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed bug in the cross overlay that caused lines not to display if the cross was
 clipped to the image boundaries. The problem was attempting to store a signed value in a size_t variable.</li>
 </ul>
 </div>
-<div class="section" id="id54">
-<h3>NDPluginROI.<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id57">
+<h3>NDPluginROI.<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Make 3-D [X, Y, 1] arrays be converted to 2-D even if they are not RGB3.</li>
 </ul>
 </div>
-<div class="section" id="id55">
-<h3>NDPluginStats.<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id58">
+<h3>NDPluginStats.<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed bug if a dimension was 1; this bug was introduced when changing dimensions to size_t.</li>
 </ul>
@@ -2641,8 +2718,8 @@ format does not support 64-bit integers.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id56">
-<h3>NDFileTIFF.<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id59">
+<h3>NDFileTIFF.<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Added 3 new TIFF tags to each TIFF file:</p>
 <ul class="simple">
@@ -2657,8 +2734,8 @@ is the quotient of the two numbers, which is not what is desired.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id57">
-<h3>NDPluginAttribute.<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id60">
+<h3>NDPluginAttribute.<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New plugin that allows trending and publishing an NDArray attribute over channel access.</li>
 </ul>
