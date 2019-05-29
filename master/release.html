@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector Releases &#8212; areaDetector 3-5-66-g7ada691 documentation</title>
+    <title>areaDetector Releases &#8212; areaDetector 3-5-67-g5c12f5e documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -58,6 +58,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Top-level Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#versions">Versions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#r3-6-may-29-2019">R3-6 (May 29, 2019)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-5-april-12-2019">R3-5 (April 12, 2019)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-4-december-3-2018">R3-4 (December 3, 2018)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-3-2-july-9-2018">R3-3-2 (July 9, 2018)</a></li>
@@ -442,6 +443,7 @@
 <li><a class="reference internal" href="#">areaDetector Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#versions">Versions</a><ul>
+<li><a class="reference internal" href="#r3-6-may-29-2019">R3-6 (May 29, 2019)</a></li>
 <li><a class="reference internal" href="#r3-5-april-12-2019">R3-5 (April 12, 2019)</a></li>
 <li><a class="reference internal" href="#r3-4-december-3-2018">R3-4 (December 3, 2018)</a></li>
 <li><a class="reference internal" href="#r3-3-2-july-9-2018">R3-3-2 (July 9, 2018)</a></li>
@@ -531,6 +533,64 @@ files respectively, in the appropriate release of the
 <h2>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h2>
 <p>Each submodule contains detailed release notes for each release of that submodule.  The release notes below
 only provide a short summary of the most significant items from the submodules.</p>
+<div class="section" id="r3-6-may-29-2019">
+<h3>R3-6 (May 29, 2019)<a class="headerlink" href="#r3-6-may-29-2019" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>New submodule repositories<ul>
+<li>specsAnalyser<ul>
+<li>Driver for SPECS Phoibos electron spectrometers, with DLD (Delay Line Detector)</li>
+<li>From Pete Leicester, Stuart Wilkins and others.</li>
+</ul>
+</li>
+<li>ADCompVision<ul>
+<li>Plugin to perform imaging processing using opencv library</li>
+<li>From Jakub Wlodek and Kaz Gofron.</li>
+</ul>
+</li>
+<li>ADPluginBar<ul>
+<li>Plugin to process bar codes</li>
+<li>From Jakub Wlodek and Kaz Gofron.</li>
+</ul>
+</li>
+<li>ADPcoWin<ul>
+<li>Driver for PCO cameras, using their SDK which is Windows only.</li>
+<li>From Jonathan Thompson and others.</li>
+</ul>
+</li>
+<li>ADMMPAD<ul>
+<li>Driver for the MMPAD detectors from Sol Gruner’s group at Cornell.</li>
+<li>From Mark Rivers.</li>
+</ul>
+</li>
+<li>ADGenICam<ul>
+<li>New base class for GenICam cameras.  Used by ADAravis, ADSpinnaker, and ADVimba.</li>
+<li>Not yet ready for production use.</li>
+<li>From Mark Rivers.</li>
+</ul>
+</li>
+<li>ADAravis<ul>
+<li>Designed to replace aravisGigE.  It is simpler because it uses ADGeniICam.</li>
+<li>Not yet ready for production use.</li>
+<li>From Mark Rivers, based on aravisGigE which is by Tom Cobb and others.</li>
+</ul>
+</li>
+<li>ADVimba<ul>
+<li>Driver for AVT/Prosilica cameras using their new Vimba SDK.  Uses ADGenICam.</li>
+<li>Not yet ready for production use.</li>
+<li>From Mark Rivers.</li>
+</ul>
+</li>
+<li>ADSpinnaker<ul>
+<li>Driver for FLIR/Point Grey cameras using their new Spinnaker SDK.</li>
+<li>This is not a new repository, but it now contains a new GenICam branch that uses ADGenICam.</li>
+<li>GenICam branch is not yet ready for production use</li>
+<li>From Mark Rivers.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="r3-5-april-12-2019">
 <h3>R3-5 (April 12, 2019)<a class="headerlink" href="#r3-5-april-12-2019" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
