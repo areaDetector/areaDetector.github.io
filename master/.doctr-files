@@ -50,6 +50,7 @@ master/ADFastCCD/plugin_introduction.html
 master/ADFastCCD/readme.html
 master/ADFastCCD/release.html
 master/ADFastCCD/st_cmd.html
+master/ADGenICam/ADGenICam.html
 master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
 master/ADProsilica/ADProsilica.html
@@ -58,6 +59,10 @@ master/ADSupport_release.html
 master/ADViewers/ad_viewers.html
 master/_images/ADBase.png
 master/_images/ADEpicsShutter.png
+master/_images/ADGenICam.png
+master/_images/ADGenICam_features1.png
+master/_images/ADGenICam_features2.png
+master/_images/ADGenICam_features3.png
 master/_images/ADTop.png
 master/_images/Barcodemain.png
 master/_images/Canny2.png
@@ -235,6 +240,7 @@ master/_sources/ADFastCCD/plugin_introduction.rst.txt
 master/_sources/ADFastCCD/readme.rst.txt
 master/_sources/ADFastCCD/release.rst.txt
 master/_sources/ADFastCCD/st_cmd.rst.txt
+master/_sources/ADGenICam/ADGenICam.rst.txt
 master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
