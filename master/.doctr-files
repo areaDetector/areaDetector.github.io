@@ -373,6 +373,8 @@ master/areaDetectorDoxygenHTML/_a_d_p_i_cam_8cpp.html
 master/areaDetectorDoxygenHTML/_a_d_p_i_cam_8h.html
 master/areaDetectorDoxygenHTML/_a_d_p_i_cam_8h_source.html
 master/areaDetectorDoxygenHTML/_a_d_spinnaker_8cpp.html
+master/areaDetectorDoxygenHTML/_a_d_spinnaker_8h.html
+master/areaDetectorDoxygenHTML/_a_d_spinnaker_8h_source.html
 master/areaDetectorDoxygenHTML/_a_dn_e_d_8cpp.html
 master/areaDetectorDoxygenHTML/_a_dn_e_d_8h.html
 master/areaDetectorDoxygenHTML/_a_dn_e_d_8h_source.html
@@ -571,6 +573,9 @@ master/areaDetectorDoxygenHTML/_q_imaging_8h.html
 master/areaDetectorDoxygenHTML/_q_imaging_8h_source.html
 master/areaDetectorDoxygenHTML/_s_p_e_header_8h.html
 master/areaDetectorDoxygenHTML/_s_p_e_header_8h_source.html
+master/areaDetectorDoxygenHTML/_s_p_feature_8cpp.html
+master/areaDetectorDoxygenHTML/_s_p_feature_8h.html
+master/areaDetectorDoxygenHTML/_s_p_feature_8h_source.html
 master/areaDetectorDoxygenHTML/_s_spin_box_8cpp.html
 master/areaDetectorDoxygenHTML/_s_spin_box_8h.html
 master/areaDetectorDoxygenHTML/_s_spin_box_8h_source.html
@@ -801,6 +806,9 @@ master/areaDetectorDoxygenHTML/class_q_image.html
 master/areaDetectorDoxygenHTML/class_q_image.png
 master/areaDetectorDoxygenHTML/class_rest_a_p_i-members.html
 master/areaDetectorDoxygenHTML/class_rest_a_p_i.html
+master/areaDetectorDoxygenHTML/class_s_p_feature-members.html
+master/areaDetectorDoxygenHTML/class_s_p_feature.html
+master/areaDetectorDoxygenHTML/class_s_p_feature.png
 master/areaDetectorDoxygenHTML/class_s_spin_box-members.html
 master/areaDetectorDoxygenHTML/class_s_spin_box.html
 master/areaDetectorDoxygenHTML/class_s_spin_box.png
