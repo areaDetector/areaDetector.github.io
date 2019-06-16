@@ -1,3 +1,4 @@
+master/ADAravis/ADAravis.html
 master/ADCompVision/ADCompVision.html
 master/ADCompVision/ADCompVisionManual.html
 master/ADCore/ADDriver.html
@@ -57,6 +58,9 @@ master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
 master/ADSupport_release.html
 master/ADViewers/ad_viewers.html
+master/_images/ADAravis.png
+master/_images/ADAravis_features1.png
+master/_images/ADAravis_features2.png
 master/_images/ADBase.png
 master/_images/ADEpicsShutter.png
 master/_images/ADGenICam.png
@@ -189,6 +193,7 @@ master/_images/scatterGatherExample_top_threads.png
 master/_images/simDetector_image_display.png
 master/_images/threshold.png
 master/_images/threshold_menu.png
+master/_sources/ADAravis/ADAravis.rst.txt
 master/_sources/ADCompVision/ADCompVision.rst.txt
 master/_sources/ADCompVision/ADCompVisionManual.rst.txt
 master/_sources/ADCore/ADDriver.rst.txt
