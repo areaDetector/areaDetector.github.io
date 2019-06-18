@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADGenICam &#8212; areaDetector 3-6-27-ga181358 documentation</title>
+    <title>ADGenICam &#8212; areaDetector 3-6-28-g314bdf1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -458,6 +458,7 @@
 <li><a class="reference internal" href="#genicamfeature-class">GenICamFeature class</a></li>
 <li><a class="reference internal" href="#adgenicamfeatureset">ADGenICamFeatureSet</a></li>
 <li><a class="reference internal" href="#adgenicam-class">ADGenICam class</a><ul>
+<li><a class="reference internal" href="#standard-driver-parameters">Standard driver parameters</a></li>
 <li><a class="reference internal" href="#adgenicam-driver-parameters">ADGenICam driver parameters</a></li>
 </ul>
 </li>
@@ -542,13 +543,14 @@
 <li><a class="reference internal" href="#genicamfeature-class" id="id12">GenICamFeature class</a></li>
 <li><a class="reference internal" href="#adgenicamfeatureset" id="id13">ADGenICamFeatureSet</a></li>
 <li><a class="reference internal" href="#adgenicam-class" id="id14">ADGenICam class</a><ul>
-<li><a class="reference internal" href="#adgenicam-driver-parameters" id="id15">ADGenICam driver parameters</a></li>
+<li><a class="reference internal" href="#standard-driver-parameters" id="id15">Standard driver parameters</a></li>
+<li><a class="reference internal" href="#adgenicam-driver-parameters" id="id16">ADGenICam driver parameters</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#linux-usb-and-gige-system-settings" id="id16">Linux USB and GigE System Settings</a></li>
-<li><a class="reference internal" href="#medm-screens" id="id17">MEDM screens</a></li>
+<li><a class="reference internal" href="#linux-usb-and-gige-system-settings" id="id17">Linux USB and GigE System Settings</a></li>
+<li><a class="reference internal" href="#medm-screens" id="id18">MEDM screens</a></li>
 </ul>
 </li>
 </ul>
@@ -627,9 +629,22 @@ Many of the ideas in <a class="reference external" href="https://github.com/area
 the XML file from the camera, even when using drivers that are not based on <a class="reference external" href="https://github.com/AravisProject/aravis">aravis</a>, e.g. the
 <a class="reference external" href="https://github.com/areaDetector/ADSpinnaker">ADSpinnaker</a> driver or the <a class="reference external" href="https://github.com/areaDetector/ADVimba">ADVimba</a> driver.  <a class="reference external" href="https://github.com/areaDetector/ADSpinnaker">ADSpinnaker</a> and <a class="reference external" href="https://github.com/areaDetector/ADVimba">ADVimba</a> can run on Windows, but the XML
 file extraction must be done once on Linux.</p>
-<p><a class="reference external" href="https://github.com/areaDetector/aravisGigE">aravisGigE</a> builds the <a class="reference external" href="https://github.com/AravisProject/aravis">aravis</a> package in its vendor/ directory.
-You can also build <a class="reference external" href="https://github.com/AravisProject/aravis">aravis</a> outside of areaDetector, for example in /usr/local.
-<a class="reference external" href="https://github.com/AravisProject/aravis">aravis</a> may be added to <a class="reference external" href="https://github.com/areaDetector/ADSupport">ADSupport</a> in the future.</p>
+<p>The following shows the steps to build and install aravis 0.6.3 on a Centos 7 machine running as root:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>yum install gtk-doc
+yum install libxml2-devel
+yum install glib2-devel
+yum install zlib-devel
+cd /usr/local
+git clone https://github.com/AravisProject/aravis
+cd aravis/
+git checkout ARAVIS_0_6_3
+./autogen.sh
+make -sj
+make install
+</pre></div>
+</div>
+<p>The steps above will be different if you do not have root access and need to install elsewhere,
+or if you are running another OS like Ubuntu where <cite>apt install</cite> is used in place of <cite>yum install</cite>.</p>
 </div>
 <div class="section" id="downloading-the-xml-file">
 <h2><a class="toc-backref" href="#id7">Downloading the XML file</a><a class="headerlink" href="#downloading-the-xml-file" title="Permalink to this headline">¶</a></h2>
@@ -856,42 +871,34 @@ the new choices.</li>
 <li><strong>startCapture()</strong> This is a pure virtual function that the derived class must implement to start the camera acquisition.</li>
 <li><strong>stopCapture()</strong>  This is a pure virtual function that the derived class must implement to stop the camera acquisition.</li>
 </ul>
-<p>The following is part of the output of the <strong>asynReport 1 SP1</strong> command for an ADSpinnaker driver, which inherits from ADGenICam.
+<p>The following is part of the output of the <strong>asynReport 1 ARV1</strong> command for the ADAravis driver, which inherits from ADGenICam.
 Note that it prints the list of features:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>epics&gt; asynReport 1 SP1
-SP1 multiDevice:No canBlock:Yes autoConnect:Yes
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>epics&gt; asynReport 1 ARV1
+ARV1 multiDevice:No canBlock:Yes autoConnect:Yes
     enabled:Yes connected:Yes numberConnects 1
     nDevices 0 nQueued 0 blocked:No
     asynManagerLock:No synchronousLock:No
     exceptionActive:No exceptionUsers 1 exceptionNotifys 0
     traceMask:0x1 traceIOMask:0x2 traceInfoMask:0x1
-
-Number of cameras detected: 2
-Camera 0
-Device Vendor Name   (DeviceVendorName):Point Grey Research
-Device Model Name (DeviceModelName):Blackfly BFLY-PGE-20E4C
-Device Serial Number (DeviceSerialNumber):13481965
-Device Version (DeviceVersion):FW:v1.43.3.00 FPGA:v2.02
-Device Type (DeviceType):GEV
-Camera 1
-Device Vendor Name   (DeviceVendorName):FLIR
-Device Model Name (DeviceModelName):Oryx ORX-10G-51S5M
-Device Serial Number (DeviceSerialNumber):18011754
-Device Version (DeviceVersion):1710.0.0.0
-Device Type (DeviceType):GEV
+Aravis GigE detector ARV1
+  NX, NY:            1600  1200
+  Data type:         1
 Feature list
 
       Node name: AcquisitionFrameCount
-          value: Not available
+          value: 1
 
       Node name: AcquisitionFrameCount
-          value: Not available
+          value: 1
 
       Node name: AcquisitionFrameRate
-          value: 33.335640
+          value: 43.956043
 
       Node name: AcquisitionFrameRate
-          value: 33.335640
+          value: 43.956043
+
+      Node name: AcquisitionFrameRate
+          value: 43.956043
 
       Node name: AcquisitionFrameRateAuto
           value: Continuous
@@ -899,68 +906,81 @@ Feature list
       Node name: AcquisitionFrameRateEnabled
           value: false
 
+      Node name: AcquisitionFrameRateEnabled
+          value: false
+
       Node name: AcquisitionMode
           value: Continuous
+
 ...
 </pre></div>
 </div>
 <p>This is the output of <strong>asynReport</strong> with <strong>details</strong> increased from 1 to 2 so additional information about each feature is printed:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>epics&gt; asynReport 2 SP1
-SP1 multiDevice:No canBlock:Yes autoConnect:Yes
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>epics&gt; asynReport 2 ARV1
+ARV1 multiDevice:No canBlock:Yes autoConnect:Yes
     enabled:Yes connected:Yes numberConnects 1
     nDevices 0 nQueued 0 blocked:No
     asynManagerLock:No synchronousLock:No
     exceptionActive:No exceptionUsers 1 exceptionNotifys 0
     traceMask:0x1 traceIOMask:0x2 traceInfoMask:0x1
     interposeInterfaceList
-        asynOctet pinterface 0x55d29a07ffa0 drvPvt 0x55d29c0ddc10
+        asynOctet pinterface 0x55d81c1bbfa0 drvPvt 0x55d81ca033c0
     interfaceList
-        asynCommon pinterface 0x55d29a07eed0 drvPvt 0x55d29c0da100
-        asynDrvUser pinterface 0x55d29a07ecc0 drvPvt 0x55d29c0da100
-        asynOctet pinterface 0x55d29a07ede0 drvPvt 0x55d29c0da100
-        asynInt32 pinterface 0x55d29a07eea0 drvPvt 0x55d29c0da100
-        asynFloat64 pinterface 0x55d29a07ee40 drvPvt 0x55d29c0da100
-        asynInt32Array pinterface 0x55d29a07ed80 drvPvt 0x55d29c0da100
-        asynGenericPointer pinterface 0x55d29a07ed20 drvPvt 0x55d29c0da100
-        asynEnum pinterface 0x55d29a07ece0 drvPvt 0x55d29c0da100
-
-Number of cameras detected: 2
-Camera 0
-Device Vendor Name   (DeviceVendorName):Point Grey Research
-Device Model Name (DeviceModelName):Blackfly BFLY-PGE-20E4C
-Device Serial Number (DeviceSerialNumber):13481965
-Device Version (DeviceVersion):FW:v1.43.3.00 FPGA:v2.02
-Device Type (DeviceType):GEV
-Camera 1
-Device Vendor Name   (DeviceVendorName):FLIR
-Device Model Name (DeviceModelName):Oryx ORX-10G-51S5M
-Device Serial Number (DeviceSerialNumber):18011754
-Device Version (DeviceVersion):1710.0.0.0
-Device Type (DeviceType):GEV
+        asynCommon pinterface 0x55d81c1baed0 drvPvt 0x55d81c9ff750
+        asynDrvUser pinterface 0x55d81c1bacc0 drvPvt 0x55d81c9ff750
+        asynOctet pinterface 0x55d81c1bade0 drvPvt 0x55d81c9ff750
+        asynInt32 pinterface 0x55d81c1baea0 drvPvt 0x55d81c9ff750
+        asynFloat64 pinterface 0x55d81c1bae40 drvPvt 0x55d81c9ff750
+        asynInt32Array pinterface 0x55d81c1bad80 drvPvt 0x55d81c9ff750
+        asynGenericPointer pinterface 0x55d81c1bad20 drvPvt 0x55d81c9ff750
+        asynEnum pinterface 0x55d81c1bace0 drvPvt 0x55d81c9ff750
+Aravis GigE detector ARV1
+  NX, NY:            1600  1200
+  Data type:         1
 Feature list
 
       Node name: AcquisitionFrameCount
-          value: Not available
+          value: 1
       asynIndex: 72
        asynName: NIMAGES
        asynType: 1
   isImplemented: true
     isAvailable: false
-     isReadable: false
-     isWritable: false
+     isReadable: true
+     isWritable: true
 
       Node name: AcquisitionFrameCount
-          value: Not available
-      asynIndex: 113
+          value: 1
+      asynIndex: 215
        asynName: GC_I_AcquisitionFrameCount
        asynType: 1
   isImplemented: true
     isAvailable: false
-     isReadable: false
+     isReadable: true
+     isWritable: true
+
+      Node name: AcquisitionFrameRate
+          value: 43.956043
+      asynIndex: 134
+       asynName: GC_D_AcquisitionFrameRate
+       asynType: 3
+  isImplemented: true
+    isAvailable: true
+     isReadable: true
      isWritable: false
 
       Node name: AcquisitionFrameRate
-          value: 33.335640
+          value: 43.956043
+      asynIndex: 94
+       asynName: GC_FRAMERATE
+       asynType: 3
+  isImplemented: true
+    isAvailable: true
+     isReadable: true
+     isWritable: false
+
+      Node name: AcquisitionFrameRate
+          value: 43.956043
       asynIndex: 75
        asynName: ACQ_PERIOD
        asynType: 3
@@ -969,30 +989,32 @@ Feature list
      isReadable: true
      isWritable: false
 
-      Node name: AcquisitionFrameRate
-          value: 33.335640
-      asynIndex: 281
-       asynName: GC_D_AcquisitionFrameRate
-       asynType: 3
-  isImplemented: true
-    isAvailable: true
-     isReadable: true
-     isWritable: false
-
       Node name: AcquisitionFrameRateAuto
           value: Continuous
-      asynIndex: 232
+      asynIndex: 165
        asynName: GC_E_AcquisitionFrameRateAuto
        asynType: 1
   isImplemented: true
     isAvailable: true
      isReadable: true
      isWritable: false
+          enums: 0: Off
+                 2: Continuous
 
       Node name: AcquisitionFrameRateEnabled
           value: false
-      asynIndex: 295
+      asynIndex: 299
        asynName: GC_B_AcquisitionFrameRateEnabled
+       asynType: 1
+  isImplemented: true
+    isAvailable: true
+     isReadable: true
+     isWritable: true
+
+      Node name: AcquisitionFrameRateEnabled
+          value: false
+      asynIndex: 95
+       asynName: GC_FRAMERATE_ENABLE
        asynType: 1
   isImplemented: true
     isAvailable: true
@@ -1008,13 +1030,136 @@ Feature list
     isAvailable: true
      isReadable: true
      isWritable: true
+
+      Node name: AcquisitionMode
+          value: Continuous
+      asynIndex: 164
+       asynName: GC_E_AcquisitionMode
+       asynType: 1
+  isImplemented: true
+    isAvailable: true
+     isReadable: true
+     isWritable: true
+          enums: 0: Continuous
+                 1: SingleFrame
+                 2: MultiFrame
+
 ...
 </pre></div>
 </div>
+<div class="section" id="standard-driver-parameters">
+<h4><a class="toc-backref" href="#id15">Standard driver parameters</a><a class="headerlink" href="#standard-driver-parameters" title="Permalink to this headline">¶</a></h4>
+<p>ADGenICam implements many of the driver parameters from the ADDriver base class
+by mapping these parameters to GenICam features.  The following table lists the mapping between
+the standard records and GenICam features.</p>
+<table border="1" class="colwidths-auto table-bordered table-striped table-hover docutils">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">EPICS record names</th>
+<th class="head">Record types</th>
+<th class="head">GenICam features</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Manufacturer_RBV</td>
+<td>stringin</td>
+<td>DeviceVendorName</td>
+<td>The camera manufacturer name</td>
+</tr>
+<tr class="row-odd"><td>Model_RBV</td>
+<td>stringin</td>
+<td>DeviceModelName</td>
+<td>The camera model name</td>
+</tr>
+<tr class="row-even"><td>FirmwareVersion_RBV</td>
+<td>stringin</td>
+<td>DeviceFirmwareVersion</td>
+<td>The camera firmware version</td>
+</tr>
+<tr class="row-odd"><td>SerialNumber_RBV</td>
+<td>stringin</td>
+<td>DeviceSerialNumber</td>
+<td>The camera serial number</td>
+</tr>
+<tr class="row-even"><td>MaxSizeX_RBV</td>
+<td>longin</td>
+<td>WidthMax</td>
+<td>Sensor width</td>
+</tr>
+<tr class="row-odd"><td>MaxSizeY_RBV</td>
+<td>longin</td>
+<td>HeightMax</td>
+<td>Sensor height</td>
+</tr>
+<tr class="row-even"><td>SizeX, SizeX_RBV</td>
+<td>longout, longin</td>
+<td>Width</td>
+<td>Width of region to read out</td>
+</tr>
+<tr class="row-odd"><td>SizeY, SizeY_RBV</td>
+<td>longout, longin</td>
+<td>Height</td>
+<td>Height of region to read out</td>
+</tr>
+<tr class="row-even"><td>MinX, MinX_RBV</td>
+<td>longout, longin</td>
+<td>OffsetX</td>
+<td>X start of region to read out</td>
+</tr>
+<tr class="row-odd"><td>MinY, MinY_RBV</td>
+<td>longout, longin</td>
+<td>OffsetY</td>
+<td>Y start of region to read out</td>
+</tr>
+<tr class="row-even"><td>BinX, BinX_RBV</td>
+<td>longout, longin</td>
+<td>BinningHorizontal</td>
+<td>Horizontal binning factor</td>
+</tr>
+<tr class="row-odd"><td>BinY, BinY_RBV</td>
+<td>longout, longin</td>
+<td>BinningVertial</td>
+<td>Vertical binning factor</td>
+</tr>
+<tr class="row-even"><td>ImageMode, ImageMode_RBV</td>
+<td>mbbo, mbbi</td>
+<td>AcquisitionMode</td>
+<td>The driver maps the standard areaDetector enums [Single, Multiple, Continuous] into the GenICam enums
+[Continuous, SingleFrame, MultiFrame].</td>
+</tr>
+<tr class="row-odd"><td>AcquireTime, AcquireTime_RBV</td>
+<td>ao, ai</td>
+<td>ExposureTime or ExposureTimeAbs</td>
+<td>Exposure time in seconds. The units are converted to/from the microseconds used by GenICam.</td>
+</tr>
+<tr class="row-even"><td>AcquirePeriod, AcquirePeriod_RBV</td>
+<td>ao, ai</td>
+<td>AcquisitionFrameRate or AcquisitionFrameRateAbs</td>
+<td>Acquire period in seconds. The units are converted to/from the frames/s used by GenICam.</td>
+</tr>
+<tr class="row-odd"><td>AcquireTime, AcquireTime_RBV</td>
+<td>ao, ai</td>
+<td>ExposureTime or ExposureTimeAbs</td>
+<td>Exposure time in seconds. The units are converted to/from the microseconds used by GenICam.</td>
+</tr>
+<tr class="row-even"><td>NumImages,, NumImages_RBV</td>
+<td>longout, longin</td>
+<td>AcquisitionFrameCount</td>
+<td>Number of images to acquire when ImageMode=Multiple</td>
+</tr>
+<tr class="row-odd"><td>Gain, Gain_RBV</td>
+<td>ao, ai</td>
+<td>Gain</td>
+<td>Analog gain.  Units may vary, often in dB.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="adgenicam-driver-parameters">
-<h4><a class="toc-backref" href="#id15">ADGenICam driver parameters</a><a class="headerlink" href="#adgenicam-driver-parameters" title="Permalink to this headline">¶</a></h4>
-<p>ADGenICam adds a number of driver parameters, beyond those in the ADDriver base class and the camera-specific parameters
-described above.  These parameters are intended to abstract the most commonly used GenICam features so that they:</p>
+<h4><a class="toc-backref" href="#id16">ADGenICam driver parameters</a><a class="headerlink" href="#adgenicam-driver-parameters" title="Permalink to this headline">¶</a></h4>
+<p>ADGenICam adds a number of driver parameters beyond those in the ADDriver base class
+and the camera-specific parameters described above.
+These parameters are intended to abstract the most commonly used GenICam features so that they:</p>
 <ul class="simple">
 <li>Have the same EPICS record names regardless of the actual GenICam feature name.</li>
 <li>Exist even if there is no corresponding GenICam feature for a specific camera, so that OPI screens don’t show invalid widgets
@@ -1022,47 +1167,57 @@ and scripts will not generate errors due to non-existent PVs.</li>
 </ul>
 <table border="1" class="colwidths-auto table-bordered table-striped table-hover docutils">
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Record names</th>
+<tr class="row-odd"><th class="head">EPICS record names</th>
 <th class="head">Record types</th>
 <th class="head">GenICam features</th>
+<th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>FrameRate, FrameRate_RBV</td>
 <td>ao, ai</td>
-<td>FrameRate or FrameRateAbs</td>
+<td>AcquisitionFrameRate or AcquisitionFrameRateAbs</td>
+<td>Frame rate in frames/s</td>
 </tr>
 <tr class="row-odd"><td>FrameRateEnable, FrameRateEnable_RBV</td>
 <td>bo, bi</td>
-<td>FrameRateEnable or FrameRateEnabled</td>
+<td>AcquisitionFrameRateEnable or AcquisitionFrameRateEnabled</td>
+<td>Enables/disables frame rate.  If disabled then exposure time or readout time determines frame rate.</td>
 </tr>
 <tr class="row-even"><td>TriggerSource, TriggerSource_RBV</td>
 <td>mbbo, mbbi</td>
 <td>TriggerSource</td>
+<td>Source of trigger signals.</td>
 </tr>
 <tr class="row-odd"><td>TriggerOverlap, TriggerOverlap_RBV</td>
 <td>mbbo, mbbi</td>
 <td>TriggerOverlap</td>
+<td>Controls whether trigger signals can overlap the exposure or readout.</td>
 </tr>
 <tr class="row-even"><td>TriggerSoftware</td>
 <td>bo</td>
 <td>TriggerSoftware</td>
+<td>Generates a software trigger when processed.</td>
 </tr>
 <tr class="row-odd"><td>ExposureMode, ExposureMode_RBV</td>
 <td>mbbo, mbbi</td>
 <td>ExposureMode</td>
+<td>Typical values are <strong>Timed</strong> and <strong>TriggerWidth</strong>.</td>
 </tr>
 <tr class="row-even"><td>ExposureAuto, ExposureAuto_RBV</td>
 <td>mbbo, mbbi</td>
 <td>ExposureAuto</td>
+<td>Enables automatically changing the <strong>ExposureTime</strong> for optimal image.</td>
 </tr>
 <tr class="row-odd"><td>GainAuto, GainAuto_RBV</td>
 <td>mbbo, mbbi</td>
 <td>GainAuto</td>
+<td>Enables automatically changing the <strong>Gain</strong> for optimal image.</td>
 </tr>
 <tr class="row-even"><td>PixelFormat, PixelFormat_RBV</td>
 <td>mbbo, mbbi</td>
 <td>PixelFormat</td>
+<td>Typical values are <strong>Mono8</strong>, <strong>Mono16</strong>, <strong>RGB8Packed</strong>, etc.</td>
 </tr>
 </tbody>
 </table>
@@ -1070,7 +1225,7 @@ and scripts will not generate errors due to non-existent PVs.</li>
 </div>
 </div>
 <div class="section" id="linux-usb-and-gige-system-settings">
-<span id="adgenicam-linux-system-settings"></span><h2><a class="toc-backref" href="#id16">Linux USB and GigE System Settings</a><a class="headerlink" href="#linux-usb-and-gige-system-settings" title="Permalink to this headline">¶</a></h2>
+<span id="adgenicam-linux-system-settings"></span><h2><a class="toc-backref" href="#id17">Linux USB and GigE System Settings</a><a class="headerlink" href="#linux-usb-and-gige-system-settings" title="Permalink to this headline">¶</a></h2>
 <p>In order to run GigE and USB-3 cameras at their full frame rates on Linux it is necessary to change some
 of the default Linux system settings.</p>
 <p>For GigE cameras the default values of the net.core.rmem_max and net.core.rmem_default are typically much to low
@@ -1116,7 +1271,7 @@ This is done by updating the boot params in grub. You can set the memory limit u
 </div>
 </div>
 <div class="section" id="medm-screens">
-<h2><a class="toc-backref" href="#id17">MEDM screens</a><a class="headerlink" href="#medm-screens" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">MEDM screens</a><a class="headerlink" href="#medm-screens" title="Permalink to this headline">¶</a></h2>
 <p>The following is the MEDM screen ADGenICam.adl when controlling a Point Grey Blackfly BFLY-PGE-20E4C camera.
 This screen is generic and can be used for any GemICam camera.</p>
 <div class="figure align-center">
