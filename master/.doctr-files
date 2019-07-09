@@ -56,6 +56,7 @@ master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
 master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
+master/ADRIXSCam/ADRIXSCam.html
 master/ADSupport_release.html
 master/ADViewers/ad_viewers.html
 master/_images/ADAravis.png
@@ -251,6 +252,7 @@ master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
 master/_sources/ADProsilica/st_cmd.rst.txt
+master/_sources/ADRIXSCam/ADRIXSCam.rst.txt
 master/_sources/ADSupport_release.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/acknowledgements.rst.txt

@@ -101,7 +101,7 @@ Macros</h2></td></tr>
 <tr class="separator:ab2106828de539188aed925f592751c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6cdb822e49152daaf368da5ea820ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a1b6cdb822e49152daaf368da5ea820ff">FIRST_PS_PARAM</a>&#160;&#160;&#160;PSReadStatistics</td></tr>
 <tr class="separator:a1b6cdb822e49152daaf368da5ea820ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15cd2edca9d1539d8c838af7f1be0f25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a15cd2edca9d1539d8c838af7f1be0f25">LAST_PS_PARAM</a>&#160;&#160;&#160;PSStrobe1Duration</td></tr>
+<tr class="memitem:a15cd2edca9d1539d8c838af7f1be0f25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#a15cd2edca9d1539d8c838af7f1be0f25">LAST_PS_PARAM</a>&#160;&#160;&#160;PSTemperatureMainboard</td></tr>
 <tr class="separator:a15cd2edca9d1539d8c838af7f1be0f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0ac219a3166f9bea4df3e872909372e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#ab0ac219a3166f9bea4df3e872909372e">NUM_PS_PARAMS</a>&#160;&#160;&#160;((int)(&amp;<a class="el" href="prosilica_8cpp.html#a15cd2edca9d1539d8c838af7f1be0f25">LAST_PS_PARAM</a> - &amp;<a class="el" href="prosilica_8cpp.html#a1b6cdb822e49152daaf368da5ea820ff">FIRST_PS_PARAM</a> + 1))</td></tr>
 <tr class="separator:ab0ac219a3166f9bea4df3e872909372e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +196,8 @@ Macros</h2></td></tr>
 <tr class="separator:a27bbcbd9bde89bb9556c67bbc7c9f2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac8c8a458399c054d594854977ecb46b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#aac8c8a458399c054d594854977ecb46b">PSStrobe1DurationString</a>&#160;&#160;&#160;&quot;PS_STROBE_1_DURATION&quot;    /* (asynFloat64,  r/w) Strobe 1 duration */</td></tr>
 <tr class="separator:aac8c8a458399c054d594854977ecb46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9d3025f7f94af4514cbaf8bc57af85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prosilica_8cpp.html#aed9d3025f7f94af4514cbaf8bc57af85">PSTemperatureMainboardString</a>&#160;&#160;&#160;&quot;PS_TEMPERATURE_MAINBOARD&quot;/* (asynFloat64,  r/o) Device temperature mainboard*/</td></tr>
+<tr class="separator:aed9d3025f7f94af4514cbaf8bc57af85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -327,7 +329,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LAST_PS_PARAM&#160;&#160;&#160;PSStrobe1Duration</td>
+          <td class="memname">#define LAST_PS_PARAM&#160;&#160;&#160;PSTemperatureMainboard</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -934,6 +936,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define PSSyncOut3ModeString&#160;&#160;&#160;&quot;PS_SYNC_OUT_3_MODE&quot;      /* (asynInt32,    r/w) Sync output 3 mode */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed9d3025f7f94af4514cbaf8bc57af85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9d3025f7f94af4514cbaf8bc57af85">&#9670;&nbsp;</a></span>PSTemperatureMainboardString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSTemperatureMainboardString&#160;&#160;&#160;&quot;PS_TEMPERATURE_MAINBOARD&quot;/* (asynFloat64,  r/o) Device temperature mainboard*/</td>
         </tr>
       </table>
 </div><div class="memdoc">

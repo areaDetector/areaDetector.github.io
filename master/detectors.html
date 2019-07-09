@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Supported Detectors &#8212; areaDetector 3-6-40-ga8b8cdc documentation</title>
+    <title>Supported Detectors &#8212; areaDetector 3-6-43-g223c108 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -374,6 +374,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ADProsilica/ADProsilica.html">areaDetector Prosilica driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADPointGrey/PointGreyDoc.html">Point Grey areaDetector driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="specsAnalyser/index.html">specsAnalyser areaDetector driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADRIXSCam/ADRIXSCam.html">areaDetector RIXSCAM driver</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ADCore/plugins.html">areaDetector Plugins</a><ul>
@@ -704,55 +705,61 @@ documentation, and pre-built binaries.</p>
 <td><a class="reference external" href="https://github.com/areaDetector/ADQImaging/blob/master/RELEASE.md">Release Notes</a></td>
 <td><a class="reference external" href="https://cars.uchicago.edu/software/pub/ADQImaging">Pre-built binaries</a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/ADRoper">ADRoper</a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/ADRIXSCam">ADRIXSCam</a></td>
+<td>Driver for XCAM RIXSCam Detectors</td>
+<td><a class="reference internal" href="ADFastCCD/index.html"><span class="doc">areaDetector FastCCD driver</span></a></td>
+<td><a class="reference external" href="https://github.com/areaDetector/ADRIXSCam/blob/master/RELEASE.md">Release Notes</a></td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/ADRoper">ADRoper</a></td>
 <td>Driver for Princeton Instruments and Photometics detectors using the WinView/WinSpec programs</td>
 <td><a class="reference external" href="RoperDoc.html">RoperDoc</a></td>
 <td><a class="reference external" href="https://github.com/areaDetector/ADRoper/blob/master/RELEASE.md">Release Notes</a></td>
 <td><a class="reference external" href="https://cars.uchicago.edu/software/pub/ADRoper">Pre-built binaries</a></td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/ADSimDetector">ADSimDetector</a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/ADSimDetector">ADSimDetector</a></td>
 <td>Driver for simulation detector</td>
 <td><a class="reference external" href="simDetectorDoc.html">simDetectorDoc</a></td>
 <td><a class="reference external" href="https://github.com/areaDetector/ADSimDetector/blob/master/RELEASE.md">Release Notes</a></td>
 <td><a class="reference external" href="https://cars.uchicago.edu/software/pub/ADSimDetector">Pre-built binaries</a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/ADURL">ADURL</a></td>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/ADURL">ADURL</a></td>
 <td>Driver for reading images from any URL using the GraphicsMagick library</td>
 <td><a class="reference external" href="URLDriverDoc.html">URLDriverDoc</a></td>
 <td><a class="reference external" href="https://github.com/areaDetector/ADURL/blob/master/RELEASE.md">Release Notes</a></td>
 <td><a class="reference external" href="https://cars.uchicago.edu/software/pub/ADURL">Pre-built binaries</a></td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/aravisGigE">aravisGigE</a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/aravisGigE">aravisGigE</a></td>
 <td>Driver using the GNOME Aravis library for Genicam GigE cameras</td>
 <td><a class="reference external" href="https://github.com/areaDetector/aravisGigE/blob/master/README.md">README</a></td>
 <td><a class="reference external" href="http://controls.diamond.ac.uk/downloads/support/aravisGigE/">Release Notes</a></td>
 <td>N.A.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/ffmpegViewer">ffmpegViewer</a></td>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/ffmpegViewer">ffmpegViewer</a></td>
 <td>A stand-alone Qt4 application to display a stream of ffmpeg compressed images</td>
 <td><a class="reference external" href="https://github.com/areaDetector/ffmpegViewer/blob/master/README.md">README</a></td>
 <td>N.A</td>
 <td>N.A.</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/ffmpegServer">ffmpegServer</a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/ffmpegServer">ffmpegServer</a></td>
 <td>Plugin that use the ffmpeg libraries to compress a stream of images to files or via an html service</td>
 <td><a class="reference external" href="http://controls.diamond.ac.uk/downloads/support/ffmpegServer/">ffmpegServer</a></td>
 <td><a class="reference external" href="http://controls.diamond.ac.uk/downloads/support/ffmpegServer/">Release Notes</a></td>
 <td>N.A.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/firewireDCAM">firewireDCAM</a></td>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/firewireDCAM">firewireDCAM</a></td>
 <td>Driver for Firewire DCAM detectors on Linux</td>
 <td><a class="reference external" href="https://github.com/areaDetector/firewireDCAM/blob/master/README.md">README</a></td>
 <td><a class="reference external" href="https://github.com/areaDetector/firewireDCAM/blob/master/RELEASE_NOTES.md">Release Notes</a></td>
 <td>N.A.</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/NDDriverStdArrays">NDDriverStdArrays</a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/NDDriverStdArrays">NDDriverStdArrays</a></td>
 <td>Driver that allows EPICS Channel Access clients to create NDArrays in an IOC</td>
 <td><a class="reference external" href="NDDriverStdArraysDoc.html">NDDriverStdArraysDoc</a></td>
 <td><a class="reference external" href="https://github.com/areaDetector/NDDriverStdArrays/blob/master/RELEASE.md">Release Notes</a></td>
 <td><a class="reference external" href="https://cars.uchicago.edu/software/pub/NDDriverStdArrays">Pre-built binaries</a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/areaDetector/pvaDriver">pvaDriver</a></td>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/areaDetector/pvaDriver">pvaDriver</a></td>
 <td>Driver that receives EPICS V4 NTNDArrays and converts them to NDArrays in an IOC</td>
 <td><a class="reference external" href="pvaDriverDoc.html">pvaDriverDoc</a></td>
 <td><a class="reference external" href="https://github.com/areaDetector/pvaDriver/blob/master/RELEASE.md">Release Notes</a></td>
