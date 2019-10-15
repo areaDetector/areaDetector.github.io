@@ -58,6 +58,7 @@ var menudata={children:[
 {text:"h",url:"namespacemembers_func.html#index_h"},
 {text:"m",url:"namespacemembers_func.html#index_m"},
 {text:"n",url:"namespacemembers_func.html#index_n"},
+{text:"p",url:"namespacemembers_func.html#index_p"},
 {text:"q",url:"namespacemembers_func.html#index_q"},
 {text:"s",url:"namespacemembers_func.html#index_s"},
 {text:"w",url:"namespacemembers_func.html#index_w"}]},
@@ -266,7 +267,8 @@ var menudata={children:[
 {text:"p",url:"globals_enum.html#index_p"},
 {text:"r",url:"globals_enum.html#index_r"},
 {text:"s",url:"globals_enum.html#index_s"},
-{text:"t",url:"globals_enum.html#index_t"}]},
+{text:"t",url:"globals_enum.html#index_t"},
+{text:"v",url:"globals_enum.html#index_v"}]},
 {text:"Enumerator",url:"globals_eval.html",children:[
 {text:"a",url:"globals_eval.html#index_a"},
 {text:"b",url:"globals_eval_b.html#index_b"},

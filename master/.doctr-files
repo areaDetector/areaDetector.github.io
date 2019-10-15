@@ -60,6 +60,7 @@ master/ADRIXSCam/ADRIXSCam.html
 master/ADSpinnaker/ADSpinnaker.html
 master/ADSupport_release.html
 master/ADViewers/ad_viewers.html
+master/ADVimba/ADVimba.html
 master/_images/ADAravis.png
 master/_images/ADAravis_features1.png
 master/_images/ADAravis_features2.png
@@ -78,6 +79,10 @@ master/_images/ADSpinnaker_features4.png
 master/_images/ADSpinnaker_features5.png
 master/_images/ADSpinnaker_features6.png
 master/_images/ADTop.png
+master/_images/ADVimba.png
+master/_images/ADVimba_features1.png
+master/_images/ADVimba_features2.png
+master/_images/ADVimba_features3.png
 master/_images/Barcodemain.png
 master/_images/Canny2.png
 master/_images/Centroid.png
@@ -264,6 +269,7 @@ master/_sources/ADRIXSCam/ADRIXSCam.rst.txt
 master/_sources/ADSpinnaker/ADSpinnaker.rst.txt
 master/_sources/ADSupport_release.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
+master/_sources/ADVimba/ADVimba.rst.txt
 master/_sources/acknowledgements.rst.txt
 master/_sources/additional_plugins.rst.txt
 master/_sources/detector_drivers.rst.txt
@@ -391,6 +397,9 @@ master/areaDetectorDoxygenHTML/_a_d_p_i_cam_8h_source.html
 master/areaDetectorDoxygenHTML/_a_d_spinnaker_8cpp.html
 master/areaDetectorDoxygenHTML/_a_d_spinnaker_8h.html
 master/areaDetectorDoxygenHTML/_a_d_spinnaker_8h_source.html
+master/areaDetectorDoxygenHTML/_a_d_vimba_8cpp.html
+master/areaDetectorDoxygenHTML/_a_d_vimba_8h.html
+master/areaDetectorDoxygenHTML/_a_d_vimba_8h_source.html
 master/areaDetectorDoxygenHTML/_a_dn_e_d_8cpp.html
 master/areaDetectorDoxygenHTML/_a_dn_e_d_8h.html
 master/areaDetectorDoxygenHTML/_a_dn_e_d_8h_source.html
@@ -441,6 +450,10 @@ master/areaDetectorDoxygenHTML/_image_format_control_8cpp-example.html
 master/areaDetectorDoxygenHTML/_image_format_control_8cpp.html
 master/areaDetectorDoxygenHTML/_l_f_test1_8cpp.html
 master/areaDetectorDoxygenHTML/_light_field_8cpp.html
+master/areaDetectorDoxygenHTML/_list_cameras_8cpp.html
+master/areaDetectorDoxygenHTML/_list_cameras_8h.html
+master/areaDetectorDoxygenHTML/_list_cameras_8h_source.html
+master/areaDetectorDoxygenHTML/_list_cameras_main_8cpp.html
 master/areaDetectorDoxygenHTML/_list_frame_rates_8cpp.html
 master/areaDetectorDoxygenHTML/_measure_temperature_8cpp.html
 master/areaDetectorDoxygenHTML/_n_d_array_8cpp.html
@@ -598,6 +611,9 @@ master/areaDetectorDoxygenHTML/_s_spin_box_8h_source.html
 master/areaDetectorDoxygenHTML/_trigger_delay_readback_8cpp.html
 master/areaDetectorDoxygenHTML/_u_r_l_driver_8cpp.html
 master/areaDetectorDoxygenHTML/_u_r_l_test_8cpp.html
+master/areaDetectorDoxygenHTML/_vimba_feature_8cpp.html
+master/areaDetectorDoxygenHTML/_vimba_feature_8h.html
+master/areaDetectorDoxygenHTML/_vimba_feature_8h_source.html
 master/areaDetectorDoxygenHTML/accum_test_8c.html
 master/areaDetectorDoxygenHTML/adsc_8cpp.html
 master/areaDetectorDoxygenHTML/andor3_8cpp.html
@@ -644,6 +660,12 @@ master/areaDetectorDoxygenHTML/class_a_d_p_i_cam.png
 master/areaDetectorDoxygenHTML/class_a_d_spinnaker-members.html
 master/areaDetectorDoxygenHTML/class_a_d_spinnaker.html
 master/areaDetectorDoxygenHTML/class_a_d_spinnaker.png
+master/areaDetectorDoxygenHTML/class_a_d_vimba-members.html
+master/areaDetectorDoxygenHTML/class_a_d_vimba.html
+master/areaDetectorDoxygenHTML/class_a_d_vimba.png
+master/areaDetectorDoxygenHTML/class_a_d_vimba_frame_observer-members.html
+master/areaDetectorDoxygenHTML/class_a_d_vimba_frame_observer.html
+master/areaDetectorDoxygenHTML/class_a_d_vimba_frame_observer.png
 master/areaDetectorDoxygenHTML/class_a_dn_e_d-members.html
 master/areaDetectorDoxygenHTML/class_a_dn_e_d.html
 master/areaDetectorDoxygenHTML/class_a_dn_e_d.png
@@ -658,6 +680,8 @@ master/areaDetectorDoxygenHTML/class_a_dn_e_d_transform.png
 master/areaDetectorDoxygenHTML/class_a_dn_e_d_transform_base-members.html
 master/areaDetectorDoxygenHTML/class_a_dn_e_d_transform_base.html
 master/areaDetectorDoxygenHTML/class_a_dn_e_d_transform_base.png
+master/areaDetectorDoxygenHTML/class_a_v_t_1_1_vmb_a_p_i_1_1_examples_1_1_list_cameras-members.html
+master/areaDetectorDoxygenHTML/class_a_v_t_1_1_vmb_a_p_i_1_1_examples_1_1_list_cameras.html
 master/areaDetectorDoxygenHTML/class_andor_c_c_d-members.html
 master/areaDetectorDoxygenHTML/class_andor_c_c_d.html
 master/areaDetectorDoxygenHTML/class_andor_c_c_d.png
@@ -835,6 +859,9 @@ master/areaDetectorDoxygenHTML/class_throttler.html
 master/areaDetectorDoxygenHTML/class_u_r_l_driver-members.html
 master/areaDetectorDoxygenHTML/class_u_r_l_driver.html
 master/areaDetectorDoxygenHTML/class_u_r_l_driver.png
+master/areaDetectorDoxygenHTML/class_vimba_feature-members.html
+master/areaDetectorDoxygenHTML/class_vimba_feature.html
+master/areaDetectorDoxygenHTML/class_vimba_feature.png
 master/areaDetectorDoxygenHTML/classadsc-members.html
 master/areaDetectorDoxygenHTML/classadsc.html
 master/areaDetectorDoxygenHTML/classadsc.png
@@ -1050,12 +1077,14 @@ master/areaDetectorDoxygenHTML/dir_8b26dd969c1b8179300da28d1493754b.html
 master/areaDetectorDoxygenHTML/dir_8bfd4a6ea6ed06e78aa7483a51570448.html
 master/areaDetectorDoxygenHTML/dir_8f4a5f4a79319beb39b1a40a2765be27.html
 master/areaDetectorDoxygenHTML/dir_8f565d1bbe2157dcb9083573d7c92a4d.html
+master/areaDetectorDoxygenHTML/dir_93f6649677c088e8ce3efd5a70c4ecf5.html
 master/areaDetectorDoxygenHTML/dir_9ae2f31a7816fc5fa113b95bb9a3565b.html
 master/areaDetectorDoxygenHTML/dir_9b6c9b8e97ad316f9e91ce80ad576064.html
 master/areaDetectorDoxygenHTML/dir_9ea3a481e2f38c7744d306224b44afb9.html
 master/areaDetectorDoxygenHTML/dir_a5b38789b6cf67f60f1e543e38afced3.html
 master/areaDetectorDoxygenHTML/dir_a655b37f2eeba148965de1cf384ede2c.html
 master/areaDetectorDoxygenHTML/dir_a90d0b6bb378f0f5d277f3d5c21fa7db.html
+master/areaDetectorDoxygenHTML/dir_ab17659922d5f69a0e377281bf3528c6.html
 master/areaDetectorDoxygenHTML/dir_b160652bdfcea9f80ad6e506ad10e63a.html
 master/areaDetectorDoxygenHTML/dir_b26d574c56f62a8bfbd8a7a242836a08.html
 master/areaDetectorDoxygenHTML/dir_b3810d2510c46ffe4e317540b31fa103.html
@@ -1070,6 +1099,7 @@ master/areaDetectorDoxygenHTML/dir_c3579301bf537887069f5978e07c41f4.html
 master/areaDetectorDoxygenHTML/dir_c394f7ac81aac6902d07b1b350d49f24.html
 master/areaDetectorDoxygenHTML/dir_c695d7476da377bc13da870b183f29c3.html
 master/areaDetectorDoxygenHTML/dir_c698096142a930edd1c5dc25a1a9b8ef.html
+master/areaDetectorDoxygenHTML/dir_c96b8dcf033281d513fedb58092f5638.html
 master/areaDetectorDoxygenHTML/dir_cc2ef07ce0a8b779514f3ca9555d667d.html
 master/areaDetectorDoxygenHTML/dir_ccd124adc1cb13ed5b3e92c7bdd7b137.html
 master/areaDetectorDoxygenHTML/dir_cdb54083b1f6199ddd7ffc5aacd675ae.html
@@ -1350,6 +1380,9 @@ master/areaDetectorDoxygenHTML/mythen_8cpp.html
 master/areaDetectorDoxygenHTML/n_e_d_channel_8cpp.html
 master/areaDetectorDoxygenHTML/n_e_d_channel_8h.html
 master/areaDetectorDoxygenHTML/n_e_d_channel_8h_source.html
+master/areaDetectorDoxygenHTML/namespace_a_v_t.html
+master/areaDetectorDoxygenHTML/namespace_a_v_t_1_1_vmb_a_p_i.html
+master/areaDetectorDoxygenHTML/namespace_a_v_t_1_1_vmb_a_p_i_1_1_examples.html
 master/areaDetectorDoxygenHTML/namespace_conversion.html
 master/areaDetectorDoxygenHTML/namespace_cpu_util.html
 master/areaDetectorDoxygenHTML/namespace_det_common_n_s.html
