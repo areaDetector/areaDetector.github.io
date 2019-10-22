@@ -49,7 +49,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Converts <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> callback data into standard asyn arrays (asynInt8Array, asynInt16Array, asynInt32Array, asynFloat32Array or asynFloat64Array); normally used for putting <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> data in EPICS waveform records.  
+<p>Converts <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> callback data into standard asyn arrays (asynInt8Array, asynInt16Array, asynInt32Array, asynInt64Array, asynFloat32Array or asynFloat64Array); normally used for putting <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> data in EPICS waveform records.  
  <a href="class_n_d_plugin_std_arrays.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_n_d_plugin_std_arrays_8h_source.html">NDPluginStdArrays.h</a>&gt;</code></p>
@@ -81,6 +81,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4108becd00af1138e9f7e0a9357e4c65"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_std_arrays.html#a4108becd00af1138e9f7e0a9357e4c65">readInt32Array</a> (asynUser *pasynUser, epicsInt32 *value, size_t nElements, size_t *nIn)</td></tr>
 <tr class="memdesc:a4108becd00af1138e9f7e0a9357e4c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when asyn clients call pasynInt32Array-&gt;read().  <a href="#a4108becd00af1138e9f7e0a9357e4c65">More...</a><br /></td></tr>
 <tr class="separator:a4108becd00af1138e9f7e0a9357e4c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b00050e8686862ceb6670378ed29774"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_std_arrays.html#a4b00050e8686862ceb6670378ed29774">readInt64Array</a> (asynUser *pasynUser, epicsInt64 *value, size_t nElements, size_t *nIn)</td></tr>
+<tr class="memdesc:a4b00050e8686862ceb6670378ed29774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when asyn clients call pasynInt64Array-&gt;read().  <a href="#a4b00050e8686862ceb6670378ed29774">More...</a><br /></td></tr>
+<tr class="separator:a4b00050e8686862ceb6670378ed29774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af83e8de2829ba969278ec342e9134004"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_std_arrays.html#af83e8de2829ba969278ec342e9134004">readFloat32Array</a> (asynUser *pasynUser, epicsFloat32 *value, size_t nElements, size_t *nIn)</td></tr>
 <tr class="memdesc:af83e8de2829ba969278ec342e9134004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when asyn clients call pasynFloat32Array-&gt;read().  <a href="#af83e8de2829ba969278ec342e9134004">More...</a><br /></td></tr>
 <tr class="separator:af83e8de2829ba969278ec342e9134004"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad95feb77baff701f85641ef5fc3d5c65 inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#ad95feb77baff701f85641ef5fc3d5c65">writeGenericPointer</a> (asynUser *pasynUser, void *genericPointer)</td></tr>
 <tr class="memdesc:ad95feb77baff701f85641ef5fc3d5c65 inherit pub_methods_classasyn_n_d_array_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method currently does nothing, but it should be implemented in this base class.  <a href="classasyn_n_d_array_driver.html#ad95feb77baff701f85641ef5fc3d5c65">More...</a><br /></td></tr>
 <tr class="separator:ad95feb77baff701f85641ef5fc3d5c65 inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf87462bc5853f8e5a56db5e93acd956 inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#abf87462bc5853f8e5a56db5e93acd956">setIntegerParam</a> (int index, int value)</td></tr>
+<tr class="memdesc:abf87462bc5853f8e5a56db5e93acd956 inherit pub_methods_classasyn_n_d_array_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for an integer in the parameter library.  <a href="classasyn_n_d_array_driver.html#abf87462bc5853f8e5a56db5e93acd956">More...</a><br /></td></tr>
+<tr class="separator:abf87462bc5853f8e5a56db5e93acd956 inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3732469004adb2cd7eb5d5f047385915 inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a3732469004adb2cd7eb5d5f047385915">setIntegerParam</a> (int list, int index, int value)</td></tr>
+<tr class="memdesc:a3732469004adb2cd7eb5d5f047385915 inherit pub_methods_classasyn_n_d_array_driver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for an integer in the parameter library.  <a href="classasyn_n_d_array_driver.html#a3732469004adb2cd7eb5d5f047385915">More...</a><br /></td></tr>
+<tr class="separator:a3732469004adb2cd7eb5d5f047385915 inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0e7e85f9f4a988614a273c035be813 inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a4c0e7e85f9f4a988614a273c035be813">readInt32</a> (asynUser *pasynUser, epicsInt32 *value)</td></tr>
 <tr class="separator:a4c0e7e85f9f4a988614a273c035be813 inherit pub_methods_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aeb82d51c34b79b77433e121722a141 inherit pub_methods_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a5aeb82d51c34b79b77433e121722a141">readFloat64</a> (asynUser *pasynUser, epicsFloat64 *value)</td></tr>
@@ -217,6 +226,22 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ad472f633149cd560959721e589d9ea54 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2be0f672f139c59f942bedfd7d94ff0f inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a2be0f672f139c59f942bedfd7d94ff0f">NDDriverVersion</a></td></tr>
 <tr class="separator:a2be0f672f139c59f942bedfd7d94ff0f inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2deb25acd798e9e0da6c52741a07b915 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a2deb25acd798e9e0da6c52741a07b915">ADManufacturer</a></td></tr>
+<tr class="separator:a2deb25acd798e9e0da6c52741a07b915 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c15720b7002ec1ff9278058240d82da inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a4c15720b7002ec1ff9278058240d82da">ADModel</a></td></tr>
+<tr class="separator:a4c15720b7002ec1ff9278058240d82da inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d910fd087c8eb02f3437b18b80bba1 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#aa4d910fd087c8eb02f3437b18b80bba1">ADSerialNumber</a></td></tr>
+<tr class="separator:aa4d910fd087c8eb02f3437b18b80bba1 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d5bd570163bd569bc6d2a2163da9c2 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a89d5bd570163bd569bc6d2a2163da9c2">ADSDKVersion</a></td></tr>
+<tr class="separator:a89d5bd570163bd569bc6d2a2163da9c2 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eadbf94d756dcf7b61d624f791fd516 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a4eadbf94d756dcf7b61d624f791fd516">ADFirmwareVersion</a></td></tr>
+<tr class="separator:a4eadbf94d756dcf7b61d624f791fd516 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06c19f650b4619a7bdbf3a79397c3d3 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#aa06c19f650b4619a7bdbf3a79397c3d3">ADAcquire</a></td></tr>
+<tr class="separator:aa06c19f650b4619a7bdbf3a79397c3d3 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb5af71e22323b6a3d4f51be380bc7a inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#aaeb5af71e22323b6a3d4f51be380bc7a">ADAcquireBusy</a></td></tr>
+<tr class="separator:aaeb5af71e22323b6a3d4f51be380bc7a inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb00dde7e1d46856e0bd4b586aff6bd2 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#adb00dde7e1d46856e0bd4b586aff6bd2">ADWaitForPlugins</a></td></tr>
+<tr class="separator:adb00dde7e1d46856e0bd4b586aff6bd2 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c89c00ea62734d82c89e09ea8aa47b inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a79c89c00ea62734d82c89e09ea8aa47b">NDArraySizeX</a></td></tr>
 <tr class="separator:a79c89c00ea62734d82c89e09ea8aa47b inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75753778fe16182d0771e924f05bde33 inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a75753778fe16182d0771e924f05bde33">NDArraySizeY</a></td></tr>
@@ -349,7 +374,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ae6b1a0c91170c2ef73546fcc4a78ac27 inherit pro_methods_class_n_d_plugin_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Converts <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> callback data into standard asyn arrays (asynInt8Array, asynInt16Array, asynInt32Array, asynFloat32Array or asynFloat64Array); normally used for putting <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> data in EPICS waveform records. </p>
+<div class="textblock"><p>Converts <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> callback data into standard asyn arrays (asynInt8Array, asynInt16Array, asynInt32Array, asynInt64Array, asynFloat32Array or asynFloat64Array); normally used for putting <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> data in EPICS waveform records. </p>
 <p>It handles the data type conversion if the <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> data type differs from the data type of the asyn interface. It flattens the NDArrays to a single dimension because asyn and EPICS do not support multi-dimensional arrays. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a7e604d57bfd1fd4fef5cb0c72021d1"></a>
@@ -721,6 +746,66 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_n_d_plugin_driver.html#ae9f9e40e62e01e41af145586f53feafc">NDPluginDriver</a>.</p>
+
+</div>
+</div>
+<a id="a4b00050e8686862ceb6670378ed29774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b00050e8686862ceb6670378ed29774">&#9670;&nbsp;</a></span>readInt64Array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asynStatus NDPluginStdArrays::readInt64Array </td>
+          <td>(</td>
+          <td class="paramtype">asynUser *&#160;</td>
+          <td class="paramname"><em>pasynUser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">epicsInt64 *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nElements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>nIn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when asyn clients call pasynInt64Array-&gt;read(). </p>
+<p>Converts the last <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> callback data to epicsInt64 (if necessary) and returns it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pasynUser</td><td>pasynUser structure that encodes the reason and address. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Pointer to the array to read. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nElements</td><td>Number of elements to read. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nIn</td><td>Number of elements actually read. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

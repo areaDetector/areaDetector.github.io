@@ -141,6 +141,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a36610c94479e66123d75057595f39f70"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a36610c94479e66123d75057595f39f70">writeInt32</a> (asynUser *pasynUser, epicsInt32 value)</td></tr>
 <tr class="memdesc:a36610c94479e66123d75057595f39f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an int32 parameter.  <a href="#a36610c94479e66123d75057595f39f70">More...</a><br /></td></tr>
 <tr class="separator:a36610c94479e66123d75057595f39f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf87462bc5853f8e5a56db5e93acd956"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#abf87462bc5853f8e5a56db5e93acd956">setIntegerParam</a> (int index, int value)</td></tr>
+<tr class="memdesc:abf87462bc5853f8e5a56db5e93acd956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for an integer in the parameter library.  <a href="#abf87462bc5853f8e5a56db5e93acd956">More...</a><br /></td></tr>
+<tr class="separator:abf87462bc5853f8e5a56db5e93acd956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3732469004adb2cd7eb5d5f047385915"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a3732469004adb2cd7eb5d5f047385915">setIntegerParam</a> (int list, int index, int value)</td></tr>
+<tr class="memdesc:a3732469004adb2cd7eb5d5f047385915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for an integer in the parameter library.  <a href="#a3732469004adb2cd7eb5d5f047385915">More...</a><br /></td></tr>
+<tr class="separator:a3732469004adb2cd7eb5d5f047385915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0e7e85f9f4a988614a273c035be813"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a4c0e7e85f9f4a988614a273c035be813">readInt32</a> (asynUser *pasynUser, epicsInt32 *value)</td></tr>
 <tr class="separator:a4c0e7e85f9f4a988614a273c035be813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aeb82d51c34b79b77433e121722a141"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a5aeb82d51c34b79b77433e121722a141">readFloat64</a> (asynUser *pasynUser, epicsFloat64 *value)</td></tr>
@@ -192,6 +198,22 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ad472f633149cd560959721e589d9ea54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2be0f672f139c59f942bedfd7d94ff0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a2be0f672f139c59f942bedfd7d94ff0f">NDDriverVersion</a></td></tr>
 <tr class="separator:a2be0f672f139c59f942bedfd7d94ff0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2deb25acd798e9e0da6c52741a07b915"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a2deb25acd798e9e0da6c52741a07b915">ADManufacturer</a></td></tr>
+<tr class="separator:a2deb25acd798e9e0da6c52741a07b915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c15720b7002ec1ff9278058240d82da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a4c15720b7002ec1ff9278058240d82da">ADModel</a></td></tr>
+<tr class="separator:a4c15720b7002ec1ff9278058240d82da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d910fd087c8eb02f3437b18b80bba1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#aa4d910fd087c8eb02f3437b18b80bba1">ADSerialNumber</a></td></tr>
+<tr class="separator:aa4d910fd087c8eb02f3437b18b80bba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d5bd570163bd569bc6d2a2163da9c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a89d5bd570163bd569bc6d2a2163da9c2">ADSDKVersion</a></td></tr>
+<tr class="separator:a89d5bd570163bd569bc6d2a2163da9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eadbf94d756dcf7b61d624f791fd516"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a4eadbf94d756dcf7b61d624f791fd516">ADFirmwareVersion</a></td></tr>
+<tr class="separator:a4eadbf94d756dcf7b61d624f791fd516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06c19f650b4619a7bdbf3a79397c3d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#aa06c19f650b4619a7bdbf3a79397c3d3">ADAcquire</a></td></tr>
+<tr class="separator:aa06c19f650b4619a7bdbf3a79397c3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb5af71e22323b6a3d4f51be380bc7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#aaeb5af71e22323b6a3d4f51be380bc7a">ADAcquireBusy</a></td></tr>
+<tr class="separator:aaeb5af71e22323b6a3d4f51be380bc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb00dde7e1d46856e0bd4b586aff6bd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#adb00dde7e1d46856e0bd4b586aff6bd2">ADWaitForPlugins</a></td></tr>
+<tr class="separator:adb00dde7e1d46856e0bd4b586aff6bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c89c00ea62734d82c89e09ea8aa47b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a79c89c00ea62734d82c89e09ea8aa47b">NDArraySizeX</a></td></tr>
 <tr class="separator:a79c89c00ea62734d82c89e09ea8aa47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75753778fe16182d0771e924f05bde33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#a75753778fe16182d0771e924f05bde33">NDArraySizeY</a></td></tr>
@@ -927,6 +949,103 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="abf87462bc5853f8e5a56db5e93acd956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf87462bc5853f8e5a56db5e93acd956">&#9670;&nbsp;</a></span>setIntegerParam() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asynStatus asynNDArrayDriver::setIntegerParam </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value for an integer in the parameter library. </p>
+<p>Calls setIntegerParam(0, index, value) i.e. for parameter list 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>The parameter number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3732469004adb2cd7eb5d5f047385915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3732469004adb2cd7eb5d5f047385915">&#9670;&nbsp;</a></span>setIntegerParam() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asynStatus asynNDArrayDriver::setIntegerParam </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value for an integer in the parameter library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>The parameter list number. Must be &lt; maxAddr passed to asynPortDriver::asynPortDriver. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>The parameter number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to set. This function was added to trap the driver setting ADAcquire to 0 and setting NumQueuedArrays. It implements the logic of setting ADAcquireBusy to reflect whether acquisition is done. If WaitForPlugins is true then this includes waiting for NumQueuedArrays to be 0. When ADAcquire goes to 0 it must use getQueuedArrayCount rather then NumQueuedArrays from the parameter library, because NumQueuedArrays is updated in a separate thread and might not have been set yet. getQueuedArrayCount updates immediately. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a688578d794900c0671da8dfaf771912b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a688578d794900c0671da8dfaf771912b">&#9670;&nbsp;</a></span>updateQueuedArrayCount()</h2>
 
@@ -1122,6 +1241,182 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa06c19f650b4619a7bdbf3a79397c3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06c19f650b4619a7bdbf3a79397c3d3">&#9670;&nbsp;</a></span>ADAcquire</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADAcquire</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaeb5af71e22323b6a3d4f51be380bc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb5af71e22323b6a3d4f51be380bc7a">&#9670;&nbsp;</a></span>ADAcquireBusy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADAcquireBusy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4eadbf94d756dcf7b61d624f791fd516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eadbf94d756dcf7b61d624f791fd516">&#9670;&nbsp;</a></span>ADFirmwareVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADFirmwareVersion</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2deb25acd798e9e0da6c52741a07b915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2deb25acd798e9e0da6c52741a07b915">&#9670;&nbsp;</a></span>ADManufacturer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADManufacturer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c15720b7002ec1ff9278058240d82da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c15720b7002ec1ff9278058240d82da">&#9670;&nbsp;</a></span>ADModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADModel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89d5bd570163bd569bc6d2a2163da9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d5bd570163bd569bc6d2a2163da9c2">&#9670;&nbsp;</a></span>ADSDKVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADSDKVersion</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4d910fd087c8eb02f3437b18b80bba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d910fd087c8eb02f3437b18b80bba1">&#9670;&nbsp;</a></span>ADSerialNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADSerialNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb00dde7e1d46856e0bd4b586aff6bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb00dde7e1d46856e0bd4b586aff6bd2">&#9670;&nbsp;</a></span>ADWaitForPlugins</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int asynNDArrayDriver::ADWaitForPlugins</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad472f633149cd560959721e589d9ea54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad472f633149cd560959721e589d9ea54">&#9670;&nbsp;</a></span>NDADCoreVersion</h2>
 
