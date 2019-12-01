@@ -425,6 +425,9 @@ master/areaDetectorDoxygenHTML/_a_dn_e_d_transform_base_8h_source.html
 master/areaDetectorDoxygenHTML/_acquisition_8cpp-example.html
 master/areaDetectorDoxygenHTML/_acquisition_8cpp.html
 master/areaDetectorDoxygenHTML/_b_i_s_detector_8cpp.html
+master/areaDetectorDoxygenHTML/_c_c_d_multi_track_8cpp.html
+master/areaDetectorDoxygenHTML/_c_c_d_multi_track_8h.html
+master/areaDetectorDoxygenHTML/_c_c_d_multi_track_8h_source.html
 master/areaDetectorDoxygenHTML/_chunk_data_8cpp.html
 master/areaDetectorDoxygenHTML/_circular_buffer_8h.html
 master/areaDetectorDoxygenHTML/_circular_buffer_8h_source.html
@@ -690,6 +693,8 @@ master/areaDetectorDoxygenHTML/class_b_i_s_detector.html
 master/areaDetectorDoxygenHTML/class_b_i_s_detector.png
 master/areaDetectorDoxygenHTML/class_bus_manager-members.html
 master/areaDetectorDoxygenHTML/class_bus_manager.html
+master/areaDetectorDoxygenHTML/class_c_c_d_multi_track-members.html
+master/areaDetectorDoxygenHTML/class_c_c_d_multi_track.html
 master/areaDetectorDoxygenHTML/class_circular_buffer-members.html
 master/areaDetectorDoxygenHTML/class_circular_buffer.html
 master/areaDetectorDoxygenHTML/class_dexela-members.html
