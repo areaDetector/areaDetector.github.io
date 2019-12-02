@@ -52,6 +52,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;libxml/parser.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_c_c_d_multi_track_8h_source.html">CCDMultiTrack.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="_a_d_driver_8h_source.html">ADDriver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_p_e_header_8h_source.html">SPEHeader.h</a>&quot;</code><br />
 </div>
@@ -114,12 +115,12 @@ Macros</h2></td></tr>
 <tr class="separator:ae5c5909dc2f30bfb5108196bbb7d839a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2f0ef3050ebe6539221cdd6623af923"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="andor_c_c_d_8h.html#ad2f0ef3050ebe6539221cdd6623af923">AndorVerticalShiftPeriodString</a>&#160;&#160;&#160;&quot;ANDOR_VS_PERIOD&quot;</td></tr>
 <tr class="separator:ad2f0ef3050ebe6539221cdd6623af923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd176301baac5b426ad2319a1b03daa2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="andor_c_c_d_8h.html#afd176301baac5b426ad2319a1b03daa2">AndorVerticalShiftAmplitudeString</a>&#160;&#160;&#160;&quot;ANDOR_VS_AMPLITUDE&quot;</td></tr>
+<tr class="separator:afd176301baac5b426ad2319a1b03daa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d7ff5938f2409f144a8ddce4cd8dee0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="andor_c_c_d_8h.html#a0d7ff5938f2409f144a8ddce4cd8dee0">FIRST_ANDOR_PARAM</a>&#160;&#160;&#160;AndorCoolerParam</td></tr>
 <tr class="separator:a0d7ff5938f2409f144a8ddce4cd8dee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab622942aa09665353e6a473f5fe3576"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="andor_c_c_d_8h.html#aab622942aa09665353e6a473f5fe3576">LAST_ANDOR_PARAM</a>&#160;&#160;&#160;AndorVerticalShiftPeriod</td></tr>
+<tr class="memitem:aab622942aa09665353e6a473f5fe3576"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="andor_c_c_d_8h.html#aab622942aa09665353e6a473f5fe3576">LAST_ANDOR_PARAM</a>&#160;&#160;&#160;AndorVerticalShiftAmplitude</td></tr>
 <tr class="separator:aab622942aa09665353e6a473f5fe3576"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a166b3ec4767be23710807af215384c58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="andor_c_c_d_8h.html#a166b3ec4767be23710807af215384c58">NUM_ANDOR_DET_PARAMS</a>&#160;&#160;&#160;((int)(&amp;<a class="el" href="andor_c_c_d_8h.html#aab622942aa09665353e6a473f5fe3576">LAST_ANDOR_PARAM</a> - &amp;<a class="el" href="andor_c_c_d_8h.html#a0d7ff5938f2409f144a8ddce4cd8dee0">FIRST_ANDOR_PARAM</a> + 1))</td></tr>
-<tr class="separator:a166b3ec4767be23710807af215384c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aacabbf78143fb337b3f57289538a4b7d"></a>
@@ -332,6 +333,20 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="afd176301baac5b426ad2319a1b03daa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd176301baac5b426ad2319a1b03daa2">&#9670;&nbsp;</a></span>AndorVerticalShiftAmplitudeString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AndorVerticalShiftAmplitudeString&#160;&#160;&#160;&quot;ANDOR_VS_AMPLITUDE&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad2f0ef3050ebe6539221cdd6623af923"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2f0ef3050ebe6539221cdd6623af923">&#9670;&nbsp;</a></span>AndorVerticalShiftPeriodString</h2>
 
@@ -367,7 +382,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LAST_ANDOR_PARAM&#160;&#160;&#160;AndorVerticalShiftPeriod</td>
+          <td class="memname">#define LAST_ANDOR_PARAM&#160;&#160;&#160;AndorVerticalShiftAmplitude</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -404,7 +419,7 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Matthew Pearson </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June 2009</dd></dl>
 <p>Updated Dec 2011 for Asyn 4-17 and areaDetector 1-7</p>
-<p>Major updates to get callbacks working, etc. by Mark Rivers Feb. 2011 </p>
+<p>Major updates to get callbacks working, etc. by Mark Rivers Feb. 2011 Updated by Peter Heesterman to support multi-track operation Oct. 2019 </p>
 
 </div>
 </div>
@@ -430,20 +445,6 @@ Macros</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MAX_VS_PERIODS&#160;&#160;&#160;16</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a166b3ec4767be23710807af215384c58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a166b3ec4767be23710807af215384c58">&#9670;&nbsp;</a></span>NUM_ANDOR_DET_PARAMS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NUM_ANDOR_DET_PARAMS&#160;&#160;&#160;((int)(&amp;<a class="el" href="andor_c_c_d_8h.html#aab622942aa09665353e6a473f5fe3576">LAST_ANDOR_PARAM</a> - &amp;<a class="el" href="andor_c_c_d_8h.html#a0d7ff5938f2409f144a8ddce4cd8dee0">FIRST_ANDOR_PARAM</a> + 1))</td>
         </tr>
       </table>
 </div><div class="memdoc">

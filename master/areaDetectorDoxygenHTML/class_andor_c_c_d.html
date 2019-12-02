@@ -78,6 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc2f578f27b07677c6f7ea1f19b1645d"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#acc2f578f27b07677c6f7ea1f19b1645d">writeFloat64</a> (asynUser *pasynUser, epicsFloat64 value)</td></tr>
 <tr class="memdesc:acc2f578f27b07677c6f7ea1f19b1645d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when asyn clients call pasynFloat64-&gt;write().  <a href="#acc2f578f27b07677c6f7ea1f19b1645d">More...</a><br /></td></tr>
 <tr class="separator:acc2f578f27b07677c6f7ea1f19b1645d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0354c69a9553ace135aee9351e634433"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#a0354c69a9553ace135aee9351e634433">writeInt32Array</a> (asynUser *pasynUser, epicsInt32 *value, size_t nElements)</td></tr>
+<tr class="separator:a0354c69a9553ace135aee9351e634433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaacc4e99005e36ae513a20e338bb4a6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#aaacc4e99005e36ae513a20e338bb4a6b">report</a> (FILE *fp, int details)</td></tr>
 <tr class="memdesc:aaacc4e99005e36ae513a20e338bb4a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report status of the driver.  <a href="#aaacc4e99005e36ae513a20e338bb4a6b">More...</a><br /></td></tr>
 <tr class="separator:aaacc4e99005e36ae513a20e338bb4a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +187,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3478e2ae02a2e6cbc8e5d53e0b51e09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa30dd38fc98cd1bbc322c1bf437cbae7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#aa30dd38fc98cd1bbc322c1bf437cbae7">AndorVerticalShiftPeriod</a></td></tr>
 <tr class="separator:aa30dd38fc98cd1bbc322c1bf437cbae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef30bad7c65e6ec927679cbf8eded25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_andor_c_c_d.html#a1ef30bad7c65e6ec927679cbf8eded25">AndorVerticalShiftAmplitude</a></td></tr>
+<tr class="separator:a1ef30bad7c65e6ec927679cbf8eded25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_a_d_driver"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_d_driver')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_a_d_driver.html">ADDriver</a></td></tr>
 <tr class="memitem:af7a169a1ab5a9069c5d556bf5c7ac387 inherit pro_attribs_class_a_d_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#af7a169a1ab5a9069c5d556bf5c7ac387">ADGain</a></td></tr>
 <tr class="separator:af7a169a1ab5a9069c5d556bf5c7ac387 inherit pro_attribs_class_a_d_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -745,6 +749,48 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a0354c69a9553ace135aee9351e634433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0354c69a9553ace135aee9351e634433">&#9670;&nbsp;</a></span>writeInt32Array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asynStatus AndorCCD::writeInt32Array </td>
+          <td>(</td>
+          <td class="paramtype">asynUser *&#160;</td>
+          <td class="paramname"><em>pasynUser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">epicsInt32 *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nElements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a48eecc0f13271db0477f5ae2d0a3a5dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48eecc0f13271db0477f5ae2d0a3a5dd">&#9670;&nbsp;</a></span>AndorAccumulatePeriod</h2>
@@ -1065,6 +1111,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int AndorCCD::AndorTempStatusMessage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ef30bad7c65e6ec927679cbf8eded25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef30bad7c65e6ec927679cbf8eded25">&#9670;&nbsp;</a></span>AndorVerticalShiftAmplitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AndorCCD::AndorVerticalShiftAmplitude</td>
         </tr>
       </table>
   </td>
