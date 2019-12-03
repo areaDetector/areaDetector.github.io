@@ -134,18 +134,6 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">portName</td><td>asyn port name to assign to the camera. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cameraId</td><td>The camera index or serial number; &lt;1000 is assumed to be index, &gt;=1000 is assumed to be serial number. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">traceMask</td><td>The initial value of the asynTraceMask.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>If set to 0 or 1 then asynTraceMask will be set to ASYN_TRACE_ERROR. If set to 0x21 (ASYN_TRACE_WARNING | ASYN_TRACE_ERROR) then each call to the FlyCap2 library will be traced including during initialization. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">memoryChannel</td><td>The camera memory channel (non-volatile memory containing camera parameters) to load during initialization. If 0 no memory channel is loaded. If &gt;=1 thenRestoreFromMemoryChannel(memoryChannel-1) is called.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Set memoryChannel to 1 to work around a bug in the Linux GigE driver in R2.0. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">maxMemory</td><td>Maximum memory (in bytes) that this driver is allowed to allocate. So if max. size = 1024x768 (8bpp) and maxBuffers is, say 14. maxMemory = 1024x768x14 = 11010048 bytes (~11MB). 0=unlimited. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>The EPICS thread priority for this driver. 0=use asyn default. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">stackSize</td><td>The size of the stack for the EPICS port thread. 0=use asyn default. </td></tr>
