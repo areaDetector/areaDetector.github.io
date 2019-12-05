@@ -56,6 +56,7 @@ master/ADFastCCD/st_cmd.html
 master/ADGenICam/ADGenICam.html
 master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
+master/ADPointGrey/st_cmd.html
 master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
 master/ADRIXSCam/ADRIXSCam.html
@@ -197,6 +198,8 @@ master/_images/liveupdate.png
 master/_images/pointGrey.png
 master/_images/pointGreyFrameRate.png
 master/_images/pointGreyPixelFormat.png
+master/_images/pointGreyProperties_BlackFly.png
+master/_images/pointGreyProperties_Grasshopper3.png
 master/_images/prosilica.png
 master/_images/prosilicaMore.png
 master/_images/prosilica_tvscl.jpg
@@ -270,6 +273,7 @@ master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADGenICam/ADGenICam.rst.txt
 master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
+master/_sources/ADPointGrey/st_cmd.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
 master/_sources/ADProsilica/st_cmd.rst.txt
 master/_sources/ADRIXSCam/ADRIXSCam.rst.txt
