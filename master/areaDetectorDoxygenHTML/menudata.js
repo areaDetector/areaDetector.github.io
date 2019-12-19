@@ -315,5 +315,4 @@ var menudata={children:[
 {text:"v",url:"globals_defs_v.html#index_v"},
 {text:"w",url:"globals_defs_w.html#index_w"},
 {text:"x",url:"globals_defs_x.html#index_x"},
-{text:"z",url:"globals_defs_z.html#index_z"}]}]}]},
-{text:"Examples",url:"examples.html"}]}
+{text:"z",url:"globals_defs_z.html#index_z"}]}]}]}]}
