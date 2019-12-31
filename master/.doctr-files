@@ -54,9 +54,9 @@ master/ADFastCCD/readme.html
 master/ADFastCCD/release.html
 master/ADFastCCD/st_cmd.html
 master/ADGenICam/ADGenICam.html
+master/ADPerkinElmer/PerkinElmerDoc.html
 master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
-master/ADPointGrey/st_cmd.html
 master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
 master/ADRIXSCam/ADRIXSCam.html
@@ -183,6 +183,7 @@ master/_images/NDStats_unfiltered.png
 master/_images/NDStdArrays.png
 master/_images/NDTimeSeriesPlot.png
 master/_images/NDTransform.png
+master/_images/PerkinElmer.png
 master/_images/Shamrock.png
 master/_images/areaDetectorArchitecture.png
 master/_images/bar1-5.png
@@ -271,9 +272,9 @@ master/_sources/ADFastCCD/readme.rst.txt
 master/_sources/ADFastCCD/release.rst.txt
 master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADGenICam/ADGenICam.rst.txt
+master/_sources/ADPerkinElmer/PerkinElmerDoc.rst.txt
 master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
-master/_sources/ADPointGrey/st_cmd.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
 master/_sources/ADProsilica/st_cmd.rst.txt
 master/_sources/ADRIXSCam/ADRIXSCam.rst.txt

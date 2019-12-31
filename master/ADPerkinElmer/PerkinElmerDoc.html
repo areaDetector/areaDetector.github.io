@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Example st.cmd Startup File &#8212; areaDetector 3-8-41-g3341675 documentation</title>
+    <title>ADPerkinElmer &#8212; areaDetector 3-8-45-ge637faf documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -15,6 +15,8 @@
     <link rel="shortcut icon" href="../_static/favicon_t.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ADPointGrey" href="../ADPointGrey/PointGreyDoc.html" />
+    <link rel="prev" title="ADGenICam" href="../ADGenICam/ADGenICam.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -52,7 +54,7 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../release.html">Top-level Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a><ul>
@@ -361,7 +363,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../ADCore/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore/arch.html">Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore/asynPortDriver.html">asynPortDriver</a></li>
@@ -376,14 +378,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#asynndarraydriver">asynNDArrayDriver</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../ADCore/guidelines.html">Guidelines and rules for drivers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore/ADDriver.html">ADDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADAndor/andorDoc.html">ADAndor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADAravis/ADAravis.html">ADAravis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADFastCCD/index.html">ADFastCCD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADGenICam/ADGenICam.html">ADGenICam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="PointGreyDoc.html">ADPointGrey</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ADPerkinElmer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPointGrey/PointGreyDoc.html">ADPointGrey</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADProsilica/ADProsilica.html">ADProsilica</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADRIXSCam/ADRIXSCam.html">ADRIXSCam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADSpinnaker/ADSpinnaker.html">ADSpinnaker</a></li>
@@ -462,7 +465,25 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Example st.cmd Startup File</a></li>
+<li><a class="reference internal" href="#">ADPerkinElmer</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#implementation-of-standard-driver-parameters">Implementation of standard driver parameters</a></li>
+<li><a class="reference internal" href="#perkinelmer-specific-parameters">PerkinElmer specific parameters</a></li>
+<li><a class="reference internal" href="#unsupported-standard-driver-parameters">Unsupported standard driver parameters</a></li>
+<li><a class="reference internal" href="#synchronization-and-triggering">Synchronization and triggering</a><ul>
+<li><a class="reference internal" href="#triggermode-free-running">TriggerMode=Free Running</a></li>
+<li><a class="reference internal" href="#triggermode-internal">TriggerMode=Internal</a></li>
+<li><a class="reference internal" href="#triggermode-external">TriggerMode=External</a></li>
+<li><a class="reference internal" href="#triggermode-soft-trigger">TriggerMode=Soft Trigger</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#example-st-cmd-startup-file">Example st.cmd startup file</a></li>
+<li><a class="reference internal" href="#medm-screens">MEDM screens</a></li>
+<li><a class="reference internal" href="#performance-measurements">Performance measurements</a></li>
+<li><a class="reference internal" href="#restrictions">Restrictions</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -471,6 +492,14 @@
             
               
                 
+  <li>
+    <a href="../ADGenICam/ADGenICam.html" title="Previous Chapter: ADGenICam"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADGenICam</span>
+    </a>
+  </li>
+  <li>
+    <a href="../ADPointGrey/PointGreyDoc.html" title="Next Chapter: ADPointGrey"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ADPointGrey &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -478,7 +507,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/ADPointGrey/st_cmd.rst.txt"
+  <a href="../_sources/ADPerkinElmer/PerkinElmerDoc.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -502,109 +531,618 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="example-st-cmd-startup-file">
-<h1>Example st.cmd Startup File<a class="headerlink" href="#example-st-cmd-startup-file" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt; envPaths
-errlogInit(20000)
+  <div class="section" id="adperkinelmer">
+<h1><a class="toc-backref" href="#id1">ADPerkinElmer</a><a class="headerlink" href="#adperkinelmer" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Mark Rivers (University of Chicago), John Hammonds, Brian Tieman (Argonne National Laboratory)</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#adperkinelmer" id="id1">ADPerkinElmer</a><ul>
+<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
+<li><a class="reference internal" href="#implementation-of-standard-driver-parameters" id="id3">Implementation of standard driver parameters</a></li>
+<li><a class="reference internal" href="#perkinelmer-specific-parameters" id="id4">PerkinElmer specific parameters</a></li>
+<li><a class="reference internal" href="#unsupported-standard-driver-parameters" id="id5">Unsupported standard driver parameters</a></li>
+<li><a class="reference internal" href="#synchronization-and-triggering" id="id6">Synchronization and triggering</a><ul>
+<li><a class="reference internal" href="#triggermode-free-running" id="id7">TriggerMode=Free Running</a></li>
+<li><a class="reference internal" href="#triggermode-internal" id="id8">TriggerMode=Internal</a></li>
+<li><a class="reference internal" href="#triggermode-external" id="id9">TriggerMode=External</a></li>
+<li><a class="reference internal" href="#triggermode-soft-trigger" id="id10">TriggerMode=Soft Trigger</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration" id="id11">Configuration</a></li>
+<li><a class="reference internal" href="#example-st-cmd-startup-file" id="id12">Example st.cmd startup file</a></li>
+<li><a class="reference internal" href="#medm-screens" id="id13">MEDM screens</a></li>
+<li><a class="reference internal" href="#performance-measurements" id="id14">Performance measurements</a></li>
+<li><a class="reference internal" href="#restrictions" id="id15">Restrictions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This is an <a class="reference internal" href="../index.html"><span class="doc">areaDetector</span></a> driver for the flat-panel amorphous
+silicon detectors from
+<a class="reference external" href="https://www.vareximaging.com/products/security-industrial/security-industrial-flat-panel-detectors">Varex Imaging (previously Perkin Elmer)</a>.</p>
+<p>The driver is based upon the XISL library provided by Perkin Elmer. It
+only runs on Microsoft Windows computers. It supports both 32-bit and
+64-bit versions of Windows.</p>
+<p>This driver has been tested with the following detectors</p>
+<ul class="simple">
+<li>XRD0820 with XRD-FG PCI frame grabber</li>
+<li>XRD0822 with Gigabit Ethernet interface</li>
+<li>XRD1621 with XRD-FGX PCI frame grabber</li>
+<li>XRD1621 with XRD-FGe Opto PCI-Express frame grabber</li>
+<li>XRPAD with Gigabit Ethernet interface</li>
+</ul>
+<p>This driver inherits from <a class="reference internal" href="../ADCore/ADDriver.html"><span class="doc">ADDriver</span></a>.
+It implements nearly all of the parameters in
+<a class="reference external" href="../areaDetectorDoxygenHTML/asyn_n_d_array_driver_8h.html">asynNDArrayDriver.h</a>
+and in
+<a class="reference external" href="../areaDetectorDoxygenHTML/_a_d_driver_8h.html">ADArrayDriver.h</a>. It
+also implements a number of parameters that are specific to the
+Perkin Elmer cameras. The <a class="reference external" href="../areaDetectorDoxygenHTML/class_perkin_elmer.html">PerkinEler class
+documentation</a>
+describes this class in detail.</p>
+</div>
+<div class="section" id="implementation-of-standard-driver-parameters">
+<h2><a class="toc-backref" href="#id3">Implementation of standard driver parameters</a><a class="headerlink" href="#implementation-of-standard-driver-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The following table describes how the PerkinElmer driver implements some
+of the standard driver parameters.</p>
+<table border="1" class="table-bordered table-striped table-hover docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2"><strong>Implementation of Parameters in asynNDArrayDriver.h and ADDriver.h, and EPICS Record
+Definitions in ADBase.template and NDFile.template</strong></th>
+</tr>
+<tr class="row-even"><th class="head">EPICS record names</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>NumImages</td>
+<td>Controls the number of images to acquire when ADImageMode is <code class="docutils literal notranslate"><span class="pre">Multiple</span></code> or <code class="docutils literal notranslate"><span class="pre">Average</span></code></td>
+</tr>
+<tr class="row-even"><td>AcquireTime, AcquireTime_RBV</td>
+<td>When TriggerMode= <code class="docutils literal notranslate"><span class="pre">Internal</span></code> or <code class="docutils literal notranslate"><span class="pre">Soft</span> <span class="pre">Trigger</span></code> this value controls the exposure time,
+both for SynchMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> and <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code>. <br>
+When TriggerMode= <code class="docutils literal notranslate"><span class="pre">External</span></code> and SynchMode= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code> this value also controls
+the exposure time. <br>
+When TriggerMode= <code class="docutils literal notranslate"><span class="pre">External</span></code> and SynchMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> the exposure time is determined
+by the time between trigger pulses, not by AcquireTime. <br>
+When TriggerMode= <code class="docutils literal notranslate"><span class="pre">Free</span> <span class="pre">Running</span></code> the AcquireTime is ignored, and the detector runs
+at the maximum possible frame rate and a fixed exposure time.</td>
+</tr>
+<tr class="row-odd"><td>TriggerMode, TriggerMode_RBV</td>
+<td>Sets the trigger mode for the detector. Options are: <br>
+<code class="docutils literal notranslate"><span class="pre">Internal</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">External</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">Free</span> <span class="pre">Running</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">Soft</span> <span class="pre">Trigger</span></code> <br>
+See the <a class="reference internal" href="#synchronization-and-triggering">Synchronization and triggering</a> section below
+for more details about synchronization and triggering.</td>
+</tr>
+<tr class="row-even"><td>ImageMode, ImageMode_RBV</td>
+<td>Sets the trigger mode for the detector. Options are: <br>
+<code class="docutils literal notranslate"><span class="pre">Single</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">Multiple</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">Continuous</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">Average</span></code> This mode is new for the Perkin Elmer. It averages NumImages frames in
+the hardware frame grabber. It is useful when the total acquisition time is longer
+than the 5 second maximum allowed in Internal trigger mode, etc.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="perkinelmer-specific-parameters">
+<h2><a class="toc-backref" href="#id4">PerkinElmer specific parameters</a><a class="headerlink" href="#perkinelmer-specific-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The PerkinElmer driver implements the following parameters in addition
+to those in asynNDArrayDriver.h and ADDriver.h.</p>
+<table border="1" class="table-bordered table-striped table-hover docutils">
+<colgroup>
+<col width="70%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="4"><strong>Parameter Definitions in PerkinElmer.h and EPICS Record Definitions in PerkinElmer.template</strong></th>
+</tr>
+<tr class="row-even"><th class="head">Description</th>
+<th class="head">drvInfo string</th>
+<th class="head">EPICS record names (preceeded with $(P)$(R))</th>
+<th class="head">EPICS record types</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>Number of software frame buffers to use</td>
+<td>PE_NUM_FRAME_BUFFERS</td>
+<td>PENumFrameBuffers, PENumFrameBuffers_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>Initialize the detector</td>
+<td>PE_INITIALIZE</td>
+<td>PEInitialize</td>
+<td>bo</td>
+</tr>
+<tr class="row-odd"><td>Trigger record for soft trigger mode</td>
+<td>PE_TRIGGER</td>
+<td>PETrigger</td>
+<td>bo</td>
+</tr>
+<tr class="row-even"><td>Frame number from the hardware frame buffer for this image. Values go from 1 to 8.</td>
+<td>PE_FRAME_BUFFER_INDEX</td>
+<td>PEFrameBuffIndex</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>Image number for this image in the software frame buffer array.</td>
+<td>PE_IMAGE_NUMBER</td>
+<td>PEImageNumber</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>Gain selection in units of pF capacitance. Choices are 0.25, 0.5, 1, 2, 4, and 8.</td>
+<td>PE_GAIN</td>
+<td>PEGain, PEGain_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>Synchronization mode. Choices are: <br>
+<code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">Clear</span></code> This mode has not been tested and clear documentation on it seems
+to be missing. <br>
+<code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code> This is Data Delivered on Demand mode. It discards the next frame
+and then starts acquiring a new frame for the specified acquisition time. <br>
+<code class="docutils literal notranslate"><span class="pre">Linewise</span></code> This is a specialized mode that requires an external timing source.
+It has not been tested with the EPICS driver. See the manual for details. <br>
+<code class="docutils literal notranslate"><span class="pre">Framewise</span></code> This is the normal default mode. The next frame delivered from the
+detector is stored. <br>
+<code class="docutils literal notranslate"><span class="pre">AutoTrigger</span></code> This mode is only available on the XRPAD. It automatically triggers
+a readout when the number of x-rays striking the detecotor reaches a defined threashold. <br>
+See the <a class="reference internal" href="#synchronization-and-triggering">Synchronization and triggering</a> section below
+for more details about synchronization and triggering.</td>
+<td>PE_SYNC_MODE</td>
+<td>PESyncMode, PESyncMode_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td colspan="3"><strong>Offset corrections</strong></td>
+</tr>
+<tr class="row-odd"><td>Number of frames to collect and average when collecting offset frames</td>
+<td>PE_NUM_OFFSET_FRAMES</td>
+<td>PENumOffsetFrames</td>
+<td>longout</td>
+</tr>
+<tr class="row-even"><td>Current offset frame being collected when collecting offset frames</td>
+<td>PE_CURRENT_OFFSET_FRAMEs</td>
+<td>PECurrentOffsetFrame</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>Acquire offset frames</td>
+<td>PE_ACQUIRE_OFFSET</td>
+<td>PEAcquireOffset</td>
+<td>busy</td>
+</tr>
+<tr class="row-even"><td>Set whether offset image is to be used. Choices are <code class="docutils literal notranslate"><span class="pre">Disable</span></code> (0) and <code class="docutils literal notranslate"><span class="pre">Enable</span></code> (1).</td>
+<td>PE_USE_OFFSET</td>
+<td>PEUseOffset</td>
+<td>bo</td>
+</tr>
+<tr class="row-odd"><td>Report whether offset image has been collected and is available for use. Choices
+are <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">available</span></code> (0) and <code class="docutils literal notranslate"><span class="pre">Available</span></code> (1).</td>
+<td>PE_OFFSET_AVAILABLE</td>
+<td>PEOffsetAvailable</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>An offset that is added to the image when the offset correction is performed. CorrectedImage
+= RawImage - OffsetImage + OffsetConstant. This constant should be used to prevent
+the CorrectedImage from having any negative pixel values, which would otherwise
+be clipped to 0. For efficiency this value is actually subtracted from the offset
+image as soon as it is collected, so it is then effectively added to each image
+when offset correction is done. This results in 2 restrictions: <br>
+1) PEOffsetConstant must be specified before the offset images are collected. If
+it is changed then the offset images must be collected again. <br>
+2) The value must be less than the minimum value of the offset image, or else negative
+values will result. In practice this should not be a problem, since an offset of
+100 should be sufficient to prevent negative values during offset correction, and
+the offset images are always greater than 100.</td>
+<td>PE_OFFSET_CONSTANT</td>
+<td>PEOffsetContant, PEOffsetContant_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td colspan="3"><strong>Gain corrections</strong></td>
+</tr>
+<tr class="row-even"><td>Number of frames to collect and average when collecting gain frames</td>
+<td>PE_NUM_GAIN_FRAMES</td>
+<td>PENumGainFrames</td>
+<td>longout</td>
+</tr>
+<tr class="row-odd"><td>Current gain frame being collected when collecting gain frames</td>
+<td>PE_CURRENT_GAIN_FRAMEs</td>
+<td>PECurrentGainFrame</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>Acquire gain frames</td>
+<td>PE_ACQUIRE_GAIN</td>
+<td>PEAcquireGain</td>
+<td>busy</td>
+</tr>
+<tr class="row-odd"><td>Set whether gain image is to be used. Choices are <code class="docutils literal notranslate"><span class="pre">Disable</span></code> (0) and <code class="docutils literal notranslate"><span class="pre">Enable</span></code> (1).</td>
+<td>PE_USE_GAIN</td>
+<td>PEUseGain</td>
+<td>bo</td>
+</tr>
+<tr class="row-even"><td>Report whether offset image has been collected and is available for use. Choices
+are <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">available</span></code> (0) and <code class="docutils literal notranslate"><span class="pre">Available</span></code> (1).</td>
+<td>PE_GAIN_AVAILABLE</td>
+<td>PEGainAvailable</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>File name for gain correction file</td>
+<td>PE_GAIN_FILE</td>
+<td>PEGainFile</td>
+<td>waveform</td>
+</tr>
+<tr class="row-even"><td>Save gain corrections to a file</td>
+<td>PE_SAVE_GAIN_FILE</td>
+<td>PESaveGainFile</td>
+<td>bo</td>
+</tr>
+<tr class="row-odd"><td>Load gain corrections from a file</td>
+<td>PE_LOAD_GAIN_FILE</td>
+<td>PELoadGainFile</td>
+<td>bo</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td colspan="3"><strong>Bad pixel corrections</strong></td>
+</tr>
+<tr class="row-odd"><td>Set whether bad pixel correction is to be used</td>
+<td>PE_USE_PIXEL_CORRECTION</td>
+<td>PEUsePixelCorrection</td>
+<td>bo</td>
+</tr>
+<tr class="row-even"><td>Report whether pixel correction file has been set and is available for use</td>
+<td>PE_PIXEL_CORRECTION_AVAILABLE</td>
+<td>PEPixelCorrectionAvailable</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>File name for pixel correction file</td>
+<td>PE_PIXEL_CORRECTION_FILE</td>
+<td>PEPixelFile</td>
+<td>waveform</td>
+</tr>
+<tr class="row-even"><td>Directory where gain and pixel correction files should be stored</td>
+<td>PE_CORRECTIONS_DIRECTORY</td>
+<td>PECorrectionsDir</td>
+<td>waveform</td>
+</tr>
+<tr class="row-odd"><td>Load pixel corrections from a file for use</td>
+<td>PE_LOAD_PIXEL_CORRECTION_FILE</td>
+<td>PELoadPixelCorrections</td>
+<td>bo</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td colspan="3"><strong>Skip frames settings</strong></td>
+</tr>
+<tr class="row-odd"><td>Set whether to skip initial PENumFramesToSkip frames from the detector on each acquisition.
+This can be used to discard the first frame which may contain data from before acquisition
+was started.</td>
+<td>PE_SKIP_FRAMES</td>
+<td>PESkipFrames, PESkipFrames_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>Sets the number of initial frames from the detector to skip on each acquisition
+if PESkipFrames=1.</td>
+<td>PE_NUM_FRAMES_TO_SKIP</td>
+<td>PENumFramesToSkip, PENumFramesToSkip_RBV</td>
+<td>longout, longin</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unsupported-standard-driver-parameters">
+<h2><a class="toc-backref" href="#id5">Unsupported standard driver parameters</a><a class="headerlink" href="#unsupported-standard-driver-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The PerkinElmer driver does not support the following standard driver
+parameters because they are not supported in the PerkinElmer library:</p>
+<ul class="simple">
+<li>Readout region (ADMinX, ADMinY, ADSizeX, ADSizeY)</li>
+<li>Type/Color (NDDataType, NDColorMode)</li>
+<li>File (None of the file parameters in NDFile)</li>
+<li>No Hardware shutter control</li>
+</ul>
+</div>
+<div class="section" id="synchronization-and-triggering">
+<span id="refname"></span><h2><a class="toc-backref" href="#id6">Synchronization and triggering</a><a class="headerlink" href="#synchronization-and-triggering" title="Permalink to this headline">¶</a></h2>
+<p>The Perkin Elmer detectors support a number of acquisition modes which
+are controlled by the TriggerMode, SyncMode, and AcquireTime records.
+This is a simplified discussion, and the reader should consult the <a class="reference external" href="1000952_Manual_XIS_Rev7.pdf">XIS
+software manual</a> and the detector
+hardware manuals (e.g. <a class="reference external" href="Manual_PKIaSi_XRD1621%202008-07-30.pdf">1621 hardware
+manual</a>) for details.</p>
+<p>The number of frames to be acquired is always controlled by the
+ImageMode=(Single, Multiple, or Continuous) and NumImages (if
+ImageMode=Multiple) records, regardless of the values of the
+TriggerMode, SyncMode, and AcquireTime records.</p>
+<p>It is important to realize that the detector hardware is constantly
+acquiring a stream of frames even when the EPICS Acquire record is 0.
+The rate of this frame stream depends on the value of the TriggerMode:</p>
+<ul class="simple">
+<li>TriggerMode= <code class="docutils literal notranslate"><span class="pre">Free</span> <span class="pre">Running</span></code> The frame rate is the maximum that the
+detector supports.</li>
+<li>TriggerMode= <code class="docutils literal notranslate"><span class="pre">Internal</span></code> The frame rate is controlled by an internal
+clock whose period is set to AcquireTime.</li>
+<li>TriggerMode= <code class="docutils literal notranslate"><span class="pre">External</span></code> The frame rate is controlled by the frequency
+of the external trigger pulses.</li>
+<li>TriggerMode= <code class="docutils literal notranslate"><span class="pre">Soft</span> <span class="pre">Trigger</span></code> The frame rate is controlled by the rate
+at which the PETrigger record is processed.</li>
+</ul>
+<p>When SyncMode=Framewise and acquisition is started by setting Acquire=1
+then the first frame that the EPICS driver collects is the next frame in
+that frame stream. <strong>NOTE:</strong> this means that this frame probably started
+exposing before Acquire was set to 1. This may not be desirable since
+motors may have still been moving, or a shutter not yet opened. When
+acquiring a sequence of images (ImageMode=Multiple) this would only
+affect the first image in the sequence, which might be acceptable.
+However, if doing a step-scan with ImageMode=Single it would affect
+every image in the scan. There are two ways to handle this. One is to
+use SyncMode=Framewise and set PENumFramesToSkip=1. This is quite
+inefficient since on average it will have an overhead of AcquireTime/2,
+and a worst case overhead of AcquireTime. A better approach is to set
+FrameSync= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code>, which adds a small overhead to each frame
+(~0.1-0.2 seconds), but ensures that the exposure is started after
+Acquire is set to 1.</p>
+<div class="section" id="triggermode-free-running">
+<h3><a class="toc-backref" href="#id7">TriggerMode=Free Running</a><a class="headerlink" href="#triggermode-free-running" title="Permalink to this headline">¶</a></h3>
+<p>In this mode the AcquireTime is ignored, and the detector runs at the
+maximum possible frame rate and a fixed minimum exposure time. SyncMode
+should be set to Framewise in this mode.</p>
+</div>
+<div class="section" id="triggermode-internal">
+<h3><a class="toc-backref" href="#id8">TriggerMode=Internal</a><a class="headerlink" href="#triggermode-internal" title="Permalink to this headline">¶</a></h3>
+<p>In this mode the behavior depends on the setting of SyncMode.</p>
+<ul class="simple">
+<li>If SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> then the detector hardware is constantly
+acquiring a stream of images with a frame rate determined by the
+AcquireTime record, up to the maximum frame rate the detector is
+capable of. When Acquire is set to 1 then this driver begins
+acquiring the images and doing callbacks to plugins. This is the
+fastest way to run the detector with a user-programmable acquisition
+time. However, it suffers from the limitation described above that
+the first frame after Acquire is set to 1 actually was being exposed
+before Acquire was set to 1. This may not be desired, particularly
+when ImageMode=Single. <strong>NOTE:</strong> the XRPAD detectors cannot use this
+mode because they are limited to a single internal frame rate and the
+AcquireTime record has no effect in this mode.</li>
+<li>If SyncMode= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code> then the detector hardware is constantly
+acquiring a stream of images at the maximum possible frame rate.
+However, when Acquire is set to 1 this driver sends a software
+trigger to the detector. This causes the hardware to discard the next
+frame when it arrives and to start a new exposure with an exposure
+time of AcquireTime. When the frame completes then the driver sends
+the next software trigger in the frame callback function. When
+running in this mode there is no limitation on the first frame
+containing data from before Acquire was set to 1. It does have the
+limitation that there is additional overhead per frame, so the
+maximum frame rate is reduced. On the XRD1621 this overhead is ~0.2
+second in 2048x2048 mode, and ~0.1 seconds in 1024x1024 mode. This
+mode is recommended when running with ImageMode=Single. If running
+with ImageMode=Multiple then this mode should be used if the first
+frame limitation described above is a problem. If the limitation of
+<code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code> mode on frame rate is more important than the
+limitation of <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> mode on the first frame then one should use
+SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="triggermode-external">
+<h3><a class="toc-backref" href="#id9">TriggerMode=External</a><a class="headerlink" href="#triggermode-external" title="Permalink to this headline">¶</a></h3>
+<p>In this mode the behavior also depends on the setting of SyncMode.</p>
+<ul class="simple">
+<li>If SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> then the detector hardware is constantly
+acquiring a stream of images with a frame rate determined by the time
+between external trigger pulses, up to the maximum frame rate the
+detector is capable of. When Acquire is set to 1 then this driver
+begins acquiring the images and doing callbacks to plugins. This is
+the fastest way to run the detector with an external trigger.
+However, it has some potential problems. First, if the time between
+external triggers is not constant then the exposure time of the
+frames will be different. This can lead to serious data quality
+issues because the offset correction will not be correct. If the time
+between trigger pulses is constant then there is still a potential
+data quality problem if the offset images were not collected with
+exactly the time acquisition time, for example if they will collected
+with an TriggerMode=Internal and a slightly different acquisition
+time. Of course this is not an issue if the offset images are
+acquired with the same external trigger period used for the data
+images, but this may be difficult to arrange in practice.</li>
+<li>If SyncMode= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code> then the detector hardware is constantly
+acquiring a stream of images at the maximum possible frame rate.
+However, when an external trigger pulse is received this causes the
+hardware to discard the next frame when it arrives and to start a new
+exposure with an exposure time of AcquireTime. This mode thus allows
+acquiring for a fixed exposure time on each external trigger, rather
+than the time until the next trigger is received. This means that
+offset images can be simply collected with TriggerMode=Internal and
+the same AcquireTime. This mode does have the limitation that there
+is additional overhead per frame, so the maximum frame rate is
+reduced. The overhead is the same as described above for
+TriggerMode= <code class="docutils literal notranslate"><span class="pre">Internal</span></code>, SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="triggermode-soft-trigger">
+<h3><a class="toc-backref" href="#id10">TriggerMode=Soft Trigger</a><a class="headerlink" href="#triggermode-soft-trigger" title="Permalink to this headline">¶</a></h3>
+<p>In this mode the behavior also depends on the setting of SyncMode.</p>
+<ul class="simple">
+<li>If SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> then the detector hardware is constantly
+acquiring a stream of images with a frame rate determined by the time
+between software triggers from the PETrigger record, up to the
+maximum frame rate the detector is capable of. When Acquire is set to
+1 then this driver begins acquiring the images and doing callbacks to
+plugins. This is the fastest way to run the detector with a software
+trigger. However, it has the same potential problems as
+TriggerMode= <code class="docutils literal notranslate"><span class="pre">External</span></code> and SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code> described above. In the
+case of software triggers the problem may be even more important if
+the time between software triggers has significant variation.</li>
+<li>If SyncMode= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code> then the detector hardware is constantly
+acquiring a stream of images at the maximum possible frame rate.
+However, when a software trigger is received this causes the hardware
+to discard the next frame when it arrives and to start a new exposure
+with an exposure time of AcquireTime. This mode thus allows acquiring
+for a fixed exposure time on each software trigger, rather than the
+time until the next software trigger is received. This means that
+offset images can be simply collected with TriggerMode= <code class="docutils literal notranslate"><span class="pre">Internal</span></code> and
+the same AcquireTime. This mode does have the limitation that there
+is additional overhead per frame, so the maximum frame rate is
+reduced. The overhead is the same as described above for
+TriggerMode= <code class="docutils literal notranslate"><span class="pre">Internal</span></code>, SyncMode= <code class="docutils literal notranslate"><span class="pre">Framewise</span></code>.</li>
+</ul>
+<p>It is important that the offset images are collected with the same
+SyncMode as the data. If the offset images are collected with
+SyncMode=Framewise and the data are collected with SyncMode= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span>
+<span class="pre">Clear</span></code> then the offset correction will not be correct, even if both are
+collected with the same AcquireTime. When using SyncMode= <code class="docutils literal notranslate"><span class="pre">DDD</span> <span class="pre">No</span> <span class="pre">Clear</span></code>
+it is fine to collect the offset and data images with different values
+of TriggerMode. For example the offset images could be collected with
+TriggerMode= <code class="docutils literal notranslate"><span class="pre">Internal</span></code> and the data images collected with TriggerMode= <code class="docutils literal notranslate"><span class="pre">External</span></code>.</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#id11">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The PerkinElmer driver is created with the perkinElmerConfig command,
+either from C/C++ or from the EPICS IOC shell.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>int PerkinElmerConfig(const char *portName, int IDType, const char* IDValue,
+                      int maxBuffers, size_t maxMemory,
+                      int priority, int stackSize )
+</pre></div>
+</div>
+<p>For details on the meaning of the parameters to this function refer to
+the detailed documentation on the PerkinElmerConfig function in the
+<a class="reference external" href="../areaDetectorDoxygenHTML/_perkin_elmer_8cpp.html">PerkinElmer.cpp
+documentation</a> and
+in the documentation for the constructor for the <a class="reference external" href="../areaDetectorDoxygenHTML/class_perkin_elmer.html">PerkinElmer
+class</a>.</p>
+</div>
+<div class="section" id="example-st-cmd-startup-file">
+<h2><a class="toc-backref" href="#id12">Example st.cmd startup file</a><a class="headerlink" href="#example-st-cmd-startup-file" title="Permalink to this headline">¶</a></h2>
+<p>The following startup script is provided with ADPerkinElmer.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>errlogInit(20000)
 
-dbLoadDatabase(&quot;$(TOP)/dbd/pointGreyApp.dbd&quot;)
-pointGreyApp_registerRecordDeviceDriver(pdbbase) 
+&lt; envPaths
+
+dbLoadDatabase(&quot;$(TOP)/dbd/PerkinElmerApp.dbd&quot;)
+PerkinElmerApp_registerRecordDeviceDriver(pdbbase) 
 
 # Prefix for all records
-epicsEnvSet(&quot;PREFIX&quot;, &quot;13PG1:&quot;)
-# Use this line for the first Point Grey camera in the system
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;0&quot;)
-# Use this line for a specific camera by serial number, in this case a Flea2 Firewire camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;9211601&quot;)
-# Use this line for a specific camera by serial number, in this case a Grasshopper3 USB-3.0 camera
-# This is the GSECARS tomography camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;13510305&quot;)
-# This is another GSECARS tomography camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15355695&quot;)
-# This is another GSECARS tomography camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15337483&quot;)
-# This is the 13-ID-D Grasshopper3 GigE camera, gse-pointgrey2
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14481221&quot;)
-# This is the 13-ID-D Grasshopper3 GigE camera, gse-pointgrey3
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14481209&quot;)
-# This is the GSECARS LVP CMOS camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14120134&quot;)
-# This is the GSECARS LVP CCD camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15452742&quot;)
-# This is the 2-BM camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15355637&quot;)
-# This is the 2-BM GS3-U3-91S6M-C camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;13510309&quot;)
-# Use this line for a specific camera by serial number, in this case a BlackFly GigE camera
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;13481965&quot;)
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;16292610&quot;)
-epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;18402100&quot;)
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;1624484&quot;)
-# Use this line for a specific camera by serial number, in this case a Flea3 GigE camera
-# epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14273040&quot;)
-#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;17476170&quot;)
-
+epicsEnvSet(&quot;PREFIX&quot;, &quot;13PE1:&quot;)
 # The port name for the detector
-epicsEnvSet(&quot;PORT&quot;,   &quot;PG1&quot;)
-# Really large queue so we can stream to disk at full camera speed
-epicsEnvSet(&quot;QSIZE&quot;,  &quot;2000&quot;)   
+epicsEnvSet(&quot;PORT&quot;,   &quot;PEDET1&quot;)
+# The queue size for all plugins
+epicsEnvSet(&quot;QSIZE&quot;,  &quot;20&quot;)
 # The maximim image width; used for row profiles in the NDPluginStats plugin
 epicsEnvSet(&quot;XSIZE&quot;,  &quot;2048&quot;)
 # The maximim image height; used for column profiles in the NDPluginStats plugin
 epicsEnvSet(&quot;YSIZE&quot;,  &quot;2048&quot;)
-# The maximum number of time series points in the NDPluginStats plugin
+# The maximum number of time seried points in the NDPluginStats plugin
 epicsEnvSet(&quot;NCHANS&quot;, &quot;2048&quot;)
 # The maximum number of frames buffered in the NDPluginCircularBuff plugin
 epicsEnvSet(&quot;CBUFFS&quot;, &quot;500&quot;)
 # The search path for database files
 epicsEnvSet(&quot;EPICS_DB_INCLUDE_PATH&quot;, &quot;$(ADCORE)/db&quot;)
-# Define NELEMENTS to be enough for a 2048x2048x3 (color) image
-epicsEnvSet(&quot;NELEMENTS&quot;, &quot;12592912&quot;)
 
-# pointGreyConfig(const char *portName, int cameraId, int traceMask, int memoryChannel,
-#                 int maxBuffers, size_t maxMemory, int priority, int stackSize)
-pointGreyConfig(&quot;$(PORT)&quot;, $(CAMERA_ID), 0x1, 0)
+# Create a PerkinElmer driver
+# PerkinElmerConfig(const char *portName, IDType, IDValue, maxBuffers, size_t maxMemory, int priority, int stackSize)
+# IDType = 0 Frame grabber card, IDValue=&quot;&quot;, use first frame grabber or directly connected GigE detector
+#        = 1 GigE detector by IP address (e.g. 164.54.160.21)
+#        = 2 GigE detector by MAC address (e.g. 00005b032e6b, must be lower-case letters)
+#        = 3 GigE detector by detector name (e.g. 8#2608).  Can get network detector names with asynReport(10)
+
+# This is for the first PCI/PCIExpress frame grabber detector in the system
+PerkinElmerConfig(&quot;$(PORT)&quot;, 0, &quot;0&quot;, 0, 0, 0, 0)
+
+# This is for the second PCI/PCIExpress frame grabber detector in the system
+#PerkinElmerConfig(&quot;$(PORT)&quot;, 0, &quot;1&quot;, 0, 0, 0, 0)
+
+# This is for a GigE detector at IP address 164.54.160.204
+#PerkinElmerConfig(&quot;$(PORT)&quot;, 1, 164.54.160.204, 0, 0, 0, 0)
+
+# This is for a GigE detector at MAC address 00005b032e6b
+#PerkinElmerConfig(&quot;$(PORT)&quot;, 2, 00005b032e6b, 0, 0, 0, 0)
+
+# This is for a GigE detector with name 8#2608
+#PerkinElmerConfig(&quot;$(PORT)&quot;, 3, 8#2608, 0, 0, 0, 0)
+
 asynSetTraceIOMask($(PORT), 0, 2)
-#asynSetTraceMask($(PORT), 0, 0xFF)
-#asynSetTraceFile($(PORT), 0, &quot;asynTrace.out&quot;)
-#asynSetTraceInfoMask($(PORT), 0, 0xf)
+# Setting this to 9 to enable ASYN_TRACEIO_DRIVER and see XIS calls
+#asynSetTraceMask($(PORT),0, 9)
 
-dbLoadRecords(&quot;$(ADPOINTGREY)/db/pointGrey.template&quot;, &quot;P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1&quot;)
-dbLoadTemplate(&quot;pointGrey.substitutions&quot;)
+dbLoadRecords(&quot;$(ADPERKINELMER)/db/PerkinElmer.template&quot;,&quot;P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1&quot;)
 
-# Create a standard arrays plugin
-NDStdArraysConfigure(&quot;Image1&quot;, 5, 0, &quot;$(PORT)&quot;, 0, 0)
-# Use this line for 8-bit data only
-#dbLoadRecords(&quot;$(ADCORE)/db/NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),TYPE=Int8,FTVL=CHAR,NELEMENTS=$(NELEMENTS)&quot;)
-# Use this line for 8-bit or 16-bit data
-dbLoadRecords(&quot;$(ADCORE)/db/NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),TYPE=Int16,FTVL=SHORT,NELEMENTS=$(NELEMENTS)&quot;)
+# Create a standard arrays plugin, set it to get data from Driver.
+NDStdArraysConfigure(&quot;Image1&quot;, 3, 0, &quot;$(PORT)&quot;, 0)
+# Set NELEMENTS to at least the total number of pixels in the detector.  The following is a little larger than 4096 x 4096
+dbLoadRecords(&quot;$(ADCORE)/db/NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),TYPE=Int16,SIZE=16,FTVL=SHORT,NELEMENTS=17000000&quot;)
 
 # Load all other plugins using commonPlugins.cmd
 &lt; $(ADCORE)/iocBoot/commonPlugins.cmd
-set_requestfile_path(&quot;$(ADPOINTGREY)/pointGreyApp/Db&quot;)
+set_requestfile_path(&quot;$(ADPERKINELMER)/perkinElmerApp/Db&quot;)
 
 iocInit()
 
 # save things every thirty seconds
-create_monitor_set(&quot;auto_settings.req&quot;, 30,&quot;P=$(PREFIX)&quot;)
+create_monitor_set(&quot;auto_settings.req&quot;, 30, &quot;P=$(PREFIX)&quot;)
 
-# Wait for enum callbacks to complete
-epicsThreadSleep(1.0)
-
-# Records with dynamic enums need to be processed again because the enum values are not available during iocInit.  
-dbpf(&quot;$(PREFIX)cam1:Format7Mode.PROC&quot;, &quot;1&quot;)
-dbpf(&quot;$(PREFIX)cam1:PixelFormat.PROC&quot;, &quot;1&quot;)
-
-# Wait for callbacks on the property limits (DRVL, DRVH) to complete
-epicsThreadSleep(1.0)
-
-# Records that depend on the state of the dynamic enum records or property limits also need to be processed again
-# Other property records may need to be added to this list
-dbpf(&quot;$(PREFIX)cam1:FrameRate.PROC&quot;, &quot;1&quot;)
-dbpf(&quot;$(PREFIX)cam1:FrameRateValAbs.PROC&quot;, &quot;1&quot;)
-dbpf(&quot;$(PREFIX)cam1:AcquireTime.PROC&quot;, &quot;1&quot;)
-
+#asynSetTraceMask($(PORT),0,0xff)
 </pre></div>
+</div>
+</div>
+<div class="section" id="medm-screens">
+<h2><a class="toc-backref" href="#id13">MEDM screens</a><a class="headerlink" href="#medm-screens" title="Permalink to this headline">¶</a></h2>
+<p>The following show the MEDM screens that are used to control the
+PerkinElmer detector. Note that the general purpose screen ADBase.adl
+can be used, but it exposes many controls that are not applicable to the
+PerkinElmer, and lacks some fields that are important for the
+PerkinElmer driver.</p>
+<p><code class="docutils literal notranslate"><span class="pre">PerkinElmer.adl</span></code> is the main screen used to control the PerkinElmer
+driver.</p>
+<div class="figure align-center">
+<img alt="../_images/PerkinElmer.png" src="../_images/PerkinElmer.png" />
+</div>
+</div>
+<div class="section" id="performance-measurements">
+<h2><a class="toc-backref" href="#id14">Performance measurements</a><a class="headerlink" href="#performance-measurements" title="Permalink to this headline">¶</a></h2>
+<p>The following measurements were done to demonstrate the performance that
+can be obtained with the areaDetector PerkinElmer driver.</p>
+<ul class="simple">
+<li>XRD1621 detector with the XRD-FGe Opto PCI-Express frame grabber<ul>
+<li>Can stream data continuously to local disk at 15 frames/s at
+2048x2048 (120 MB/s) and 30 frames/s at 1024x1024 (60 MB/s). These
+tests were done on a Windows 7 64-bit machine with 2 disk drives
+(SAS, 15K RPM, RAID 0).</li>
+</ul>
+</li>
+<li>XRD0822 detector with a GigE interface<ul>
+<li>Can stream data continuously to local disk at 25 frames/s at
+1024x1024 (50 MB/s) and 50 frames/s at 512x512 (25 MB/s). These
+tests were done on a Windows 7 64-bit laptop with a local disk
+drive.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="restrictions">
+<h2><a class="toc-backref" href="#id15">Restrictions</a><a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h2>
+<p>The following are some current restrictions of the PerkinElmer driver:</p>
+<ul class="simple">
+<li>Prior to R2-4 the driver only supported a single frame-grabber or
+directly connected GigE detector. This restriction was removed in
+R2-4.</li>
+</ul>
 </div>
 </div>
 

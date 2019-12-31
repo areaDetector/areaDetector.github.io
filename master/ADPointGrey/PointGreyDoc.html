@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADPointGrey &#8212; areaDetector 3-8-41-g3341675 documentation</title>
+    <title>ADPointGrey &#8212; areaDetector 3-8-45-ge637faf documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ADProsilica" href="../ADProsilica/ADProsilica.html" />
-    <link rel="prev" title="ADGenICam" href="../ADGenICam/ADGenICam.html" />
+    <link rel="prev" title="ADPerkinElmer" href="../ADPerkinElmer/PerkinElmerDoc.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -385,6 +385,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADAravis/ADAravis.html">ADAravis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADFastCCD/index.html">ADFastCCD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADGenICam/ADGenICam.html">ADGenICam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPerkinElmer/PerkinElmerDoc.html">ADPerkinElmer</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ADPointGrey</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADProsilica/ADProsilica.html">ADProsilica</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADRIXSCam/ADRIXSCam.html">ADRIXSCam</a></li>
@@ -475,10 +476,9 @@
 <li><a class="reference internal" href="#gige-properties">GigE Properties</a></li>
 <li><a class="reference internal" href="#standard-areadetector-parameters">Standard areaDetector parameters</a></li>
 <li><a class="reference internal" href="#point-grey-specific-driver-parameters">Point Grey specific driver parameters</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#example-st-cmd-startup-file">Example st.cmd startup file</a></li>
 <li><a class="reference internal" href="#medm-screens">MEDM screens</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -490,7 +490,7 @@
               
                 
   <li>
-    <a href="../ADGenICam/ADGenICam.html" title="Previous Chapter: ADGenICam"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADGenICam</span>
+    <a href="../ADPerkinElmer/PerkinElmerDoc.html" title="Previous Chapter: ADPerkinElmer"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADPerkinElmer</span>
     </a>
   </li>
   <li>
@@ -552,10 +552,9 @@
 <li><a class="reference internal" href="#gige-properties" id="id9">GigE Properties</a></li>
 <li><a class="reference internal" href="#standard-areadetector-parameters" id="id10">Standard areaDetector parameters</a></li>
 <li><a class="reference internal" href="#point-grey-specific-driver-parameters" id="id11">Point Grey specific driver parameters</a></li>
-<li><a class="reference internal" href="#configuration" id="id12">Configuration</a><ul>
-<li><a class="reference internal" href="#medm-screens" id="id13">MEDM screens</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#configuration" id="id12">Configuration</a></li>
+<li><a class="reference internal" href="#example-st-cmd-startup-file" id="id13">Example st.cmd startup file</a></li>
+<li><a class="reference internal" href="#medm-screens" id="id14">MEDM screens</a></li>
 </ul>
 </li>
 </ul>
@@ -586,7 +585,7 @@ It implements nearly all of the parameters in
 and in
 <a class="reference external" href="../areaDetectorDoxygenHTML/_a_d_driver_8h.html">ADArrayDriver.h</a>. It
 also implements a number of parameters that are specific to the
-Point Grey cameras. The <a class="reference external" href="areaDetectorDoxygenHTML/classpoint_grey.html">pointGrey class
+Point Grey cameras. The <a class="reference external" href="../areaDetectorDoxygenHTML/classpoint_grey.html">pointGrey class
 documentation</a>
 describes this class in detail.</p>
 <p>The Point Grey cameras use the <a class="reference external" href="http://damien.douxchamps.net/ieee1394/libdc1394/iidc/">IIDC/DCAM
@@ -1138,8 +1137,8 @@ are in pointGreyProperty.template.</p>
 <tr class="row-even"><td>PGVideoMode</td>
 <td>asynInt32</td>
 <td>r/w</td>
-<td>The video mode. All possible values are listed in the &lt;a href=”#VideoModes”&gt;Video
-modes&lt;/a&gt; section above. The actual enum choices for this record will only include
+<td>The video mode. All possible values are listed in the <a class="reference internal" href="#video-modes">Video modes</a>
+section above. The actual enum choices for this record will pnly include
 the video modes supported by the camera in use.</td>
 <td>PG_VIDEO_MODE</td>
 <td>$(P)$(R)VideoMode, $(P)$(R)VideoMode_RBV</td>
@@ -1150,7 +1149,7 @@ the video modes supported by the camera in use.</td>
 <td>asynInt32</td>
 <td>r/w</td>
 <td>The Format7 mode when the camera is in VideoMode=Format7. This is discussed in the
-&lt;a href=”#Format7Modes”&gt;Format7 modes&lt;/a&gt; section above. The actual enum choices
+<a class="reference internal" href="#format7-modes">Format7 Modes</a> section above. The actual enum choices
 for this record will only include the Format7 modes supported by the camera in use.</td>
 <td>PG_FORMAT7_MODE</td>
 <td>$(P)$(R)Format7Mode, $(P)$(R)Format7Mode_RBV</td>
@@ -1161,7 +1160,7 @@ for this record will only include the Format7 modes supported by the camera in u
 <td>asynInt32</td>
 <td>r/w</td>
 <td>The pixel format when the camera is in VideoMode=Format7. This is discussed in the
-&lt;a href=”#PixelFormats”&gt;Pixel formats&lt;/a&gt; section above. The actual enum choices
+<a class="reference internal" href="#pixel-formats">Pixel formats</a> section above. The actual enum choices
 for this record will only include the pixel formats supported by the camera in use
 for the Format7Mode currently selected.</td>
 <td>PG_PIXEL_FORMAT</td>
@@ -1203,7 +1202,7 @@ the bandwidth requirement by a factor of 3. <br></td>
 <td>asynInt32</td>
 <td>r/w</td>
 <td>The frame rate choice when the VideoMode is not Format7. This is discussed in the
-&lt;a href=”#FrameRates”&gt;Frame rates&lt;/a&gt; section above. The actual enum choices for
+<a class="reference internal" href="#frame-rates">Frame rates</a> section above. The actual enum choices for
 this record will only include the frame rates supported by the camera in use for
 the VideoMode currently selected.</td>
 <td>PG_FRAME_RATE</td>
@@ -1223,9 +1222,10 @@ the VideoMode currently selected.</td>
 <tr class="row-even"><td>&#160;</td>
 <td>&#160;</td>
 <td colspan="5"><strong>Property parameters, These parameters apply to each of the 18 Point Grey properties discussed in the
-&lt;a href=”#Properties”&gt;Properties&lt;/a&gt; section above.
-, The $(PROPERTY) macro in this table is the EPICS record base name listed in that
-section., These records are defined in pointGreyProperty.template.</strong></td>
+`Properties`_ section above. |br|
+The $(PROPERTY) macro in this table is the EPICS record base name listed in that
+section. |br|
+These records are defined in pointGreyProperty.template.</strong></td>
 </tr>
 <tr class="row-odd"><td>PGPropertyAvail</td>
 <td>asynInt32</td>
@@ -1396,9 +1396,10 @@ HOPR and DRVH fields of the $(P)$(R)$(PROPERTY)ValAbs record.</td>
 <tr class="row-odd"><td>&#160;</td>
 <td>&#160;</td>
 <td colspan="5"><strong>GigE Property parameters, These parameters apply to each of the 4 Point Grey GigE properties discussed in
-the &lt;a href=”#GigEProperties”&gt;GigE Properties&lt;/a&gt; section above.
-, The $(PROPERTY) macro in this table is the EPICS record base name listed in that
-section., These records are defined in pointGreyProperty.template.</strong></td>
+the `GigE Properties`_ section above. |br|
+The $(PROPERTY) macro in this table is the EPICS record base name listed in that
+section. |br|
+These records are defined in pointGreyProperty.template.</strong></td>
 </tr>
 <tr class="row-even"><td>PGPropertyValue</td>
 <td>asynInt32</td>
@@ -1409,8 +1410,7 @@ WHITE_BALANCE.</td>
 <td>PG_PROP_VAL</td>
 <td>$(P)$(R)$(PROPERTY)Val
 , $(P)$(R)$(PROPERTY)Val_RBV</td>
-<td>ao
-, ai</td>
+<td>ao, ai</td>
 </tr>
 <tr class="row-odd"><td>PGPropertyValueMin</td>
 <td>asynInt32</td>
@@ -1677,9 +1677,9 @@ of available cameras (e.g. 0 if there is only a single Point Grey camera
 available) or the serial number of the camera to use. For additional
 details on the meaning of the parameters to this function refer to the
 detailed documentation on the pointGreyConfigConfig function in the
-<a class="reference external" href="areaDetectorDoxygenHTML/point_grey_8cpp.html">pointGrey.cpp
+<a class="reference external" href="../areaDetectorDoxygenHTML/point_grey_8cpp.html">pointGrey.cpp
 documentation</a> and in
-the documentation for the constructor for the <a class="reference external" href="areaDetectorDoxygenHTML/classpoint_grey.html">pointGrey
+the documentation for the constructor for the <a class="reference external" href="../areaDetectorDoxygenHTML/classpoint_grey.html">pointGrey
 class</a>.</p>
 <p>The traceMask can be set to a value &gt; 1 to enable asynTrace debugging
 during initialization, before the value can be set from the IOC shell or
@@ -1697,11 +1697,115 @@ will work around this problem by replacing the settings in the camera
 with a default set. Since the EPICS IOC sets nearly all the camera
 settings to save/restore values at startup anyway, this is not a serious
 limitation.</p>
-<p>There an example IOC boot directory and startup script
-:<a class="reference internal" href="st_cmd.html"><span class="doc">Example st.cmd Startup File</span></a> provided with
-areaDetector.</p>
+</div>
+<div class="section" id="example-st-cmd-startup-file">
+<h2><a class="toc-backref" href="#id13">Example st.cmd startup file</a><a class="headerlink" href="#example-st-cmd-startup-file" title="Permalink to this headline">¶</a></h2>
+<p>The following startup script is provided with ADPointGrey.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt; envPaths
+errlogInit(20000)
+
+dbLoadDatabase(&quot;$(TOP)/dbd/pointGreyApp.dbd&quot;)
+pointGreyApp_registerRecordDeviceDriver(pdbbase) 
+
+# Prefix for all records
+epicsEnvSet(&quot;PREFIX&quot;, &quot;13PG1:&quot;)
+# Use this line for the first Point Grey camera in the system
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;0&quot;)
+# Use this line for a specific camera by serial number, in this case a Flea2 Firewire camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;9211601&quot;)
+# Use this line for a specific camera by serial number, in this case a Grasshopper3 USB-3.0 camera
+# This is the GSECARS tomography camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;13510305&quot;)
+# This is another GSECARS tomography camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15355695&quot;)
+# This is another GSECARS tomography camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15337483&quot;)
+# This is the 13-ID-D Grasshopper3 GigE camera, gse-pointgrey2
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14481221&quot;)
+# This is the 13-ID-D Grasshopper3 GigE camera, gse-pointgrey3
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14481209&quot;)
+# This is the GSECARS LVP CMOS camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14120134&quot;)
+# This is the GSECARS LVP CCD camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15452742&quot;)
+# This is the 2-BM camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;15355637&quot;)
+# This is the 2-BM GS3-U3-91S6M-C camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;13510309&quot;)
+# Use this line for a specific camera by serial number, in this case a BlackFly GigE camera
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;13481965&quot;)
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;16292610&quot;)
+epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;18402100&quot;)
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;1624484&quot;)
+# Use this line for a specific camera by serial number, in this case a Flea3 GigE camera
+# epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;14273040&quot;)
+#epicsEnvSet(&quot;CAMERA_ID&quot;, &quot;17476170&quot;)
+
+# The port name for the detector
+epicsEnvSet(&quot;PORT&quot;,   &quot;PG1&quot;)
+# Really large queue so we can stream to disk at full camera speed
+epicsEnvSet(&quot;QSIZE&quot;,  &quot;2000&quot;)   
+# The maximim image width; used for row profiles in the NDPluginStats plugin
+epicsEnvSet(&quot;XSIZE&quot;,  &quot;2048&quot;)
+# The maximim image height; used for column profiles in the NDPluginStats plugin
+epicsEnvSet(&quot;YSIZE&quot;,  &quot;2048&quot;)
+# The maximum number of time series points in the NDPluginStats plugin
+epicsEnvSet(&quot;NCHANS&quot;, &quot;2048&quot;)
+# The maximum number of frames buffered in the NDPluginCircularBuff plugin
+epicsEnvSet(&quot;CBUFFS&quot;, &quot;500&quot;)
+# The search path for database files
+epicsEnvSet(&quot;EPICS_DB_INCLUDE_PATH&quot;, &quot;$(ADCORE)/db&quot;)
+# Define NELEMENTS to be enough for a 2048x2048x3 (color) image
+epicsEnvSet(&quot;NELEMENTS&quot;, &quot;12592912&quot;)
+
+# pointGreyConfig(const char *portName, int cameraId, int traceMask, int memoryChannel,
+#                 int maxBuffers, size_t maxMemory, int priority, int stackSize)
+pointGreyConfig(&quot;$(PORT)&quot;, $(CAMERA_ID), 0x1, 0)
+asynSetTraceIOMask($(PORT), 0, 2)
+#asynSetTraceMask($(PORT), 0, 0xFF)
+#asynSetTraceFile($(PORT), 0, &quot;asynTrace.out&quot;)
+#asynSetTraceInfoMask($(PORT), 0, 0xf)
+
+dbLoadRecords(&quot;$(ADPOINTGREY)/db/pointGrey.template&quot;, &quot;P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1&quot;)
+dbLoadTemplate(&quot;pointGrey.substitutions&quot;)
+
+# Create a standard arrays plugin
+NDStdArraysConfigure(&quot;Image1&quot;, 5, 0, &quot;$(PORT)&quot;, 0, 0)
+# Use this line for 8-bit data only
+#dbLoadRecords(&quot;$(ADCORE)/db/NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),TYPE=Int8,FTVL=CHAR,NELEMENTS=$(NELEMENTS)&quot;)
+# Use this line for 8-bit or 16-bit data
+dbLoadRecords(&quot;$(ADCORE)/db/NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),TYPE=Int16,FTVL=SHORT,NELEMENTS=$(NELEMENTS)&quot;)
+
+# Load all other plugins using commonPlugins.cmd
+&lt; $(ADCORE)/iocBoot/commonPlugins.cmd
+set_requestfile_path(&quot;$(ADPOINTGREY)/pointGreyApp/Db&quot;)
+
+iocInit()
+
+# save things every thirty seconds
+create_monitor_set(&quot;auto_settings.req&quot;, 30,&quot;P=$(PREFIX)&quot;)
+
+# Wait for enum callbacks to complete
+epicsThreadSleep(1.0)
+
+# Records with dynamic enums need to be processed again because the enum values are not available during iocInit.  
+dbpf(&quot;$(PREFIX)cam1:Format7Mode.PROC&quot;, &quot;1&quot;)
+dbpf(&quot;$(PREFIX)cam1:PixelFormat.PROC&quot;, &quot;1&quot;)
+
+# Wait for callbacks on the property limits (DRVL, DRVH) to complete
+epicsThreadSleep(1.0)
+
+# Records that depend on the state of the dynamic enum records or property limits also need to be processed again
+# Other property records may need to be added to this list
+dbpf(&quot;$(PREFIX)cam1:FrameRate.PROC&quot;, &quot;1&quot;)
+dbpf(&quot;$(PREFIX)cam1:FrameRateValAbs.PROC&quot;, &quot;1&quot;)
+dbpf(&quot;$(PREFIX)cam1:AcquireTime.PROC&quot;, &quot;1&quot;)
+
+</pre></div>
+</div>
+</div>
 <div class="section" id="medm-screens">
-<h3><a class="toc-backref" href="#id13">MEDM screens</a><a class="headerlink" href="#medm-screens" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id14">MEDM screens</a><a class="headerlink" href="#medm-screens" title="Permalink to this headline">¶</a></h2>
 <p>The following show the MEDM screens that are used to control the Point
 Grey cameras.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pointGrey.adl</span></code> is the main screen used to control Point Grey cameras.</p>
@@ -1745,7 +1849,6 @@ pointGrey.adl screen can also be incorrect, so it may be necessary to
 close and re-open that main screen as well.</p>
 <div class="figure align-center">
 <img alt="../_images/pointGreyPixelFormat.png" src="../_images/pointGreyPixelFormat.png" />
-</div>
 </div>
 </div>
 </div>
