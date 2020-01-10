@@ -240,7 +240,7 @@ copyright: Brookhaven National Laboratory 2017-2019
 
 .. |barcode| image:: barcode.png
    :width: 500px
-.. |commonplugins| image:: commonplugins.png
+.. |commonplugins| image:: ADPluginBar_commonPlugins.png
    :width: 700px
 .. |NDPluginBar.opi| image:: Barcodemain.png
    :width: 700px
