@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector: Installation Guide &#8212; areaDetector 3-8-52-g02a1b77 documentation</title>
+    <title>areaDetector: Installation Guide &#8212; areaDetector 3-8-54-g22736ba documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -81,7 +81,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ADCore_release.html">ADCore Release Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ADCore_release.html#scanrate-macro">SCANRATE macro</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#r3-9-december-xxx-2019"><strong>R3-9 (December XXX, 2019)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
@@ -953,7 +956,7 @@ meet the following requirements:</p>
 <ul class="simple">
 <li>If using the top-level areaDetector
 repository then it is only necessary to edit the CONFIG* and RELEASE*
-files in the <code class="docutils literal notranslate"><span class="pre">areaDetector/configure</span> <span class="pre">directory</span></code>, and not in each of the
+files in the <code class="docutils literal notranslate"><span class="pre">areaDetector/configure</span></code> directory, and not in each of the
 submodules, of which there are now about 40.</li>
 <li>Allows building multiple
 architectures in the same tree, including Linux and Windows. This means
