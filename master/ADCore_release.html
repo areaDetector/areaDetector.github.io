@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADCore Releases &#8212; areaDetector 3-8-59-g12fe180 documentation</title>
+    <title>ADCore Releases &#8212; areaDetector 3-8-61-g5000fec documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -81,11 +81,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADCore Release Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#scanrate-macro">SCANRATE macro</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#r3-9-december-xxx-2019"><strong>R3-9 (December XXX, 2019)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -469,11 +466,8 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ADCore Releases</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a><ul>
-<li><a class="reference internal" href="#scanrate-macro">SCANRATE macro</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#r3-9-december-xxx-2019"><strong>R3-9 (December XXX, 2019)</strong></a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
 <li><a class="reference internal" href="#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -765,25 +759,9 @@ in the areaDetector releases available via links at
 the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE_PRODS.local
 files respectively, in the configure/ directory of the appropriate release of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector">top-level areaDetector</a> repository.</p>
-<div class="section" id="scanrate-macro">
-<h3>SCANRATE macro<a class="headerlink" href="#scanrate-macro" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>A new macro has been added to NDPosPlugin.template, NDPluginBase.template, NDFile.tamplate, NDArrayBase.template and
-ADBase.template. This can be used to control the SCAN value of status PVs which update on every frame such as
-ArrayCounter_RBV, TimeStamp_RBV, UniqueId_RBV among others. These were found to be intensive on the CPU when set to
-I/O Intr for a detector running at faster than 1 KHz. The performance could be improved by setting the SCAN value
-to update less frequently.</li>
-<li>The default value of the macro has been set to I/O Intr so that it will not affect any applications that do not
-require the SCAN rate throttled.</li>
-<li>The ImageJ EPICS_AD_Viewer plugin monitors ArrayCounter_RBV to decide when there is a new image to display. That
-means that it will not display faster than the SCANRATE you select.</li>
-<li>By making the records periodically scanned they will be reading even when the detector is stopped, which is a bit
-more overhead than SCAN=I/O Intr.</li>
-</ul>
 </div>
-</div>
-<div class="section" id="r3-9-december-xxx-2019">
-<h2><strong>R3-9 (December XXX, 2019)</strong><a class="headerlink" href="#r3-9-december-xxx-2019" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r3-9-january-xxx-2020">
+<h2><strong>R3-9 (January XXX, 2020)</strong><a class="headerlink" href="#r3-9-january-xxx-2020" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ccdmultitrack">
 <h3>CCDMultiTrack<a class="headerlink" href="#ccdmultitrack" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -795,6 +773,18 @@ It was incorrectly reporting the number of elements above HistMax and the mid-po
 the histogram had 0 counts when it should not.
 ### NDFileHDF5</li>
 <li>Fixed problem with XML2 library linking warnings on static Windows builds (Peter Heesterman)
+### SCANRATE macro</li>
+<li>A new macro has been added to NDPosPlugin.template, NDPluginBase.template, NDFile.tamplate, NDArrayBase.template and
+ADBase.template. This can be used to control the SCAN value of status PVs which update on every frame such as
+ArrayCounter_RBV, TimeStamp_RBV, UniqueId_RBV among others. These were found to be intensive on the CPU when set to
+I/O Intr for a detector running at faster than 1 KHz. The performance could be improved by setting the SCAN value
+to update less frequently.</li>
+<li>The default value of the macro has been set to I/O Intr so that it will not affect any applications that do not
+require the SCAN rate throttled.</li>
+<li>The ImageJ EPICS_AD_Viewer plugin monitors ArrayCounter_RBV to decide when there is a new image to display. That
+means that it will not display faster than the SCANRATE you select.</li>
+<li>By making the records periodically scanned they will be reading even when the detector is stopped, which is a bit
+more overhead than SCAN=I/O Intr.
 ### docs</li>
 <li>Replaced all raw HTML tables in .rst files with Sphinx flat-tables.</li>
 </ul>

@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector: Installation Guide &#8212; areaDetector 3-8-59-g12fe180 documentation</title>
+    <title>areaDetector: Installation Guide &#8212; areaDetector 3-8-61-g5000fec documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -81,11 +81,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ADCore_release.html">ADCore Release Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#introduction">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ADCore_release.html#scanrate-macro">SCANRATE macro</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#r3-9-december-xxx-2019"><strong>R3-9 (December XXX, 2019)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -566,7 +563,7 @@
 <p><em>Marty Kraimer, Brookhaven National Laboratory</em></p>
 <p><em>Mark Rivers, University of Chicago</em></p>
 <div class="contents topic" id="install-guide-contents">
-<p class="topic-title first">Install Guide Contents</p>
+<p class="topic-title">Install Guide Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#areadetector-installation-guide" id="id1">areaDetector: Installation Guide</a><ul>
 <li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
@@ -1354,9 +1351,9 @@ For example if using a detector with 1024x1024 pixels and
 In practice it should be set at least 100 bytes larger than this
 because there is some overhead. For example:</p>
 <p><code class="docutils literal notranslate"><span class="pre">setenv</span> <span class="pre">EPICS_CA_MAX_ARRAY_BYTES</span> <span class="pre">4154000</span></code></p>
-<p>Do not simply set <code class="docutils literal notranslate"><span class="pre">EPICS_CA_MAX_ARRAY_BYTE``S</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">very</span> <span class="pre">large</span> <span class="pre">number</span>
-<span class="pre">like</span> <span class="pre">100MB</span> <span class="pre">or</span> <span class="pre">1GB.</span> <span class="pre">EPICS</span> <span class="pre">Channel</span> <span class="pre">Access</span> <span class="pre">allocates</span> <span class="pre">buffers</span> <span class="pre">of</span>
-<span class="pre">exactly</span> <span class="pre">``EPICS_CA_MAX_ARRAY</span></code> bytes whenever the required buffer size
+<p>Do not simply set <code class="docutils literal notranslate"><span class="pre">EPICS_CA_MAX_ARRAY_BYTES</span></code> to a very large number
+like 100MB or 1GB. EPICS Channel Access allocates buffers of
+exactly <code class="docutils literal notranslate"><span class="pre">EPICS_CA_MAX_ARRAY</span></code> bytes whenever the required buffer size
 exceeds 16 kB, and one does not want unnecessarily large buffers
 to be allocated.</p>
 </li>
