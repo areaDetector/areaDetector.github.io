@@ -64,6 +64,7 @@ master/ADSpinnaker/ADSpinnaker.html
 master/ADSupport_release.html
 master/ADViewers/ad_viewers.html
 master/ADVimba/ADVimba.html
+master/ADmarCCD/marCCDDoc.html
 master/_images/ADAravis.png
 master/_images/ADAravis_features1.png
 master/_images/ADAravis_features2.png
@@ -106,6 +107,9 @@ master/_images/ImageJ_GaussianProfiler.png
 master/_images/ImageJ_Main_Screen.png
 master/_images/Laplacian.png
 master/_images/MainCVScreen.png
+master/_images/MarCCDAncillary.png
+master/_images/MarCCDAsynOctet.png
+master/_images/MarCCDAsynRecord.png
 master/_images/NDCircularBuff.png
 master/_images/NDCodec.png
 master/_images/NDCodec_Performance.png
@@ -196,6 +200,7 @@ master/_images/fccd1.png
 master/_images/fileStructure.png
 master/_images/laplacian_menu.png
 master/_images/liveupdate.png
+master/_images/marCCD.png
 master/_images/pointGrey.png
 master/_images/pointGreyFrameRate.png
 master/_images/pointGreyPixelFormat.png
@@ -282,6 +287,7 @@ master/_sources/ADSpinnaker/ADSpinnaker.rst.txt
 master/_sources/ADSupport_release.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/ADVimba/ADVimba.rst.txt
+master/_sources/ADmarCCD/marCCDDoc.rst.txt
 master/_sources/acknowledgements.rst.txt
 master/_sources/additional_plugins.rst.txt
 master/_sources/detector_drivers.rst.txt
