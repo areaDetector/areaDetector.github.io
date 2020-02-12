@@ -55,6 +55,7 @@ master/ADFastCCD/release.html
 master/ADFastCCD/st_cmd.html
 master/ADGenICam/ADGenICam.html
 master/ADPerkinElmer/PerkinElmerDoc.html
+master/ADPilatus/pilatusDoc.html
 master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
 master/ADProsilica/ADProsilica.html
@@ -75,6 +76,7 @@ master/_images/ADGenICam_features1.png
 master/_images/ADGenICam_features2.png
 master/_images/ADGenICam_features3.png
 master/_images/ADGenICam_features4.png
+master/_images/ADPvaDriver.png
 master/_images/ADSpinnaker.png
 master/_images/ADSpinnaker_features1.png
 master/_images/ADSpinnaker_features2.png
@@ -201,6 +203,16 @@ master/_images/fileStructure.png
 master/_images/laplacian_menu.png
 master/_images/liveupdate.png
 master/_images/marCCD.png
+master/_images/pilatusAncillary.png
+master/_images/pilatusAsyn.png
+master/_images/pilatusAsynOctet.png
+master/_images/pilatusDetector.png
+master/_images/pilatusMCA.png
+master/_images/pilatusROI4.png
+master/_images/pilatusSPEC.png
+master/_images/pilatusStats5.png
+master/_images/pilatusThresholdScanPlot.png
+master/_images/pilatusThresholdScanSetup.png
 master/_images/pointGrey.png
 master/_images/pointGreyFrameRate.png
 master/_images/pointGreyPixelFormat.png
@@ -278,6 +290,7 @@ master/_sources/ADFastCCD/release.rst.txt
 master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADGenICam/ADGenICam.rst.txt
 master/_sources/ADPerkinElmer/PerkinElmerDoc.rst.txt
+master/_sources/ADPilatus/pilatusDoc.rst.txt
 master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
@@ -297,6 +310,8 @@ master/_sources/index.rst.txt
 master/_sources/install_guide.rst.txt
 master/_sources/legacy_versions.rst.txt
 master/_sources/license.rst.txt
+master/_sources/pvaDriver/pvaDriver.rst.txt
+master/_sources/pvaDriver/st_cmd.rst.txt
 master/_sources/readme.rst.txt
 master/_sources/release.rst.txt
 master/_sources/specsAnalyser/index.rst.txt
@@ -1580,6 +1595,8 @@ master/install_guide.html
 master/legacy_versions.html
 master/license.html
 master/objects.inv
+master/pvaDriver/pvaDriver.html
+master/pvaDriver/st_cmd.html
 master/readme.html
 master/release.html
 master/search.html

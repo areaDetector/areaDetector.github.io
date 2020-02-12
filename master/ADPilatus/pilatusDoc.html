@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ADPilatus &#8212; areaDetector 3-8-92-gd67a8e0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon_t.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ADPointGrey" href="../ADPointGrey/PointGreyDoc.html" />
+    <link rel="prev" title="ADPerkinElmer" href="../ADPerkinElmer/PerkinElmerDoc.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          areaDetector</a>
+        <span class="navbar-text navbar-version pull-left"><b>3-8</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release.html">Top-level Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-9-january-xxx-2020">R3-9 (January XXX, 2020)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-7-august-9-2019">R3-7 (August 9, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-6-may-29-2019">R3-6 (May 29, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-5-april-12-2019">R3-5 (April 12, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-4-december-3-2018">R3-4 (December 3, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-2-july-9-2018">R3-3-2 (July 9, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-1-july-1-2018">R3-3-1 (July 1, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-june-27-2018">R3-3 (June 27, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-2-january-28-2018">R3-2 (January 28, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-1-july-3-2017">R3-1 (July 3, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-0-may-5-2017">R3-0 (May 5, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-6-february-22-2017">R2-6 (February 22, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-5-october-28-2016">R2-5 (October 28, 2016)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-4-september-18-2015">R2-4 (September 18, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-3-july-24-2015">R2-3 (July 24, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-2-march-23-2015">R2-2 (March 23, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-0-april-4-2014">R2-0 (April 4, 2014)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r1-9-1-and-earlier">R1-9-1 and earlier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ADCore_release.html">ADCore Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-8-october-20-2019"><strong>R3-8 (October 20, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#bit-integer-support">64-bit integer support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-addriver">asynNDArrayDriver, ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#makefiles">Makefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#myattributefunctions-cpp">myAttributeFunctions.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adtop-adl-ui-opi-edl">ADTop.[adl, .ui, .opi, .edl]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-7-august-8-2019"><strong>R3-7 (August 8, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-addriver-ndplugindriver">asynNDArrayDriver, ADDriver, NDPluginDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-6-may-29-2019"><strong>R3-6 (May 29, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf5">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfiletiff">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincolorconvert">NDPluginColorConvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#commondrivermakefile">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#example-commonplugins-cmd-example-commonplugin-settings-req">EXAMPLE_commonPlugins.cmd, EXAMPLE_commonPlugin_settings.req</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-5-april-12-2019"><strong>R3-5 (April 12, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver-asynndarraydriver">ADDriver, asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray">NDArray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincodec">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginattribute">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id3">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id4">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf5-template">NDFileHDF5.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndplugindriver-ndarraybase-template-ndpluginbasefull-adl">asynNDArrayDriver, NDPluginDriver, NDArrayBase.template, NDPluginBaseFull.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginbase-template">NDPluginBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugintests">pluginTests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-4-december-3-2018"><strong>R3-4 (December 3, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adsrc-asynndarraydriver-h-asynndarraydriver-cpp">ADSrc/asynNDArrayDriver.h, asynNDArrayDriver.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id5">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver-ndpluginpva-ndpluginstdarrays">NDPluginDriver, NDPluginPva, NDPluginStdArrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincircularbuff">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id6">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id7">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#opi-files">OPI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#example-commonplugins-cmd">EXAMPLE_commonPlugins.cmd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-2-july-9-2018"><strong>R3-3-2 (July 9, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-commondrivermakefile">ADApp/commonDriverMakefile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-1-july-1-2018"><strong>R3-3-1 (July 1, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id8">ADApp/commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-adsrc">ADApp/ADSrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-adsrc-makefile-adapp-pluginsrc-makefile-adapp-plugintests-makefile">ADApp/ADSrc/Makefile, ADApp/pluginSrc/Makefile, ADApp/pluginTests/Makefile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-june-27-2018"><strong>R3-3 (June 27, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraypool-design-changes">NDArrayPool design changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#queued-array-counting-and-waiting-for-plugins-to-complete">Queued array counting and waiting for plugins to complete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-ndarraypool">NDArray, NDArrayPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpva">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ntndarrayconverter-cpp">ntndArrayConverter.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginfile">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id9">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginprocess">NDPluginProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id10">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-db">ADApp/Db/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-op-adl">ADApp/op/adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-op-edl-autoconvert">ADApp/op/edl/autoconvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-plugintests">ADApp/pluginTests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-2-january-28-2018"><strong>R3-2 (January 28, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id11">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id12">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id13">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginoverlay">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver">asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#operator-displays-medm-edm-caqtdm-css-boy">Operator displays (medm, edm, caQtDM, CSS-BOY)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id14">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id15">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginattrplot">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginroistat">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ntndarrayconvert-cpp">ntndArrayConvert.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndscatter-template">NDScatter.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugintests-makefile">pluginTests/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#xml-schema-ndattributes-xsd">XML_schema/NDAttributes.xsd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#epics-v4-pvaccess">EPICS V4 (pvAccess)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-1-july-3-2017"><strong>R3-1 (July 3, 2017)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#graphicsmagick">GraphicsMagick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pluginsrc-makefile-plugintests-makefile">pluginSrc/Makefile, pluginTests/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id16">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adtop-adl">ADTop.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id17">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id18">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-h">asynNDArrayDriver.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-0-may-5-2017"><strong>R3-0 (May 5, 2017)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#incompatible-changes">Incompatible changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#multiple-threads-in-single-plugins-ndplugindriver-ndpluginbase-template-ndpluginbase-adl-many-plugins">Multiple threads in single plugins (NDPluginDriver, NDPluginBase.template, NDPluginBase.adl, many plugins)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginscatter">NDPluginScatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugingather">NDPluginGather</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id19">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndfilenexus">asynNDArrayDriver, NDFileNexus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pvattribute">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id20">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugin-internals">Plugin internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#commonlibrarymakefile-commondrivermakefile">commonLibraryMakefile, commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndoverlayn-template">NDOverlayN.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#viewers">Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-6-february-19-2017"><strong>R2-6 (February 19, 2017)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver-ndpluginbase-template-ndpluginbase-adl">NDPluginDriver, NDPluginBase.template, NDPluginBase.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraybase-template">NDArrayBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginsupport-dbd">NDPluginSupport.dbd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginroi">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id21">pluginTests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugintransform">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id22">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id23">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpos">NDPluginPos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id24">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id25">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id26">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndattribute">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#paramattribute">paramAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id27">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndarraybase-template-ndpluginbase-adl-adsetup-adl-all-plugin-adl-files">asynNDArrayDriver, NDArrayBase.template, NDPluginBase.adl, ADSetup.adl, all plugin adl files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver-adbase-template-adsetup-adl">ADDriver, ADBase.template, ADSetup.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pvadriver">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-cpp">NDArray.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocboot-example-commonplugins-cmd">iocBoot/EXAMPLE_commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#viewers-imagej">Viewers/ImageJ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-5-october-28-2016"><strong>R2-5 (October 28, 2016)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adsupport">ADSupport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id28">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id29">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id30">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndposplugin">NDPosPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id31">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugintimeseries">NDPluginTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginfft">NDPluginFFT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats-and-ndpluginroistat">NDPluginStats and NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id33">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id34">asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraybase-template-ndplugindriver-cpp">NDArrayBase.template, NDPluginDriver.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id35">NDPluginBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id36">ADApp/op/adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#nexussrc-makefile">nexusSrc/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocboot">iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#imagej-epics-adviewer">ImageJ EPICS_ADViewer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-4-september-21-2015"><strong>R2-4 (September 21, 2015)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#removed-simdetector-and-iocs-directory">Removed simDetector and iocs directory.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id37">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndroistat-adl-edl-ui-opi">NDRoiStat[.adl, .edl, ui, .opi]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id38">ADApp/pluginTests/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#xml-schema">XML schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id39">iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp">ADApp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-3-july-23-2015"><strong>R2-3 (July 23, 2015)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#deviocstats-and-alive-modules">devIocStats and alive modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id40">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id41">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id42">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id43">commonDriverMakefile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-2-march-23-2015"><strong>R2-2 (March 23, 2015)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#compatibility">Compatibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id44">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id45">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id46">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id47">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id48">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id49">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id50">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id51">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#version-information">Version information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugins-general">Plugins general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#netcdfsupport">netCDFSupport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndattribute-class">NDAttribute class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#template-files">Template files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#imagej-viewer">ImageJ Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#simdetector-driver">simDetector driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocs-simdetectornoioc">iocs/simDetectorNoIOC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id52">Makefiles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-1-october-17-2014"><strong>R2-1 (October 17, 2014)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id53">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id54">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id55">NDFileTiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id56">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id57">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-0-april-4-2014"><strong>R2-0 (April 4, 2014)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-and-asynndarraydriver">NDArray and asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id58">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id59">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id60">NDPluginOverlay.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id61">NDPluginROI.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id62">NDPluginStats.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilenetcdf">NDFileNetCDF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id63">NDFileTIFF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id64">NDPluginAttribute.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r1-9-1-and-earlier"><strong>R1-9-1 and earlier</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ADSupport_release.html">ADSupport Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-9-august-8-2019"><strong>R1-9 (August 8, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-8-may-24-2019"><strong>R1-8 (May 24, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-7-april-12-2019"><strong>R1-7 (April 12, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-6-december-3-2018"><strong>R1-6 (December 3, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-5-november-12-2018"><strong>R1-5 (November 12, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-4-january-27-2018"><strong>R1-4 (January 27, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-3-july-3-2017"><strong>R1-3 (July 3, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-2-may-5-2017"><strong>R1-2 (May 5, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-1-february-19-2017"><strong>R1-1 (February 19, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-0-october-28-2016"><strong>R1-0 (October 28, 2016)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#epics-products-required-for-building-areadetector">EPICS Products Required for Building areaDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#external-products-required-for-building-areadetector">External Products Required for Building areaDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#tiff-jpeg-xml2-and-z">TIFF, JPEG, XML2, and Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#hdf5-szip-and-graphics-magick">HDF5, SZIP, and GRAPHICS_MAGICK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#release-and-config-files">RELEASE* and CONFIG* files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-libs-local">Edit RELEASE_LIBS.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-prods-local">Edit RELEASE_PRODS.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#optionally-create-or-edit-area-detector-release-epics-host-arch-local">Optionally create or edit $(AREA_DETECTOR)/../RELEASE.$(EPICS_HOST_ARCH).local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-config-site-local-and-optionally-config-site-local-epics-host-arch">Edit CONFIG_SITE.local and optionally CONFIG_SITE.local.$(EPICS_HOST_ARCH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-local">Edit RELEASE.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#make">make</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#example-files-in-adcore-iocboot">Example files in ADCore/iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#run-simdetector">Run SimDetector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#medm">MEDM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edm">EDM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#css">CSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#caqtdm">caQtDM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/arch.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/asynPortDriver.html">asynPortDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/NDArray.html">NDArray</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#id1">NDArray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#ndarraypool">NDArrayPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#ndattribute">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#ndattributelist">NDAttributeList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#pvattribute">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#paramattribute">paramAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#functattribute">functAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#asynndarraydriver">asynNDArrayDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/guidelines.html">Guidelines and rules for drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/ADDriver.html">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADAndor/andorDoc.html">ADAndor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADAravis/ADAravis.html">ADAravis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADFastCCD/index.html">ADFastCCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADGenICam/ADGenICam.html">ADGenICam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADmarCCD/marCCDDoc.html">ADmarCCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPerkinElmer/PerkinElmerDoc.html">ADPerkinElmer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ADPilatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPointGrey/PointGreyDoc.html">ADPointGrey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADProsilica/ADProsilica.html">ADProsilica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADRIXSCam/ADRIXSCam.html">ADRIXSCam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADSpinnaker/ADSpinnaker.html">ADSpinnaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADVimba/ADVimba.html">ADVimba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pvaDriver/pvaDriver.html">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../specsAnalyser/index.html">specsAnalyser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/plugins.html">areaDetector Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginDriver.html">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_guidelines.html">Guidelines and rules for plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_medm.html">Base class medm screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/common_plugins.html">commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_performance.html">Performance example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginAttrPlot.html">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginAttribute.html">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginCircularBuff.html">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginCodec.html">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginColorConvert.html">NDPluginColorConvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginFFT.html">NDPluginFFT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginFile.html">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginGather.html">NDPluginGather</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginOverlay.html">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginProcess.html">NDPluginProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginPva.html">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginROI.html">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginROIStat.html">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginScatter.html">NDPluginScatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginStats.html">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginStdArrays.html">NDPluginStdArrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginTimeSeries.html">NDPluginTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginTransform.html">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginPos.html">NDPosPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/ffmpegServer.html">ffmpegServer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../additional_plugins.html">Additional plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCompVision/ADCompVision.html">ADCompVision Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPluginBar/ADPluginBar.html">ADPluginBar Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/medm.html">MEDM screens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADViewers/ad_viewers.html">areaDetector Viewers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-viewers">ImageJ Viewers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-controller-epics-ad-controller-java">ImageJ Controller (EPICS_AD_Controller.java)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-gaussian-profiler-gaussianprofiler-java">ImageJ Gaussian Profiler (GaussianProfiler.java)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#idl-viewer">IDL Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../detectors.html">Supported Detectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#commuinity-supported-detectors">Commuinity Supported Detectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../legacy_versions.html">Legacy Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#required-modules">Required Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#installation-and-building">Installation and Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Source Code Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">ADPilatus</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#implementation-of-standard-driver-parameters">Implementation of standard driver parameters</a></li>
+<li><a class="reference internal" href="#pilatus-specific-parameters">Pilatus specific parameters</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#example-st-cmd-startup-file">Example st.cmd startup file</a></li>
+<li><a class="reference internal" href="#medm-screens">MEDM screens</a></li>
+<li><a class="reference internal" href="#spec-interface">SPEC interface</a></li>
+<li><a class="reference internal" href="#performance-measurements">Performance measurements</a></li>
+<li><a class="reference internal" href="#hardware-notes">Hardware notes</a><ul>
+<li><a class="reference internal" href="#trigger-pulses">Trigger pulses</a></li>
+<li><a class="reference internal" href="#detector-voltage">Detector Voltage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#restrictions">Restrictions</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../ADPerkinElmer/PerkinElmerDoc.html" title="Previous Chapter: ADPerkinElmer"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADPerkinElmer</span>
+    </a>
+  </li>
+  <li>
+    <a href="../ADPointGrey/PointGreyDoc.html" title="Next Chapter: ADPointGrey"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ADPointGrey &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ADPilatus/pilatusDoc.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="adpilatus">
+<h1><a class="toc-backref" href="#id2">ADPilatus</a><a class="headerlink" href="#adpilatus" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Mark Rivers (University of Chicago), John Hammonds, Brian Tieman (Argonne National Laboratory)</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#adpilatus" id="id2">ADPilatus</a><ul>
+<li><a class="reference internal" href="#introduction" id="id3">Introduction</a></li>
+<li><a class="reference internal" href="#implementation-of-standard-driver-parameters" id="id4">Implementation of standard driver parameters</a></li>
+<li><a class="reference internal" href="#pilatus-specific-parameters" id="id5">Pilatus specific parameters</a></li>
+<li><a class="reference internal" href="#configuration" id="id6">Configuration</a></li>
+<li><a class="reference internal" href="#example-st-cmd-startup-file" id="id7">Example st.cmd startup file</a></li>
+<li><a class="reference internal" href="#medm-screens" id="id8">MEDM screens</a></li>
+<li><a class="reference internal" href="#spec-interface" id="id9">SPEC interface</a></li>
+<li><a class="reference internal" href="#performance-measurements" id="id10">Performance measurements</a></li>
+<li><a class="reference internal" href="#hardware-notes" id="id11">Hardware notes</a><ul>
+<li><a class="reference internal" href="#trigger-pulses" id="id12">Trigger pulses</a></li>
+<li><a class="reference internal" href="#detector-voltage" id="id13">Detector Voltage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#restrictions" id="id14">Restrictions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This is an <a class="reference internal" href="../index.html"><span class="doc">areaDetector</span></a> driver for the Pilatus pixel array
+detectors from <a class="reference external" href="http://www.dectris.com">Dectris</a>.</p>
+<p>The interface to the detector is via a TCP/IP socket interface to the
+<code class="docutils literal notranslate"><span class="pre">camserver</span></code> server that Dectris provides. The camserver program must
+be started before the areaDetector software is started, typically by
+running the <strong>camonly</strong> script provided by Dectris.</p>
+<p>The camserver program saves the data to disk as TIFF or CBF files. The
+areaDetector software reads these disk files in order to read the data,
+because camserver does not provide another mechanism to access the data.
+If camserver is saving TIFF files then the driver reads the
+TIFFImageDescription tag from the TIFF file. This is a long string that
+camserver writes to the file containing all of the detector settings,
+including threshold, energy, etc. The driver adds this information to
+the NDArray using an NDAttribute called TIFFImageDescription. The
+NDFileTIFF plugin in ADCore R2-6 was changed to write this complete
+attribute to the TIFFImageDescription tag in the new TIFF file. It will
+also be written by the NDFileNetCDF, NDFileHDF5, and NDFileNexus
+plugins. However these plugins are currently limited to 256 character
+string attributes, so some of the information will be lost because the
+string is longer than 256 characters.</p>
+<p>This driver inherits from <a class="reference internal" href="../ADCore/ADDriver.html"><span class="doc">ADDriver</span></a>.
+It implements nearly all of the parameters in
+<a class="reference external" href="../areaDetectorDoxygenHTML/asyn_n_d_array_driver_8h.html">asynNDArrayDriver.h</a>
+and in
+<a class="reference external" href="../areaDetectorDoxygenHTML/_a_d_driver_8h.html">ADArrayDriver.h</a>. It
+also implements a number of parameters that are specific to the
+Pilatus detectors. The <a class="reference external" href="../areaDetectorDoxygenHTML/classpilatus_detector.html">pilatusDetector class
+documentation</a>
+describes this class in detail.</p>
+</div>
+<div class="section" id="implementation-of-standard-driver-parameters">
+<h2><a class="toc-backref" href="#id4">Implementation of standard driver parameters</a><a class="headerlink" href="#implementation-of-standard-driver-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The following table describes how the Pilatus driver implements some of
+the standard driver parameters.</p>
+<table border="1" class="table-bordered table-striped table-hover docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3"><strong>Parameter Definitions in pilatusDetector.cpp and EPICS Record Definitions in pilatus.template</strong></th>
+</tr>
+<tr class="row-even"><th class="head">Parameter index variable</th>
+<th class="head">EPICS record name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>ADTriggerMode</td>
+<td>$(P)$(R)TriggerMode</td>
+<td>The driver redefines the choices for the ADTriggerMode parameter (record $(P)$(R)TriggerMode) from ADDriver.h. The choices for the Pilatus are: <br>
+<code class="docutils literal notranslate"><span class="pre">Internal</span></code> (external signal not used)  <br>
+<code class="docutils literal notranslate"><span class="pre">External</span> <span class="pre">Enable</span></code> (count while external trigger line is high, readout on high to low transition) <br>
+<code class="docutils literal notranslate"><span class="pre">External</span> <span class="pre">Trigger</span></code> (begin acquisition sequence on high to low transition of external trigger line) <br>
+<code class="docutils literal notranslate"><span class="pre">Multiple</span> <span class="pre">External</span> <span class="pre">Trigger</span></code> (high to low transition on external signal triggers a single acquisition for the programmed exposure time) <br>
+<code class="docutils literal notranslate"><span class="pre">Alignment</span></code> (collect images as fast as exposure time and readout permit, images written to a temporary file) <br>
+The first 4 modes correspond directly to the camserver commands Exposure, ExtEnable, ExtTrigger, and ExtMTrigger respectively.
+Alignment mode uses the Exposure command as well, but continuously takes images into the same temporary file (alignment.tif).</td>
+</tr>
+<tr class="row-even"><td>ADAcquireTime</td>
+<td>$(P)$(R)AcquireTime</td>
+<td>Controls the acquisition time in all modes except External Enable. In External Enable mode the timing is controlled entirely by the external trigger line.
+However, even in ExternalEnable mode AcquireTime is used by camserver and by the driver to estimate how long the acquisition will take.
+Hardware timeouts will occur if the actual time to acquire differs significantly from the estimated time based on AcquireTime and AcquirePeriod.</td>
+</tr>
+<tr class="row-odd"><td>ADNumImages</td>
+<td>$(P)$(R)NumImages</td>
+<td>Controls the number of images to acquire. It applies in all trigger modes except Alignment.</td>
+</tr>
+<tr class="row-even"><td>ADAcquirePeriod</td>
+<td>$(P)$(R)AcquirePeriod</td>
+<td>Controls the exposure period in seconds in Internal or External Trigger modes when NumImages &gt;1.
+In External Enable mode the timing is controlled entirely by the external trigger line.
+However, even in ExternalEnable mode AcquirePeriod is used by camserver and by the driver to estimate how long the acquisition will take.
+Hardware timeouts will occur if the actual time to acquire differs significantly from the estimated time based on AcquireTime and AcquirePeriod.</td>
+</tr>
+<tr class="row-odd"><td>ADNumExposures</td>
+<td>$(P)$(R)NumExposures</td>
+<td>Controls the number of exposures per image. It is most useful in External Enable mode, but it can be set in any mode.</td>
+</tr>
+<tr class="row-even"><td>ADAcquire</td>
+<td>$(P)$(R)Acquire</td>
+<td>Controls the acquisition. Setting this to 1 starts image acquisition. The driver sets the record to 0 when acquisition is complete.
+This means an entire acquisition series if NImages &gt;1. Setting this to 0 aborts an acquisition.
+If the driver was currently acquiring imges then this record will cause the “Stop” and “K” (Kill) commands to be sent to camserver.</td>
+</tr>
+<tr class="row-odd"><td>NDFilePath</td>
+<td>$(P)$(R)FilePath</td>
+<td>Controls the path for saving images.
+It must be a valid path for camserver and for the areaDetector driver, which is normally running in an EPICS IOC.
+If camserver and the EPICS IOC are not running on the same machine then soft links will typically be used to make the paths look identical.</td>
+</tr>
+<tr class="row-even"><td>NDFileTemplate</td>
+<td>$(P)$(R)FileTemplate</td>
+<td><p class="first">camserver uses the file extension to determine what format to save the files in.
+The areaDetector Pilatus driver only supports TIFF and CBF files, so the extension should be .tif or .cbf.
+When saving multiple images (NImages&gt;1) camserver has its own rules for creating the names of the individual files. The rules are as follows.
+The name constructed using the algorithm described for NDFileTemplate under File Saving Parameters is used as a basename.
+The following examples show the interpretation of the basename.</p>
+<blockquote class="last">
+<div><p>Basename:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>test6.tif           test6_00000.tif,  test6_00001.tif, ...
+test6_.tif          test6_00000.tif,  test6_00001.tif, ...
+test6_014.tif       test6_014.tif,    test6_015.tif, ...
+test6_0008.tif      test6_0008.tif,   test6_0009.tif, ...
+</pre></div>
+</div>
+<p>The numbers following the last ‘_’ are taken as a format template, and as a start value. The minimum format is 3; there is no maximum; the default is 5. The format is also constrained by the requested number of images.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p>It is useful to load and enable an NDPluginStats plugin that gets its
+data from the Pilatus driver. The MaxValue_RBV PV for that plugin can be
+monitored to make sure that the 20-bit limit of 1,048,575 is not being
+approached in any pixel.</p>
+</div>
+<div class="section" id="pilatus-specific-parameters">
+<h2><a class="toc-backref" href="#id5">Pilatus specific parameters</a><a class="headerlink" href="#pilatus-specific-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Pilatus driver implements the following parameters in addition to
+those in asynNDArrayDriver.h and ADDriver.h:. Note that to reduce the
+width of this table the parameter index variable names have been split
+into 2 lines, but these are just a single name, for example
+<code class="docutils literal notranslate"><span class="pre">PilatusDelayTime</span></code>.</p>
+<table border="1" class="table-bordered table-striped table-hover docutils">
+<colgroup>
+<col width="70%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="4"><em>Parameter Definitions in pilatusDetector.cpp and EPICS Record Definitions in pilatus.template*</em></th>
+</tr>
+<tr class="row-even"><th class="head">Description</th>
+<th class="head">drvInfo string</th>
+<th class="head">EPICS record name</th>
+<th class="head">EPICS record type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>Delay in seconds between the external trigger and the start of image acquisition. It only applies in External Trigger mode</td>
+<td>DELAY_TIME</td>
+<td>$(P)$(R)DelayTime</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>Threshold energy in keV. camserver uses this value to set the discriminators in each pixel.
+It is typically set to the incident x-ray energy ($(P)$(R)Energy), but sometimes other values may be preferable.</td>
+<td>THRESHOLD</td>
+<td>$(P)$(R)ThresholdEnergy, $(P)$(R)ThresholdEnergy_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>Apply the threshold value.
+Setting the threshold can be a time consuming operation, so if ThresholdAutoApply is No then ThresholdApply must be processed to actually send the threshold to camserver.</td>
+<td>THRESHOLD_APPLY</td>
+<td>$(P)$(R)ThresholdApply</td>
+<td>busy</td>
+</tr>
+<tr class="row-even"><td>Apply the threshold value.
+Setting the threshold can be a time consuming operation, so if ThresholdAutoApply is No then ThresholdApply must be processed to actually send the threshold to camserver.</td>
+<td>THRESHOLD_APPLY</td>
+<td>$(P)$(R)ThresholdApply</td>
+<td>busy</td>
+</tr>
+<tr class="row-odd"><td>Automatically apply the threshold value whenever it changes.
+Setting the threshold can be a time consuming operation, so if ThresholdAutoApply is No then ThresholdApply must be processed to actually send the threshold to camserver.
+If it is Yes then the threshold value will be sent to camserver whenever it is changed.</td>
+<td>THRESHOLD_AUTO_APPLY</td>
+<td>$(P)$(R)ThresholdAutoApply, $(P)$(R)ThresholdAutoApply_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>X-ray energy in keV. This is used by camserver to calculate the proper flat field corrrection.
+If Energy is 0 then the energy value sent to camserver is ThresholdEnergy*2.</td>
+<td>ENERGY</td>
+<td>$(P)$(R)Energy, $(P)$(R)Energy_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>The value that camserver should write to the data file for the gaps between pixels in the detector. Choices are -2, 0, and -1.</td>
+<td>GAP_FILL</td>
+<td>$(P)$(R)GapFill, $(P)$(R)GapFill_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td><dl class="first docutils">
+<dt>Gain menu. Controls the value of Vrf, which determines the shaping time and gain of the input amplifiers. The allowed values are: <br></dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">Fast/Low</span></code> Fastest shaping time (~125ns) and lowest gain. <br></li>
+<li><code class="docutils literal notranslate"><span class="pre">Medium/Medium</span></code> Medium shaping time (~200 ns) and medium gain. <br></li>
+<li><code class="docutils literal notranslate"><span class="pre">Slow/High</span></code> Slow shaping time (~400 ns) and high gain. <br></li>
+<li><code class="docutils literal notranslate"><span class="pre">Slow/Ultrahigh</span></code> Slowest peaking time (? ns) and highest gain. <br></li>
+</ul>
+</dd>
+</dl>
+<p class="last">This is only used on older Pilatus detectors, not the newer ones.</p>
+</td>
+<td>N/A</td>
+<td>$(P)$(R)GainMenu</td>
+<td>mbbo</td>
+</tr>
+<tr class="row-odd"><td>Flag to indicate when the Pilatus is ready to accept external trigger signals (0=not ready, 1=ready). This should be used by clients to indicate when it is OK to start sending trigger pulses to the Pilatus. If pulses are send before Armed=1 then the Pilatus may miss them, leading to DMA timeout errors from camserver</td>
+<td>ARMED</td>
+<td>$(P)$(R)Armed</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>Processing this record sends the “ResetModulePower delayTime” command to camserver.
+This cycles the high voltage and other detector supply voltages.
+This is particularly useful with the CdTe detectors when they have been exposed to a very strong signal.
+Cycling the power can erase the memory effects of oversaturation.
+The delayTime controls the amount of time to wait after turning off the power before turning it back on again.
+It is set by the ResetPowerTime record.</td>
+<td>RESET_POWER</td>
+<td>$(P)$(R)ResetPower</td>
+<td>bo</td>
+</tr>
+<tr class="row-odd"><td>This record controls the number of seconds to wait after turning off the power before turning it back on again when the ResetPower record is processed.</td>
+<td>RESET_POWER_TIME</td>
+<td>$(P)$(R)ResetPower, $(P)$(R)ResetPower_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>Timeout in seconds when reading a TIFF or CBF file.
+It should be set to several seconds, because there can be delays for various reasons.
+One reason is that there is sometimes a delay between when an External Enable acquisition is started and when the first external pulse occurs.
+Another is that it can take some time for camserver processes to finish writing the files.</td>
+<td>IMAGE_FILE_TMOT</td>
+<td>$(P)$(R)ImageFileTmot</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Name of a file to be used to replace bad pixels.
+If this record does not point to a valid bad pixel file then no bad pixel mapping is performed.
+The bad pixel map is used before making the NDArray callbacks. It does not modify the data in the files that camserver writes.
+This is a simple ASCII file with the following format:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>badX1,badY1 replacementX1,replacementY1
+badX2,badY2 replacementX2,replacementY2
+...
+</pre></div>
+</div>
+<p>The X and Y coordinates range from 0 to NXPixels-1 and NYPixels-1.
+Up to 100 bad pixels can be defined.
+The bad pixel mapping simply replaces the bad pixels with another pixel’s value.
+It does not do any averaging.
+It is felt that this is sufficient for the purpose for which this driver was written, namely fast on-line viewing of ROIs and image data.
+More sophisticated algorithms can be used for offline analysis of the image files themselves.
+The following is an example bad pixel file for a GSECARS detector:</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>263,3   262,3
+264,3   266,3
+263,3   266,3
+300,85  299,85
+300,86  299,86
+471,129 472,129
+</pre></div>
+</div>
+</td>
+<td>BAD_PIXEL_FILE</td>
+<td>$(P)$(R)BadPixelFile</td>
+<td>waveform</td>
+</tr>
+<tr class="row-even"><td>The number of bad pixels defined in the bad pixel file. Useful for seeing if the bad pixel file was read correctly.</td>
+<td>NUM_BAD_PIXELS</td>
+<td>$(P)$(R)NumBadPixels</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Name of a file to be used to correct for the flat field.
+If this record does not point to a valid flat field file then no flat field correction is performed.
+The flat field file is simply a TIFF or CBF file collected by the Pilatus that is used to correct for spatial non-uniformity in the response of the detector.
+It should be collected with a spatially uniform intensity on the detector at roughly the same energy as the measurements being corrected.
+When the flat field file is read, the average pixel value (averageFlatField) is computed using all pixels with intensities &gt; PilatusMinFlatField.
+All pixels with intensity &lt;PilatusMinFlatField in the flat field are replaced with averageFlatField.
+When images are collected before the NDArray callbacks are performed the following per-pixel correction is applied:</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>ImageData[i] =
+(averageFlatField *
+ImageData[i])/flatField[i];
+</pre></div>
+</div>
+</td>
+<td>FLAT_FIELD_FILE</td>
+<td>$(P)$(R)FlatFieldFile</td>
+<td>waveform</td>
+</tr>
+<tr class="row-even"><td>The mimimum valid intensity in the flat field.
+This value must be set &gt; 0 to prevent divide by 0 errors.
+If the flat field was collected with some pixels having very low intensity then this value can be used to replace those pixels with the average response.</td>
+<td>MIN_FLAT_FIELD</td>
+<td>$(P)$(R)MinFlatField</td>
+<td>longout</td>
+</tr>
+<tr class="row-odd"><td>This record indicates if a valid flat field file has been read. 0=No, 1=Yes.</td>
+<td>FLAT_FIELD_VALID</td>
+<td>$(P)$(R)FlatFieldValid</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>MX wavelength to write to CBF and TIFF image header.</td>
+<td>WAVELENGTH</td>
+<td>$(P)$(R)Wavelength</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX energy range low value to write to CBF and TIFF image header.</td>
+<td>ENERGY_LOW</td>
+<td>$(P)$(R)EnergyLow</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX energy range high value to write to CBF and TIFF image header.</td>
+<td>ENERGY_HIGH</td>
+<td>$(P)$(R)EnergyHigh</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX detector distance to write to CBF and TIFF image header.</td>
+<td>DET_DIST</td>
+<td>$(P)$(R)DetDist</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX detector vertical offset to write to CBF and TIFF image header.</td>
+<td>DET_VOFFSET</td>
+<td>$(P)$(R)DetVOffset</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX beam X to write to CBF and TIFF image header.</td>
+<td>BEAM_X</td>
+<td>$(P)$(R)BeamX</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX beam Y to write to CBF and TIFF image header.</td>
+<td>BEAM_Y</td>
+<td>$(P)$(R)BeamY</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX flux to write to CBF and TIFF image header.</td>
+<td>FLUX</td>
+<td>$(P)$(R)Flux</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX filter transmission to write to CBF and TIFF image header.</td>
+<td>FILTER_TRANSM</td>
+<td>$(P)$(R)FilterTransm</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX start angle to write to CBF and TIFF image header.
+When saving multiple images (ADNumImages&gt;1) camserver will automatically increment the field in the image header by PilatusAngleIncr for each image.</td>
+<td>START_ANGLE</td>
+<td>$(P)$(R)StartAngle</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX angle increment to write to CBF and TIFF image header.
+When saving multiple images (ADNumImages&gt;1) camserver will automatically increment the field corresponding to PilatusStartAngle
+in the image header by this value for each image.</td>
+<td>ANGLE_INCR</td>
+<td>$(P)$(R)AngleIncr</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX detector 2theta to write to CBF and TIFF image header.</td>
+<td>DET_2THETA</td>
+<td>$(P)$(R)Det2theta</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX polarization to write to CBF and TIFF image header.</td>
+<td>POLARIZATION</td>
+<td>$(P)$(R)Polarization</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX alpha to write to CBF and TIFF image header.</td>
+<td>ALPHA</td>
+<td>$(P)$(R)Alpha</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX kappa to write to CBF and TIFF image header.</td>
+<td>KAPPA</td>
+<td>$(P)$(R)Kappa</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX phi to write to CBF and TIFF image header.</td>
+<td>PHI</td>
+<td>$(P)$(R)Phi</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX phi increment to write to CBF and TIFF image header</td>
+<td>PHI_INCR</td>
+<td>$(P)$(R)PhiIncr</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX chi to write to CBF and TIFF image header.</td>
+<td>CHI</td>
+<td>$(P)$(R)Chi</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX chi increment to write to CBF and TIFF image header</td>
+<td>CHI_INCR</td>
+<td>$(P)$(R)ChiIncr</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX omega to write to CBF and TIFF image header.</td>
+<td>OMEGA</td>
+<td>$(P)$(R)Omega</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>MX omega increment to write to CBF and TIFF image header</td>
+<td>OMEGA_INCR</td>
+<td>$(P)$(R)OmegaIncr</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>MX oscillation axis text, up to 18 characters in length, to write to CBF and TIFF image header.</td>
+<td>OSCILL_AXIS</td>
+<td>$(P)$(R)OscillAxis</td>
+<td>stringout</td>
+</tr>
+<tr class="row-even"><td>MX number of oscillations to write to CBF and TIFF image header.</td>
+<td>NUM_OSCILL</td>
+<td>$(P)$(R)NumOscill</td>
+<td>longout</td>
+</tr>
+<tr class="row-odd"><td>Template file to be used to obtain all of the MX parameters above. Set the name of this file to “0” to disable the template file.</td>
+<td>CBFTEMPLATEFILE</td>
+<td>$(P)$(R)CbfTemplateFile</td>
+<td>waveform</td>
+</tr>
+<tr class="row-even"><td>Header string to write in the COMMENT field of the CBF file.</td>
+<td>HEADERSTRING</td>
+<td>$(P)$(R)HeaderString</td>
+<td>waveform</td>
+</tr>
+<tr class="row-odd"><td>Maximum possible count rate per pixel.</td>
+<td>PIXEL_CUTOFF</td>
+<td>$(P)$(R)PixelCutOff_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>Temperature readout 0.</td>
+<td>TH_TEMP_0</td>
+<td>$(P)$(R)Temp0_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>Temperature readout 1.</td>
+<td>TH_TEMP_1</td>
+<td>$(P)$(R)Temp1_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>Temperature readout 2.</td>
+<td>TH_TEMP_2</td>
+<td>$(P)$(R)Temp2_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>Humidity readout 0.</td>
+<td>TH_HUMID_0</td>
+<td>$(P)$(R)Humid0_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>Humidity readout 1.</td>
+<td>TH_HUMID_1</td>
+<td>$(P)$(R)Humid1_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>Humidity readout 2.</td>
+<td>TH_HUMID_2</td>
+<td>$(P)$(R)Humid2_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>Version of TVX and camserver. This record is redundant with the SDKVersion_RBV record added in ADCore R2-6, which should be used instead.</td>
+<td>TVXVERSION</td>
+<td>$(P)$(R)TVXVersion_RBV</td>
+<td>stringin</td>
+</tr>
+<tr class="row-odd"><td>asyn record to control debugging communication with camserver.
+Setting the CNCT field in this record to <code class="docutils literal notranslate"><span class="pre">Disconnect</span></code> causes the drvAsynIPPort server to disconnect from camserver.
+This can be used to allow another program, such as TVX, to temporarily take control of camserver, without restarting the EPICS IOC.
+Set CNCT to <code class="docutils literal notranslate"><span class="pre">Connect</span></code> to reconnect the IOC to camserver, or simply process any record which communicates with camserver,
+because the driver will automatically reconnect.</td>
+<td>N/A</td>
+<td>$(P)$(R)CamserverAsyn</td>
+<td>asyn</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#id6">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The pilatusDetector driver is created with the pilatusDetectorConfig
+command, either from C/C++ or from the EPICS IOC shell.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>int pilatusDetectorConfig(const char *portName, const char *camserverPort,
+                          int maxSizeX, int maxSizeY,
+                          int maxBuffers, size_t maxMemory,
+                          int priority, int stackSize)
+</pre></div>
+</div>
+<p>For details on the meaning of the parameters to this function refer to
+the detailed documentation on the pilatusDetectorConfig function in the
+<a class="reference external" href="areaDetectorDoxygenHTML/pilatus_detector_8cpp.html">pilatusDetector.cpp documentation</a>
+and in the documentation for the constructor for the
+<a class="reference external" href="areaDetectorDoxygenHTML/classpilatus_detector.html">pilatusDetector class</a>.</p>
+</div>
+<div class="section" id="example-st-cmd-startup-file">
+<h2><a class="toc-backref" href="#id7">Example st.cmd startup file</a><a class="headerlink" href="#example-st-cmd-startup-file" title="Permalink to this headline">¶</a></h2>
+<p>The following startup script is provided with ADPilatus.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt; envPaths
+errlogInit(20000)
+
+dbLoadDatabase(&quot;$(TOP)/dbd/pilatusDetectorApp.dbd&quot;)
+pilatusDetectorApp_registerRecordDeviceDriver(pdbbase) 
+
+# Prefix for all records
+epicsEnvSet(&quot;PREFIX&quot;, &quot;13PIL1:&quot;)
+# The port name for the detector
+epicsEnvSet(&quot;PORT&quot;,   &quot;PIL&quot;)
+# The queue size for all plugins
+epicsEnvSet(&quot;QSIZE&quot;,  &quot;20&quot;)
+# The maximim image width; used for row profiles in the NDPluginStats plugin
+epicsEnvSet(&quot;XSIZE&quot;,  &quot;487&quot;)
+# The maximim image height; used for column profiles in the NDPluginStats plugin
+epicsEnvSet(&quot;YSIZE&quot;,  &quot;195&quot;)
+# The maximum number of time seried points in the NDPluginStats plugin
+epicsEnvSet(&quot;NCHANS&quot;, &quot;2048&quot;)
+# The maximum number of frames buffered in the NDPluginCircularBuff plugin
+epicsEnvSet(&quot;CBUFFS&quot;, &quot;500&quot;)
+# The search path for database files
+epicsEnvSet(&quot;EPICS_DB_INCLUDE_PATH&quot;, &quot;$(ADCORE)/db&quot;)
+
+###
+# Create the asyn port to talk to the Pilatus on port 41234.
+drvAsynIPPortConfigure(&quot;camserver&quot;,&quot;gse-pilatus1:41234&quot;)
+# Uncomment the following to enable asynTrace on the camserver port
+#asynSetTraceIOMask(&quot;camserver&quot;,0,2)
+#asynSetTraceMask(&quot;camserver&quot;,0,9)
+# Set the input and output terminators.
+asynOctetSetInputEos(&quot;camserver&quot;, 0, &quot;\030&quot;)
+asynOctetSetOutputEos(&quot;camserver&quot;, 0, &quot;\n&quot;)
+
+pilatusDetectorConfig(&quot;$(PORT)&quot;, &quot;camserver&quot;, $(XSIZE), $(YSIZE), 0, 0)
+dbLoadRecords(&quot;$(ADPILATUS)/db/pilatus.template&quot;,&quot;P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1,CAMSERVER_PORT=camserver&quot;)
+
+# Create a standard arrays plugin
+NDStdArraysConfigure(&quot;Image1&quot;, 5, 0, &quot;$(PORT)&quot;, 0, 0)
+dbLoadRecords(&quot;$(ADCORE)/db/NDStdArrays.template&quot;, &quot;P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),TYPE=Int32,FTVL=LONG,NELEMENTS=94965&quot;)
+
+# Load all other plugins using commonPlugins.cmd
+&lt; $(ADCORE)/iocBoot/commonPlugins.cmd
+set_requestfile_path(&quot;$(ADPILATUS)/pilatusApp/Db&quot;)
+
+# Uncomment to enable asynTrace on the driver port
+#asynSetTraceMask(&quot;$(PORT)&quot;,0,255)
+
+
+iocInit()
+
+# save things every thirty seconds
+create_monitor_set(&quot;auto_settings.req&quot;, 30,&quot;P=$(PREFIX)&quot;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="medm-screens">
+<span id="id1"></span><h2><a class="toc-backref" href="#id8">MEDM screens</a><a class="headerlink" href="#medm-screens" title="Permalink to this headline">¶</a></h2>
+<p>The following show the MEDM screens that are used to control the Pilatus
+detector. Note that the general purpose screen ADBase.adl can be used,
+but it exposes many controls that are not applicable to the Pilatus.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pilatusDetector.adl</span></code> is the main screen used to control the Pilatus
+driver.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusDetector.png" src="../_images/pilatusDetector.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pilatusAncillary.adl</span></code> is the screen used to control define the
+metadata that will be written to the Pilatus data file.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusAncillary.png" src="../_images/pilatusAncillary.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">NDROI4.adl</span></code> is used to define the ROIs. In this example there are 3
+valid ROIs defined. ROI 1 is the entire detector, ROI 2 is a 300x50
+rectangle starting at [100,60], and ROI 3 is a 50x30 rectangle starting
+at [220,70].</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusROI4.png" src="../_images/pilatusROI4.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">NDStats5.adl</span></code> is used to display the statistics in the ROIs defined
+above.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusStats5.png" src="../_images/pilatusStats5.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">mca.adl</span> <span class="pre">or</span> <span class="pre">mca_small.adl</span></code> can be used to plot the net or total counts
+in an ROI when NImages&gt;1. In this example the plot is the net counts in
+ROI 1 as the diffractometer chi was scanned +- 1 degree with 1000 points
+at .02 seconds/point. This was done with the SPEC command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>lup chi -1 1 1000 .02
+</pre></div>
+</div>
+<p>using trajectory scanning on a Newport kappa diffractometer. This was a
+compound motor scan with the Newport XPS putting out pulses every .02
+seconds. These pulses triggered the Pilatus in External Enable mode. The
+Pilatus driver read each TIFF file as it was created and updated this
+plot every 0.2 seconds. The total time to collect this scan with 1000
+images was 20.8 seconds.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusMCA.png" src="../_images/pilatusMCA.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">scan_more.adl</span></code> is used to define a scan. In this example the sscan
+record is set up to scan the ThresholdEnergy PV and to collect the total
+counts in ROI2, which was defined to include the entire detector.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusThresholdScanSetup.png" src="../_images/pilatusThresholdScanSetup.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">scanDetPlot.adl</span></code> is used to plot the results of a scan after it is
+complete. In this example the total counts in ROI 1 are plotted as a
+function of the ThresholdEnergy as it was scanned from 3000 to 10000 eV
+in 250 eV steps. The source was Fe55, and the cut-off is at 6 keV, as
+expected for the Mn Ka and Mn Kb x-rays that this source produces.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusThresholdScanPlot.png" src="../_images/pilatusThresholdScanPlot.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">asynRecord.adl</span></code> is used to control the debugging information printed
+by the asyn TCP/IP driver for camserver (asynTraceIODriver).</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusAsyn.png" src="../_images/pilatusAsyn.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">asynOctet.adl</span></code> can be used to send any command to camserver and
+display the response. It can be loaded from the More menu in
+asynRecord.adl above.</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusAsynOctet.png" src="../_images/pilatusAsynOctet.png" />
+</div>
+</div>
+<div class="section" id="spec-interface">
+<h2><a class="toc-backref" href="#id9">SPEC interface</a><a class="headerlink" href="#spec-interface" title="Permalink to this headline">¶</a></h2>
+<p>At the GSECARS beamlines (13-ID-C and 13-BM-C) at the APS we use SPEC to
+control our Newport diffractometers. We have added and modified SPEC
+macros to use the pilatusDetector areaDetector driver to treat the
+Pilatus detector as a SPEC counter. This works in both traditional
+step-scanning mode, as well as in <a class="reference external" href="https://cars.uchicago.edu/software/epics/trajectoryScan.html">trajectory
+scanning</a>
+mode. Here are some snippets from the SPEC macros for the Pilatus. We
+can supply the source files on request.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  # need some more globals (kludge)
+global    PILATUS_ROI_PV
+global    PILATUS_ROI_ARRAY_PV
+global    PILATUS_ROI_ARRAY_START_PV
+global    PILATUS_ROI_ARRAY_NUSE_PV
+global    PILATUS_ROI_ARRAY_ACQ_PV
+global    PILATUS_IMGPATH_PV
+global    PILATUS_FNAME_PV
+global    PILATUS_FILENUMBER_PV
+global    PILATUS_FILEFORMAT_PV
+global    PILATUS_EXPSRTM_PV
+global    PILATUS_NFRAME_PV
+global    PILATUS_EXPPRD_PV
+global    PILATUS_NEXPFRM_PV
+global    PILATUS_ACQ_PV
+global    PILATUS_ARMED_PV
+global    PILATUS_ABORT_PV
+global    PILATUS_ACQMODE_PV
+global    PILATUS_READOUT_TIME
+
+global    PILATUS_ROI_0_MinX_PV
+global    PILATUS_ROI_0_SizeX_PV
+global    PILATUS_ROI_0_MinY_PV
+global    PILATUS_ROI_0_SizeY_PV
+
+
+###############################################################
+def _setup_img &#39;{
+...
+     # PILATUS_PREFIX detector name i.e. (GSE-PILATUS1:)
+     if ( PILATUS_PREFIX == &quot;&quot;) PILATUS_PREFIX = &quot;GSE-PILATUS1:&quot;
+     PILATUS_PREFIX = getsval(&quot;Enter PILATUS detector name i.e. GSE-PILATUS1:&quot;,PILATUS_PREFIX)
+
+     # PILATUS_DET_PREFIX is the pv used by areaDetector to identify a specific detector.
+     # When only one detector is used it is usally (cam1:)
+     if ( PILATUS_DET_PREFIX == &quot;&quot;) PILATUS_DET_PREFIX = &quot;cam1:&quot;
+     PILATUS_DET_PREFIX = getsval(&quot;Enter PILATUS specific detector name i.e. cam1:&quot;,PILATUS_DET_PREFIX)
+
+     # PILATUS_ROI_PREFIX is the pv used by areaDetector to identify a specific a ROI plugin.
+     # When only one ROI plugin is used it is usally (ROI1:)
+     if ( PILATUS_ROI_PREFIX == &quot;&quot;) PILATUS_DET_PREFIX = &quot;ROI1:&quot;
+     PILATUS_ROI_PREFIX = getsval(&quot;Enter PILATUS ROI plugin name i.e. ROI1:&quot;,PILATUS_ROI_PREFIX)
+
+     if (PILATUS_MOUNT == &quot;&quot;) PILATUS_MOUNT = &quot;cars5/Data&quot;
+     PILATUS_MOUNT = getsval(&quot;Enter mount point relative to camserver home directory&quot;,PILATUS_MOUNT)
+     if (PILATUS_SPEC_MOUNT == &quot;&quot;) PILATUS_SPEC_MOUNT = &quot;cars5/Data&quot;
+     PILATUS_SPEC_MOUNT = getsval(&quot;Enter mount point relative to spec home directory&quot;,PILATUS_SPEC_MOUNT)
+...
+     PILATUS_ROI_PV             = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:Net_RBV&quot;
+     PILATUS_ROI_ARRAY_PV       = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:NetArray&quot;
+     PILATUS_ROI_ARRAY_START_PV = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:NetArrayEraseStart&quot;
+     PILATUS_ROI_ARRAY_NUSE_PV  = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:NetArray.NUSE&quot;
+     PILATUS_ROI_ARRAY_ACQ_PV   = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:NetArray.ACQG&quot;
+     PILATUS_IMGPATH_PV         = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;FilePath&quot;
+     PILATUS_FNAME_PV           = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;FileName&quot;
+     PILATUS_FILENUMBER_PV      = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;FileNumber&quot;
+     PILATUS_FILEFORMAT_PV      = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;FileTemplate&quot;
+     PILATUS_EXPSRTM_PV         = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;AcquireTime&quot;
+     PILATUS_NFRAME_PV          = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;NumImages&quot;
+     PILATUS_EXPPRD_PV          = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;AcquirePeriod&quot;
+     PILATUS_NEXPFRM_PV         = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;NumExposures&quot;
+     PILATUS_ACQ_PV             = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;Acquire&quot;
+     PILATUS_ARMED_PV           = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;Armed&quot;
+     PILATUS_ABORT_PV           = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;Acquire&quot;
+     PILATUS_ACQMODE_PV         = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;TriggerMode&quot;
+     PILATUS_THRESHOLD_PV       = PILATUS_PREFIX PILATUS_DET_PREFIX &quot;ThresholdEnergy&quot;
+     PILATUS_ROI_0_MinX_PV      = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:MinX&quot;
+     PILATUS_ROI_0_SizeX_PV     = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:SizeX&quot;
+     PILATUS_ROI_0_MinY_PV      = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:MinY&quot;
+     PILATUS_ROI_0_SizeY_PV     = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:SizeY&quot;
+     PILATUS_ROI_0_BgdWidth_PV  = PILATUS_PREFIX PILATUS_ROI_PREFIX &quot;0:BgdWidth&quot;
+...
+
+def epics_pilatus_count &#39;{
+...
+     # Call macro that creates and set the Pilatus path and filename
+     img_full_filename
+
+     # Setup exposure time, collection mode and number of frames
+     epics_put(PILATUS_FILENUMBER_PV,NPTS, 1)
+     epics_put(PILATUS_NFRAME_PV, 1, 1)
+     epics_put(PILATUS_ACQMODE_PV,0, 1)  # Internal trigger
+     epics_put(PILATUS_EXPSRTM_PV,cnt_time_val, 1)
+     epics_put(PILATUS_NEXPFRM_PV, 1, 1)
+
+...
+     # hit the triggers
+     epics_put(PILATUS_ACQ_PV,1)
+
+     epics_put(sc_cnt_pv,1)
+
+     # wait for scaler and Pilatus AQG to finish
+     status     = 1
+     sc_done    = FALSE
+     img_done   = FALSE
+     data_done  = FALSE
+     while(status){
+         # is the scalar done
+        if (epics_get(sc_cnt_pv)==&quot;Done&quot;){
+             sc_done = TRUE;
+             #p &quot;scaler done&quot;
+        }
+
+        # is the pilatus done
+        if (epics_get(PILATUS_ACQ_PV) == &quot;Done&quot;){
+            img_done = TRUE;
+            #p &quot;image collection done&quot;
+        }
+
+        if( (sc_done==TRUE) &amp;&amp; (img_done==TRUE)) break;
+        sleep(0.01)
+     }
+
+
+     # use the get_counts routine to read the scalers
+     # note get_counts also calls user_getcounts
+     # thats where the rois get read.
+     get_counts
+}&#39;
+
+
+def user_getcounts &#39;{
+...
+    # using image_count routine
+    } else if ( EPICS_COUNT == 4 ) {
+        S[iroi] = 0
+        S[iroi] = epics_get(PILATUS_ROI_PV)
+</pre></div>
+</div>
+</div>
+<div class="section" id="performance-measurements">
+<h2><a class="toc-backref" href="#id10">Performance measurements</a><a class="headerlink" href="#performance-measurements" title="Permalink to this headline">¶</a></h2>
+<p>The following measurements were done to demonstrate the performance that
+can be obtained with the areaDetector Pilatus driver.</p>
+<ol class="arabic">
+<li><p class="first">AcquireMode=Internal, NumImages=1000, AcquireTime=.005,
+AcquirePeriod=.01, NumExposures=1. The time to collect this series
+should be exactly 10.0 seconds. The actual time was measured using
+the EPICS camonitor program. It printed the time when acquisition was
+started (Acquire changed to Acquire=1) and when acquisition was
+complete (Acquire changed to Done=0). The time was 10.022 seconds.
+This includes the time for camserver to save all 1000 images to disk
+(366 MB), and for the driver to read each file, correct the bad
+pixels and flat field, compute the ROIs, and post the ROIs to EPICS.
+It also posted all of the images to EPICS. The total additional time
+was less than 0.03 seconds for all 1000 images.</p>
+</li>
+<li><p class="first">AcquireMode=Internal, NImages=1, ExposureTime=.01, NExposures=1. An
+EPICS sscan record was used to collect 1000 points. There were no
+positioner PVs (to eliminate motor overhead). The only detector
+trigger was the Pilatus Acquire PV. The only detector PV was
+ROI1:0:Total_RBV. In this mode camserver is being told to
+individually collect each file. If there were no overhead then time
+to collect this series should be exactly 10.0 seconds. The actual
+time measured using the EPICS camonitor program was 45.514 seconds.
+The overhead is thus 35.514 seconds, or 35 ms per point. In this
+single-frame mode the driver is thus able to collect &gt;20
+images/second. For comparison, another measurement was done using the
+same EPICS sscan record, but using a Joerger VSC16 scaler as the
+detector trigger and detector. The preset time was also .01 seconds.
+The elapsed time for a 1000 point scan was 16.068 seconds, so the
+overhead was 6.068 seconds, or 6 ms per point.</p>
+</li>
+<li><p class="first">AcquireMode=Ext. Enable, NImages=1000, NExposures=1. SPEC was used to
+collect 1000 points using <a class="reference external" href="https://cars.uchicago.edu/software/epics/trajectoryScan.html">trajectory
+scanning</a>
+mode with the Newport XPS motor controller. The following SPEC
+command was used::</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>lup chi -1 1 1000 .02
+</pre></div>
+</div>
+<p>This tells SPEC to do a relative scan of the chi axis from -2 degrees
+to +2 degrees with 1000 points at .015 seconds/point. On our kappa
+diffractometer this entails a coordinated motion of the phi, kappa
+and omega axes. The EPICS trajectory scanning software downloads the
+non-linear trajectory that SPEC computes into the XPS controller,
+which executes it. As the motors are moving the XPS outputs
+synchronization pulses at the period of the collection time, .020
+seconds in this case. These pulses are used as the external trigger
+to the Pilatus. The time to execute this scan should be 20.0 seconds.
+The actual time was 20.8 seconds, measured using camonitor on the
+Acquire PV. Again, this includes the time for camserver to save all
+1000 images to disk (366 MB), and for the Pilatus driver to read each
+file, correct the bad pixels and flat field, compute the ROIs, and
+post the ROIs to EPICS. It also posted all of the images to EPICS.
+The total additional time was less than 0.8 seconds for all 1000
+images. As soon as the acquisition was complete SPEC plotted the net
+counts in the first ROI (containing the Bragg peak) as follows:</p>
+<div class="figure align-center">
+<img alt="../_images/pilatusSPEC.png" src="../_images/pilatusSPEC.png" />
+</div>
+<p>For comparison this identical scan was executed in traditional
+step-scanning mode, where the motors stopped at each point in the
+scan. The Pilatus was run in Internal mode with NumImages=1. The
+total time for the scan was 870 seconds (more than 14 minutes),
+compared to 20.8 seconds in trajectory mode. Most of this overhead is
+the settling time for the motors, with only a small fraction due to
+the Pilatus single-exposure mode. The trajectory scanning mode is
+thus more than 50 times faster to execute the identical SPEC scan.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="hardware-notes">
+<h2><a class="toc-backref" href="#id11">Hardware notes</a><a class="headerlink" href="#hardware-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trigger-pulses">
+<h3><a class="toc-backref" href="#id12">Trigger pulses</a><a class="headerlink" href="#trigger-pulses" title="Permalink to this headline">¶</a></h3>
+<p>The Pilatus supports 3 types of external triggering. In External Trigger
+mode (the camserver ExtTrigger command) the Pilatus uses the programmed
+values of AcquireTime, AcquirePeriod, NImages and NExposures. It waits
+for a single external trigger, then waits for Delay seconds and then
+collects the entire sequence. It is very similar to Internal mode with
+NImages&gt;1, except that it waits for a trigger to begin collecting the
+sequence.</p>
+<p>In External Enable mode (the camserver ExtEnable command) the Pilatus
+uses the external signal to control acquisition. Only NImages and
+NExposures are used, AcquireTime and AcquirePeriod are not used. When
+the signal is high the detector counts, and on the transition to low it
+begins its readout.</p>
+<p>In External MultiTrigger Mode (the camserver ExtMTrigger command) the
+Pilatus uses the programmed AcquireTime, in addition to NImages and
+NExposures. Each external trigger pulse causes the Pilatus to collect
+one image at the programmed exposure time. This mode works well with a
+trigger source like the Newport motor controllers or the SIS380x
+multichannel scaler, that put out a short trigger pulse for each image.
+One only needs to take care that the time between external trigger
+pulses is at least 4msec longer than the programmed exposure time, to
+allow time for the detector to read out before the next trigger pulse
+arrives.</p>
+<p>When using the External Enable mode, we use an inexpensive analog pulse
+generator to convert the trigger pulses from the MM4005 and XPS to a
+form suitable for External Enable mode with the Pilatus. This is the
+solution we have developed that seems to be reliable:</p>
+<ul class="simple">
+<li>The synchonization pulses from the Newport MM4005 or XPS controller
+are input into the external next pulse (channel advance, control
+signal 1) input of the SIS3801 multiscaler. This is the normal
+configuration used for MCS counting without the Pilatus in trajectory
+scanning mode.</li>
+<li>The Copy In Progress (CIP) output of the SIS3801 (control signal 5)
+is connected to the Trigger Input of a Tenma TGP110 10 MHz Pulse
+Generator. CIP will output a pulse whenever the SIS3801 does a
+channel advance, either in external mode with the motor controller
+pulse input, or in internal timed channel advance mode. The TGP100
+Pulse Generator is configured as follows:<ul>
+<li>Trigger Input connected to CIP output of SIS3801.</li>
+<li>Triggered mode.</li>
+<li>Complement output.</li>
+<li>Pulse duration set with knobs to 3msec.</li>
+<li>TTL Output connected to the External Input of the Pilatus.</li>
+</ul>
+</li>
+<li>With this configuration the SIS3801 CIP output is normally at 5V, and
+outputs a 0V pulse 1 microsecond long. The trailing (rising) edge of
+that pulse triggers the TGP110. The TGP110 TTL output is also
+normally at 5V, and outputs a 0V pulse 3 milliseconds long each time
+the SIS3801 pulses. That output is connected to the Pilatus External
+Input. In External Enable mode when Pilatus External Input is high
+the Pilatus is counting. When the External Input is low the Pilatus
+reads out. The readout time is set via the knobs on the pulse
+generator to be 3 ms, which is close to the minimum time allowed on
+the Pilatus.</li>
+</ul>
+<p>The Tenma TGP110 seems to be currently called a Tenma 72-6860, and lists
+for about $350 new at <a class="reference external" href="http://www.newark.com">Newark</a>.</p>
+</div>
+<div class="section" id="detector-voltage">
+<h3><a class="toc-backref" href="#id13">Detector Voltage</a><a class="headerlink" href="#detector-voltage" title="Permalink to this headline">¶</a></h3>
+<p>When we were initially testing the Pilatus in the lab, we had many
+errors in External Enable mode, where it did not seem to be seeing the
+external pulses. camserver would get DMA timeouts, and need to be
+restarted. Dectris said these were happening because the cables on our
+detector are longer than normal, and the voltage drop from the power
+supply to the detector was leading to marginal voltage values. They
+suggested shortening the cables or increasing the supply voltage
+slightly. When moving the detector to the hutch these problems initially
+went away. However, they then recurred, and we fixed the problem by
+increasing the power supply voltage from 4.4 to 4.7 volts at the
+detector.</p>
+<p>Dectris has since informed me that they have increased the power supply
+voltage on all new Pilatus systems, so this should no longer be an
+issue.</p>
+</div>
+</div>
+<div class="section" id="restrictions">
+<h2><a class="toc-backref" href="#id14">Restrictions</a><a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h2>
+<p>The following are some current restrictions of the areaDetector Pilatus
+driver:</p>
+<ul class="simple">
+<li>Limited to TIFF or CBF file format. camserver can save files in other
+formats, but the driver can currently only read TIFF and CBF files.
+It uses the standard libtiff library to read the TIFF files, so it
+should work on big or little endian machines, and should work with
+uncompressed or compressed files. It has only been tested with
+uncompressed files on a little-endian machine. It uses the CBFlib
+library to read the CBF files.</li>
+<li>The EPICS IOC should be run on the same computer as camserver. This
+is not strictly necessary, and places a small additional load on the
+CPU and network on that computer. However, we have found that TIFF
+files are available to be read within 10ms after camserver says they
+have been written if the IOC is running on the same machine as
+camserver. This is true even if the files are being saved on a remote
+NFS or SMB file system. On the other hand, if the IOC and camserver
+are running on separate machines, then the filesystem can wait up to
+1 second after camserver says the TIFF file has been written before
+the IOC can read it. This is true even if the files are being written
+to the computer that the IOC is running on! This 1 second delay is
+often unacceptable for fast single-exposure scans, i.e. with
+NImages=1.</li>
+<li>The Pilatus driver keeps retrying to read each image file until the
+modification date of the image file is <em>after</em> the time that the
+acquisition was started. If it did not do this check then it could be
+reading and displaying old files that happen to have the same name as
+the current files being collected. This check requires that the
+computer that is running the soft IOC must have its clock well
+synchronized with the clock on the computer on which the files are
+being written (i.e. the computer generating the file modification
+time). If the clocks are not synchronized then the files may appear
+to be stale when they are not, and the driver will time out. The
+driver actually tolerates up to 10 second clock skew betweeen the
+computers but any more than this may lead to problems.</li>
+<li>Setting Acquire to 0 does not always stop acquisition immediately
+because camserver does not reliably implement the “K” command to stop
+an exposure sequence. In particular with NumImages&gt;1 camserver seems
+to often ignore the K command completely, even with exposure
+times/periods as long as 10 seconds. With NumImages=1 it does kill
+the exposure after a few seconds.</li>
+<li>The following items are hardcoded in the driver. They can be changed
+by compiling if necessary.<ul>
+<li>MAX_MESSAGE_SIZE=256 The maximum size of message to/from
+camserver.</li>
+<li>MAX_FILENAME_LEN=256 The maximum size of a complete file name
+including path and extension.</li>
+<li>FILE_READ_DELAY=.01 seconds. The time between polling to see if
+the image file exists or if it is the expected size.</li>
+<li>MAX_BAD_PIXELS=100 The maximum number of bad pixels.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Mark Rivers.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
