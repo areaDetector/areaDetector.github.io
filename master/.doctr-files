@@ -55,6 +55,8 @@ master/ADFastCCD/readme.html
 master/ADFastCCD/release.html
 master/ADFastCCD/st_cmd.html
 master/ADGenICam/ADGenICam.html
+master/ADLightField/ADLightField.html
+master/ADLightField/st_cmd.html
 master/ADPerkinElmer/PerkinElmerDoc.html
 master/ADPilatus/pilatusDoc.html
 master/ADPixirad/ADPixirad.html
@@ -111,6 +113,9 @@ master/_images/ImageJ_EPICS_NTNDA_Viewer_Decompress.png
 master/_images/ImageJ_GaussianProfiler.png
 master/_images/ImageJ_Main_Screen.png
 master/_images/Laplacian.png
+master/_images/LightField.png
+master/_images/LightFieldApplication.png
+master/_images/LightFieldFile.png
 master/_images/MainCVScreen.png
 master/_images/MarCCDAncillary.png
 master/_images/MarCCDAsynOctet.png
@@ -295,6 +300,8 @@ master/_sources/ADFastCCD/readme.rst.txt
 master/_sources/ADFastCCD/release.rst.txt
 master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADGenICam/ADGenICam.rst.txt
+master/_sources/ADLightField/ADLightField.rst.txt
+master/_sources/ADLightField/st_cmd.rst.txt
 master/_sources/ADPerkinElmer/PerkinElmerDoc.rst.txt
 master/_sources/ADPilatus/pilatusDoc.rst.txt
 master/_sources/ADPixirad/ADPixirad.rst.txt
