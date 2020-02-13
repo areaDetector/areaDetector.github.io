@@ -44,6 +44,7 @@ master/ADCore/plugin_overview.html
 master/ADCore/plugin_performance.html
 master/ADCore/plugins.html
 master/ADCore_release.html
+master/ADEiger/eiger.html
 master/ADFastCCD/configuration.html
 master/ADFastCCD/index.html
 master/ADFastCCD/introduction.html
@@ -56,6 +57,8 @@ master/ADFastCCD/st_cmd.html
 master/ADGenICam/ADGenICam.html
 master/ADPerkinElmer/PerkinElmerDoc.html
 master/ADPilatus/pilatusDoc.html
+master/ADPixirad/ADPixirad.html
+master/ADPixirad/st_cmd.html
 master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
 master/ADProsilica/ADProsilica.html
@@ -198,6 +201,7 @@ master/_images/canny_menu.png
 master/_images/centroid_menu.png
 master/_images/commonPlugins.png
 master/_images/commonplugins.png
+master/_images/eiger.png
 master/_images/fccd1.png
 master/_images/fileStructure.png
 master/_images/laplacian_menu.png
@@ -213,6 +217,7 @@ master/_images/pilatusSPEC.png
 master/_images/pilatusStats5.png
 master/_images/pilatusThresholdScanPlot.png
 master/_images/pilatusThresholdScanSetup.png
+master/_images/pixirad.png
 master/_images/pointGrey.png
 master/_images/pointGreyFrameRate.png
 master/_images/pointGreyPixelFormat.png
@@ -279,6 +284,7 @@ master/_sources/ADCore/plugin_overview.rst.txt
 master/_sources/ADCore/plugin_performance.rst.txt
 master/_sources/ADCore/plugins.rst.txt
 master/_sources/ADCore_release.rst.txt
+master/_sources/ADEiger/eiger.rst.txt
 master/_sources/ADFastCCD/configuration.rst.txt
 master/_sources/ADFastCCD/index.rst.txt
 master/_sources/ADFastCCD/introduction.rst.txt
@@ -291,6 +297,8 @@ master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADGenICam/ADGenICam.rst.txt
 master/_sources/ADPerkinElmer/PerkinElmerDoc.rst.txt
 master/_sources/ADPilatus/pilatusDoc.rst.txt
+master/_sources/ADPixirad/ADPixirad.rst.txt
+master/_sources/ADPixirad/st_cmd.rst.txt
 master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
