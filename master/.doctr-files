@@ -44,6 +44,8 @@ master/ADCore/plugin_overview.html
 master/ADCore/plugin_performance.html
 master/ADCore/plugins.html
 master/ADCore_release.html
+master/ADDexela/ADDexela.html
+master/ADDexela/st_cmd.html
 master/ADEiger/eiger.html
 master/ADFastCCD/configuration.html
 master/ADFastCCD/index.html
@@ -103,6 +105,7 @@ master/_images/AndorFile.png
 master/_images/Barcodemain.png
 master/_images/Canny2.png
 master/_images/Centroid.png
+master/_images/Dexela.png
 master/_images/HDFView-screenshot.png
 master/_images/HDFmultiple-dimensions.png
 master/_images/IDL_epics_ad_display.png
@@ -309,6 +312,8 @@ master/_sources/ADCore/plugin_overview.rst.txt
 master/_sources/ADCore/plugin_performance.rst.txt
 master/_sources/ADCore/plugins.rst.txt
 master/_sources/ADCore_release.rst.txt
+master/_sources/ADDexela/ADDexela.rst.txt
+master/_sources/ADDexela/st_cmd.rst.txt
 master/_sources/ADEiger/eiger.rst.txt
 master/_sources/ADFastCCD/configuration.rst.txt
 master/_sources/ADFastCCD/index.rst.txt
