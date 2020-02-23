@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>NDFileNetCDF &#8212; areaDetector 3-8-120-gc738bc5 documentation</title>
+    <title>NDFileNetCDF &#8212; areaDetector 3-8-122-g06010fb documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -83,7 +83,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ADCore_release.html">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-february-xxx-2020"><strong>R3-9 (February XXX, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -570,6 +570,13 @@ streaming are in progress because that would change the structure of the
 attribute array. Also the colorMode attribute must not be changed while
 capture or streaming is in progress, because that would change the
 structure of the NDArray data.</p>
+<p>The netCDF classic file format does not handle 64-bit integer data, so cannot
+actually store NDArrays with types NDInt64 or NDUInt64, or NDAttributes of type
+NDAttrInt64 or NDAttrUInt64. This plugin works around this restriction by casting the data to float64,
+so the netCDF library thinks it is writing float64 (double) data, and marks the netCDF data in in the file as double.
+However the netCDF global attribute “datatype” (enum NDDataType_t) will correctly indicate the actual datatype.
+File readers will need to cast the data to the actual datatype after reading the data with the netCDF
+library functions.</p>
 <p>The <a class="reference external" href="../areaDetectorDoxygenHTML/class_n_d_file_net_c_d_f.html">NDFileNetCDF class
 documentation</a>
 describes this class in detail.</p>
@@ -711,7 +718,7 @@ type.</li>
 <p>There is an IDL function,
 <a class="reference external" href="https://cars.uchicago.edu/software/idl/detector_routines.html#read_nd_netcdf">read_nd_netcdf</a>
 that can be used to read the netCDF files created by this plugin. This
-routine is contained in the <a class="reference external" href="https://cars.uchicago.edu/software/idl/detectors.html#read_nd_netcdf">CARS IDL detector
+routine is contained in the <a class="reference external" href="https://github.com/CARS-UChicago/IDL_Detectors/blob/master/read_nd_netcdf.pro">CARS IDL detector
 package</a>.
 This function is also contained in the areaDetector distribution in the
 Viewers/IDL directory.</p>

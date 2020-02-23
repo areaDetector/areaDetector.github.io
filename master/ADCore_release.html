@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADCore Releases &#8212; areaDetector 3-8-120-gc738bc5 documentation</title>
+    <title>ADCore Releases &#8212; areaDetector 3-8-122-g06010fb documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -83,7 +83,7 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#r3-9-february-xxx-2020"><strong>R3-9 (February XXX, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -477,7 +477,7 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ADCore Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#r3-9-january-xxx-2020"><strong>R3-9 (January XXX, 2020)</strong></a><ul>
+<li><a class="reference internal" href="#r3-9-february-xxx-2020"><strong>R3-9 (February XXX, 2020)</strong></a><ul>
 <li><a class="reference internal" href="#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -770,8 +770,8 @@ the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE
 files respectively, in the configure/ directory of the appropriate release of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector">top-level areaDetector</a> repository.</p>
 </div>
-<div class="section" id="r3-9-january-xxx-2020">
-<h2><strong>R3-9 (January XXX, 2020)</strong><a class="headerlink" href="#r3-9-january-xxx-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r3-9-february-xxx-2020">
+<h2><strong>R3-9 (February XXX, 2020)</strong><a class="headerlink" href="#r3-9-february-xxx-2020" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ccdmultitrack">
 <h3>CCDMultiTrack<a class="headerlink" href="#ccdmultitrack" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -786,6 +786,16 @@ the histogram had 0 counts when it should not.
 ### NDPluginStdArrays</li>
 <li>Changes to support compressed NDArrays. This will really only work properly when the ArrayData waveform record
 FTVL is CHAR, since compressed data is just a stream of bytes.
+### NDFileNetCDF</li>
+<li>Changes to handle NDArrays and NDAttributes with data types epicsInt64 and epicsUInt64.  The netCDF classic file
+format does not handle 64-bit integer data.  The workaround is to cast the data to float64, so the netCDF library
+thinks it is writing float64 data, and marks the netCDF data in in the file as type <code class="docutils literal notranslate"><span class="pre">double</span></code>.
+However the netCDF global attribute “datatype” (enum NDDataType_t) will correctly indicate the actual datatype.
+File readers will need to cast the data to the actual datatype after reading the data with the netCDF library functions.</li>
+<li>Incremented the global attribute NDNetCDFFileVersion from 3.0 to 3.1 because the order of the NDDataType_t enums
+changed in ADCore R3-8 to insert NDInt64 and NDUInt64 after NDUInt32.  This changed the enum values of NDFloat32
+and NDFloat64.  File readers using the value of these enums thus need to know which version of ADCore the file
+was written with.  This change should have been made in R3-8.
 ### SCANRATE macro</li>
 <li>A new macro has been added to NDPosPlugin.template, NDPluginBase.template, NDFile.tamplate, NDArrayBase.template and
 ADBase.template. This can be used to control the SCAN value of status PVs which update on every frame such as
@@ -799,7 +809,11 @@ means that it will not display faster than the SCANRATE you select.</li>
 <li>By making the records periodically scanned they will be reading even when the detector is stopped, which is a bit
 more overhead than SCAN=I/O Intr.
 ### docs</li>
-<li>Replaced all raw HTML tables in .rst files with Sphinx flat-tables.</li>
+<li>Replaced all raw HTML tables in .rst files with Sphinx flat-tables.
+### iocBoot</li>
+<li>Added command <code class="docutils literal notranslate"><span class="pre">callbackSetQueueSize(5000)</span></code> to avoid <code class="docutils literal notranslate"><span class="pre">callbackRequest:</span> <span class="pre">cbLow</span> <span class="pre">ring</span> <span class="pre">buffer</span> <span class="pre">full</span></code> errors.
+### OPI files</li>
+<li>Added .bob files for the Phoebus Display Builder.  These are autoconverted from the .adl files.</li>
 </ul>
 </div>
 </div>
