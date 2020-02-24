@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector Releases &#8212; areaDetector 3-8-122-g06010fb documentation</title>
+    <title>areaDetector Releases &#8212; areaDetector 3-8-124-g6f19e72 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -58,7 +58,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Top-level Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#versions">Versions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#r3-9-january-xxx-2020">R3-9 (January XXX, 2020)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r3-9-february-xxx-2020">R3-9 (February XXX, 2020)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-7-august-9-2019">R3-7 (August 9, 2019)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-6-may-29-2019">R3-6 (May 29, 2019)</a></li>
@@ -83,7 +83,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ADCore_release.html">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#r3-9-february-xxx-2020"><strong>R3-9 (February XXX, 2020)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ADCore_release.html#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
 </ul>
 </li>
@@ -478,7 +478,7 @@
 <li><a class="reference internal" href="#">areaDetector Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#versions">Versions</a><ul>
-<li><a class="reference internal" href="#r3-9-january-xxx-2020">R3-9 (January XXX, 2020)</a></li>
+<li><a class="reference internal" href="#r3-9-february-xxx-2020">R3-9 (February XXX, 2020)</a></li>
 <li><a class="reference internal" href="#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
 <li><a class="reference internal" href="#r3-7-august-9-2019">R3-7 (August 9, 2019)</a></li>
 <li><a class="reference internal" href="#r3-6-may-29-2019">R3-6 (May 29, 2019)</a></li>
@@ -571,11 +571,51 @@ files respectively, in the appropriate release of the
 <h2>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h2>
 <p>Each submodule contains detailed release notes for each release of that submodule.  The release notes below
 only provide a short summary of the most significant items from the submodules.</p>
-<div class="section" id="r3-9-january-xxx-2020">
-<h3>R3-9 (January XXX, 2020)<a class="headerlink" href="#r3-9-january-xxx-2020" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="r3-9-february-xxx-2020">
+<h3>R3-9 (February XXX, 2020)<a class="headerlink" href="#r3-9-february-xxx-2020" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>All modules.<ul>
 <li>Added .bob files for Phoebus, autoconverted from .adl files.</li>
+</ul>
+</li>
+<li>Documentation<ul>
+<li>Converted more of the driver HTML documentation hosted at cars.uchicago.edu
+to ReST hosted at areaDetector.githun.io.  Much of this work was done at the recent Codeathon
+at Diamond Light Source.  Thanks to Timo, Andy, Gary, XXX, XXX for work on this.</li>
+<li>Updated the install_guide.rst to reflect the changes to the configure/ directory described below.</li>
+<li>Changes to Sphinx settings to make Web pages wider, improving appearance of tables.</li>
+<li>Change from Sphinx 1.8.4 to 1.8.5.</li>
+</ul>
+</li>
+<li>configure/ directory<ul>
+<li>Fixed problems with EXAMPLE_RELEASE_LIBS.local and EXAMPLE_RELEASE_PRODS.local.
+They were missing the definition of SUPPORT.</li>
+<li>Removed EXAMPLE_RELEASE_SUPPORT.local and EXAMPLE_RELEASE_BASE.local.
+RELEASE_SUPPORT.local and RELEASE_BASE.local are not longer used.  They were previously
+used, for example, to allow building Linux and Windows in the same tree where the definition
+of SUPPORT and EPICS_BASE would have a different syntax.  This is now handled in the more
+standard way of optionally including $(TOP)/../RELEASE.local and $(TOP)/../RELEASE.$(EPICS_HOST_ARCH).local.</li>
+<li>RELEASE_LIBS_INCLUDE and RELEASE_PRODS_INCLUDE were changed to also optionally include these files from
+the level above $(AREA_DETECTOR).</li>
+</ul>
+</li>
+<li>ADCore R3-9<ul>
+<li>Added Int64 support to NDFileNetCDF.</li>
+<li>Support for compressed NDArrays in NDPluginStdArrays (Channel Access)</li>
+</ul>
+</li>
+<li>ADGenICam R1-2 and R1-3<ul>
+<li>Change integer features from epicsInt32 to epicsInt64.  Requires asyn R4-38.</li>
+<li>Added databases and OPI files for many more FLIR and AVT cameras.</li>
+</ul>
+</li>
+<li>ADSpinnaker R2-1<ul>
+<li>Change integer features from epicsInt32 to epicsInt64.  Requires asyn R4-38.</li>
+<li>Added vendor SFNC_GenTL*.xml files which are required to be present in the lib directory on Linux.</li>
+</ul>
+</li>
+<li>ADAravis R1-2<ul>
+<li>Change integer features from epicsInt32 to epicsInt64.  Requires asyn R4-38.</li>
 </ul>
 </li>
 </ul>
@@ -583,7 +623,7 @@ only provide a short summary of the most significant items from the submodules.<
 <div class="section" id="r3-8-october-22-2019">
 <h3>R3-8 (October 22, 2019)<a class="headerlink" href="#r3-8-october-22-2019" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>ADCore R3-8.<ul>
+<li>ADCore R3-8<ul>
 <li>Int64 support.  Requires asyn R4-37.</li>
 </ul>
 </li>
