@@ -74,6 +74,7 @@ master/ADSpinnaker/ADSpinnaker.html
 master/ADSupport_release.html
 master/ADURL/ADURL.html
 master/ADURL/st_cmd.html
+master/ADViewers/PY_NTNDA_Viewer.html
 master/ADViewers/ad_viewers.html
 master/ADVimba/ADVimba.html
 master/ADmarCCD/marCCDDoc.html
@@ -205,6 +206,8 @@ master/_images/NDStats_unfiltered.png
 master/_images/NDStdArrays.png
 master/_images/NDTimeSeriesPlot.png
 master/_images/NDTransform.png
+master/_images/PY_NTNDA_Viewer_Control.png
+master/_images/PY_NTNDA_Viewer_Image.png
 master/_images/PerkinElmer.png
 master/_images/Shamrock.png
 master/_images/URLDriver.png
@@ -342,6 +345,7 @@ master/_sources/ADSpinnaker/ADSpinnaker.rst.txt
 master/_sources/ADSupport_release.rst.txt
 master/_sources/ADURL/ADURL.rst.txt
 master/_sources/ADURL/st_cmd.rst.txt
+master/_sources/ADViewers/PY_NTNDA_Viewer.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/ADVimba/ADVimba.rst.txt
 master/_sources/ADmarCCD/marCCDDoc.rst.txt
