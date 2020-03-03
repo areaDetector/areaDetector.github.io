@@ -74,6 +74,10 @@ master/ADSpinnaker/ADSpinnaker.html
 master/ADSupport_release.html
 master/ADURL/ADURL.html
 master/ADURL/st_cmd.html
+master/ADViewers/IDL_Viewer.html
+master/ADViewers/ImageJ_EPICS_AD_Controller.html
+master/ADViewers/ImageJ_EPICS_AD_Viewer.html
+master/ADViewers/ImageJ_EPICS_NTNDA_Viewer.html
 master/ADViewers/PY_NTNDA_Viewer.html
 master/ADViewers/ad_viewers.html
 master/ADVimba/ADVimba.html
@@ -345,6 +349,10 @@ master/_sources/ADSpinnaker/ADSpinnaker.rst.txt
 master/_sources/ADSupport_release.rst.txt
 master/_sources/ADURL/ADURL.rst.txt
 master/_sources/ADURL/st_cmd.rst.txt
+master/_sources/ADViewers/IDL_Viewer.rst.txt
+master/_sources/ADViewers/ImageJ_EPICS_AD_Controller.rst.txt
+master/_sources/ADViewers/ImageJ_EPICS_AD_Viewer.rst.txt
+master/_sources/ADViewers/ImageJ_EPICS_NTNDA_Viewer.rst.txt
 master/_sources/ADViewers/PY_NTNDA_Viewer.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/ADVimba/ADVimba.rst.txt
