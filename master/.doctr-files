@@ -69,7 +69,7 @@ master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
 master/ADRIXSCam/ADRIXSCam.html
 master/ADSimDetector/simDetector.html
-master/ADSimDetector/stcmd.html
+master/ADSimDetector/st_cmd.html
 master/ADSpinnaker/ADSpinnaker.html
 master/ADSupport_release.html
 master/ADURL/ADURL.html
@@ -81,7 +81,10 @@ master/ADViewers/ImageJ_EPICS_NTNDA_Viewer.html
 master/ADViewers/PY_NTNDA_Viewer.html
 master/ADViewers/ad_viewers.html
 master/ADVimba/ADVimba.html
+master/ADmar345/mar345Doc.html
+master/ADmar345/st_cmd.html
 master/ADmarCCD/marCCDDoc.html
+master/ADmarCCD/st_cmd.html
 master/_images/ADAravis.png
 master/_images/ADAravis_features1.png
 master/_images/ADAravis_features2.png
@@ -111,6 +114,7 @@ master/_images/Barcodemain.png
 master/_images/Canny2.png
 master/_images/Centroid.png
 master/_images/Dexela.png
+master/_images/DistanceCheck.png
 master/_images/HDFView-screenshot.png
 master/_images/HDFmultiple-dimensions.png
 master/_images/IDL_epics_ad_display.png
@@ -216,18 +220,17 @@ master/_images/PerkinElmer.png
 master/_images/Shamrock.png
 master/_images/URLDriver.png
 master/_images/URLDriverSetup.png
+master/_images/Video_Record.png
 master/_images/areaDetectorArchitecture.png
 master/_images/bar1-5.png
 master/_images/barcode.png
-master/_images/canny_menu.png
-master/_images/centroid_menu.png
 master/_images/commonPlugins.png
 master/_images/commonplugins.png
 master/_images/eiger.png
 master/_images/fccd1.png
 master/_images/fileStructure.png
-master/_images/laplacian_menu.png
 master/_images/liveupdate.png
+master/_images/mar345.png
 master/_images/marCCD.png
 master/_images/pilatusAncillary.png
 master/_images/pilatusAsyn.png
@@ -272,7 +275,6 @@ master/_images/simDetector_ImageJ_display.png
 master/_images/simDetector_image_display.png
 master/_images/simDetector_image_display1.png
 master/_images/threshold.png
-master/_images/threshold_menu.png
 master/_sources/ADAndor/andorDoc.rst.txt
 master/_sources/ADAndor/st_cmd.rst.txt
 master/_sources/ADAravis/ADAravis.rst.txt
@@ -344,7 +346,7 @@ master/_sources/ADProsilica/ADProsilica.rst.txt
 master/_sources/ADProsilica/st_cmd.rst.txt
 master/_sources/ADRIXSCam/ADRIXSCam.rst.txt
 master/_sources/ADSimDetector/simDetector.rst.txt
-master/_sources/ADSimDetector/stcmd.rst.txt
+master/_sources/ADSimDetector/st_cmd.rst.txt
 master/_sources/ADSpinnaker/ADSpinnaker.rst.txt
 master/_sources/ADSupport_release.rst.txt
 master/_sources/ADURL/ADURL.rst.txt
@@ -356,7 +358,10 @@ master/_sources/ADViewers/ImageJ_EPICS_NTNDA_Viewer.rst.txt
 master/_sources/ADViewers/PY_NTNDA_Viewer.rst.txt
 master/_sources/ADViewers/ad_viewers.rst.txt
 master/_sources/ADVimba/ADVimba.rst.txt
+master/_sources/ADmar345/mar345Doc.rst.txt
+master/_sources/ADmar345/st_cmd.rst.txt
 master/_sources/ADmarCCD/marCCDDoc.rst.txt
+master/_sources/ADmarCCD/st_cmd.rst.txt
 master/_sources/acknowledgements.rst.txt
 master/_sources/additional_plugins.rst.txt
 master/_sources/detector_drivers.rst.txt
