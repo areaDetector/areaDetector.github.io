@@ -61,9 +61,9 @@ Inheritance diagram for ADSpinnaker:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad239cbce1488ec76716b736cec8df848"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_spinnaker.html#ad239cbce1488ec76716b736cec8df848">ADSpinnaker</a> (const char *portName, int cameraId, int traceMask, int memoryChannel, size_t maxMemory, int priority, int stackSize)</td></tr>
-<tr class="memdesc:ad239cbce1488ec76716b736cec8df848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_a_d_spinnaker.html" title="Main driver class inherited from areaDetectors ADDriver class.">ADSpinnaker</a> class.  <a href="#ad239cbce1488ec76716b736cec8df848">More...</a><br /></td></tr>
-<tr class="separator:ad239cbce1488ec76716b736cec8df848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70dfefc99b05843b3218713735f9e164"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_spinnaker.html#a70dfefc99b05843b3218713735f9e164">ADSpinnaker</a> (const char *portName, int cameraId, int traceMask, size_t maxMemory, int priority, int stackSize)</td></tr>
+<tr class="memdesc:a70dfefc99b05843b3218713735f9e164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_a_d_spinnaker.html" title="Main driver class inherited from areaDetectors ADDriver class.">ADSpinnaker</a> class.  <a href="#a70dfefc99b05843b3218713735f9e164">More...</a><br /></td></tr>
+<tr class="separator:a70dfefc99b05843b3218713735f9e164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf4b46ecf92f6e19a704d2dae1655e84"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_spinnaker.html#aaf4b46ecf92f6e19a704d2dae1655e84">readEnum</a> (asynUser *pasynUser, char *strings[], int values[], int severities[], size_t nElements, size_t *nIn)</td></tr>
 <tr class="separator:aaf4b46ecf92f6e19a704d2dae1655e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10ee13de89989f8262bc23e141b8efc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_spinnaker.html#a10ee13de89989f8262bc23e141b8efc8">report</a> (FILE *fp, int details)</td></tr>
@@ -84,8 +84,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Main driver class inherited from areaDetectors <a class="el" href="class_a_d_driver.html" title="Class from which areaDetector drivers are directly derived.">ADDriver</a> class. </p>
 <p>One instance of this class will control one camera. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad239cbce1488ec76716b736cec8df848"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad239cbce1488ec76716b736cec8df848">&#9670;&nbsp;</a></span>ADSpinnaker()</h2>
+<a id="a70dfefc99b05843b3218713735f9e164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70dfefc99b05843b3218713735f9e164">&#9670;&nbsp;</a></span>ADSpinnaker()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,12 +107,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>traceMask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>memoryChannel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -150,12 +144,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <p>If set to 0 or 1 then asynTraceMask will be set to ASYN_TRACE_ERROR. If set to 0x21 (ASYN_TRACE_WARNING | ASYN_TRACE_ERROR) then each call to the Spinnaker library will be traced including during initialization. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">memoryChannel</td><td>The camera memory channel (non-volatile memory containing camera parameters) to load during initialization. If 0 no memory channel is loaded. If &gt;=1 thenRestoreFromMemoryChannel(memoryChannel-1) is called.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Set memoryChannel to 1 to work around a bug in the Linux GigE driver in R2.0. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">maxMemory</td><td>Maximum memory (in bytes) that this driver is allowed to allocate. 0=unlimited. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>The EPICS thread priority for this driver. 0=use asyn default. </td></tr>

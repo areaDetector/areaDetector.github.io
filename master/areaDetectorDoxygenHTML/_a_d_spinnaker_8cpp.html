@@ -107,9 +107,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7e004270277e00538c1cd68c8a31fcf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_spinnaker_8cpp.html#a7e004270277e00538c1cd68c8a31fcf8">ADSpinnakerConfig</a> (const char *portName, int cameraId, int traceMask, int memoryChannel, size_t maxMemory, int priority, int stackSize)</td></tr>
-<tr class="memdesc:a7e004270277e00538c1cd68c8a31fcf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration function to configure one camera.  <a href="#a7e004270277e00538c1cd68c8a31fcf8">More...</a><br /></td></tr>
-<tr class="separator:a7e004270277e00538c1cd68c8a31fcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cad2e547c401b3100c861fbac08fb30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_spinnaker_8cpp.html#a4cad2e547c401b3100c861fbac08fb30">ADSpinnakerConfig</a> (const char *portName, int cameraId, int traceMask, size_t maxMemory, int priority, int stackSize)</td></tr>
+<tr class="memdesc:a4cad2e547c401b3100c861fbac08fb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration function to configure one camera.  <a href="#a4cad2e547c401b3100c861fbac08fb30">More...</a><br /></td></tr>
+<tr class="separator:a4cad2e547c401b3100c861fbac08fb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310fd8a7a827d815f2199b06ce06eced"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_spinnaker_8cpp.html#a310fd8a7a827d815f2199b06ce06eced">epicsExportRegistrar</a> (ADSpinnakerRegister)</td></tr>
 <tr class="separator:a310fd8a7a827d815f2199b06ce06eced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -230,8 +230,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7e004270277e00538c1cd68c8a31fcf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e004270277e00538c1cd68c8a31fcf8">&#9670;&nbsp;</a></span>ADSpinnakerConfig()</h2>
+<a id="a4cad2e547c401b3100c861fbac08fb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cad2e547c401b3100c861fbac08fb30">&#9670;&nbsp;</a></span>ADSpinnakerConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,12 +253,6 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>traceMask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>memoryChannel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -296,12 +290,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>If set to 0 or 1 then asynTraceMask will be set to ASYN_TRACE_ERROR. If set to 0x21 (ASYN_TRACE_WARNING | ASYN_TRACE_ERROR) then each call to the Spinnaker library will be traced including during initialization. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">memoryChannel</td><td>The camera memory channel (non-volatile memory containing camera parameters) to load during initialization. If 0 no memory channel is loaded. If &gt;=1 thenRestoreFromMemoryChannel(memoryChannel-1) is called.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Set memoryChannel to 1 to work around a bug in the Linux GigE driver in R2.0. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">maxMemory</td><td>Maximum memory (in bytes) that this driver is allowed to allocate. 0=unlimited. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>The EPICS thread priority for this driver. 0=use asyn default. </td></tr>

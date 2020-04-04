@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADGenICam &#8212; areaDetector 3-9-6-gd0d2db0 documentation</title>
+    <title>ADGenICam &#8212; areaDetector 3-9-7-g2f5f09d documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -1325,6 +1325,8 @@ This is done by updating the boot params in grub. You can set the memory limit u
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>update-grub
 </pre></div>
 </div>
+<p>On some Linux systems the update-grub command does not exist, so use this instead:</p>
+<p>grub2-mkconfig -o /boot/grub2/grub.cfg</p>
 <p>Reboot and test a USB 3 camera.</p>
 <p>If this method fails to set the memory limit, run the following command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sh -c &#39;echo 1000 &gt; /sys/module/usbcore/parameters/usbfs_memory_mb&#39;
