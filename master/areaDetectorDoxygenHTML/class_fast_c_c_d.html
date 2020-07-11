@@ -73,6 +73,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af505305276e8e489239be73769dec4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#af505305276e8e489239be73769dec4b3">More...</a><br /></td></tr>
 <tr class="separator:af505305276e8e489239be73769dec4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada3ac79155e235327a752a688496ce6e"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fast_c_c_d.html#ada3ac79155e235327a752a688496ce6e">connect</a> (asynUser *pasynUser)</td></tr>
+<tr class="memdesc:ada3ac79155e235327a752a688496ce6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects driver to device; This method is called when the driver's pasynCommon-&gt;<a class="el" href="class_fast_c_c_d.html#ada3ac79155e235327a752a688496ce6e" title="Connects driver to device; This method is called when the driver&#39;s pasynCommon-&gt;connect() function is...">connect()</a> function is called.  <a href="#ada3ac79155e235327a752a688496ce6e">More...</a><br /></td></tr>
 <tr class="separator:ada3ac79155e235327a752a688496ce6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5843420d4c129b3c59d6d2222f2a4386"><td class="memItemLeft" align="right" valign="top">asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fast_c_c_d.html#a5843420d4c129b3c59d6d2222f2a4386">disconnect</a> (asynUser *pasynUser)</td></tr>
 <tr class="separator:a5843420d4c129b3c59d6d2222f2a4386"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -464,6 +465,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9f521abfc93c9ccba2b0e83acace6d0e inherit pro_attribs_class_a_d_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb837da5ddf5ba868ea2dea316254c41 inherit pro_attribs_class_a_d_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#adb837da5ddf5ba868ea2dea316254c41">ADStringFromServer</a></td></tr>
 <tr class="separator:adb837da5ddf5ba868ea2dea316254c41 inherit pro_attribs_class_a_d_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad387fa6e2e45c812ba82adba2cc74bd0 inherit pro_attribs_class_a_d_driver"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_driver.html#ad387fa6e2e45c812ba82adba2cc74bd0">deviceIsReachable</a></td></tr>
+<tr class="separator:ad387fa6e2e45c812ba82adba2cc74bd0 inherit pro_attribs_class_a_d_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classasyn_n_d_array_driver"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classasyn_n_d_array_driver')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classasyn_n_d_array_driver.html">asynNDArrayDriver</a></td></tr>
 <tr class="memitem:acefc2096d9db2fd102542a957722ceef inherit pro_attribs_classasyn_n_d_array_driver"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classasyn_n_d_array_driver.html#acefc2096d9db2fd102542a957722ceef">NDPortNameSelf</a></td></tr>
 <tr class="separator:acefc2096d9db2fd102542a957722ceef inherit pro_attribs_classasyn_n_d_array_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -744,6 +747,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">asynStatus FastCCD::connect </td>
@@ -753,7 +759,22 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Connects driver to device; This method is called when the driver's pasynCommon-&gt;<a class="el" href="class_fast_c_c_d.html#ada3ac79155e235327a752a688496ce6e" title="Connects driver to device; This method is called when the driver&#39;s pasynCommon-&gt;connect() function is...">connect()</a> function is called. </p>
+<p>It uses the class variable deviceIsReachable to determine whether to call asynPortDriver::connect(), which in turn calls pasynManager::exceptionConnect() to signal that the driver is connected to the underlying hardware. Derived classes can override this method if they need to handle <a class="el" href="class_fast_c_c_d.html#ada3ac79155e235327a752a688496ce6e" title="Connects driver to device; This method is called when the driver&#39;s pasynCommon-&gt;connect() function is...">connect()</a> calls in a more complex way. For example, with a network camera that can be temporarily unreachable the driver could attempt to connect to the camera each time that <a class="el" href="class_fast_c_c_d.html#ada3ac79155e235327a752a688496ce6e" title="Connects driver to device; This method is called when the driver&#39;s pasynCommon-&gt;connect() function is...">connect()</a> is called. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pasynUser</td><td>The pasynUser structure which contains information about the port and address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_a_d_driver.html#a619dfbdc35605a104d2a07ea46f37b5f">ADDriver</a>.</p>
 
 </div>
 </div>

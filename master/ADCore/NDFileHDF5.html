@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>NDFileHDF5 &#8212; areaDetector 3-9-7-g2f5f09d documentation</title>
+    <title>NDFileHDF5 &#8212; areaDetector 3-9-8-g03840b9 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -140,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#python-viewer">Python Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#idl-viewer">IDL Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#comparison-of-features-and-performance">Comparison of features and performance</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
@@ -208,6 +209,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ADCore_release.html">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-10-july-xxx-2020"><strong>R3-10 (July XXX, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf">NDFileHDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincicularbuff">NDPluginCicularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndstats-adl">NDStats.adl</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats">NDPluginStats</a></li>
@@ -675,8 +684,8 @@ represents a global functionality definition</li>
 </tr>
 <tr class="row-odd"><td>when</td>
 <td>optional</td>
-<td>Event when the attribute data is updated</td>
-<td>Enum string: “OnFileOpen”, “OnFileClose”, “OnFileWrite”</td>
+<td>Event when the attribute data is written</td>
+<td>Enum string: “OnFileOpen” (default), “OnFileClose”</td>
 </tr>
 <tr class="row-even"><td>value</td>
 <td>Required only if source=”constant”</td>
@@ -731,49 +740,54 @@ which have not been defined to be stored elsewhere will not be stored at all</td
 <td>Definition of where the dataset gets its data values from</td>
 <td>string enum: “detector”, “ndattribute”, “constant”</td>
 </tr>
-<tr class="row-even"><td>value</td>
+<tr class="row-even"><td>when</td>
+<td>optional</td>
+<td>Event when the dataset data is written</td>
+<td>Enum string: “OnFileOpen”, “OnFileClose”, “OnFileWrite” (default)</td>
+</tr>
+<tr class="row-odd"><td>value</td>
 <td>Required only if source=”constant”</td>
 <td>Constant value to write directly into the HDF5 dataset</td>
 <td>String - possibly containing int or float values. Arrays of int and float values
 can also be represented in a comma-separated string</td>
 </tr>
-<tr class="row-odd"><td>ndattribute</td>
+<tr class="row-even"><td>ndattribute</td>
 <td>Required only if source=”ndattribute”</td>
 <td>The name of the areaDetector NDAttribute to use as a data source for this HDF5 dataset</td>
 <td>string containing the name of the NDAttribute</td>
 </tr>
-<tr class="row-even"><td>det_default</td>
+<tr class="row-odd"><td>det_default</td>
 <td>optional</td>
 <td>Flag to indicate that this HDF5 dataset is the default dataset for the detector
 to write NDArrays into. Only sensible to set true if source=”detector”</td>
 <td>boolean (default=false)</td>
 </tr>
-<tr class="row-odd"><td>&#160;</td>
+<tr class="row-even"><td>&#160;</td>
 <td>&#160;</td>
 <td colspan="2"><strong>XML “global” element attributes</strong></td>
 </tr>
-<tr class="row-even"><td>name</td>
+<tr class="row-odd"><td>name</td>
 <td>yes</td>
 <td>Name of the global functionality or parameter to set</td>
 <td>enum string: “detector_data_destination”
 , (currently only one supported parameter)</td>
 </tr>
-<tr class="row-odd"><td>ndattribute</td>
+<tr class="row-even"><td>ndattribute</td>
 <td>Required when name=”detector_data_destination”</td>
 <td>Name of the NDAttribute which defines the name of the dataset where incoming NDArrays
 are to be stored</td>
 <td>string containing the name of an NDAttribute</td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
+<tr class="row-odd"><td>&#160;</td>
 <td>&#160;</td>
 <td colspan="2"><strong>XML “hardlink” element attributes</strong></td>
 </tr>
-<tr class="row-odd"><td>name</td>
+<tr class="row-even"><td>name</td>
 <td>yes</td>
 <td>Name of the link</td>
 <td>string: string containing the name of the hardlink being created</td>
 </tr>
-<tr class="row-even"><td>target</td>
+<tr class="row-odd"><td>target</td>
 <td>yes</td>
 <td>Name of the existing target object in the HDF5 file being linked to.</td>
 <td>string containing the name of the target object being linked to</td>

@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADCore Releases &#8212; areaDetector 3-9-7-g2f5f09d documentation</title>
+    <title>ADCore Releases &#8212; areaDetector 3-9-8-g03840b9 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -140,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ADViewers/ad_viewers.html#python-viewer">Python Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADViewers/ad_viewers.html#idl-viewer">IDL Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADViewers/ad_viewers.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADViewers/ad_viewers.html#comparison-of-features-and-performance">Comparison of features and performance</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="acknowledgements.html">Acknowledgements and licenses</a></li>
@@ -208,6 +209,14 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r3-10-july-xxx-2020"><strong>R3-10 (July XXX, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#addriver">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ndfilehdf">NDFileHDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ndplugincicularbuff">NDPluginCicularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ndstats-adl">NDStats.adl</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ccdmultitrack">CCDMultiTrack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginstats">NDPluginStats</a></li>
@@ -488,6 +497,14 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ADCore Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#r3-10-july-xxx-2020"><strong>R3-10 (July XXX, 2020)</strong></a><ul>
+<li><a class="reference internal" href="#addriver">ADDriver</a></li>
+<li><a class="reference internal" href="#ndfilehdf">NDFileHDF</a></li>
+<li><a class="reference internal" href="#ndplugincicularbuff">NDPluginCicularBuff</a></li>
+<li><a class="reference internal" href="#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
+<li><a class="reference internal" href="#ndstats-adl">NDStats.adl</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
 <li><a class="reference internal" href="#ccdmultitrack">CCDMultiTrack</a></li>
 <li><a class="reference internal" href="#ndpluginstats">NDPluginStats</a></li>
@@ -790,6 +807,55 @@ the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE
 files respectively, in the configure/ directory of the appropriate release of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector">top-level areaDetector</a> repository.</p>
 </div>
+<div class="section" id="r3-10-july-xxx-2020">
+<h2><strong>R3-10 (July XXX, 2020)</strong><a class="headerlink" href="#r3-10-july-xxx-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="addriver">
+<h3>ADDriver<a class="headerlink" href="#addriver" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added new bool member variable deviceIsReachable and new method connect().
+If drivers detect that the underlying hardware is unreachable they should
+set deviceIsReachable=false and call this-&gt;disconnect().  That will cause
+asynManager to flag the driver as disconnected, and prevent queuing any
+read or write requests.  It will also cause the associated asyn record .CNCT
+field to be “Disconnected” which displays prominently in red letters on all
+driver OPI screens.</li>
+</ul>
+</div>
+<div class="section" id="ndfilehdf">
+<h3>NDFileHDF<a class="headerlink" href="#ndfilehdf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed a problem that constant datasets were not closed before closing the file.
+This produced warning messages, and probably minor memory leaks.</li>
+</ul>
+</div>
+<div class="section" id="ndplugincicularbuff">
+<h3>NDPluginCicularBuff<a class="headerlink" href="#ndplugincicularbuff" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added extra checks when pre-count is set<ul>
+<li>A negative value resulted in a segfault.</li>
+<li>Changing it while acquiring doesn’t make sense, as it is used
+to allocate the ring buffer when starting an acquisition</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">
+<h3>docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5<a class="headerlink" href="#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed the XML schema and the documentation for the use of the “when” attribute in HDF5 layout XML files.
+Previously it stated that “when” could only be used for HDF5 attributes, not datasets.
+This is incorrect, it can also be used for datasets.  It also incorectly stated that the allowed
+values were “OnFileOpen”, “OnFileClose”, and “OnFileWrite”.  “OnFileWrite” is a valid
+value for HDF5 datasets, but it is not an allowed value for HDF5 attributes.</li>
+</ul>
+</div>
+<div class="section" id="ndstats-adl">
+<h3>NDStats.adl<a class="headerlink" href="#ndstats-adl" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed typo in arguments for centroidX timeseries plot related display.</li>
+</ul>
+</div>
+</div>
 <div class="section" id="r3-9-february-24-2020">
 <h2><strong>R3-9 (February 24, 2020)</strong><a class="headerlink" href="#r3-9-february-24-2020" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ccdmultitrack">
@@ -925,7 +991,7 @@ This allows them to be used with other drivers that derive from asynNDArrayDrive
 <div class="section" id="myattributefunctions-cpp">
 <h3>myAttributeFunctions.cpp<a class="headerlink" href="#myattributefunctions-cpp" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Added new TIME64 parameter and functTime64 function.<span class="raw-html-m2r"><br></span>
+<li>Added new TIME64 parameter and functTime64 function.
 This creates an attribute of type NDAttrUInt64 that contains the current EPICS time with secPastEpoch in the
 high-order 32-bits and nsec in the low order 32-bits.  This allows testing 64-bit attribute handling.</li>
 </ul>
@@ -1055,12 +1121,12 @@ but also the compression level, shuffle parameter, etc.</li>
 <div class="section" id="ndplugincodec">
 <h3>NDPluginCodec<a class="headerlink" href="#ndplugincodec" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Added support for the lz4 and bitshuffle/lz4 codecs.<span class="raw-html-m2r"><br></span>
+<li>Added support for the lz4 and bitshuffle/lz4 codecs.
 These are the compressors that the Eiger uses, so compressed NDArrays from ADEiger can
 now be decompressed by NDPluginCodec.
 The ImageJ pvAccess plugin in ADViewers now also supports decompressing lz4 and bitshuffle/lz4.
 These codecs are independent of Blosc, which also supports lz4 and bitshuffle but with some differences.</li>
-<li>Fixed a problem with NDPluginCodec.template for the Blosc codec.<span class="raw-html-m2r"><br></span>
+<li>Fixed a problem with NDPluginCodec.template for the Blosc codec.
 The Bit and Byte shuffle values in the BloscShuffle records were swapped so when Bit shuffle was selected
 it was actually doing Byte shuffle and vice versa.</li>
 </ul>
@@ -1069,7 +1135,7 @@ it was actually doing Byte shuffle and vice versa.</li>
 <h3>NDPluginAttribute<a class="headerlink" href="#ndpluginattribute" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Changed the time series support to use NDPluginTimeSeries.  This is very similar to the change that
-was made in R3-3 for NDPluginStats.<span class="raw-html-m2r"><br></span>
+was made in R3-3 for NDPluginStats.
 This significantly reduced the code size, while adding the capability of running in Circular Buffer mode,
 not just a fixed number of time points.
 Thanks to Hinko Kocevar for this.</li>
@@ -1093,7 +1159,7 @@ This can significantly improve performance by bypassing much if the code in the 
 <li>Added support for bitshuffle/lz4 compression, which is independent of Blosc.</li>
 <li>Added support for lz4 compression, which is independent of bitshuffle and Blosc.</li>
 <li>Added FlushNow record to force flushing the datasets to disk in SWMR mode.</li>
-<li>Changed the enum strings for compression (Blosc, LZ4, BSLZ4) to be compatible with NDPluginCodec.<span class="raw-html-m2r"><br></span>
+<li>Changed the enum strings for compression (Blosc, LZ4, BSLZ4) to be compatible with NDPluginCodec.
 This may break backwards compatibilty with clients that were settings these using the enum string.</li>
 <li>Fixed many memory leaks.  The most serious ones were causing ~100kB leak per HDF5 file, which was significant when
 saving many small files.</li>
@@ -1103,7 +1169,7 @@ saving many small files.</li>
 <div class="section" id="ndfilehdf5-template">
 <h3>NDFileHDF5.template<a class="headerlink" href="#ndfilehdf5-template" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Previously the size of the XMLFileName waveform record was set to 1048576.<span class="raw-html-m2r"><br></span>
+<li>Previously the size of the XMLFileName waveform record was set to 1048576.
 This only needs to be large if using it to transmit the actual XML content, which is not typical.
 Changed the size to be controlled by the macro XMLSIZE with a default of 2048.</li>
 </ul>
@@ -1185,7 +1251,7 @@ These are implemented in the database with calc records.
 They write and read from MinCallbackTime but provide units of arrays/sec rather than sec/array.</li>
 <li>Optimization improvement when output arrays are sorted.
 Previously it always put the array in the sort queue, even if the order of this array was OK.
-That introduced an unneeded latency because the sort task only runs periodically.<span class="raw-html-m2r"><br></span>
+That introduced an unneeded latency because the sort task only runs periodically.
 It caused ImageJ update rates to be slow, because the PVA output then comes in bursts,
 and some arrays are dropped either in the pvAccess server or client (not sure which).
 Now if the array is in the correct order it is output immediately.</li>
@@ -1275,7 +1341,7 @@ to this:
 USR_INCLUDES += $(addprefix -I, $(XML2_INCLUDE))
 </pre></span>
 This allows XML2_INCLUDE to contain multiple directory paths.</p>
-<p>Note that these user-defined include directories must <strong>not</strong> contain the -I in their definitions.<span class="raw-html-m2r"><br></span>
+<p>Note that these user-defined include directories must <strong>not</strong> contain the -I in their definitions.
 Prior to areaDetector R3-3-1 the areaDetector/configure/EXAMPLE_CONFIG_SITE.local* files incorrectly had
 the -I flags in them, and these would not work correctly with the Makefiles in this release
 (or prior releases) of ADCore or other repositories.</p>
@@ -1354,7 +1420,7 @@ i.e. when Acquire_RBV=0. If WaitForPlugins is Yes then it also waits for NumQueu
 </li>
 <li>The ADCollect sub-screen now contains these 3 PVs.</li>
 <li>The ADBase screen contains the ADCollect screen, so it shows these PVs.</li>
-<li>Driver screens typically do not use the ADCollect sub-screen, so they need to be individually edited to contain these PVs.<span class="raw-html-m2r"><br></span>
+<li>Driver screens typically do not use the ADCollect sub-screen, so they need to be individually edited to contain these PVs.
 They are not yet all complete.</li>
 <li>With this new design it should rarely be necessary to change plugins to use CallbacksBlock=Yes.</li>
 </ul>
@@ -1399,7 +1465,7 @@ do callbacks to downstream plugins.<ul>
 <li>All datatypes (NDDataType_t) are supported.</li>
 <li>It supports Mono, RGB1, and RGB3 color modes.  It also correctly reads files written with RGB2 color mode.</li>
 <li>It restores the NDArray fields uniqueID, timeStamp, and epicsTS if they are present.</li>
-<li>It restores all of the NDArray NDAttributes that were written to the TIFF file.<span class="raw-html-m2r"><br></span>
+<li>It restores all of the NDArray NDAttributes that were written to the TIFF file.
 Because of the way the NDAttributes are stored in the TIFF file the restored attributes are all of type NDAttrString,
 rather than the numeric data types the attributes may have originally used.</li>
 <li>One motivation for adding this capability is for the NDPluginProcess plugin to be able to read TIFF files
@@ -1506,7 +1572,7 @@ this would not have been required.  It may thus require some changes to startup 
 <ul class="simple">
 <li>Added support for blosc compression library.  The compressors include blosclz, lz4, lz4hc, snappy, zlib, and zstd.
 There is also support for ByteSuffle and BitShuffle.
-ADSupport now contains the blosc library, so it is available for most architectures.<span class="raw-html-m2r"><br></span>
+ADSupport now contains the blosc library, so it is available for most architectures.
 The build flags WITH_BLOSC, BLOSC_EXTERNAL, and BLOSC_LIB have been added, similar to other optional libraries.
 Thanks to Xiaoqiang Wang for this addition.</li>
 <li>Changed all output records in NDFileHDF.template to have PINI=YES.  This is how other plugins all work.</li>
@@ -1953,7 +2019,7 @@ the behavior depends on the order of execution with SizeX/Y.</li>
 <ul class="simple">
 <li>The ADCore/Viewers directory containing the ImageJ and IDL viewers has been moved to its own
 <a class="reference external" href="https://github.com/areaDetector/ADViewers">ADViewers repository</a>.</li>
-<li>It now contains a new ImageJ EPICS_NTNDA_Viewer plugin written by Tim Madden and Marty Kraimer.<span class="raw-html-m2r"><br></span>
+<li>It now contains a new ImageJ EPICS_NTNDA_Viewer plugin written by Tim Madden and Marty Kraimer.
 It is essentially identical to EPICS_AD_Viewer.java except that it displays NTNDArrays from the NDPluginPva plugin,
 i.e. using pvAccess to transport the images rather than NDPluginStdArrays which uses Channel Access.</li>
 <li>EPICS_AD_Viewer.java has been changed to work with the new ProcessPlugin feature in NDPluginDriver by monitoring
@@ -2273,7 +2339,7 @@ and multiple machines. Thanks to Bruno Martins for this.</li>
 <h3>pvaDriver<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New driver for importing an EPICS V4 NTNDArray into areaDetector.  It works by creating a monitor on the
-specified PV and doing plugin callbacks each time the array changes.<span class="raw-html-m2r"><br></span>
+specified PV and doing plugin callbacks each time the array changes.
 When used with NDPluginPva it provides a mechanism for distributing plugin processing across multiple processes
 and multiple machines.  Thanks to Bruno Martins for this.</li>
 </ul>
@@ -2312,7 +2378,7 @@ this branch, but must be aware that it is not officially supported.</li>
 </ul>
 </li>
 <li><p class="first">NDAttributes of type NDAttrString are now saved as 1-D array of strings (HDF5 type H5T_C_S1) rather
-than a 2-D array of 8-bit integers (HDF5 type H5T_NATIVE_CHAR), which is the datatype used prior to R2-5.<span class="raw-html-m2r"><br></span>
+than a 2-D array of 8-bit integers (HDF5 type H5T_NATIVE_CHAR), which is the datatype used prior to R2-5.
 H5T_NATIVE_CHAR is really intended to be an integer data type, and so most HDF5 utilities (h5dump, HDFView, etc.) display
 these attributes by default as an array of integer numbers rather than as a string.</p>
 </li>
@@ -2323,7 +2389,7 @@ these attributes by default as an array of integer numbers rather than as a stri
 <ul class="simple">
 <li>New plugin attach positional information to NDArrays in the form of NDAttributes. This plugin accepts an XML
 description of the position data and then attaches each position to NDArrays as they are passed through the plugin.
-Each position can contain a set of index values and each index is attached as a separate NDAttribute.<span class="raw-html-m2r"><br></span>
+Each position can contain a set of index values and each index is attached as a separate NDAttribute.
 The plugin operates using a FIFO and new positions can be added to the queue while the plugin is actively
 attaching position data.  When used in conjunction with the HDF5
 writer it is possible to store NDArrays in an arbitrary pattern within a multi-dimensional dataset.</li>
@@ -2505,20 +2571,20 @@ but before ADExample.</p>
 <div class="section" id="id41">
 <h3>iocBoot<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Moved commonPlugin_settings.req from ADApp/Db to iocBoot.<span class="raw-html-m2r"><br></span>
+<li>Moved commonPlugin_settings.req from ADApp/Db to iocBoot.
 Renamed commonPlugins.cmd to EXAMPLE_commonPlugins.cmd and commonPlugin_settings.req to
 EXAMPLE_commonPlugin_settings.req.  These files must be copied to commonPlugins.cmd and
 commonPlugin_settings.req respectively.  This was done because these files are typically
 edited locally, and so should not be in git.
-iocBoot now only contains EXAMPLE_commonPlugins.cmd and EXAMPLE_commonPlugin_settings.req.<span class="raw-html-m2r"><br></span>
+iocBoot now only contains EXAMPLE_commonPlugins.cmd and EXAMPLE_commonPlugin_settings.req.
 EXAMPLE_commonPlugins.cmd adds ADCore/iocBoot to the autosave search path.</li>
 </ul>
 </div>
 <div class="section" id="adapp">
 <h3>ADApp<a class="headerlink" href="#adapp" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>commonLibraryMakefile has been changed to define xxx_DIR and set LIB_LIBS+ = xxx if xxx_LIB is defined.<span class="raw-html-m2r"><br></span>
-If xxx_LIB is not defined then xxx_DIR is not defined and it sets LIB_SYS_LIBS += xxx.<span class="raw-html-m2r"><br></span>
+<li>commonLibraryMakefile has been changed to define xxx_DIR and set LIB_LIBS+ = xxx if xxx_LIB is defined.
+If xxx_LIB is not defined then xxx_DIR is not defined and it sets LIB_SYS_LIBS += xxx.
 xxx includes HDF5, SZIP, and OPENCV.
 commonDriverMakefile has been changed similarly for PROD_LIBS and PROD_SYS_LIBS.
 This allows optional libraries to either searched in the system location or a user-defined location
@@ -2548,8 +2614,8 @@ updated to describe what needs to be done to enable or disable these optional mo
 <li>Fixed a serious performance problem.  The calls to openFile() and closeFile() in the derived file
 writing classes were being done with the asynPortDriver mutex locked.
 This meant that driver callbacks were blocked from putting entries on the queue during this time,
-slowing down the drivers and potentially causing them to drop frames.<span class="raw-html-m2r"><br></span>
-Changed openFileBase() and closeFileBase() to unlock the mutex during these operations.<span class="raw-html-m2r"><br></span>
+slowing down the drivers and potentially causing them to drop frames.
+Changed openFileBase() and closeFileBase() to unlock the mutex during these operations.
 Testing with the simDetector and ADDexela shows that the new version no longer slows
 down the driver or drops frames at the driver level when saving TIFF files or netCDF files
 in Single mode.  This required locking the mutex in the derived file writing classes when

@@ -384,8 +384,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> file writing plugins; actual file writing plugins inherit from this class. </p>
-<p>This class handles the logic of single file per image, capture into buffer or streaming multiple images to a single file.</p>
-<p>Derived classes must implement the 4 pure virtual functions: openFile, readFile, writeFile and closeFile. </p>
+<p>This class handles the logic of single file per image, capture into buffer or streaming multiple images to a single file. Derived classes must implement the 4 pure virtual functions: openFile, readFile, writeFile and closeFile. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a59d1b76dfbef43310a6a5628fdfcc655"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59d1b76dfbef43310a6a5628fdfcc655">&#9670;&nbsp;</a></span>NDPluginFile()</h2>
@@ -597,11 +596,10 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Absolute path name of the file to open. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">openMode</td><td>Bit mask with one of the access mode bits NDFileModeRead, NDFileModeWrite. NDFileModeAppend. May also have the bit NDFileModeMultiple set if the file is to be opened to write or read multiple NDArrays into a single file. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pArray</td><td>Pointer to an <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a>; this array does not contain data to be written or read.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pArray</td><td>Pointer to an <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a>; this array does not contain data to be written or read. Rather it can be used to determine the header information and data structure for the file. It is guaranteed that NDArrays pass to <a class="el" href="class_n_d_plugin_file.html#aa4492e7f3b478ba3d9cd5f7a179c469b" title="Write NDArray data to a file; pure virtual function that must be implemented by derived classes.">NDPluginFile::writeFile</a> or <a class="el" href="class_n_d_plugin_file.html#a810cbc3916e9e1aae2ec1d9c589320f2" title="Read NDArray data from a file; pure virtual function that must be implemented by derived classes.">NDPluginFile::readFile</a> will have the same data type, data dimensions and attributes as this array. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Rather it can be used to determine the header information and data structure for the file. It is guaranteed that NDArrays pass to <a class="el" href="class_n_d_plugin_file.html#aa4492e7f3b478ba3d9cd5f7a179c469b" title="Write NDArray data to a file; pure virtual function that must be implemented by derived classes.">NDPluginFile::writeFile</a> or <a class="el" href="class_n_d_plugin_file.html#a810cbc3916e9e1aae2ec1d9c589320f2" title="Read NDArray data from a file; pure virtual function that must be implemented by derived classes.">NDPluginFile::readFile</a> will have the same data type, data dimensions and attributes as this array. </p>
 
 <p>Implemented in <a class="el" href="class_n_d_file_h_d_f5.html#af14d09cbad66e107e354fcbcb87cd141">NDFileHDF5</a>, <a class="el" href="class_n_d_file_j_p_e_g.html#a6004151e4870085cbc281215b3366d14">NDFileJPEG</a>, <a class="el" href="class_n_d_file_nexus.html#a512c83e2f73921a28eb293ed46adb2ae">NDFileNexus</a>, <a class="el" href="class_n_d_file_net_c_d_f.html#a2875f4d09dab434f3aef2187a5349641">NDFileNetCDF</a>, <a class="el" href="class_n_d_file_t_i_f_f.html#a0f6e77ee9eee63c0c58e05c7f355a85b">NDFileTIFF</a>, <a class="el" href="class_n_d_file_magick.html#a15942537c3a299ef246f621124e0988a">NDFileMagick</a>, <a class="el" href="classffmpeg_file.html#a9ed8ae7dbff372476b59cf7e310456ba">ffmpegFile</a>, <a class="el" href="class_n_d_file_null.html#acc3865549b4d1d05bb98c6ee54d55ecf">NDFileNull</a>, and <a class="el" href="classpco_edge_plugin.html#a7bdd835f8f803bf19f766bb3dc24266e">pcoEdgePlugin</a>.</p>
 

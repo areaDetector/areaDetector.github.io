@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADSpinnaker &#8212; areaDetector 3-9-7-g2f5f09d documentation</title>
+    <title>ADSpinnaker &#8212; areaDetector 3-9-8-g03840b9 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -140,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#python-viewer">Python Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#idl-viewer">IDL Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#comparison-of-features-and-performance">Comparison of features and performance</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
@@ -208,6 +209,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ADCore_release.html">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-10-july-xxx-2020"><strong>R3-10 (July XXX, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf">NDFileHDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincicularbuff">NDPluginCicularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndstats-adl">NDStats.adl</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats">NDPluginStats</a></li>
@@ -569,10 +578,9 @@
 <p>ADSpinnaker is derived from the base class <a class="reference external" href="https://github.com/areaDetector/ADGenICam">ADGenICam</a>, which handles many of the details of
 mapping <a class="reference external" href="https://www.emva.org/standards-technology/genicam">GenICam</a> features to EPICS records.</p>
 <p>As it name implies, <a class="reference external" href="https://github.com/areaDetector/ADSpinnaker">ADSpinnaker</a> uses the FLIR/Point Grey <a class="reference external" href="https://www.flir.com/products/spinnaker-sdk">Spinnaker</a> library.
-It runs on Windows, and on Linux with Ubuntu 18 and higher.
-It does not run on other most older Linux versions (e.g. Centos 7/RHEL 7) because
-the FLIR Spinnaker SDK is compiled with a very recent gcc version and thus requires
-new versions of GLIBC and GLIBCXX.</p>
+It runs on Windows, and on Linux versions with gcc 7.5 and higher (e.g. Ubuntu 18, RHEL 8, Centos 8, Debian 10)
+It does not run on older Linux versions (e.g. Centos 7/RHEL 7) because
+the FLIR Spinnaker SDK is compiled on Ubuntu 18 and thus requires newer versions of GLIBC and GLIBCXX.</p>
 <p>Prior to using ADSpinnaker with a specific camera model, the XML file must be read from the camera using the arv-tool utility,
 as described in the
 <a class="reference internal" href="../ADGenICam/ADGenICam.html#adgenicam-download-xml"><span class="std std-ref">ADGenICam documentation</span></a>.</p>
