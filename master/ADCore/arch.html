@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Architecture &#8212; areaDetector 3-9-9-g6eb356c documentation</title>
+    <title>Architecture &#8212; areaDetector 3-9-11-g13e7432 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -210,17 +210,20 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ADCore_release.html">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-10-july-xxx-2020"><strong>R3-10 (July XXX, 2020)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-10-august-xxx-2020"><strong>R3-10 (August XXX, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver">ADDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf">NDFileHDF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincicularbuff">NDPluginCicularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincircularbuff">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpva">NDPluginPva</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndstats-adl">NDStats.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#many-source-files">Many source files</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id1">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf5">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstdarrays">NDPluginStdArrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilenetcdf">NDFileNetCDF</a></li>
@@ -244,9 +247,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-6-may-29-2019"><strong>R3-6 (May 29, 2019)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id1">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id2">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfiletiff">NDFileTIFF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id2">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id3">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincolorconvert">NDPluginColorConvert</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#commondrivermakefile">commonDriverMakefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#example-commonplugins-cmd-example-commonplugin-settings-req">EXAMPLE_commonPlugins.cmd, EXAMPLE_commonPlugin_settings.req</a></li>
@@ -258,8 +261,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray">NDArray</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincodec">NDPluginCodec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginattribute">NDPluginAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id3">commonDriverMakefile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id4">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id4">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id5">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf5-template">NDFileHDF5.template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndplugindriver-ndarraybase-template-ndpluginbasefull-adl">asynNDArrayDriver, NDPluginDriver, NDArrayBase.template, NDPluginBaseFull.adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginbase-template">NDPluginBase.template</a></li>
@@ -268,12 +271,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-4-december-3-2018"><strong>R3-4 (December 3, 2018)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adsrc-asynndarraydriver-h-asynndarraydriver-cpp">ADSrc/asynNDArrayDriver.h, asynNDArrayDriver.cpp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id5">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id6">NDPluginCodec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver-ndpluginpva-ndpluginstdarrays">NDPluginDriver, NDPluginPva, NDPluginStdArrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincircularbuff">NDPluginCircularBuff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id6">NDFileTIFF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id7">NDPluginStats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id8">OPI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id7">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id8">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id9">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id10">OPI files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#example-commonplugins-cmd">EXAMPLE_commonPlugins.cmd</a></li>
 </ul>
 </li>
@@ -282,7 +285,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-1-july-1-2018"><strong>R3-3-1 (July 1, 2018)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id9">ADApp/commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id11">ADApp/commonDriverMakefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-adsrc">ADApp/ADSrc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-adsrc-makefile-adapp-pluginsrc-makefile-adapp-plugintests-makefile">ADApp/ADSrc/Makefile, ADApp/pluginSrc/Makefile, ADApp/pluginTests/Makefile</a></li>
 </ul>
@@ -291,12 +294,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraypool-design-changes">NDArrayPool design changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#queued-array-counting-and-waiting-for-plugins-to-complete">Queued array counting and waiting for plugins to complete</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-ndarraypool">NDArray, NDArrayPool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpva">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id12">NDPluginPva</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ntndarrayconverter-cpp">ntndArrayConverter.cpp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginfile">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id10">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id13">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginprocess">NDPluginProcess</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id11">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id14">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-db">ADApp/Db/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-op-adl">ADApp/op/adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-op-edl-autoconvert">ADApp/op/edl/autoconvert</a></li>
@@ -304,14 +307,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-2-january-28-2018"><strong>R3-2 (January 28, 2018)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id12">NDPluginStats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id13">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id14">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id15">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id16">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id17">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginoverlay">NDPluginOverlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver">asynNDArrayDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#operator-displays-medm-edm-caqtdm-css-boy">Operator displays (medm, edm, caQtDM, CSS-BOY)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id15">commonDriverMakefile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id16">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id18">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id19">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginattrplot">NDPluginAttrPlot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginroistat">NDPluginROIStat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ntndarrayconvert-cpp">ntndArrayConvert.cpp</a></li>
@@ -325,10 +328,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-1-july-3-2017"><strong>R3-1 (July 3, 2017)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#graphicsmagick">GraphicsMagick</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pluginsrc-makefile-plugintests-makefile">pluginSrc/Makefile, pluginTests/Makefile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id17">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id20">NDPluginDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adtop-adl">ADTop.adl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id18">NDPluginAttrPlot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id19">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id21">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id22">NDPluginPva</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-h">asynNDArrayDriver.h</a></li>
 </ul>
 </li>
@@ -338,10 +341,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#multiple-threads-in-single-plugins-ndplugindriver-ndpluginbase-template-ndpluginbase-adl-many-plugins">Multiple threads in single plugins (NDPluginDriver, NDPluginBase.template, NDPluginBase.adl, many plugins)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginscatter">NDPluginScatter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugingather">NDPluginGather</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id20">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id23">NDPluginAttrPlot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndfilenexus">asynNDArrayDriver, NDFileNexus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pvattribute">PVAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id21">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id24">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugin-internals">Plugin internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#commonlibrarymakefile-commondrivermakefile">commonLibraryMakefile, commonDriverMakefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndoverlayn-template">NDOverlayN.template</a></li>
@@ -353,41 +356,41 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraybase-template">NDArrayBase.template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginsupport-dbd">NDPluginSupport.dbd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginroi">NDPluginROI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id22">pluginTests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id25">pluginTests</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugintransform">NDPluginTransform</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id23">NDPluginOverlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id24">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id26">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id27">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpos">NDPluginPos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id25">NDPluginPva</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id26">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id27">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id28">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id29">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id30">NDFileTIFF</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndattribute">NDAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#paramattribute">paramAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id28">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id31">PVAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndarraybase-template-ndpluginbase-adl-adsetup-adl-all-plugin-adl-files">asynNDArrayDriver, NDArrayBase.template, NDPluginBase.adl, ADSetup.adl, all plugin adl files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver-adbase-template-adsetup-adl">ADDriver, ADBase.template, ADSetup.adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pvadriver">pvaDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-cpp">NDArray.cpp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id29">iocBoot/EXAMPLE_commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id32">iocBoot/EXAMPLE_commonPlugins.cmd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#viewers-imagej">Viewers/ImageJ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#dependencies">Dependencies</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-5-october-28-2016"><strong>R2-5 (October 28, 2016)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adsupport">ADSupport</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id30">NDPluginPva</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id31">pvaDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id32">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id33">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id34">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id35">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndposplugin">NDPosPlugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id33">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id36">NDPluginDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugintimeseries">NDPluginTimeSeries</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginfft">NDPluginFFT</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats-and-ndpluginroistat">NDPluginStats and NDPluginROIStat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id35">NDPluginCircularBuff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id36">asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id38">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id39">asynNDArrayDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraybase-template-ndplugindriver-cpp">NDArrayBase.template, NDPluginDriver.cpp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id37">NDPluginBase.template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id38">ADApp/op/adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id40">NDPluginBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id41">ADApp/op/adl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#nexussrc-makefile">nexusSrc/Makefile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocboot">iocBoot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#imagej-epics-adviewer">ImageJ EPICS_ADViewer</a></li>
@@ -395,32 +398,32 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-4-september-21-2015"><strong>R2-4 (September 21, 2015)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#removed-simdetector-and-iocs-directory">Removed simDetector and iocs directory.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id39">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id42">NDAttribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndroistat-adl-edl-ui-opi">NDRoiStat[.adl, .edl, ui, .opi]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id40">ADApp/pluginTests/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id43">ADApp/pluginTests/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#xml-schema">XML schema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id41">iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id44">iocBoot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp">ADApp</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-3-july-23-2015"><strong>R2-3 (July 23, 2015)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#deviocstats-and-alive-modules">devIocStats and alive modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id42">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id43">NDPluginROIStat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id44">NDFileHDF5</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id45">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id45">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id46">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id47">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id48">commonDriverMakefile</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-2-march-23-2015"><strong>R2-2 (March 23, 2015)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#compatibility">Compatibility</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id46">NDPluginROIStat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id47">NDPluginCircularBuff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id48">NDPluginAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id49">NDPluginStats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id50">NDPluginROI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id51">NDPluginOverlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id52">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id53">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id49">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id50">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id51">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id52">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id53">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id54">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id55">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id56">NDFileHDF5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#version-information">Version information</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugins-general">Plugins general</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#netcdfsupport">netCDFSupport</a></li>
@@ -429,29 +432,29 @@
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#imagej-viewer">ImageJ Viewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#simdetector-driver">simDetector driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocs-simdetectornoioc">iocs/simDetectorNoIOC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id54">Makefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id57">Makefiles</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-1-october-17-2014"><strong>R2-1 (October 17, 2014)</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id55">NDPluginFile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id56">NDFileHDF5</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id57">NDFileTiff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id58">NDPluginOverlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id59">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id58">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id59">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id60">NDFileTiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id61">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id62">NDPluginTransform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-0-april-4-2014"><strong>R2-0 (April 4, 2014)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#general">General</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-and-asynndarraydriver">NDArray and asynNDArrayDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id60">NDAttribute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id61">NDPluginDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id62">NDPluginOverlay.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id63">NDPluginROI.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id64">NDPluginStats.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id65">NDFileNetCDF.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id66">NDFileTIFF.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id67">NDPluginAttribute.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id63">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id64">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id65">NDPluginOverlay.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id66">NDPluginROI.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id67">NDPluginStats.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id68">NDFileNetCDF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id69">NDFileTIFF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id70">NDPluginAttribute.</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r1-9-1-and-earlier"><strong>R1-9-1 and earlier</strong></a></li>
