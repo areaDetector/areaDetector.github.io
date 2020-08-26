@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADProsilica &#8212; areaDetector 3-9-11-g13e7432 documentation</title>
+    <title>ADProsilica &#8212; areaDetector 3-9-12-g022def5 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -795,13 +795,16 @@ it also stores the current POSIX or EPICS time in the driver.</td>
 This is NativeTicks divided by the internal camera clock frequency.</li>
 <li>POSIX: The number of seconds since the POSIX Epoch (00:00:00 UTC, January 1, 1970).</li>
 <li>EPICS The number of seconds since the EPICS Epoch (January 1, 1990).</li>
+<li>IOC The number of seconds since the EPICS Epoch (January 1, 1990).</li>
 </ul>
-<p class="last">The POSIX and EPICS timestamps are calculated as follows: when the timer is reset
+<p>The POSIX and EPICS timestamps are calculated as follows: when the timer is reset
 the current POSIX or EPICS time is stored, and the internal camera timer is reset.
 The timestamps are then computed by adding the camera ticks (converted to seconds)
 to the stored POSIX or EPICS time. Thus, the relative times of each frame are accurately
 controlled by the internal camera clock. The accuracy of the absolute time is determined
 by the accuracy of the time of day clock in the IOC computer.</p>
+<p class="last">The IOC timestamp is simply the time returned by epicsTimeGetCurrent(), and does not
+use the camera tick clock at all.</p>
 </td>
 <td>$(P)$(R)PSTimestampType, $(P)$(R)PSTimestampType_RBV</td>
 <td>mbbo, mbbi</td>
