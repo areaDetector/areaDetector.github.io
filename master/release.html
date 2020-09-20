@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector Releases &#8212; areaDetector 3-9-17-g0d48928 documentation</title>
+    <title>areaDetector Releases &#8212; areaDetector 3-9-19-g9739d42 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -185,6 +185,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Top-level Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#versions">Versions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#r3-10-september-20-2020">R3-10 (September 20, 2020)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-9-february-24-2020">R3-9 (February 24, 2020)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-7-august-9-2019">R3-7 (August 9, 2019)</a></li>
@@ -503,6 +504,7 @@
 <li><a class="reference internal" href="#">areaDetector Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#versions">Versions</a><ul>
+<li><a class="reference internal" href="#r3-10-september-20-2020">R3-10 (September 20, 2020)</a></li>
 <li><a class="reference internal" href="#r3-9-february-24-2020">R3-9 (February 24, 2020)</a></li>
 <li><a class="reference internal" href="#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
 <li><a class="reference internal" href="#r3-7-august-9-2019">R3-7 (August 9, 2019)</a></li>
@@ -596,6 +598,53 @@ files respectively, in the appropriate release of the
 <h2>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h2>
 <p>Each submodule contains detailed release notes for each release of that submodule.  The release notes below
 only provide a short summary of the most significant items from the submodules.</p>
+<div class="section" id="r3-10-september-20-2020">
+<h3>R3-10 (September 20, 2020)<a class="headerlink" href="#r3-10-september-20-2020" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">ADCore R3-10</p>
+<ul class="simple">
+<li>Numerous new features and bug fixes.</li>
+</ul>
+</li>
+<li><p class="first">ADGenICam R1-4 and R1-5</p>
+<ul>
+<li><p class="first">Added logic to pause and resume acquisition when any of the following parameters are changed:</p>
+<ul class="simple">
+<li>ADMinX, ADMinY</li>
+<li>ADSizeX, ADSizeY</li>
+<li>ADBinX, ADBinY</li>
+<li>ADNumImages</li>
+<li>GCPixelFormat</li>
+</ul>
+<p>Previously changing these parameters while acquiring had no effect.</p>
+</li>
+<li><p class="first">Added fix for cameras that don’t support GenICam feature AcquisitionMode=MultiFrame.</p>
+</li>
+<li><p class="first">Added support for new cameras.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">ADSpinnaker R2-2 and R3-0</p>
+<ul class="simple">
+<li>Updated Spinnaker version from 1.2.0 to 2.0.0.147.</li>
+<li>Worked around a bug that in epicsMessageQueueWaitWithTimeout that is present in
+most versions of EPICS base.</li>
+<li>Tested that ADSpinnaker runs on Centos 8.
+It should also work on other Linux versions with gcc 7.5 and up, e.g. RHEL 8 and Debian 10.</li>
+</ul>
+</li>
+<li><p class="first">ADAravis R1-3 and R2-0</p>
+<ul class="simple">
+<li>Updated from aravis 0.7.2 to 0.8.1.  The aravis API has changed, so sites will need to update their
+local aravis installation to 0.8.1.</li>
+<li>Fixed a problem with GenICam boolean features.  Previously the code was calling the aravis functions
+for integer features, which did not work.  It was changed to call the functions for boolean features,
+and it now works correctly.</li>
+<li>Added .bob files for Phoebus Display Manager</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="r3-9-february-24-2020">
 <h3>R3-9 (February 24, 2020)<a class="headerlink" href="#r3-9-february-24-2020" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
