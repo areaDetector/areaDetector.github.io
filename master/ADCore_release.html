@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADCore Releases &#8212; areaDetector 3-9-12-g022def5 documentation</title>
+    <title>ADCore Releases &#8212; areaDetector 3-9-16-g1d69951 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -210,15 +210,16 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#r3-10-august-xxx-2020"><strong>R3-10 (August XXX, 2020)</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#r3-10-september-20-2020"><strong>R3-10 (September 20, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#many-files">Many files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#addriver">ADDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndfilehdf">NDFileHDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ndfilemagick">NDFileMagick</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndplugincircularbuff">NDPluginCircularBuff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginstats">NDPluginStats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginpva">NDPluginPva</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndstats-adl">NDStats.adl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#many-source-files">Many source files</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
@@ -501,15 +502,16 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ADCore Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#r3-10-august-xxx-2020"><strong>R3-10 (August XXX, 2020)</strong></a><ul>
+<li><a class="reference internal" href="#r3-10-september-20-2020"><strong>R3-10 (September 20, 2020)</strong></a><ul>
+<li><a class="reference internal" href="#many-files">Many files</a></li>
 <li><a class="reference internal" href="#addriver">ADDriver</a></li>
 <li><a class="reference internal" href="#ndfilehdf">NDFileHDF</a></li>
+<li><a class="reference internal" href="#ndfilemagick">NDFileMagick</a></li>
 <li><a class="reference internal" href="#ndplugincircularbuff">NDPluginCircularBuff</a></li>
 <li><a class="reference internal" href="#ndpluginstats">NDPluginStats</a></li>
 <li><a class="reference internal" href="#ndpluginpva">NDPluginPva</a></li>
 <li><a class="reference internal" href="#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
 <li><a class="reference internal" href="#ndstats-adl">NDStats.adl</a></li>
-<li><a class="reference internal" href="#many-source-files">Many source files</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
@@ -814,8 +816,21 @@ the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE
 files respectively, in the configure/ directory of the appropriate release of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector">top-level areaDetector</a> repository.</p>
 </div>
-<div class="section" id="r3-10-august-xxx-2020">
-<h2><strong>R3-10 (August XXX, 2020)</strong><a class="headerlink" href="#r3-10-august-xxx-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r3-10-september-20-2020">
+<h2><strong>R3-10 (September 20, 2020)</strong><a class="headerlink" href="#r3-10-september-20-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="many-files">
+<h3>Many files<a class="headerlink" href="#many-files" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Changed the code and the Makefiles to avoid using shareLib.h from EPICS base.
+Added new header files ADCoreAPI.h and NDPluginAPI.h that are used to control whether
+functions, classes, and variables are definined internally to the asyn library or externally.
+This is the mechanism now used in EPICS base 7.
+It makes it much easier to avoid mistakes in the order of include files that cause external
+functions to be accidentally exported in the DLL or shareable library.
+This should work on all versions of base, and have no impact on user code.</li>
+<li>Fixed many minor problems that caused compiler warnings.</li>
+</ul>
+</div>
 <div class="section" id="addriver">
 <h3>ADDriver<a class="headerlink" href="#addriver" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -831,11 +846,24 @@ driver OPI screens.</li>
 <div class="section" id="ndfilehdf">
 <h3>NDFileHDF<a class="headerlink" href="#ndfilehdf" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li>Fixed a problem loading XML layout files with invalid XML syntax.
+Previously it would crash the IOC with no error message.
+Now it prints an error message, sets the error status PVs in the OPI screen,
+and does not crash.</li>
 <li>Fixed a problem that constant datasets were not closed before closing the file.
 This produced warning messages, and probably minor memory leaks.</li>
 <li>Changed free() calls for XML variables to xmlGetGlobalState()-&gt;xmlFree().
 This fixes issues when mixing static and dynamically built libraries.
 Thanks to Ben Bradnick for this.</li>
+</ul>
+</div>
+<div class="section" id="ndfilemagick">
+<h3>NDFileMagick<a class="headerlink" href="#ndfilemagick" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed a problem that GraphicsMagick was being initialized too late, resulting
+in an assertion failure with newer versions of GraphicsMagick than the one
+in ADSupport.
+Thanks to Michael Davidsaver for this.</li>
 </ul>
 </div>
 <div class="section" id="ndplugincircularbuff">
@@ -852,7 +880,7 @@ to allocate the ring buffer when starting an acquisition</li>
 <div class="section" id="ndpluginstats">
 <h3>NDPluginStats<a class="headerlink" href="#ndpluginstats" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Added new CursonVal record that contains the current value of the pixel at the cursor position.
+<li>Added new CursorVal record that contains the current value of the pixel at the cursor position.
 Thanks to Ray Gregory from ORNL for this.</li>
 </ul>
 </div>
@@ -876,12 +904,6 @@ value for HDF5 datasets, but it is not an allowed value for HDF5 attributes.</li
 <h3>NDStats.adl<a class="headerlink" href="#ndstats-adl" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fixed typo in arguments for centroidX timeseries plot related display.</li>
-</ul>
-</div>
-<div class="section" id="many-source-files">
-<h3>Many source files<a class="headerlink" href="#many-source-files" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Fixed minor problems that caused compiler warnings.</li>
 </ul>
 </div>
 </div>

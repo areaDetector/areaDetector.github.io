@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">areaDetector
-   &#160;<span id="projectnumber">3-9-0</span>
+   &#160;<span id="projectnumber">3-10-0</span>
    </div>
    <div id="projectbrief">EPICS areaDetector framework</div>
   </td>
@@ -60,11 +60,9 @@ $(function() {
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;libxml/parser.h&gt;</code><br />
 <code>#include &lt;epicsString.h&gt;</code><br />
-<code>#include &lt;epicsMutex.h&gt;</code><br />
+<code>#include &lt;epicsThread.h&gt;</code><br />
 <code>#include &lt;macLib.h&gt;</code><br />
 <code>#include &lt;cantProceed.h&gt;</code><br />
-<code>#include &lt;asynPortDriver.h&gt;</code><br />
-<code>#include &lt;shareLib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_p_v_attribute_8h_source.html">PVAttribute.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="param_attribute_8h_source.html">paramAttribute.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="funct_attribute_8h_source.html">functAttribute.h</a>&quot;</code><br />
@@ -72,10 +70,8 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:afae12deffb73bbcf61b8a45da8236ec1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asyn_n_d_array_driver_8cpp.html#afae12deffb73bbcf61b8a45da8236ec1">epicsExportSharedSymbols</a></td></tr>
-<tr class="memdesc:afae12deffb73bbcf61b8a45da8236ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="asyn_n_d_array_driver_8cpp.html">asynNDArrayDriver.cpp</a>  <a href="#afae12deffb73bbcf61b8a45da8236ec1">More...</a><br /></td></tr>
-<tr class="separator:afae12deffb73bbcf61b8a45da8236ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca7b6505dcd5339ed32a0cd1ef3612dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asyn_n_d_array_driver_8cpp.html#aca7b6505dcd5339ed32a0cd1ef3612dc">MAX_PATH_PARTS</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:aca7b6505dcd5339ed32a0cd1ef3612dc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="asyn_n_d_array_driver_8cpp.html">asynNDArrayDriver.cpp</a>  <a href="#aca7b6505dcd5339ed32a0cd1ef3612dc">More...</a><br /></td></tr>
 <tr class="separator:aca7b6505dcd5339ed32a0cd1ef3612dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa56511e3e15a1aaee3ea96ac298c4598"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asyn_n_d_array_driver_8cpp.html#aa56511e3e15a1aaee3ea96ac298c4598">delim</a>&#160;&#160;&#160;&quot;/&quot;</td></tr>
 <tr class="separator:aa56511e3e15a1aaee3ea96ac298c4598"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,25 +95,6 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="afae12deffb73bbcf61b8a45da8236ec1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afae12deffb73bbcf61b8a45da8236ec1">&#9670;&nbsp;</a></span>epicsExportSharedSymbols</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define epicsExportSharedSymbols</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="asyn_n_d_array_driver_8cpp.html">asynNDArrayDriver.cpp</a> </p>
-<p>Base class that implements methods for asynStandardInterfaces with a parameter library.</p>
-<p>Author: Mark Rivers</p>
-<p>Created May 11, 2008 </p>
-
-</div>
-</div>
 <a id="aca7b6505dcd5339ed32a0cd1ef3612dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca7b6505dcd5339ed32a0cd1ef3612dc">&#9670;&nbsp;</a></span>MAX_PATH_PARTS</h2>
 
@@ -129,6 +106,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="asyn_n_d_array_driver_8cpp.html">asynNDArrayDriver.cpp</a> </p>
+<p>Base class that implements methods for asynStandardInterfaces with a parameter library.</p>
+<p>Author: Mark Rivers</p>
+<p>Created May 11, 2008 </p>
 
 </div>
 </div>
