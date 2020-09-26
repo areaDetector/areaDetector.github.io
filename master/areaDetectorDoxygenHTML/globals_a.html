@@ -53,12 +53,6 @@ $(function() {
 <li>AcquireCallbackSequence()
 : <a class="el" href="_image_callback_ex_8cpp.html#a079785a2d829aa21b70cbf39d63c9304">ImageCallbackEx.cpp</a>
 </li>
-<li>AcquireImages()
-: <a class="el" href="_image_format_control_8cpp.html#a2836a024d3f74c4699c84267163c70aa">ImageFormatControl.cpp</a>
-, <a class="el" href="_acquisition_8cpp.html#a2836a024d3f74c4699c84267163c70aa">Acquisition.cpp</a>
-, <a class="el" href="_chunk_data_8cpp.html#a2836a024d3f74c4699c84267163c70aa">ChunkData.cpp</a>
-, <a class="el" href="_gig_e_vision_performance_8cpp.html#a6f94f0fd253fb79f27260b0bb77947e6">GigEVisionPerformance.cpp</a>
-</li>
 <li>acquisitionComplete
 : <a class="el" href="_l_f_test1_8cpp.html#a6b76d01859ec85807c5cf61bd6a32a3e">LFTest1.cpp</a>
 </li>
@@ -76,6 +70,9 @@ $(function() {
 </li>
 <li>ADAcquireTimeString
 : <a class="el" href="_a_d_driver_8h.html#af07c81dfc00594d3ef655185fcb86b3a">ADDriver.h</a>
+</li>
+<li>ADAravisConfig()
+: <a class="el" href="_a_d_aravis_8cpp.html#aad6d4517fedfb1de22746a098911e193">ADAravis.cpp</a>
 </li>
 <li>ADBinXString
 : <a class="el" href="_a_d_driver_8h.html#a2866599e25156009182e26fd114ed46b">ADDriver.h</a>
@@ -124,6 +121,9 @@ $(function() {
 </li>
 <li>ADGainString
 : <a class="el" href="_a_d_driver_8h.html#a2b8f83423110e6ab8fb14f9312b1dcae">ADDriver.h</a>
+</li>
+<li>ADGENICAM_API
+: <a class="el" href="_a_d_gen_i_cam_a_p_i_8h.html#ae4915568bceba222078d95ecba28f93b">ADGenICamAPI.h</a>
 </li>
 <li>ADImageContinuous
 : <a class="el" href="_a_d_driver_8h.html#a4e304cb4683f0862cc3ca9b5fff213e2a09274bf54e26793fae63922fee5c603b">ADDriver.h</a>
@@ -740,7 +740,7 @@ $(function() {
 : <a class="el" href="_a_d_driver_8h.html#adcd5a6683e158a9c18d91dfab56e290a">ADDriver.h</a>
 </li>
 <li>ADSpinnakerConfig()
-: <a class="el" href="_a_d_spinnaker_8cpp.html#a4cad2e547c401b3100c861fbac08fb30">ADSpinnaker.cpp</a>
+: <a class="el" href="_a_d_spinnaker_8cpp.html#a5fb7c89339f0eb44edfbebbf623b5c6f">ADSpinnaker.cpp</a>
 </li>
 <li>ADStatus_t
 : <a class="el" href="_a_d_driver_8h.html#a69820e97c7282152e222297a6d36f72e">ADDriver.h</a>
@@ -821,8 +821,8 @@ $(function() {
 : <a class="el" href="_n_d_file_h_d_f5_8cpp.html#a1e2f93a3c786adc5c7c7235ef28fba38">NDFileHDF5.cpp</a>
 </li>
 <li>ALL_COLUMN_PAIR_SELECTION_OPCODE
-: <a class="el" href="_p_i_x_i_e_i_i__data__utilities_8h.html#a08d2d0462df5254eda5e371e50b53093">PIXIEII_data_utilities.h</a>
-, <a class="el" href="_p_i_x_i_e_i_i__data__utilities__v2_8h.html#a08d2d0462df5254eda5e371e50b53093">PIXIEII_data_utilities_v2.h</a>
+: <a class="el" href="_p_i_x_i_e_i_i__data__utilities__v2_8h.html#a08d2d0462df5254eda5e371e50b53093">PIXIEII_data_utilities_v2.h</a>
+, <a class="el" href="_p_i_x_i_e_i_i__data__utilities_8h.html#a08d2d0462df5254eda5e371e50b53093">PIXIEII_data_utilities.h</a>
 </li>
 <li>allocate_cams()
 : <a class="el" href="firewiretool_8cpp.html#a414cdfeff28579a8ed4b51114d60f0b5">firewiretool.cpp</a>
@@ -968,45 +968,22 @@ $(function() {
 <li>AREA_DETECTOR_OK
 : <a class="el" href="_a_d_driver_8h.html#a5f6fbe82b6adc9039d472e137fc8bff0">ADDriver.h</a>
 </li>
-<li>argBayerRG
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a0a21cd51d0c33acc8c3fb2e2b6ffdbc0">GigEVisionPerformance.cpp</a>
-</li>
-<li>argDuration
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#aefea70d44320b214fb9a6b40a6c28143">GigEVisionPerformance.cpp</a>
-</li>
-<li>argMaxFrames
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a32bc72154065bcb95e939f0e154d4729">GigEVisionPerformance.cpp</a>
-</li>
-<li>argNumImages
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a7e542889266e8029742f00ca9bb538e3">GigEVisionPerformance.cpp</a>
-</li>
-<li>argPacketDelay
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a43ecf1bf277c5141571e3218c7e887d9">GigEVisionPerformance.cpp</a>
-</li>
-<li>argPacketSize
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#aea2b07608b497067ac73c584ab9235a5">GigEVisionPerformance.cpp</a>
-</li>
-<li>argPrintUsage
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a00b130f51a5df8a29112a9a7702ee2b8">GigEVisionPerformance.cpp</a>
-</li>
-<li>argRelease
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a9a0dfafe2194f4574762cd703fcda3c1">GigEVisionPerformance.cpp</a>
-</li>
-<li>argUserSetFrames
-: <a class="el" href="_gig_e_vision_performance_8cpp.html#a841b7b0399df5df4db6a27db26e61eb8">GigEVisionPerformance.cpp</a>
+<li>ARV_PIXEL_FORMAT_MONO_12_P
+: <a class="el" href="_a_d_aravis_8cpp.html#a8d88d262883e5ce3d99f2fc6fb4b9f78">ADAravis.cpp</a>
 </li>
 <li>arv_viewer_new_buffer_cb()
 : <a class="el" href="aravis_test_8c.html#a6ae3cb6e0a1e882ed57b0be54c58a1f4">aravisTest.c</a>
 </li>
 <li>ArvBufferStatusToString()
 : <a class="el" href="aravis_camera_8cpp.html#a8003353a03f19014aebc15f2443cc79b">aravisCamera.cpp</a>
+, <a class="el" href="_a_d_aravis_8cpp.html#a8003353a03f19014aebc15f2443cc79b">ADAravis.cpp</a>
 </li>
 <li>ASIC_TYPE
 : <a class="el" href="pxrd2__interface__misc_8h.html#a33a1b2f6e5dff428a7e09bea6f03ee97">pxrd2_interface_misc.h</a>
 </li>
 <li>ASYN_POLL_TIME
-: <a class="el" href="merlin_detector_8h.html#a5eaca2ba2c7e7c7bfca7166ab3124758">merlinDetector.h</a>
-, <a class="el" href="pilatus_detector_8cpp.html#a5eaca2ba2c7e7c7bfca7166ab3124758">pilatusDetector.cpp</a>
+: <a class="el" href="pilatus_detector_8cpp.html#a5eaca2ba2c7e7c7bfca7166ab3124758">pilatusDetector.cpp</a>
+, <a class="el" href="merlin_detector_8h.html#a5eaca2ba2c7e7c7bfca7166ab3124758">merlinDetector.h</a>
 , <a class="el" href="_b_i_s_detector_8cpp.html#a5eaca2ba2c7e7c7bfca7166ab3124758">BISDetector.cpp</a>
 </li>
 <li>ASYN_TRACE_MPX
@@ -1037,8 +1014,8 @@ $(function() {
 : <a class="el" href="pxrd2__interface__misc_8h.html#a192d9029b78da393fe9a628ccbd7fab4add7302e1aeeee6d27f917d1bdaecc7dc">pxrd2_interface_misc.h</a>
 </li>
 <li>AUTOCAL_DATA
-: <a class="el" href="udp__client__pixirad__single_8cpp.html#a5875a8d6be6d870e0dfcd1c337f28a13">udp_client_pixirad_single.cpp</a>
-, <a class="el" href="pixirad_8cpp.html#a5875a8d6be6d870e0dfcd1c337f28a13">pixirad.cpp</a>
+: <a class="el" href="pixirad_8cpp.html#a5875a8d6be6d870e0dfcd1c337f28a13">pixirad.cpp</a>
+, <a class="el" href="udp__client__pixirad__single_8cpp.html#a5875a8d6be6d870e0dfcd1c337f28a13">udp_client_pixirad_single.cpp</a>
 </li>
 <li>AUTOCAL_NPACK
 : <a class="el" href="udp__client__pixirad__single_8cpp.html#a7dff8a35a9f6600203a5cd5beebfedd5">udp_client_pixirad_single.cpp</a>
@@ -1047,8 +1024,8 @@ $(function() {
 : <a class="el" href="udp__client__pixirad__single_8cpp.html#a8226c13cfc98ccf7d30da27d62747eda">udp_client_pixirad_single.cpp</a>
 </li>
 <li>AUTOCALIBRATION_OPCODE
-: <a class="el" href="_p_i_x_i_e_i_i__data__utilities_8h.html#acfa142577b98078761819dfb797fdf48">PIXIEII_data_utilities.h</a>
-, <a class="el" href="_p_i_x_i_e_i_i__data__utilities__v2_8h.html#acfa142577b98078761819dfb797fdf48">PIXIEII_data_utilities_v2.h</a>
+: <a class="el" href="_p_i_x_i_e_i_i__data__utilities__v2_8h.html#acfa142577b98078761819dfb797fdf48">PIXIEII_data_utilities_v2.h</a>
+, <a class="el" href="_p_i_x_i_e_i_i__data__utilities_8h.html#acfa142577b98078761819dfb797fdf48">PIXIEII_data_utilities.h</a>
 </li>
 <li>AUTOHV
 : <a class="el" href="pxrd2__interface__misc_8h.html#a28c239da1ff27240ab75a9b85e604f40a1f5d4a778fb8dfc945666a42bee2e905">pxrd2_interface_misc.h</a>
