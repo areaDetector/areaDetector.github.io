@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADAravis &#8212; areaDetector 3-10-2-g3889a2e documentation</title>
+    <title>ADAravis &#8212; areaDetector 3-10-3-g139c026 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -667,16 +667,25 @@ specific to ADAravis.</p>
 <td>N.A.</td>
 <td>Connects to the camera when available</td>
 </tr>
-<tr class="row-odd"><td>ARLeftShift, ARLeftShift_RBV</td>
+<tr class="row-odd"><td>ARConvertPixelFormat, ARConvertPixelFormat_RBV</td>
 <td>mbbo/mbbi</td>
-<td>ARAVIS_LEFTSHIFT</td>
-<td>Choices are [0:”No”, 1:”Yes”]. If this is set to 1, then 10, 12 and 16 bit images will be left shifted
-so that a pixel with maximum exposure = 2^16 no matter what the pixel format</td>
+<td>ARAVIS_CONVERT_PIXEL_FORMAT</td>
+<td>Controls how Mono12Packed and Mono12p pixel formats are decompressed.
+Choices are [0:”Mono16Low”, 1:Mono16High”].
+Mono16Low means that the data is not left-shifted by 4 bits, so bits 12-15 are 0.
+Mono16High means that the data is left-shifted by 4 bits, so bits 0-3 are 0.</td>
 </tr>
-<tr class="row-even"><td>ARWImageMode, ARWImageMode_RBV</td>
-<td>bo/bi</td>
-<td>ARAVIS_HWIMAGEMODE</td>
-<td>Use HW register for acquisition modes.  Choices are [0:”No”, 1:”Yes”].  Need to check implementation.</td>
+<tr class="row-even"><td>ARShiftDir, ARShiftDir_RBV</td>
+<td>mbbo/mbbi</td>
+<td>ARAVIS_SHIFT_DIR</td>
+<td>Controls how UInt16 data are shifted. Choices are [0:”None”, 1:”Left”, 2:”Right”].
+The number of bits to shift is controlled by the ARShiftBits record.</td>
+</tr>
+<tr class="row-odd"><td>ARShiftBits, ARShiftBits_RBV</td>
+<td>mbbo/mbbi</td>
+<td>ARAVIS_SHIFT_BITS</td>
+<td>Controls how many bits UInt16 data are shifted left or right. Choices are 1-8.
+The direction to shift is controlled by the ARShiftDir record.</td>
 </tr>
 </tbody>
 </table>

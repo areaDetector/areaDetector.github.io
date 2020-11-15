@@ -93,10 +93,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7489a9ce1d10c05d82ba6ea31fb842ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ada9c170dbbb222903ed829e7ca5f9"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a45ada9c170dbbb222903ed829e7ca5f9">resumeAcquisition</a> ()</td></tr>
 <tr class="separator:a45ada9c170dbbb222903ed829e7ca5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af46968196f7b909a409140c7ef941485"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#af46968196f7b909a409140c7ef941485">decompressMono12p</a> (int numPixels, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
-<tr class="separator:af46968196f7b909a409140c7ef941485"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24eb753a421b503d217ffb97894c9013"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a24eb753a421b503d217ffb97894c9013">decompressMono12Packed</a> (int numPixels, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
-<tr class="separator:a24eb753a421b503d217ffb97894c9013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71a532743b9fca14a1793a326818e2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#af71a532743b9fca14a1793a326818e2f">decompressMono12p</a> (int numPixels, bool leftShift, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
+<tr class="memdesc:af71a532743b9fca14a1793a326818e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompresses Mono12p to epicsUInt16.  <a href="#af71a532743b9fca14a1793a326818e2f">More...</a><br /></td></tr>
+<tr class="separator:af71a532743b9fca14a1793a326818e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2fbbceb7ba3d967ad3ae97b5fb03dd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a0f2fbbceb7ba3d967ad3ae97b5fb03dd">decompressMono12Packed</a> (int numPixels, bool leftShift, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
+<tr class="memdesc:a0f2fbbceb7ba3d967ad3ae97b5fb03dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompresses Mono12Packed to epicsUInt16.  <a href="#a0f2fbbceb7ba3d967ad3ae97b5fb03dd">More...</a><br /></td></tr>
+<tr class="separator:a0f2fbbceb7ba3d967ad3ae97b5fb03dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1989d94807c08ce3f12ee6e950cda256"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_gen_i_cam_feature.html">GenICamFeature</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a1989d94807c08ce3f12ee6e950cda256">createFeature</a> (<a class="el" href="class_gen_i_cam_feature_set.html">GenICamFeatureSet</a> *set, std::string const &amp;asynName, asynParamType asynType, int asynIndex, std::string const &amp;featureName, <a class="el" href="_gen_i_cam_feature_8h.html#a7e16ddb9db92703eb6dc8b3d6bfd5f05">GCFeatureType_t</a> featureType)=0</td></tr>
 <tr class="separator:a1989d94807c08ce3f12ee6e950cda256"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f80552ba55c70d873589e66681399d9"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a1f80552ba55c70d873589e66681399d9">addADDriverFeatures</a> ()</td></tr>
@@ -542,8 +544,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af46968196f7b909a409140c7ef941485"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af46968196f7b909a409140c7ef941485">&#9670;&nbsp;</a></span>decompressMono12p()</h2>
+<a id="af71a532743b9fca14a1793a326818e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af71a532743b9fca14a1793a326818e2f">&#9670;&nbsp;</a></span>decompressMono12p()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -560,6 +562,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>leftShift</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">epicsUInt8 *&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
@@ -582,10 +590,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Decompresses Mono12p to epicsUInt16. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numPixels</td><td>Number of pixels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">leftShift</td><td>If true left shift 4 bits so bits 0-3 are zero. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to the Mono12p packed input buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to the epicUInt16 output buffer that must have already been allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a24eb753a421b503d217ffb97894c9013"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24eb753a421b503d217ffb97894c9013">&#9670;&nbsp;</a></span>decompressMono12Packed()</h2>
+<a id="a0f2fbbceb7ba3d967ad3ae97b5fb03dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2fbbceb7ba3d967ad3ae97b5fb03dd">&#9670;&nbsp;</a></span>decompressMono12Packed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,6 +621,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>leftShift</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">epicsUInt8 *&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
@@ -623,6 +648,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Decompresses Mono12Packed to epicsUInt16. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numPixels</td><td>Number of pixels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">leftShift</td><td>If true left shift 4 bits so bits 0-3 are zero. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to the Mono12Packed packed input buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>Pointer to the epicUInt16 output buffer that must have already been allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

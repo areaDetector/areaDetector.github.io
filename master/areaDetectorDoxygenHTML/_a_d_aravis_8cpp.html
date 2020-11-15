@@ -47,6 +47,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ADAravis.cpp File Reference</div>  </div>
@@ -80,7 +81,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae578001fe043b4cca7a0edd801cfe9c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_aravis_8cpp.html#ae578001fe043b4cca7a0edd801cfe9c4">DRIVER_VERSION</a>&#160;&#160;&#160;&quot;2.0.0&quot;</td></tr>
+<tr class="memitem:ae578001fe043b4cca7a0edd801cfe9c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_aravis_8cpp.html#ae578001fe043b4cca7a0edd801cfe9c4">DRIVER_VERSION</a>&#160;&#160;&#160;&quot;2.1.0&quot;</td></tr>
 <tr class="separator:ae578001fe043b4cca7a0edd801cfe9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d88d262883e5ce3d99f2fc6fb4b9f78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_aravis_8cpp.html#a8d88d262883e5ce3d99f2fc6fb4b9f78">ARV_PIXEL_FORMAT_MONO_12_P</a>&#160;&#160;&#160;((ArvPixelFormat) 0x010c0047u)</td></tr>
 <tr class="separator:a8d88d262883e5ce3d99f2fc6fb4b9f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,6 +91,18 @@ Macros</h2></td></tr>
 <tr class="separator:a55ce186659619c3aa3413e3e6ff9fa43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba18d26abbc88f615effb390c864f3ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_aravis_8cpp.html#aba18d26abbc88f615effb390c864f3ac">LAST_ARAVIS_CAMERA_PARAM</a>&#160;&#160;&#160;AravisReset</td></tr>
 <tr class="separator:aba18d26abbc88f615effb390c864f3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6960a9844264c4c806adf4129ce21d61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_aravis_8cpp.html#a6960a9844264c4c806adf4129ce21d61">AravisConvertPixelFormat_t</a> { <a class="el" href="_a_d_aravis_8cpp.html#a6960a9844264c4c806adf4129ce21d61a738db72f67e84c4a68f55125e4840d53">AravisConvertPixelFormatMono16Low</a>, 
+<a class="el" href="_a_d_aravis_8cpp.html#a6960a9844264c4c806adf4129ce21d61acca08c7d1e78458ee8fcea8954b02dbc">AravisConvertPixelFormatMono16High</a>
+ }</td></tr>
+<tr class="separator:a6960a9844264c4c806adf4129ce21d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338bce54d8a0c22f5c263607bb4f8998"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_d_aravis_8cpp.html#a338bce54d8a0c22f5c263607bb4f8998">AravisShift_t</a> { <a class="el" href="_a_d_aravis_8cpp.html#a338bce54d8a0c22f5c263607bb4f8998a1548dea3d7480ab946b371533569f80c">AravisShiftNone</a>, 
+<a class="el" href="_a_d_aravis_8cpp.html#a338bce54d8a0c22f5c263607bb4f8998a97dde9d30686284f07b1fe2703e7f69d">AravisShiftLeft</a>, 
+<a class="el" href="_a_d_aravis_8cpp.html#a338bce54d8a0c22f5c263607bb4f8998a934e4c037efe0fa8e3004abb2a5bccd8">AravisShiftRight</a>
+ }</td></tr>
+<tr class="separator:a338bce54d8a0c22f5c263607bb4f8998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -123,7 +136,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DRIVER_VERSION&#160;&#160;&#160;&quot;2.0.0&quot;</td>
+          <td class="memname">#define DRIVER_VERSION&#160;&#160;&#160;&quot;2.1.0&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -169,6 +182,44 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a6960a9844264c4c806adf4129ce21d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6960a9844264c4c806adf4129ce21d61">&#9670;&nbsp;</a></span>AravisConvertPixelFormat_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_a_d_aravis_8cpp.html#a6960a9844264c4c806adf4129ce21d61">AravisConvertPixelFormat_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6960a9844264c4c806adf4129ce21d61a738db72f67e84c4a68f55125e4840d53"></a>AravisConvertPixelFormatMono16Low&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6960a9844264c4c806adf4129ce21d61acca08c7d1e78458ee8fcea8954b02dbc"></a>AravisConvertPixelFormatMono16High&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a338bce54d8a0c22f5c263607bb4f8998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338bce54d8a0c22f5c263607bb4f8998">&#9670;&nbsp;</a></span>AravisShift_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_a_d_aravis_8cpp.html#a338bce54d8a0c22f5c263607bb4f8998">AravisShift_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a338bce54d8a0c22f5c263607bb4f8998a1548dea3d7480ab946b371533569f80c"></a>AravisShiftNone&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a338bce54d8a0c22f5c263607bb4f8998a97dde9d30686284f07b1fe2703e7f69d"></a>AravisShiftLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a338bce54d8a0c22f5c263607bb4f8998a934e4c037efe0fa8e3004abb2a5bccd8"></a>AravisShiftRight&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>

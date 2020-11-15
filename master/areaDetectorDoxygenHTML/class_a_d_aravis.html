@@ -111,10 +111,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7489a9ce1d10c05d82ba6ea31fb842ad inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ada9c170dbbb222903ed829e7ca5f9 inherit pub_methods_class_a_d_gen_i_cam"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a45ada9c170dbbb222903ed829e7ca5f9">resumeAcquisition</a> ()</td></tr>
 <tr class="separator:a45ada9c170dbbb222903ed829e7ca5f9 inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af46968196f7b909a409140c7ef941485 inherit pub_methods_class_a_d_gen_i_cam"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#af46968196f7b909a409140c7ef941485">decompressMono12p</a> (int numPixels, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
-<tr class="separator:af46968196f7b909a409140c7ef941485 inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24eb753a421b503d217ffb97894c9013 inherit pub_methods_class_a_d_gen_i_cam"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a24eb753a421b503d217ffb97894c9013">decompressMono12Packed</a> (int numPixels, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
-<tr class="separator:a24eb753a421b503d217ffb97894c9013 inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71a532743b9fca14a1793a326818e2f inherit pub_methods_class_a_d_gen_i_cam"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#af71a532743b9fca14a1793a326818e2f">decompressMono12p</a> (int numPixels, bool leftShift, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
+<tr class="memdesc:af71a532743b9fca14a1793a326818e2f inherit pub_methods_class_a_d_gen_i_cam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompresses Mono12p to epicsUInt16.  <a href="class_a_d_gen_i_cam.html#af71a532743b9fca14a1793a326818e2f">More...</a><br /></td></tr>
+<tr class="separator:af71a532743b9fca14a1793a326818e2f inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2fbbceb7ba3d967ad3ae97b5fb03dd inherit pub_methods_class_a_d_gen_i_cam"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a0f2fbbceb7ba3d967ad3ae97b5fb03dd">decompressMono12Packed</a> (int numPixels, bool leftShift, epicsUInt8 *input, epicsUInt16 *output)</td></tr>
+<tr class="memdesc:a0f2fbbceb7ba3d967ad3ae97b5fb03dd inherit pub_methods_class_a_d_gen_i_cam"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompresses Mono12Packed to epicsUInt16.  <a href="class_a_d_gen_i_cam.html#a0f2fbbceb7ba3d967ad3ae97b5fb03dd">More...</a><br /></td></tr>
+<tr class="separator:a0f2fbbceb7ba3d967ad3ae97b5fb03dd inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f80552ba55c70d873589e66681399d9 inherit pub_methods_class_a_d_gen_i_cam"><td class="memItemLeft" align="right" valign="top">virtual asynStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_gen_i_cam.html#a1f80552ba55c70d873589e66681399d9">addADDriverFeatures</a> ()</td></tr>
 <tr class="separator:a1f80552ba55c70d873589e66681399d9 inherit pub_methods_class_a_d_gen_i_cam"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_a_d_driver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_d_driver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_a_d_driver.html">ADDriver</a></td></tr>
@@ -215,8 +217,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a08032ff68cdd366c4da7512eeb13a9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77b8966242d5ba6989fbe59ba24fc105"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#a77b8966242d5ba6989fbe59ba24fc105">AravisResentPkts</a></td></tr>
 <tr class="separator:a77b8966242d5ba6989fbe59ba24fc105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a939c47df1bc1bcb248f7db9a4ad99299"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#a939c47df1bc1bcb248f7db9a4ad99299">AravisLeftShift</a></td></tr>
-<tr class="separator:a939c47df1bc1bcb248f7db9a4ad99299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6109e9146a019a93bc4bee87421c4fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#ae6109e9146a019a93bc4bee87421c4fa">AravisConvertPixelFormat</a></td></tr>
+<tr class="separator:ae6109e9146a019a93bc4bee87421c4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c35df08b3c8d25a3944cf084195a753"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#a1c35df08b3c8d25a3944cf084195a753">AravisShiftDir</a></td></tr>
+<tr class="separator:a1c35df08b3c8d25a3944cf084195a753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9d50f4b734550d741288b4ce263714"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#a0b9d50f4b734550d741288b4ce263714">AravisShiftBits</a></td></tr>
+<tr class="separator:a0b9d50f4b734550d741288b4ce263714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acafb8f8d14f442d8a5dd7041f59b8be3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#acafb8f8d14f442d8a5dd7041f59b8be3">AravisConnection</a></td></tr>
 <tr class="separator:acafb8f8d14f442d8a5dd7041f59b8be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3e0024d26d5e5f134e1cf22011046b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_aravis.html#a1e3e0024d26d5e5f134e1cf22011046b">AravisReset</a></td></tr>
@@ -808,6 +814,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae6109e9146a019a93bc4bee87421c4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6109e9146a019a93bc4bee87421c4fa">&#9670;&nbsp;</a></span>AravisConvertPixelFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ADAravis::AravisConvertPixelFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae09451baf87c33e15cba16ed44a3957e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae09451baf87c33e15cba16ed44a3957e">&#9670;&nbsp;</a></span>AravisFailures</h2>
 
@@ -841,28 +869,6 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ADAravis::AravisFrameRetention</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a939c47df1bc1bcb248f7db9a4ad99299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a939c47df1bc1bcb248f7db9a4ad99299">&#9670;&nbsp;</a></span>AravisLeftShift</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ADAravis::AravisLeftShift</td>
         </tr>
       </table>
   </td>
@@ -973,6 +979,50 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ADAravis::AravisReset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b9d50f4b734550d741288b4ce263714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9d50f4b734550d741288b4ce263714">&#9670;&nbsp;</a></span>AravisShiftBits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ADAravis::AravisShiftBits</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c35df08b3c8d25a3944cf084195a753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c35df08b3c8d25a3944cf084195a753">&#9670;&nbsp;</a></span>AravisShiftDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ADAravis::AravisShiftDir</td>
         </tr>
       </table>
   </td>
