@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADPerkinElmer &#8212; areaDetector 3-10-3-g139c026 documentation</title>
+    <title>ADPerkinElmer &#8212; areaDetector 3-10-6-g1b6e78e documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -874,6 +874,57 @@ was started.</td>
 if PESkipFrames=1.</td>
 <td>PENumFramesToSkip, PENumFramesToSkip_RBV</td>
 <td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td colspan="2"><strong>Trigger output control</strong></td>
+</tr>
+<tr class="row-even"><td><p class="first">Controls which signal appears on the trigger output connector.  Choices are:</p>
+<ol class="last arabic simple" start="0">
+<li>FRM_EN_PWM</li>
+<li>FRM_EN_PWM_INV</li>
+<li>EP</li>
+<li>EP_INV</li>
+<li>DDD_PULSE</li>
+<li>DDD_PULSE_INV</li>
+<li>GND</li>
+<li>VCC</li>
+</ol>
+</td>
+<td>PETrigOutSignal, PETrigOutSignal_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>Trigger output EP length</td>
+<td>PETrigOutEPLength, PETrigOutEPLength_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>Trigger output EP first frame</td>
+<td>PETrigOutEPFirstFrame, PETrigOutEPFirstFrame_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>Trigger output EP last frame</td>
+<td>PETrigOutEPLastFrame, PETrigOutEPLastFrame_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>Trigger output EP delay 1</td>
+<td>PETrigOutEPDelay1, PETrigOutEPDelay1_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>Trigger output EP delay 2</td>
+<td>PETrigOutEPDelay2, PETrigOutEPDelay2_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>Trigger output DDD delay</td>
+<td>PETrigOutDDDDelay, PETrigOutDDDDelay_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Trigger output edge.  Choices are:</p>
+<ol class="last arabic simple" start="0">
+<li>Falling</li>
+<li>Rising</li>
+</ol>
+</td>
+<td>PETrigOutEdge, PETrigOutEdge_RBV</td>
+<td>mbbo, mbbi</td>
 </tr>
 </tbody>
 </table>
