@@ -74,8 +74,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad97188edfdd667de971027b35330fa41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a>&#160;&#160;&#160;&quot;1.6.0&quot;</td></tr>
-<tr class="separator:ad97188edfdd667de971027b35330fa41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e67e9429d48a2ba8f833ee3b1dceb5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>&#160;&#160;&#160;&quot;\r\n&quot;</td></tr>
 <tr class="separator:a4e67e9429d48a2ba8f833ee3b1dceb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546ba4d9fbd8e32aae1f09dd5bc5d4d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rest_api_8cpp.html#a546ba4d9fbd8e32aae1f09dd5bc5d4d7">EOL_LEN</a>&#160;&#160;&#160;2</td></tr>
@@ -137,20 +135,6 @@ Typedefs</h2></td></tr>
 <tr class="separator:a75f4114ce7890a713f4b4bde8e48025d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ad97188edfdd667de971027b35330fa41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad97188edfdd667de971027b35330fa41">&#9670;&nbsp;</a></span>API_VERSION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define API_VERSION&#160;&#160;&#160;&quot;1.6.0&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af26ac4e9ffdbb498f81eba4b80fd8ba4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af26ac4e9ffdbb498f81eba4b80fd8ba4">&#9670;&nbsp;</a></span>DATA_HDF5</h2>
 
@@ -348,7 +332,7 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">fprintf(stderr, <a class="code" href="rest_api_8cpp.html#ad8de19b57a26747fb7ef015e2a678b45">ERR_PREFIX</a> <span class="stringliteral">&quot;::%s: &quot;</span> fmt <span class="stringliteral">&quot;\n&quot;</span>, \</div><div class="line">    functionName, __VA_ARGS__)</div><div class="ttc" id="rest_api_8cpp_html_ad8de19b57a26747fb7ef015e2a678b45"><div class="ttname"><a href="rest_api_8cpp.html#ad8de19b57a26747fb7ef015e2a678b45">ERR_PREFIX</a></div><div class="ttdeci">#define ERR_PREFIX</div><div class="ttdef"><b>Definition:</b> restApi.cpp:39</div></div>
+<b>Value:</b><div class="fragment"><div class="line">fprintf(stderr, <a class="code" href="rest_api_8cpp.html#ad8de19b57a26747fb7ef015e2a678b45">ERR_PREFIX</a> <span class="stringliteral">&quot;::%s: &quot;</span> fmt <span class="stringliteral">&quot;\n&quot;</span>, \</div><div class="line">    functionName, __VA_ARGS__)</div><div class="ttc" id="rest_api_8cpp_html_ad8de19b57a26747fb7ef015e2a678b45"><div class="ttname"><a href="rest_api_8cpp.html#ad8de19b57a26747fb7ef015e2a678b45">ERR_PREFIX</a></div><div class="ttdeci">#define ERR_PREFIX</div><div class="ttdef"><b>Definition:</b> restApi.cpp:38</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -461,8 +445,8 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;DELETE %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:19</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:17</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;DELETE %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:18</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -477,9 +461,9 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;GET %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Content-Length: 0&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Accept: &quot;</span> <a class="code" href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a61aa1fbf493cc7a59f907a7e7e23ac84"><div class="ttname"><a href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a></div><div class="ttdeci">#define DATA_NATIVE</div><div class="ttdef"><b>Definition:</b> restApi.cpp:25</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:19</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:17</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;GET %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Content-Length: 0&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Accept: &quot;</span> <a class="code" href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a61aa1fbf493cc7a59f907a7e7e23ac84"><div class="ttname"><a href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a></div><div class="ttdeci">#define DATA_NATIVE</div><div class="ttdef"><b>Definition:</b> restApi.cpp:24</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:18</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -494,8 +478,8 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;GET %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Content-Length: 0&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Accept: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:19</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:17</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;GET %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Content-Length: 0&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Accept: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:18</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -510,8 +494,8 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;HEAD %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:19</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:17</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;HEAD %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:18</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -526,9 +510,9 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;PUT %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Accept-Encoding: identity&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Content-Type: &quot;</span> <a class="code" href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Content-Length: %lu&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a61aa1fbf493cc7a59f907a7e7e23ac84"><div class="ttname"><a href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a></div><div class="ttdeci">#define DATA_NATIVE</div><div class="ttdef"><b>Definition:</b> restApi.cpp:25</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:19</div></div>
-<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:17</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;PUT %s%s HTTP/1.1&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Host: %s&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Accept-Encoding: identity&quot;</span> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a>\</div><div class="line">    <span class="stringliteral">&quot;Content-Type: &quot;</span> <a class="code" href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a> <a class="code" href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a> \</div><div class="line">    <span class="stringliteral">&quot;Content-Length: %lu&quot;</span> <a class="code" href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttc" id="rest_api_8cpp_html_a61aa1fbf493cc7a59f907a7e7e23ac84"><div class="ttname"><a href="rest_api_8cpp.html#a61aa1fbf493cc7a59f907a7e7e23ac84">DATA_NATIVE</a></div><div class="ttdeci">#define DATA_NATIVE</div><div class="ttdef"><b>Definition:</b> restApi.cpp:24</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4fff801e2524b9df0b97b92544cfe3bb"><div class="ttname"><a href="rest_api_8cpp.html#a4fff801e2524b9df0b97b92544cfe3bb">EOH</a></div><div class="ttdeci">#define EOH</div><div class="ttdef"><b>Definition:</b> restApi.cpp:18</div></div>
+<div class="ttc" id="rest_api_8cpp_html_a4e67e9429d48a2ba8f833ee3b1dceb5d"><div class="ttname"><a href="rest_api_8cpp.html#a4e67e9429d48a2ba8f833ee3b1dceb5d">EOL</a></div><div class="ttdeci">#define EOL</div><div class="ttdef"><b>Definition:</b> restApi.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>

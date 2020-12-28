@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADEiger &#8212; areaDetector 3-10-6-g1b6e78e documentation</title>
+    <title>ADEiger &#8212; areaDetector 3-10-8-ge679836 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -518,7 +518,7 @@
 </li>
 <li><a class="reference internal" href="#crystallography-parameters">Crystallography Parameters</a></li>
 <li><a class="reference internal" href="#implementation-of-standard-driver-parameters">Implementation of standard driver parameters</a></li>
-<li><a class="reference internal" href="#eiger-specific-parameters">Eiger specific parameters</a></li>
+<li><a class="reference internal" href="#eiger-specific-parameters-common-to-eiger1-and-eiger2">Eiger specific parameters common to Eiger1 and Eiger2</a></li>
 <li><a class="reference internal" href="#unsupported-standard-driver-parameters">Unsupported standard driver parameters</a></li>
 <li><a class="reference internal" href="#configuration">Configuration</a></li>
 <li><a class="reference internal" href="#medm-screen">medm screen</a></li>
@@ -603,7 +603,7 @@
 </li>
 <li><a class="reference internal" href="#crystallography-parameters" id="id10">Crystallography Parameters</a></li>
 <li><a class="reference internal" href="#implementation-of-standard-driver-parameters" id="id11">Implementation of standard driver parameters</a></li>
-<li><a class="reference internal" href="#eiger-specific-parameters" id="id12">Eiger specific parameters</a></li>
+<li><a class="reference internal" href="#eiger-specific-parameters-common-to-eiger1-and-eiger2" id="id12">Eiger specific parameters common to Eiger1 and Eiger2</a></li>
 <li><a class="reference internal" href="#unsupported-standard-driver-parameters" id="id13">Unsupported standard driver parameters</a></li>
 <li><a class="reference internal" href="#configuration" id="id14">Configuration</a></li>
 <li><a class="reference internal" href="#medm-screen" id="id15">medm screen</a></li>
@@ -619,13 +619,13 @@
 </div>
 <div class="section" id="introduction">
 <h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>This is an <a class="reference external" href="http://www.aps.anl.gov/epics">EPICS</a> <a class="reference external" href="https://areadetector.github.io/master/index.html">areaDetector</a> driver for the Eiger detector
+<p>This is an <a class="reference external" href="http://www.aps.anl.gov/epics">EPICS</a> <a class="reference external" href="https://areadetector.github.io/master/index.html">areaDetector</a> driver for the Eiger and Eiger2 detectors
 from <a class="reference external" href="http://www.dectris.com">Dectris</a>. It has been tested on the Eiger 500K, 1M, 4M and 16M
-with the firmware version 1.6.4+. The driver communicates with the
-detector via its SIMPLON REST interface, so no library from Dectris is
-required. The images can pulled from the detector as HDF5 files, as a
-ZeroMQ stream or both. The files can be both saved to disk and passed
-to the areaDetector pipeline at the same time.</p>
+with the firmware version 1.6.4+, and Eiger2 with firmware 2020.2.
+The driver communicates with the detector via its SIMPLON REST interface,
+so no library from Dectris is required. The images can pulled from the detector
+as HDF5 files, as a ZeroMQ stream or both.
+The files can be both saved to disk and passed to the areaDetector pipeline at the same time.</p>
 <p>All trigger modes are supported, although Internal Enable mode seems
 to not be working properly. See Known Issues.</p>
 <p>This driver inherits from <a class="reference external" href="https://areadetector.github.io/master/ADCore/ADDriver.html">ADDriver</a>. It implements many of the
@@ -640,7 +640,7 @@ Sometimes it does, however, refer to those parameters as they are
 named in Dectris’ documentation.</p>
 <p>The SIMPLON API provides ways to query parameter limits, valid values
 for enums, error conditions, etc. The driver will clamp values to
-their minumum or maximum value if they are outside the acceptable
+their minimum or maximum value if they are outside the acceptable
 range. Setting a parameter will immediately push its value to the
 detector.</p>
 <p>This driver was built upon a multithreaded architecture. A combination
@@ -695,17 +695,23 @@ this example, this PV will be accessing the parameter:</p>
 </div>
 <div class="section" id="trigger-modes">
 <h2><a class="toc-backref" href="#id4">Trigger Modes</a><a class="headerlink" href="#trigger-modes" title="Permalink to this headline">¶</a></h2>
-<p>There are four trigger modes available:</p>
+<p>There are five trigger modes available:</p>
 <ul class="simple">
 <li><strong>Internal Series</strong>: one internal trigger pulse generates N images</li>
 <li><strong>Internal Enable</strong>: one internal trigger pulse generates one image</li>
 <li><strong>External Series</strong>: one external trigger pulse generates N images</li>
 <li><strong>External Enable</strong>: one external trigger pulse generates one image</li>
+<li><dl class="first docutils">
+<dt><strong>External Gate</strong>: This mode is used only with new firmware on the Eiger2</dt>
+<dd>which has 2 counters per pixel.  The behavior depend on the setting
+the ExtGateMode PV.</dd>
+</dl>
+</li>
 </ul>
 <p>The total number of images generated by <strong>Internal</strong> and <strong>External
 Series</strong> modes is given by the product of the NumImages and
 NumTriggers PVs (nimages and ntriggers in Dectris terminology).</p>
-<p>On both <strong>Internal</strong> and <strong>External Enable</strong> modes the total number of
+<p>On both <strong>Internal Enable</strong> and <strong>External Enable</strong> modes the total number of
 images generated is given solely by the NumTriggers PV (ntriggers).
 NumImages is set to 1 temporarily during the acquisition.</p>
 <p>Triggers for <strong>Internal Enable</strong> mode are sent by processing the
@@ -775,7 +781,8 @@ can be given with the command:</p>
 </pre></div>
 </div>
 <p>All files on the detector disk can be deleted at once by processing
-the FWClear PV.</p>
+the FWClear PV.  This is only available with the Eiger1 and Simplon API version
+1.6.0.</p>
 <p>If the last data file of a series won’t be full (e.g.
 series_1_data_000002.h5 with 20 images) then it will only appear on
 the detector disk after a disarm command (issued when the acquisition
@@ -835,6 +842,7 @@ the standard driver parameters.</p>
 <li>Internal Enable</li>
 <li>External Series</li>
 <li>External Enable</li>
+<li>External Gate (Eiger2 with 2021 firmware only)</li>
 </ul>
 </td>
 </tr>
@@ -843,15 +851,24 @@ the standard driver parameters.</p>
 <td>Sets the number of images to take per trigger when on Internal Series or External
 Series mode.</td>
 </tr>
-<tr class="row-odd"><td>$(P)$(R)AcquireTime, $(P)$(R)AcquireTime_RBV</td>
-<td>detector/config/count_time</td>
-<td>Sets the parameter “count_time”, which is the exposure time for a single image on
-INTS or EXTS mode.</td>
+<tr class="row-odd"><td>$(P)$(R)NumExposures, $(P)$(R)NumExposures_RBV</td>
+<td>detector/config/nexpi</td>
+<td>Sets the number of exposures per image in External Gate trigger mode.</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)AcquirePeriod, $(P)$(R)AcquirePeriod_RBV</td>
+<tr class="row-even"><td>$(P)$(R)AcquireTime, $(P)$(R)AcquireTime_RBV</td>
+<td>detector/config/count_time</td>
+<td>Sets the parameter “count_time”, which is the exposure time for a single image in
+Internal Series or External Series mode.</td>
+</tr>
+<tr class="row-odd"><td>$(P)$(R)AcquirePeriod, $(P)$(R)AcquirePeriod_RBV</td>
 <td>detector/config/frame_time</td>
 <td>Sets the parameter “frame_time”, which directly affects the frame rate of the detector.
 The resulting frame rate will be 1/AcquirePeriod.</td>
+</tr>
+<tr class="row-even"><td>$(P)$(R)DataType_RBV</td>
+<td>N.A</td>
+<td>The data type of the image data. If AcquireTime results in less than 50Hz, this
+will have the value UInt16, otherwise UInt32.</td>
 </tr>
 <tr class="row-odd"><td>$(P)$(R)DataType_RBV</td>
 <td>N.A</td>
@@ -889,18 +906,22 @@ ROI Mode selected.</td>
 <td>Detector serial number</td>
 </tr>
 <tr class="row-odd"><td>$(P)$(R)FirmwareVersion_RBV</td>
-<td>detector/config/software_version</td>
+<td>detector/config/eiger_fw_version</td>
 <td>Detector firmware version</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)DriverVersion_RBV</td>
+<tr class="row-even"><td>$(P)$(R)SDKVersion_RBV</td>
+<td>detector/api/version</td>
+<td>Simplon API version</td>
+</tr>
+<tr class="row-odd"><td>$(P)$(R)DriverVersion_RBV</td>
 <td>N.A</td>
 <td>This driver’s version</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="eiger-specific-parameters">
-<h2><a class="toc-backref" href="#id12">Eiger specific parameters</a><a class="headerlink" href="#eiger-specific-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eiger-specific-parameters-common-to-eiger1-and-eiger2">
+<h2><a class="toc-backref" href="#id12">Eiger specific parameters common to Eiger1 and Eiger2</a><a class="headerlink" href="#eiger-specific-parameters-common-to-eiger1-and-eiger2" title="Permalink to this headline">¶</a></h2>
 <p>The Eiger driver implements the following parameters in addition to
 those in asynNDArrayDriver.h and ADDriver.h.</p>
 <table border="1" class="table-bordered table-striped table-hover docutils">
@@ -922,22 +943,12 @@ those in asynNDArrayDriver.h and ADDriver.h.</p>
 </thead>
 <tbody valign="top">
 <tr class="row-odd"><td>&#160;</td>
-<td colspan="3"><strong>Detector Metadata</strong></td>
+<td colspan="3"><strong>Detector Information</strong></td>
 </tr>
 <tr class="row-even"><td>detector/config/description</td>
 <td>Detector’s manufacturer and model</td>
 <td>Description_RBV</td>
 <td>stringin</td>
-</tr>
-<tr class="row-odd"><td>detector/config/sensor_material</td>
-<td>Detector’s sensor material</td>
-<td>SensorMaterial_RBV</td>
-<td>stringin</td>
-</tr>
-<tr class="row-even"><td>detector/config/sensor_thickness</td>
-<td>Detector’s sensor thickness, in meters</td>
-<td>SensorThickness_RBV</td>
-<td>ai</td>
 </tr>
 <tr class="row-odd"><td>detector/config/x_pixel_size</td>
 <td>Detector’s pixel size in the X direction, in meters</td>
@@ -949,6 +960,16 @@ those in asynNDArrayDriver.h and ADDriver.h.</p>
 <td>YPixelSize_RBV</td>
 <td>ai</td>
 </tr>
+<tr class="row-odd"><td>detector/config/sensor_material</td>
+<td>Detector’s sensor material</td>
+<td>SensorMaterial_RBV</td>
+<td>stringin</td>
+</tr>
+<tr class="row-even"><td>detector/config/sensor_thickness</td>
+<td>Detector’s sensor thickness, in meters</td>
+<td>SensorThickness_RBV</td>
+<td>ai</td>
+</tr>
 <tr class="row-odd"><td>detector/config/detector_readout_time</td>
 <td>Detector’s readout time (dead time) between frames. Changes with different Threshold
 Energies.</td>
@@ -956,23 +977,22 @@ Energies.</td>
 <td>ai</td>
 </tr>
 <tr class="row-even"><td>&#160;</td>
-<td colspan="3"><strong>Status Parameters</strong></td>
+<td colspan="3"><strong>Detector Status Parameters</strong></td>
 </tr>
-<tr class="row-odd"><td>detector/status/state</td>
+<tr class="row-odd"><td>N.A.</td>
+<td>Initializes the detector DCU.  This command takes many seconds.</td>
+<td>Initialize</td>
+<td>busy</td>
+</tr>
+<tr class="row-even"><td>detector/status/state</td>
 <td>State of the detector</td>
 <td>State_RBV</td>
 <td>stringin</td>
 </tr>
-<tr class="row-even"><td>detector/status/error</td>
+<tr class="row-odd"><td>detector/status/error</td>
 <td>List of parameters causing an error state</td>
 <td>Error_RBV</td>
 <td>stringin</td>
-</tr>
-<tr class="row-odd"><td>detector/status/builder/dcu_buffer_free</td>
-<td>Percentage of the detector’s internal buffer that is free. Low values may indicate
-a problem.</td>
-<td>DCUBufferFree_RBV</td>
-<td>ai</td>
 </tr>
 <tr class="row-even"><td>detector/status/board_000/th0_temp</td>
 <td>Temperature of the first module</td>
@@ -985,27 +1005,212 @@ a problem.</td>
 <td>ai</td>
 </tr>
 <tr class="row-even"><td>detector/status/link_0, detector/status/link_1, detector/status/link_2, detector/status/link_3</td>
-<td>Status of the four links between the detector server and the head</td>
+<td>Status of the four links between the detector server and the head. Eiger1 only.</td>
 <td>Link0_RBV, Link1_RBV, Link2_RBV, Link3_RBV</td>
 <td>bi</td>
 </tr>
+<tr class="row-odd"><td>detector/status/builder/dcu_buffer_free</td>
+<td>Percentage of the detector’s internal buffer that is free. Low values may indicate
+a problem. Eiger1 only.</td>
+<td>DCUBufferFree_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>N.A.</td>
+<td>High voltage reset time. Eiger2 only.</td>
+<td>HVResetTime, HVResetTime_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>N.A.</td>
+<td>High voltage reset command.
+Turns off high voltage for HVResetTime and then turns it back on. Eiger2 only.</td>
+<td>HVReset</td>
+<td>bo</td>
+</tr>
+<tr class="row-even"><td>detector/status/high_voltage/state</td>
+<td>High voltage state.
+State of the high voltage. Eiger2 only.</td>
+<td>HVState_RBV</td>
+<td>stringin</td>
+</tr>
 <tr class="row-odd"><td>&#160;</td>
+<td colspan="3"><strong>Acquisition Setup</strong></td>
+</tr>
+<tr class="row-even"><td>detector/config/threshold_energy</td>
+<td>Energy threshold 1 for the acquisition. This is the only threshold on the Eiger1.</td>
+<td>Threshold, Threshold_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>detector/config/threshold/1/mode</td>
+<td>Enable or disable threshold 1. Eiger2 only.</td>
+<td>Threshold1Enable, Threshold1Enable_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>detector/config/threshold/2/energy</td>
+<td>Energy threshold 2 for the acquisition. Eiger2 only.</td>
+<td>Threshold2, Threshold2_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>detector/config/threshold/2/mode</td>
+<td>Enable or disable threshold 2. Eiger2 only.</td>
+<td>Threshold2Enable, Threshold2Enable_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>detector/config/threshold/difference/mode</td>
+<td>Enable or disable difference mode, where the output image is threshold1-threshold2. Eiger2 only.</td>
+<td>ThresholdDiffEnable, ThresholdDiffEnable_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>detector/config/photon_energy</td>
+<td>Photon energy for the acquisition</td>
+<td>PhotonEnergy, PhotonEnergy_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-even"><td>detector/config/counting_mode</td>
+<td>Counting mode, “Normal” or “Retrigger”. Eiger2 only.</td>
+<td>CountingMode, CountingMode_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td colspan="3"><strong>Trigger Setup</strong></td>
+</tr>
+<tr class="row-even"><td>detector/config/extg_mode</td>
+<td>Mode to be used when TriggerMode=External Gate.
+Choices are “Pump &amp; Probe” and “HDR”.  Eiger2 with 2021 firmware only.</td>
+<td>ExtGateMode, ExtGateMode_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>detector/command/trigger</td>
+<td>Software trigger to be used on modes Internal Series and Internal Enable when ManualTrigger is set</td>
+<td>Trigger</td>
+<td>ao</td>
+</tr>
+<tr class="row-even"><td>N.A.</td>
+<td>Exposure to be used with the triggers on the Internal Enable trigger mode</td>
+<td>TriggerExposure, TriggerExposure_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>detector/config/ntrigger</td>
+<td>Number of triggers for the acquisition</td>
+<td>NumTriggers, NumTriggers_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-even"><td>N.A.</td>
+<td>On Internal Series and Internal Enable modes, controls whether triggers will be issued automatically (0)
+or only via the Trigger PV (1).</td>
+<td>ManualTrigger, ManualTrigger_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>detector/config/trigger_start_delay</td>
+<td>Delay time in second after receipt of trigger signal before taking action. Eiger2 only.</td>
+<td>TriggerStartDelay, TriggerStartDelay_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td colspan="3"><strong>Readout Control</strong></td>
+</tr>
+<tr class="row-odd"><td>detector/config/roi_mode</td>
+<td><dl class="first last docutils">
+<dt>Which ROI mode to use. <strong>Only supported on Eiger 9M and 16M.</strong> Options are:</dt>
+<dd><ul class="first last simple">
+<li>Disabled</li>
+<li>4M</li>
+</ul>
+</dd>
+</dl>
+</td>
+<td>ROIMode, ROIMode_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>detector/config/flatfield_correction_applied</td>
+<td>Controls whether the flatfield correction should be applied</td>
+<td>FlatfieldApplied, FlatfieldApplied_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>detector/config/countrate_correction_applied</td>
+<td>Controls whether the count rate correction should be applied</td>
+<td>CountrateCorrApplied, CountrateCorrApplied_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>detector/config/pixel_mask_applied</td>
+<td>Controls whether the pixel mask should be applied</td>
+<td>PixelMaskApplied, PixelMaskApplied_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>detector/config/auto_summation</td>
+<td>Controls whether autosummation should be done.</td>
+<td>AutoSummation, AutoSummation_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>detector/config/compression</td>
+<td><dl class="first docutils">
+<dt>Compression algorithm to use when compression is enabled. Options are:</dt>
+<dd><ul class="first last simple">
+<li>lz4</li>
+<li>bslz4 (bitshuffle lz4)</li>
+<li>None (API 1.8.0 only)</li>
+</ul>
+</dd>
+</dl>
+<p class="last">The selected algorithm will always be used on the Stream ZMQ interface. It will
+also be used for HDF5 files written by the FileWriter interface if FWCompression=Enabled.</p>
+</td>
+<td>CompressionAlgo, CompressionAlgo_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>N.A.</td>
+<td><dl class="first last docutils">
+<dt>Which data source to use for areaDetector pipeline. Valid values:</dt>
+<dd><ul class="first last simple">
+<li>None</li>
+<li>FileWriter</li>
+<li>Stream</li>
+</ul>
+</dd>
+</dl>
+</td>
+<td>DataSource, DataSource_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td colspan="3"><strong>Acquisition Status</strong></td>
+</tr>
+<tr class="row-odd"><td>N.A.</td>
+<td>Armed state of the detector</td>
+<td>Armed</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>detector/config/bit_depth_image</td>
+<td>The bit depth of the image data. If AcquireTime results in less than 50Hz, this
+will have the value 16, otherwise 32.</td>
+<td colspan="2">$(P)$(R)BitDepthImage_RBV</td>
+</tr>
+<tr class="row-odd"><td>detector/config/countrate_correction_count_cutoff</td>
+<td>Number of counts after which the detector will cutoff due to the count rate correction.</td>
+<td>CountCutoff_RBV</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
 <td colspan="3"><strong>FileWriter Control</strong></td>
 </tr>
-<tr class="row-even"><td>filewriter/config/mode</td>
+<tr class="row-odd"><td>filewriter/config/mode</td>
 <td>Enables or disables the FileWriter module</td>
 <td>FWEnable, FWEnable_RBV</td>
 <td>bo, bi</td>
 </tr>
-<tr class="row-odd"><td>filewriter/config/clear</td>
-<td>Writing to this PV clears <em>all</em> files on the detector server disk</td>
-<td>FWClear</td>
-<td>ao</td>
+<tr class="row-even"><td>filewriter/status/state</td>
+<td>State of the FileWriter module</td>
+<td>FWState_RBV</td>
+<td>stringin</td>
 </tr>
-<tr class="row-even"><td>filewriter/config/compression_enabled</td>
-<td>Enables or disables LZ4 or BSLZ4 compression on the server side</td>
+<tr class="row-odd"><td>filewriter/config/compression_enabled</td>
+<td>Enables or disables LZ4 or BSLZ4 compression for HDF5 files written by the DCU</td>
 <td>FWCompression, FWCompression_RBV</td>
 <td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>filewriter/config/nimages_per_file</td>
+<td>Number of images per HDF5 data file</td>
+<td>FWNImgsPerFile, FWNImgsPerFile_RBV</td>
+<td>ao, ai</td>
 </tr>
 <tr class="row-odd"><td>filewriter/config/name_patttern</td>
 <td><p class="first">Name pattern for the generated HDF5 files. The pattern can be anything, but it must
@@ -1018,30 +1223,53 @@ id of the acquisition. The default is: “series_$id”, which would generate th
 </pre></div>
 </div>
 <p class="last">For the sequence id 1. If ‘$id’ is omitted, files might get overwritten on the server,
-because then every acqusition would generate files with the same name</p>
+because then every acquisition would generate files with the same name</p>
 </td>
 <td>FWNamePattern, FWNamePattern_RBV</td>
 <td>stringout, stringin</td>
 </tr>
-<tr class="row-even"><td>filewriter/config/nimages_per_file</td>
-<td>Number of images per HDF5 data file</td>
-<td>FWNImgsPerFile, FWNImgsPerFile_RBV</td>
-<td>ao, ai</td>
+<tr class="row-even"><td>N.A.</td>
+<td>Sequence ID of the current acquisition</td>
+<td>SequenceId</td>
+<td>ai</td>
 </tr>
 <tr class="row-odd"><td>N.A.</td>
-<td>Controls whether downloaded files should be removed from the detector disk</td>
-<td>FWAutoRemove, FWAutoRemove_RBV</td>
+<td>Controls whether acquired files should be saved locally to disk</td>
+<td>SaveFiles, SaveFiles_RBV</td>
 <td>bo, bi</td>
 </tr>
-<tr class="row-even"><td>filewriter/status/buffer_free</td>
+<tr class="row-even"><td>N.A.</td>
+<td>Controls the owner of the file saved to disk. Requires the IOC to have the CAP_SETUID
+capability.</td>
+<td>FileOwner, FileOwner_RBV</td>
+<td>stringout, stringin</td>
+</tr>
+<tr class="row-odd"><td>N.A.</td>
+<td>Controls the owner group of the file saved to disk. Requires the IOC to have the
+CAP_SETGID capability.</td>
+<td>FileOwnerGrp, FileOwnerGrp_RBV</td>
+<td>stringout, stringin</td>
+</tr>
+<tr class="row-even"><td>N.A.</td>
+<td>Controls the permissions for the files saved to disk.
+Normal Linux octal bitmask format, for Owner/Group/World, e.g. 0666 is r+w owner, group, and world.</td>
+<td>FilePerms</td>
+<td>ao</td>
+</tr>
+<tr class="row-odd"><td>filewriter/status/buffer_free</td>
 <td>Free space on detector disk.</td>
 <td>FWFree_RBV</td>
 <td>ai</td>
 </tr>
-<tr class="row-odd"><td>filewriter/status/state</td>
-<td>State of the FileWriter module</td>
-<td>FWState_RBV</td>
-<td>stringin</td>
+<tr class="row-even"><td>N.A.</td>
+<td>Controls whether downloaded files should be removed from the detector disk</td>
+<td>FWAutoRemove, FWAutoRemove_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>filewriter/config/clear</td>
+<td>Writing to this PV clears <em>all</em> files on the detector server disk. Eiger1 only.</td>
+<td>FWClear</td>
+<td>ao</td>
 </tr>
 <tr class="row-even"><td>&#160;</td>
 <td colspan="3"><strong>Stream Control</strong></td>
@@ -1051,10 +1279,10 @@ because then every acqusition would generate files with the same name</p>
 <td>StreamEnable, StreamEnable_RBV</td>
 <td>bo, bi</td>
 </tr>
-<tr class="row-even"><td>stream/status/dropped</td>
-<td>Indicates how many images were dropped in the last acquisition</td>
-<td>StreamDropped_RBV</td>
-<td>ai</td>
+<tr class="row-even"><td>stream/status/state</td>
+<td>State of the Stream module</td>
+<td>StreamState_RBV</td>
+<td>stringin</td>
 </tr>
 <tr class="row-odd"><td>N.A.</td>
 <td>Controls whether the NDArrays from the Stream interface are decompressed (Yes) or
@@ -1062,12 +1290,7 @@ compressed (No)</td>
 <td>StreamDecompress, StreamDecompress_RBV</td>
 <td>bo, bi</td>
 </tr>
-<tr class="row-even"><td>stream/status/state</td>
-<td>State of the Stream module</td>
-<td>StreamState_RBV</td>
-<td>stringin</td>
-</tr>
-<tr class="row-odd"><td>stream/config/header_detail</td>
+<tr class="row-even"><td>stream/config/header_detail</td>
 <td><dl class="first last docutils">
 <dt>Selects the level of detail for Stream API Headers. Options are:</dt>
 <dd><ul class="first last simple">
@@ -1081,15 +1304,20 @@ compressed (No)</td>
 <td>StreamHdrDetail, StreamHdrDetail_RBV</td>
 <td>mbbo, mbbi</td>
 </tr>
-<tr class="row-even"><td>stream/config/header_appendix</td>
+<tr class="row-odd"><td>stream/config/header_appendix</td>
 <td>Sets the text to be appended to the Stream API headers</td>
 <td>StreamHdrAppendix</td>
 <td>waveform</td>
 </tr>
-<tr class="row-odd"><td>stream/config/image_appendix</td>
+<tr class="row-even"><td>stream/config/image_appendix</td>
 <td>Sets the text to be appended to the Stream API images</td>
 <td>StreamImgAppendix</td>
 <td>waveform</td>
+</tr>
+<tr class="row-odd"><td>stream/status/dropped</td>
+<td>Indicates how many images were dropped in the last acquisition</td>
+<td>StreamDropped_RBV</td>
+<td>ai</td>
 </tr>
 <tr class="row-even"><td>&#160;</td>
 <td colspan="3"><strong>Monitor Control</strong></td>
@@ -1099,15 +1327,15 @@ compressed (No)</td>
 <td>MonitorEnable, MonitorEnable_RBV</td>
 <td>bo, bi</td>
 </tr>
-<tr class="row-even"><td>N.A.</td>
-<td>Timeout for queries on the Monitor interface for new images</td>
-<td>MonitorTimeout, MonitorTimeout_RBV</td>
-<td>ao, ai</td>
-</tr>
-<tr class="row-odd"><td>monitor/status/state</td>
+<tr class="row-even"><td>monitor/status/state</td>
 <td>State of the Monitor module</td>
 <td>MonitorState_RBV</td>
 <td>stringin</td>
+</tr>
+<tr class="row-odd"><td>N.A.</td>
+<td>Timeout for queries on the Monitor interface for new images</td>
+<td>MonitorTimeout, MonitorTimeout_RBV</td>
+<td>ao, ai</td>
 </tr>
 <tr class="row-even"><td>&#160;</td>
 <td colspan="3"><strong>Acquisition Metadata</strong></td>
@@ -1133,176 +1361,58 @@ changes</td>
 <td>Wavelength, Wavelength_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-odd"><td>detector/config/countrate_correction_count_cutoff</td>
-<td>Number of counts after which the detector will cutoff due to the count rate correction.</td>
-<td>CountCutoff_RBV</td>
-<td>ai</td>
+<tr class="row-odd"><td>&#160;</td>
+<td colspan="3"><strong>Detector Metadata</strong></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td colspan="3"><strong>Acquisition MX Metadata</strong></td>
-</tr>
-<tr class="row-odd"><td>detector/config/chi_start</td>
+<tr class="row-even"><td>detector/config/chi_start</td>
 <td>Start value of the Chi angle</td>
 <td>ChiStart, ChiStart_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-even"><td>detector/config/chi_increment</td>
+<tr class="row-odd"><td>detector/config/chi_increment</td>
 <td>Chi angle increment per frame</td>
 <td>ChiIncr, ChiIncr_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-odd"><td>detector/config/kappa_start</td>
+<tr class="row-even"><td>detector/config/kappa_start</td>
 <td>Start value of the Kappa angle</td>
 <td>KappaStart, KappaStart_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-even"><td>detector/config/kappa_increment</td>
+<tr class="row-odd"><td>detector/config/kappa_increment</td>
 <td>Kappa angle increment per frame</td>
 <td>KappaIncr, KappaIncr_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-odd"><td>detector/config/omega_start</td>
+<tr class="row-even"><td>detector/config/omega_start</td>
 <td>Start value of the Omega angle</td>
 <td>OmegaStart, OmegaStart_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-even"><td>detector/config/omega_increment</td>
+<tr class="row-odd"><td>detector/config/omega_increment</td>
 <td>Omega angle increment per frame</td>
 <td>OmegaIncr, OmegaIncr_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-odd"><td>detector/config/phi_start</td>
+<tr class="row-even"><td>detector/config/phi_start</td>
 <td>Start value of the Phi angle</td>
 <td>PhiStart, PhiStart_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-even"><td>detector/config/phi_increment</td>
+<tr class="row-odd"><td>detector/config/phi_increment</td>
 <td>Phi angle increment per frame</td>
 <td>PhiIncr, PhiIncr_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-odd"><td>detector/config/two_theta_start</td>
+<tr class="row-even"><td>detector/config/two_theta_start</td>
 <td>Start value of the TwoTheta angle</td>
 <td>TwoThetaStart, TwoThetaStart_RBV</td>
 <td>ao, ai</td>
 </tr>
-<tr class="row-even"><td>detector/config/two_theta_increment</td>
+<tr class="row-odd"><td>detector/config/two_theta_increment</td>
 <td>TwoTheta angle increment per frame</td>
 <td>TwoThetaIncr, TwoThetaIncr_RBV</td>
 <td>ao, ai</td>
-</tr>
-<tr class="row-odd"><td>&#160;</td>
-<td colspan="3"><strong>Acquisition Control</strong></td>
-</tr>
-<tr class="row-even"><td>N.A.</td>
-<td><dl class="first last docutils">
-<dt>Which data source to use for areaDetecor pipeline. Valid values:</dt>
-<dd><ul class="first last simple">
-<li>None</li>
-<li>FileWriter</li>
-<li>Stream</li>
-</ul>
-</dd>
-</dl>
-</td>
-<td>DataSource, DataSource_RBV</td>
-<td>mbbo, mbbi</td>
-</tr>
-<tr class="row-odd"><td>N.A.</td>
-<td>Armed state of the detector</td>
-<td>Armed</td>
-<td>bi</td>
-</tr>
-<tr class="row-even"><td>N.A.</td>
-<td>Controls whether acquired files should be saved locally to disk</td>
-<td>SaveFiles, SaveFiles_RBV</td>
-<td>bo, bi</td>
-</tr>
-<tr class="row-odd"><td>N.A.</td>
-<td>Controls the owner of the file saved to disk. Requires the IOC to have the CAP_SETUID
-capability.</td>
-<td>FileOwner, FileOwner_RBV</td>
-<td>stringout, stringin</td>
-</tr>
-<tr class="row-even"><td>N.A.</td>
-<td>Controls the owner group of the file saved to disk. Requires the IOC to have the
-CAP_SETGID capability.</td>
-<td>FileOwnerGrp, FileOwnerGrp_RBV</td>
-<td>stringout, stringin</td>
-</tr>
-<tr class="row-odd"><td>N.A.</td>
-<td>Controls the permissions for the files saved to disk</td>
-<td>FilePerms</td>
-<td>ao</td>
-</tr>
-<tr class="row-even"><td>N.A.</td>
-<td>Sequence ID of the current acquisition</td>
-<td>SequenceId</td>
-<td>ai</td>
-</tr>
-<tr class="row-odd"><td>detector/config/flatfield_correction_applied</td>
-<td>Controls whether the flatfield correction should be applied</td>
-<td>FlatfieldApplied, FlatfieldApplied_RBV</td>
-<td>bo, bi</td>
-</tr>
-<tr class="row-even"><td>detector/config/photon_energy</td>
-<td>Photon energy for the acquisition</td>
-<td>PhotonEnergy, PhotonEnergy_RBV</td>
-<td>ao, ai</td>
-</tr>
-<tr class="row-odd"><td>detector/config/threshold_energy</td>
-<td>Energy threshold for the acquisition</td>
-<td>Threshold, Threshold_RBV</td>
-<td>ao, ai</td>
-</tr>
-<tr class="row-even"><td>detector/command/trigger</td>
-<td>Software trigger to be used on modes INTS and INTE when ManualTrigger is set</td>
-<td>Trigger</td>
-<td>ao</td>
-</tr>
-<tr class="row-odd"><td>detector/command/trigger</td>
-<td>Exposure to be used with the triggers on the INTE mode</td>
-<td>TriggerExposure, TriggerExposure_RBV</td>
-<td>ao, ai</td>
-</tr>
-<tr class="row-even"><td>detector/config/ntrigger</td>
-<td>Number of triggers for the acquisition</td>
-<td>NumTriggers, NumTriggers_RBV</td>
-<td>ao, ai</td>
-</tr>
-<tr class="row-odd"><td>N.A.</td>
-<td>On INTS and INTE modes, controls whether triggers will be issued automatically (0)
-or only via the Trigger PV (1).</td>
-<td>ManualTrigger, ManualTrigger_RBV</td>
-<td>bo, bi</td>
-</tr>
-<tr class="row-even"><td>detector/config/compression</td>
-<td><dl class="first docutils">
-<dt>Compression algorithm to use when compression is enabled. Options are:</dt>
-<dd><ul class="first last simple">
-<li>lz4</li>
-<li>bslz4 (bitshuffle lz4)</li>
-</ul>
-</dd>
-</dl>
-<p class="last">The selected algorithm will always be used on the Stream ZMQ interface. It will
-also be used for HDF5 files written by the FileWriter interface if FWCompression=Enabled.</p>
-</td>
-<td>CompressionAlgo, CompressionAlgo_RBV</td>
-<td>mbbo, mbbi</td>
-</tr>
-<tr class="row-odd"><td>detector/config/roi_mode</td>
-<td><dl class="first last docutils">
-<dt>Which ROI mode to use. <strong>Only supported on Eiger 9M and 16M.</strong> Options are:</dt>
-<dd><ul class="first last simple">
-<li>Disabled</li>
-<li>4M</li>
-</ul>
-</dd>
-</dl>
-</td>
-<td>ROIMode, ROIMode_RBV</td>
-<td>mbbo, mbbi</td>
 </tr>
 </tbody>
 </table>

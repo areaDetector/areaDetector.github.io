@@ -43,7 +43,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_rest_a_p_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">RestAPI Class Reference</div>  </div>
@@ -74,8 +73,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ada70bbc81eaf00ddce547633ccd107e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a106067bd36fe4c725c64c855da10d507"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#a106067bd36fe4c725c64c855da10d507">wait</a> (void)</td></tr>
 <tr class="separator:a106067bd36fe4c725c64c855da10d507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48937b64fd8afe334cf720cf89e6b9cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#a48937b64fd8afe334cf720cf89e6b9cd">hvReset</a> (int resetTime)</td></tr>
+<tr class="separator:a48937b64fd8afe334cf720cf89e6b9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbb3ff038766f6b86f56c13d79bbd859"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#afbb3ff038766f6b86f56c13d79bbd859">statusUpdate</a> (void)</td></tr>
 <tr class="separator:afbb3ff038766f6b86f56c13d79bbd859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41df19ad9346a73690e8b672e0419e64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rest_api_8h.html#afd90a56eecf857322c679f314656bb22">eigerAPIVersion_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#a41df19ad9346a73690e8b672e0419e64">getAPIVersion</a> (void)</td></tr>
+<tr class="separator:a41df19ad9346a73690e8b672e0419e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d156f1c0dfdf3a65196c6d53e8f5a7f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#a3d156f1c0dfdf3a65196c6d53e8f5a7f">getFileSize</a> (const char *filename, size_t *size)</td></tr>
 <tr class="separator:a3d156f1c0dfdf3a65196c6d53e8f5a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9adf011b39075e6078985105a5c67405"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#a9adf011b39075e6078985105a5c67405">waitFile</a> (const char *filename, double timeout=<a class="el" href="rest_api_8h.html#aad2dd72565852b91c809cd4685833b17">DEFAULT_TIMEOUT</a>)</td></tr>
@@ -93,11 +96,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8273915057ec140617e5280369429390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac143d147cbc5e05934cdccdf8fe3b31f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#ac143d147cbc5e05934cdccdf8fe3b31f">buildDataName</a> (int n, const char *pattern, int seqId, char *<a class="el" href="udp__client__pixirad__single_8cpp.html#ac8ed9b9edf72a0bbde1ba01f0c67ef73">buf</a>, size_t bufSize)</td></tr>
 <tr class="separator:ac143d147cbc5e05934cdccdf8fe3b31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a9718a50acd9ca5eefcdf0fa1a345a8f5"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_a_p_i.html#a9718a50acd9ca5eefcdf0fa1a345a8f5">sysStr</a> [<a class="el" href="rest_api_8h.html#a14c3ad6f5fa82ee5ff47981398d0e13ca69d0630a4d1e3d547807db45c2ae59bf">SSCount</a>]</td></tr>
-<tr class="separator:a9718a50acd9ca5eefcdf0fa1a345a8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6e5355fe38f7a44019d965b3298af46d"></a>
@@ -367,6 +365,24 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a41df19ad9346a73690e8b672e0419e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41df19ad9346a73690e8b672e0419e64">&#9670;&nbsp;</a></span>getAPIVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rest_api_8h.html#afd90a56eecf857322c679f314656bb22">eigerAPIVersion_t</a> RestAPI::getAPIVersion </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acf2eeb00b8a0887e2f97ab9722f1e9e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf2eeb00b8a0887e2f97ab9722f1e9e4">&#9670;&nbsp;</a></span>getFile()</h2>
 
@@ -457,6 +473,24 @@ Static Public Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48937b64fd8afe334cf720cf89e6b9cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48937b64fd8afe334cf720cf89e6b9cd">&#9670;&nbsp;</a></span>hvReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RestAPI::hvReset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resetTime</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -617,29 +651,6 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9718a50acd9ca5eefcdf0fa1a345a8f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9718a50acd9ca5eefcdf0fa1a345a8f5">&#9670;&nbsp;</a></span>sysStr</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char * RestAPI::sysStr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">    <span class="stringliteral">&quot;/detector/api/version&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/detector/api/&quot;</span>   <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/config/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/detector/api/&quot;</span>   <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/status/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/filewriter/api/&quot;</span> <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/config/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/filewriter/api/&quot;</span> <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/status/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/filewriter/api/&quot;</span> <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/command/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/detector/api/&quot;</span>   <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/command/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/data/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/monitor/api/&quot;</span>    <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/config/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/monitor/api/&quot;</span>    <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/status/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/monitor/api/&quot;</span>    <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/images/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/stream/api/&quot;</span>     <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/config/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/stream/api/&quot;</span>     <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/status/&quot;</span>,</div><div class="line">    <span class="stringliteral">&quot;/system/api/&quot;</span>     <a class="code" href="rest_api_8cpp.html#ad97188edfdd667de971027b35330fa41">API_VERSION</a> <span class="stringliteral">&quot;/command/&quot;</span>,</div><div class="line">}</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
