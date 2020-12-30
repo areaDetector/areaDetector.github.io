@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADEiger &#8212; areaDetector 3-10-9-gfb7a724 documentation</title>
+    <title>ADEiger &#8212; areaDetector 3-10-10-g8b5c0f3 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -894,53 +894,54 @@ The resulting frame rate will be 1/AcquirePeriod.</td>
 </tr>
 <tr class="row-odd"><td>$(P)$(R)DataType_RBV</td>
 <td>N.A</td>
-<td>The data type of the image data. If AcquireTime results in less than 50Hz, this
-will have the value UInt16, otherwise UInt32.</td>
+<td><p class="first">The data type of the image data. This depends both on the AcquirePeriod (frame rate) and
+the AcquireTime (exposure time).</p>
+<ul class="last simple">
+<li>AcquireTime &gt; 0.0066 ms: DataType_RBV=UInt32</li>
+<li>AcquirePeriod &lt;  .00045 (2200 frames/s): DataType_RBV=UInt8</li>
+<li>Neither of above conditions: DataType_RBV=UInt16</li>
+</ul>
+</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)DataType_RBV</td>
-<td>N.A</td>
-<td>The data type of the image data. If AcquireTime results in less than 50Hz, this
-will have the value UInt16, otherwise UInt32.</td>
-</tr>
-<tr class="row-odd"><td>$(P)$(R)TemperatureActual</td>
+<tr class="row-even"><td>$(P)$(R)TemperatureActual</td>
 <td>detector/status/board_000/th0_temp</td>
 <td>Reads the actual temperature of the detector.</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)MaxSizeX_RBV</td>
+<tr class="row-odd"><td>$(P)$(R)MaxSizeX_RBV</td>
 <td>N.A</td>
 <td>Detector sensor size in the X direction.</td>
 </tr>
-<tr class="row-odd"><td>$(P)$(R)MaxSizeY_RBV</td>
+<tr class="row-even"><td>$(P)$(R)MaxSizeY_RBV</td>
 <td>N.A</td>
 <td>Detector sensor size in the Y direction.</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)ArraySizeX_RBV</td>
+<tr class="row-odd"><td>$(P)$(R)ArraySizeX_RBV</td>
 <td>detector/config/x_pixels_in_detector</td>
 <td>Current detector sensor size in the X direction. This can change depending on the
 ROI Mode selected.</td>
 </tr>
-<tr class="row-odd"><td>$(P)$(R)ArraySizeY_RBV</td>
+<tr class="row-even"><td>$(P)$(R)ArraySizeY_RBV</td>
 <td>detector/config/y_pixels_in_detector</td>
 <td>Current detector sensor size in the Y direction. This can change depending on the
 ROI Mode selected.</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)Manufacturer_RBV, $(P)$(R)Model_RBV</td>
+<tr class="row-odd"><td>$(P)$(R)Manufacturer_RBV, $(P)$(R)Model_RBV</td>
 <td>detector/config/description</td>
 <td>Reads the detector manufacturer (Dectris) and model (Eiger xx M).</td>
 </tr>
-<tr class="row-odd"><td>$(P)$(R)SerialNumber_RBV</td>
+<tr class="row-even"><td>$(P)$(R)SerialNumber_RBV</td>
 <td>detector/config/detector_number</td>
 <td>Detector serial number</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)FirmwareVersion_RBV</td>
+<tr class="row-odd"><td>$(P)$(R)FirmwareVersion_RBV</td>
 <td>detector/config/eiger_fw_version</td>
 <td>Detector firmware version</td>
 </tr>
-<tr class="row-odd"><td>$(P)$(R)SDKVersion_RBV</td>
+<tr class="row-even"><td>$(P)$(R)SDKVersion_RBV</td>
 <td>detector/api/version</td>
 <td>Simplon API version</td>
 </tr>
-<tr class="row-even"><td>$(P)$(R)DriverVersion_RBV</td>
+<tr class="row-odd"><td>$(P)$(R)DriverVersion_RBV</td>
 <td>N.A</td>
 <td>This driver’s version</td>
 </tr>
@@ -1290,8 +1291,14 @@ also be used for HDF5 files written by the FileWriter interface if FWCompression
 <td>bi</td>
 </tr>
 <tr class="row-odd"><td>detector/config/bit_depth_image</td>
-<td>The bit depth of the image data. If AcquireTime results in less than 50Hz, this
-will have the value 16, otherwise 32.</td>
+<td><p class="first">The bit depth of the image data. This depends both on the AcquirePeriod (frame rate) and
+the AcquireTime (exposure time).</p>
+<ul class="last simple">
+<li>AcquireTime &gt; 0.0066 ms: BitDepthImage_RBV=32</li>
+<li>AcquirePeriod &lt;  .00045 (2200 frames/s): BitDepthImage_RBV=8</li>
+<li>Neither of above conditions: BitDepthImage_RBV=16</li>
+</ul>
+</td>
 <td>$(P)$(R)BitDepthImage_RBV</td>
 <td>longin</td>
 </tr>
