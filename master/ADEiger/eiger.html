@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADEiger &#8212; areaDetector 3-10-11-g48f559c documentation</title>
+    <title>ADEiger &#8212; areaDetector 3-10-12-g26765ad documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -894,8 +894,9 @@ The resulting frame rate will be 1/AcquirePeriod.</td>
 </tr>
 <tr class="row-odd"><td>$(P)$(R)DataType_RBV</td>
 <td>N.A</td>
-<td><p class="first">The data type of the image data. This depends both on the AcquirePeriod (frame rate) and
-the AcquireTime (exposure time).</p>
+<td><p class="first">The data type of the image data. This depends on the Eiger model, the AcquirePeriod (frame rate) and
+the AcquireTime (exposure time). At long exposure times it is UInt32, at intermediate frame rates it
+is UInt16, and at very high frame rates it is UInt8.  For example, on an Eiger2 500K:</p>
 <ul class="last simple">
 <li>AcquireTime &gt; 0.0066 ms: DataType_RBV=UInt32</li>
 <li>AcquirePeriod &lt;  .00045 (2200 frames/s): DataType_RBV=UInt8</li>
@@ -1291,8 +1292,9 @@ also be used for HDF5 files written by the FileWriter interface if FWCompression
 <td>bi</td>
 </tr>
 <tr class="row-odd"><td>detector/config/bit_depth_image</td>
-<td><p class="first">The bit depth of the image data. This depends both on the AcquirePeriod (frame rate) and
-the AcquireTime (exposure time).</p>
+<td><p class="first">The bit depth of the image data. This depends on the Eiger model, the AcquirePeriod (frame rate) and
+the AcquireTime (exposure time). At long exposure times it is 32, at intermediate frame rates it
+is 16, and at very high frame rates it is 8.  For example, on an Eiger2 500K:</p>
 <ul class="last simple">
 <li>AcquireTime &gt; 0.0066 ms: BitDepthImage_RBV=32</li>
 <li>AcquirePeriod &lt;  .00045 (2200 frames/s): BitDepthImage_RBV=8</li>
