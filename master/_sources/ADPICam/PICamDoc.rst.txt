@@ -1,4 +1,4 @@
-areaDetector PICam driver
+ADPICam
 =========================
 
 :author: john-hammonds (Argonne National Laboratory)
