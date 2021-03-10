@@ -1,6 +1,7 @@
 master/ADAndor/andorDoc.html
 master/ADAndor/st_cmd.html
 master/ADAravis/ADAravis.html
+master/ADCSimDetector/ADCSimDetectorDoc.html
 master/ADCompVision/ADCompVision.html
 master/ADCompVision/ADCompVisionManual.html
 master/ADCore/ADDriver.html
@@ -91,6 +92,10 @@ master/_images/ADAravis.png
 master/_images/ADAravis_features1.png
 master/_images/ADAravis_features2.png
 master/_images/ADBase.png
+master/_images/ADCSimDetector.png
+master/_images/ADCSimDetectorSinCosPlot.png
+master/_images/ADCSimDetectorSquareWavePlotAll.png
+master/_images/ADCSimDetectorTimeSeriesPlugin.png
 master/_images/ADEpicsShutter.png
 master/_images/ADGenICam.png
 master/_images/ADGenICam_features1.png
@@ -302,6 +307,7 @@ master/_images/threshold.png
 master/_sources/ADAndor/andorDoc.rst.txt
 master/_sources/ADAndor/st_cmd.rst.txt
 master/_sources/ADAravis/ADAravis.rst.txt
+master/_sources/ADCSimDetector/ADCSimDetectorDoc.rst.txt
 master/_sources/ADCompVision/ADCompVision.rst.txt
 master/_sources/ADCompVision/ADCompVisionManual.rst.txt
 master/_sources/ADCore/ADDriver.rst.txt
