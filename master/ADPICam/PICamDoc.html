@@ -1,0 +1,3969 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>areaDetector PICam driver &#8212; areaDetector 3-10-20-g7ac14a8 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon_t.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ADPilatus" href="../ADPilatus/pilatusDoc.html" />
+    <link rel="prev" title="ADPerkinElmer" href="../ADPerkinElmer/PerkinElmerDoc.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          areaDetector</a>
+        <span class="navbar-text navbar-version pull-left"><b>3-10</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/arch.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/asynPortDriver.html">asynPortDriver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/NDArray.html">NDArray</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#id1">NDArray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#ndarraypool">NDArrayPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#ndattribute">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#ndattributelist">NDAttributeList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#pvattribute">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#paramattribute">paramAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#functattribute">functAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDArray.html#asynndarraydriver">asynNDArrayDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../detector_drivers.html">Detector Drivers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/guidelines.html">Guidelines and rules for drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/ADDriver.html">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADAndor/andorDoc.html">ADAndor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADAravis/ADAravis.html">ADAravis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADDexela/ADDexela.html">ADDexela</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADEiger/eiger.html">ADEiger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADFastCCD/index.html">ADFastCCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADGenICam/ADGenICam.html">ADGenICam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADLambda/ADLambda.html">areaDetector Lambda driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADLightField/ADLightField.html">ADLightField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADmarCCD/marCCDDoc.html">ADmarCCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADmar345/mar345Doc.html">ADmar345</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPerkinElmer/PerkinElmerDoc.html">ADPerkinElmer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">areaDetector PICam driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPilatus/pilatusDoc.html">ADPilatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPixirad/ADPixirad.html">ADPixirad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPointGrey/PointGreyDoc.html">ADPointGrey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADProsilica/ADProsilica.html">ADProsilica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADRIXSCam/ADRIXSCam.html">ADRIXSCam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADSimDetector/simDetector.html">ADSimDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADSpinnaker/ADSpinnaker.html">ADSpinnaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADVimba/ADVimba.html">ADVimba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADURL/ADURL.html">ADURL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pvaDriver/pvaDriver.html">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../specsAnalyser/index.html">specsAnalyser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/plugins.html">areaDetector Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginDriver.html">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_guidelines.html">Guidelines and rules for plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_medm.html">Base class medm screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/common_plugins.html">commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/plugin_performance.html">Performance example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginAttrPlot.html">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginAttribute.html">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginCircularBuff.html">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginCodec.html">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginColorConvert.html">NDPluginColorConvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginFFT.html">NDPluginFFT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginFile.html">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginGather.html">NDPluginGather</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginOverlay.html">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginProcess.html">NDPluginProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginPva.html">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginROI.html">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginROIStat.html">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginScatter.html">NDPluginScatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginStats.html">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginStdArrays.html">NDPluginStdArrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginTimeSeries.html">NDPluginTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginTransform.html">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/NDPluginPos.html">NDPosPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore/ffmpegServer.html">ffmpegServer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../additional_plugins.html">Additional plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCompVision/ADCompVision.html">ADCompVision Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADPluginBar/ADPluginBar.html">ADPluginBar Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore/medm.html">MEDM screens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADViewers/ad_viewers.html">areaDetector Viewers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-viewers">ImageJ Viewers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-controller-epics-ad-controller-java">ImageJ Controller (EPICS_AD_Controller.java)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#imagej-gaussian-profiler-gaussianprofiler-java">ImageJ Gaussian Profiler (GaussianProfiler.java)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#python-viewer">Python Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#idl-viewer">IDL Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#feature-comparison">Feature comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADViewers/ad_viewers.html#performance-comparison">Performance comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../acknowledgements.html">Acknowledgements and licenses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../install_guide.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-and-building-from-source-code">Installing and Building from Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#epics-products-required-for-building-areadetector">EPICS Products Required for Building areaDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#external-products-required-for-building-areadetector">External Products Required for Building areaDetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#tiff-jpeg-xml2-and-z">TIFF, JPEG, XML2, and Z</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#hdf5-szip-and-graphics-magick">HDF5, SZIP, and GRAPHICS_MAGICK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#downloading-and-installing-areadetector-source-code">Downloading and Installing areaDetector Source Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#release-and-config-files">RELEASE* and CONFIG* files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-libs-local">Edit RELEASE_LIBS.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-prods-local">Edit RELEASE_PRODS.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#optionally-create-or-edit-area-detector-release-epics-host-arch-local">Optionally create or edit $(AREA_DETECTOR)/../RELEASE.$(EPICS_HOST_ARCH).local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-config-site-local-and-optionally-config-site-local-epics-host-arch">Edit CONFIG_SITE.local and optionally CONFIG_SITE.local.$(EPICS_HOST_ARCH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edit-release-local">Edit RELEASE.local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#make">make</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#example-files-in-adcore-iocboot">Example files in ADCore/iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#run-simdetector">Run SimDetector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#installing-pre-built-binary-versions-of-areadetector">Installing Pre-Built Binary Versions of areaDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#display-managers">Display Managers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#medm">MEDM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#edm">EDM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#css">CSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install_guide.html#caqtdm">caQtDM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#running-the-ioc-application">Running the IOC Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install_guide.html#image-viewers">Image Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../release.html">Top-level Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release.html#versions">Versions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-10-september-20-2020">R3-10 (September 20, 2020)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-9-february-24-2020">R3-9 (February 24, 2020)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-7-august-9-2019">R3-7 (August 9, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-6-may-29-2019">R3-6 (May 29, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-5-april-12-2019">R3-5 (April 12, 2019)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-4-december-3-2018">R3-4 (December 3, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-2-july-9-2018">R3-3-2 (July 9, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-1-july-1-2018">R3-3-1 (July 1, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-3-june-27-2018">R3-3 (June 27, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-2-january-28-2018">R3-2 (January 28, 2018)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-1-july-3-2017">R3-1 (July 3, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r3-0-may-5-2017">R3-0 (May 5, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-6-february-22-2017">R2-6 (February 22, 2017)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-5-october-28-2016">R2-5 (October 28, 2016)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-4-september-18-2015">R2-4 (September 18, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-3-july-24-2015">R2-3 (July 24, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-2-march-23-2015">R2-2 (March 23, 2015)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r2-0-april-4-2014">R2-0 (April 4, 2014)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release.html#r1-9-1-and-earlier">R1-9-1 and earlier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ADCore_release.html">ADCore Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-11-september-xxx-2020"><strong>R3-11 (September XXX, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf">NDFileHDF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-10-september-20-2020"><strong>R3-10 (September 20, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#many-files">Many files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver">ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id1">NDFileHDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilemagick">NDFileMagick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincircularbuff">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpva">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#docs-adcore-ndfilehdf5-rst-xml-schema-hdf5">docs/ADCore/NDFileHDF5.rst, XML_schema/hdf5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndstats-adl">NDStats.adl</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-9-february-24-2020"><strong>R3-9 (February 24, 2020)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ccdmultitrack">CCDMultiTrack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id2">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf5">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstdarrays">NDPluginStdArrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilenetcdf">NDFileNetCDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#scanrate-macro">SCANRATE macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#docs">docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocboot-example-commonplugins-cmd">iocBoot/EXAMPLE_commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#database-files-adbase-template-ndpluginbase-template-and-adprefixes-template">Database files ADBase.template, NDPluginBase.template, and ADPrefixes.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#opi-files">OPI files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-8-october-20-2019"><strong>R3-8 (October 20, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#bit-integer-support">64-bit integer support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-addriver">asynNDArrayDriver, ADDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#makefiles">Makefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#myattributefunctions-cpp">myAttributeFunctions.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adtop-adl-ui-opi-edl">ADTop.[adl, .ui, .opi, .edl]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-7-august-8-2019"><strong>R3-7 (August 8, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-addriver-ndplugindriver">asynNDArrayDriver, ADDriver, NDPluginDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-6-may-29-2019"><strong>R3-6 (May 29, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id3">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfiletiff">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id4">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincolorconvert">NDPluginColorConvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#commondrivermakefile">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#example-commonplugins-cmd-example-commonplugin-settings-req">EXAMPLE_commonPlugins.cmd, EXAMPLE_commonPlugin_settings.req</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-5-april-12-2019"><strong>R3-5 (April 12, 2019)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver-asynndarraydriver">ADDriver, asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray">NDArray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugincodec">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginattribute">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id5">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id6">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndfilehdf5-template">NDFileHDF5.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndplugindriver-ndarraybase-template-ndpluginbasefull-adl">asynNDArrayDriver, NDPluginDriver, NDArrayBase.template, NDPluginBaseFull.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginbase-template">NDPluginBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugintests">pluginTests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-4-december-3-2018"><strong>R3-4 (December 3, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adsrc-asynndarraydriver-h-asynndarraydriver-cpp">ADSrc/asynNDArrayDriver.h, asynNDArrayDriver.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id7">NDPluginCodec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver-ndpluginpva-ndpluginstdarrays">NDPluginDriver, NDPluginPva, NDPluginStdArrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id8">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id9">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id10">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id11">OPI files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#example-commonplugins-cmd">EXAMPLE_commonPlugins.cmd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-2-july-9-2018"><strong>R3-3-2 (July 9, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-commondrivermakefile">ADApp/commonDriverMakefile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-1-july-1-2018"><strong>R3-3-1 (July 1, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id12">ADApp/commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-adsrc">ADApp/ADSrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-adsrc-makefile-adapp-pluginsrc-makefile-adapp-plugintests-makefile">ADApp/ADSrc/Makefile, ADApp/pluginSrc/Makefile, ADApp/pluginTests/Makefile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-3-june-27-2018"><strong>R3-3 (June 27, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraypool-design-changes">NDArrayPool design changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#queued-array-counting-and-waiting-for-plugins-to-complete">Queued array counting and waiting for plugins to complete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-ndarraypool">NDArray, NDArrayPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id13">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ntndarrayconverter-cpp">ntndArrayConverter.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginfile">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id14">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginprocess">NDPluginProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id15">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-db">ADApp/Db/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-op-adl">ADApp/op/adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-op-edl-autoconvert">ADApp/op/edl/autoconvert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp-plugintests">ADApp/pluginTests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-2-january-28-2018"><strong>R3-2 (January 28, 2018)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id16">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id17">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id18">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginoverlay">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver">asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#operator-displays-medm-edm-caqtdm-css-boy">Operator displays (medm, edm, caQtDM, CSS-BOY)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id19">commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id20">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginattrplot">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginroistat">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ntndarrayconvert-cpp">ntndArrayConvert.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndscatter-template">NDScatter.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugintests-makefile">pluginTests/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#xml-schema-ndattributes-xsd">XML_schema/NDAttributes.xsd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#epics-v4-pvaccess">EPICS V4 (pvAccess)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-1-july-3-2017"><strong>R3-1 (July 3, 2017)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#graphicsmagick">GraphicsMagick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pluginsrc-makefile-plugintests-makefile">pluginSrc/Makefile, pluginTests/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id21">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adtop-adl">ADTop.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id22">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id23">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-h">asynNDArrayDriver.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r3-0-may-5-2017"><strong>R3-0 (May 5, 2017)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#incompatible-changes">Incompatible changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#multiple-threads-in-single-plugins-ndplugindriver-ndpluginbase-template-ndpluginbase-adl-many-plugins">Multiple threads in single plugins (NDPluginDriver, NDPluginBase.template, NDPluginBase.adl, many plugins)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginscatter">NDPluginScatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugingather">NDPluginGather</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id24">NDPluginAttrPlot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndfilenexus">asynNDArrayDriver, NDFileNexus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pvattribute">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id25">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugin-internals">Plugin internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#commonlibrarymakefile-commondrivermakefile">commonLibraryMakefile, commonDriverMakefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndoverlayn-template">NDOverlayN.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#viewers">Viewers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-6-february-19-2017"><strong>R2-6 (February 19, 2017)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugindriver-ndpluginbase-template-ndpluginbase-adl">NDPluginDriver, NDPluginBase.template, NDPluginBase.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraybase-template">NDArrayBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginsupport-dbd">NDPluginSupport.dbd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginroi">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id26">pluginTests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugintransform">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id27">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id28">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginpos">NDPluginPos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id29">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id30">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id31">NDFileTIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndattribute">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#paramattribute">paramAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id32">PVAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#asynndarraydriver-ndarraybase-template-ndpluginbase-adl-adsetup-adl-all-plugin-adl-files">asynNDArrayDriver, NDArrayBase.template, NDPluginBase.adl, ADSetup.adl, all plugin adl files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#addriver-adbase-template-adsetup-adl">ADDriver, ADBase.template, ADSetup.adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#pvadriver">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-cpp">NDArray.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id33">iocBoot/EXAMPLE_commonPlugins.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#viewers-imagej">Viewers/ImageJ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-5-october-28-2016"><strong>R2-5 (October 28, 2016)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adsupport">ADSupport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id34">NDPluginPva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id35">pvaDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id36">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndposplugin">NDPosPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id37">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndplugintimeseries">NDPluginTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginfft">NDPluginFFT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndpluginstats-and-ndpluginroistat">NDPluginStats and NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id39">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id40">asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarraybase-template-ndplugindriver-cpp">NDArrayBase.template, NDPluginDriver.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id41">NDPluginBase.template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id42">ADApp/op/adl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#nexussrc-makefile">nexusSrc/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocboot">iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#imagej-epics-adviewer">ImageJ EPICS_ADViewer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-4-september-21-2015"><strong>R2-4 (September 21, 2015)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#removed-simdetector-and-iocs-directory">Removed simDetector and iocs directory.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id43">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndroistat-adl-edl-ui-opi">NDRoiStat[.adl, .edl, ui, .opi]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id44">ADApp/pluginTests/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#xml-schema">XML schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id45">iocBoot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#adapp">ADApp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-3-july-23-2015"><strong>R2-3 (July 23, 2015)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#deviocstats-and-alive-modules">devIocStats and alive modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id46">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id47">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id48">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id49">commonDriverMakefile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-2-march-23-2015"><strong>R2-2 (March 23, 2015)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#compatibility">Compatibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id50">NDPluginROIStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id51">NDPluginCircularBuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id52">NDPluginAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id53">NDPluginStats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id54">NDPluginROI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id55">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id56">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id57">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#version-information">Version information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#plugins-general">Plugins general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#netcdfsupport">netCDFSupport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndattribute-class">NDAttribute class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#template-files">Template files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#imagej-viewer">ImageJ Viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#simdetector-driver">simDetector driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#iocs-simdetectornoioc">iocs/simDetectorNoIOC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id58">Makefiles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-1-october-17-2014"><strong>R2-1 (October 17, 2014)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id59">NDPluginFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id60">NDFileHDF5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id61">NDFileTiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id62">NDPluginOverlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id63">NDPluginTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r2-0-april-4-2014"><strong>R2-0 (April 4, 2014)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#ndarray-and-asynndarraydriver">NDArray and asynNDArrayDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id64">NDAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id65">NDPluginDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id66">NDPluginOverlay.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id67">NDPluginROI.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id68">NDPluginStats.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id69">NDFileNetCDF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id70">NDFileTIFF.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ADCore_release.html#id71">NDPluginAttribute.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ADCore_release.html#r1-9-1-and-earlier"><strong>R1-9-1 and earlier</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ADSupport_release.html">ADSupport Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-9-august-8-2019"><strong>R1-9 (August 8, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-8-may-24-2019"><strong>R1-8 (May 24, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-7-april-12-2019"><strong>R1-7 (April 12, 2019)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-6-december-3-2018"><strong>R1-6 (December 3, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-5-november-12-2018"><strong>R1-5 (November 12, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-4-january-27-2018"><strong>R1-4 (January 27, 2018)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-3-july-3-2017"><strong>R1-3 (July 3, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-2-may-5-2017"><strong>R1-2 (May 5, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-1-february-19-2017"><strong>R1-1 (February 19, 2017)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ADSupport_release.html#r1-0-october-28-2016"><strong>R1-0 (October 28, 2016)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen.html">Source Code Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../detectors.html">Supported Detectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#commuinity-supported-detectors">Commuinity Supported Detectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../detectors.html#areadetector-camera-drivers-supplied-by-3rd-parties">areaDetector camera drivers supplied by 3rd parties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../legacy_versions.html">Legacy Versions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#required-modules">Required Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_versions.html#installation-and-building">Installation and Building</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">areaDetector PICam driver</a><ul>
+<li><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#implementation-of-standard-driver-parameters">Implementation of standard driver parameters</a></li>
+<li><a class="reference internal" href="#picam-specific-parameters">PICam specific parameters</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#screenshots">Screenshots</a><ul>
+<li><a class="reference internal" href="#picambase-adl">PICAMBase.adl</a></li>
+<li><a class="reference internal" href="#picam-adl">PICAM.adl</a></li>
+<li><a class="reference internal" href="#parameterrelevance-adl">ParameterRelevance.adl</a></li>
+<li><a class="reference internal" href="#sensorcleaning-adl">SensorCleaning.adl</a></li>
+<li><a class="reference internal" href="#sensorinformation-adl">SensorInformation.adl</a></li>
+<li><a class="reference internal" href="#sensorlayout-adl">SensorLayout.adl</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../ADPerkinElmer/PerkinElmerDoc.html" title="Previous Chapter: ADPerkinElmer"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADPerkinElmer</span>
+    </a>
+  </li>
+  <li>
+    <a href="../ADPilatus/pilatusDoc.html" title="Next Chapter: ADPilatus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ADPilatus &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/ADPICam/PICamDoc.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="areadetector-picam-driver">
+<h1><a class="toc-backref" href="#id1">areaDetector PICam driver</a><a class="headerlink" href="#areadetector-picam-driver" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">john-hammonds (Argonne National Laboratory)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="table-of-contents">
+<h2><a class="toc-backref" href="#id2">Table of Contents</a><a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#areadetector-picam-driver" id="id1">areaDetector PICam driver</a><ul>
+<li><a class="reference internal" href="#table-of-contents" id="id2">Table of Contents</a></li>
+<li><a class="reference internal" href="#introduction" id="id3">Introduction</a></li>
+<li><a class="reference internal" href="#implementation-of-standard-driver-parameters" id="id4">Implementation of standard driver parameters</a></li>
+<li><a class="reference internal" href="#picam-specific-parameters" id="id5">PICam specific parameters</a></li>
+<li><a class="reference internal" href="#configuration" id="id6">Configuration</a></li>
+<li><a class="reference internal" href="#screenshots" id="id7">Screenshots</a><ul>
+<li><a class="reference internal" href="#picambase-adl" id="id8">PICAMBase.adl</a></li>
+<li><a class="reference internal" href="#picam-adl" id="id9">PICAM.adl</a></li>
+<li><a class="reference internal" href="#parameterrelevance-adl" id="id10">ParameterRelevance.adl</a></li>
+<li><a class="reference internal" href="#sensorcleaning-adl" id="id11">SensorCleaning.adl</a></li>
+<li><a class="reference internal" href="#sensorinformation-adl" id="id12">SensorInformation.adl</a></li>
+<li><a class="reference internal" href="#sensorlayout-adl" id="id13">SensorLayout.adl</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This is an EPICS areaDetector driver for Princeton Instruments (PI)
+detectors using the PICAM driver library from PI. The PICAM driver
+supports various models of cameras. Supported families of detectors
+include:</p>
+<ul class="simple">
+<li>PI-Max3</li>
+<li>PI-MAX4, PI-MAX4:RF, PI-MAX4-EM</li>
+<li>PIoNIR/NIRvana</li>
+<li>PIXIS, PIXIS-XB, PIXIS-XF, PIXIS-XO</li>
+<li>ProEM</li>
+<li>ProEM+</li>
+<li>PyLoN-IR</li>
+<li>QuadRO</li>
+</ul>
+<p>PICAM version 2.8.1.1408 was used during development of this driver.
+Most of the initial development was done using a QuadRO: 4320 camera or
+using the PIXIS-100F demo (soft) camera. According to the PICAM Users
+Guide, the PICAM driver library is supported on 64 bit versions of
+Windows Vista, Windows 7 and Windows 8, as well as RedHat Enterprise
+Linux Version 6.4. The areaDetector Driver was tested only on Windows 7
+(64-bit).</p>
+</div>
+<div class="section" id="implementation-of-standard-driver-parameters">
+<h2><a class="toc-backref" href="#id4">Implementation of standard driver parameters</a><a class="headerlink" href="#implementation-of-standard-driver-parameters" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered table-striped table-hover docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3"><strong>Implementation of Parameters in asynNDArrayDriver.h and ADDriver.h, and EPICS Record
+Definitions in ADBase.template and NDFile.template</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parameter index variable</td>
+<td>EPICS record name</td>
+<td>Description</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="picam-specific-parameters">
+<h2><a class="toc-backref" href="#id5">PICam specific parameters</a><a class="headerlink" href="#picam-specific-parameters" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered table-striped table-hover docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="7"><strong>Parameter Definitions in ADPICam.cpp and EPICS Record Definitions in PICam.template</strong></th>
+</tr>
+<tr class="row-even"><th class="head">Parameter index variable</th>
+<th class="head">asyn interface</th>
+<th class="head">Access</th>
+<th class="head">Description</th>
+<th class="head">drvInfo string</th>
+<th class="head">EPICS record name</th>
+<th class="head">EPICS record type</th>
+</tr>
+<tr class="row-odd"><th class="head" colspan="7"><strong>Driver Parameters</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>PICAM_VersionNumber</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_VERSION_NUMBER</td>
+<td colspan="2">$(P)$(R)VersionNumber, - stringin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AvailableCameras</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_AVAILABLE_CAMERAS</td>
+<td>$(P)$(R)AvailableCameras, $(P)$(R)AvailableCameras_RBV</td>
+<td><p class="first">mbbo</p>
+<p class="last">mbbi</p>
+</td>
+</tr>
+<tr class="row-even"><td>PICAM_CameraInterface</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CAMERA_INTERFACE</td>
+<td colspan="2">$(P)$(R)CameraInterface, - stringin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorName</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_NAME</td>
+<td colspan="2">$(P)$(R)SensorName, - stringin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SerialNumber</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SERIAL_NUMBER</td>
+<td colspan="2">$(P)$(R)CamSerialNumber, - stringin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FirmwareRevision</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FIRMWARE_REVISION</td>
+<td colspan="2">$(P)$(R)FirmwareRevision, - stringin</td>
+</tr>
+<tr class="row-even"><td>PICAM_UnavailableCameras</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_UNAVAILABLE_CAMERAS</td>
+<td>$(P)$(R)UnavailableCameras, $(P)$(R)UnavailableCameras_RBV</td>
+<td><p class="first">mbbo</p>
+<p class="last">mbbi</p>
+</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CameraInterfaceUnavailable</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CAMERA_INTERFACE_UNAVAILABLE</td>
+<td colspan="2">$(P)$(R)CameraInterfaceUnavailable, - stringin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorNameUnavailable</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_NAME_UNAVAILABLE</td>
+<td colspan="2">$(P)$(R)SensorNameUnavailable, - stringin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SerialNumberUnavailable</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SERIAL_NUMBER_UNAVAILABLE</td>
+<td colspan="2">$(P)$(R)CamSerialNumUnavailable, - stringin</td>
+</tr>
+<tr class="row-even"><td>PICAM_FirmwareRevisionUnavailable</td>
+<td>asynOctet</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FIRMWARE_REVISION_UNAVAILABLE</td>
+<td colspan="2">$(P)$(R)FirmwareRevisionUnavailable, - stringin</td>
+</tr>
+<tr class="row-odd"><td colspan="7"><strong>Camera Parameters</strong></td>
+</tr>
+<tr class="row-even"><td colspan="7"><strong>Shutter Timing</strong></td>
+</tr>
+<tr class="row-odd"><td colspan="7"><strong>Intensifier</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_BracketGating</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_BRACKET_GATING</td>
+<td>$(P)$(R)BracketGating, $(P)$(R)BracketGating_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CustomModulationSequence</td>
+<td>TBD</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>PICAM_CUSTOM_MODULATION_SEQUENCE</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>PICAM_DifEndingGate</td>
+<td>TBD</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>PICAM_DIF_ENDING_GATE</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_DifStartingGate</td>
+<td>TBD</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_DIF_STARTING_GATE</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>PICAM_EMIccdGain</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_EMI_CCD_GAIN</td>
+<td>$(P)$(R)EMIccdGain, $(P)$(R)EMIccdGain_RBV</td>
+<td><p class="first">longout</p>
+<p class="last">longin</p>
+</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EMIccdGainControlMode</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_EMI_CCD_GAIN_CONTROL_MODE</td>
+<td>$(P)$(R)EMIccdGainControlMode, $(P)$(R)EMIccdGainControlMode_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableIntensifier</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_INTENSIFIER</td>
+<td>$(P)$(R)ENABLE_INTENSIFIER, $(P)$(R)ENABLE_INTENSIFIER_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableModulation</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION</td>
+<td>$(P)$(R)EnableModulation, $(P)$(R)EnableModulation_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_GatingMode</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_GATING_MODE</td>
+<td>$(P)$(R)GatingMode, $(P)$(R)GatingMode_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_GatingSpeed</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATING_SPEED</td>
+<td>$(P)$(R)GatingSpeed</td>
+<td>mbbo</td>
+</tr>
+<tr class="row-even"><td>PICAM_IntensifierDiameter</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_DIAMETER</td>
+<td>$(P)$(R)IntensifierDiameter</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_IntensifierGain</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_GAIN</td>
+<td>$(P)$(R)IntensiferGain</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_IntensifierOptions</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_OPTIONS</td>
+<td>$(P)$(R)IntensifierOptions</td>
+<td>mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_IntensifierStatus</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_STATUS</td>
+<td>$(P)$(R)IntensifierStatus</td>
+<td>mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationDuration</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_DURATION</td>
+<td>$(P)$(R)ModulationDuration, $(P)$(R)ModulationDuration_RBV</td>
+<td>ai, ao</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationFrequency</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_FREQUENCY</td>
+<td>$(P)$(R)ModulationFrequency, $(P)$(R)ModulationFrequency_RBV</td>
+<td>ai, ao</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhosphorDecayDelay</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_PHOSPHOR_DECAY_DELAY</td>
+<td>$(P)$(R)PhosphorDecayDelay</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhosphorDecayDelayResolution</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_PhosphorDecayDelayResolution</td>
+<td>$(P)$(R)PhosphorDecayDelayResolution, $(P)$(R)PhosphorDecayDelayResolution_RBV</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhosphorType</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PhosphorType</td>
+<td>$(P)$(R)PhosphorType</td>
+<td>mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhotocathodeSensitivity</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTOCATHODE_SENSITIVITY</td>
+<td>$(P)$(R)PhotocathodeSensitivity</td>
+<td>mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_RepetitiveGate</td>
+<td>TBD Pulse</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_REPETITIVE_GATE</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_RepetitiveModulation</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_REPETITVE_MODULATION</td>
+<td>$(P)$(R)RepetitiveModulation, $(P)$(R)RepetitiveModulation_RBV</td>
+<td>ai, ao</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialStartingModulationPhase</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SEQUENTIAL_STARTING_MODULATION_PHASE</td>
+<td>$(P)$(R)SequentialStartingModulationPhase, $(P)$(R)SequentialStartingModulationPhase_RBV</td>
+<td>ai, ao</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialEndingModulationPhase</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SEQUENTIAL_ENDING_MODULATION_PHASE</td>
+<td>$(P)$(R)SequentialEndingModulationPhase, $(P)$(R)SequentialEndingModulationPhase_RBV</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialEndingGate</td>
+<td>TBD Pulse</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SEQUENTIAL_ENDING_GATE</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialGateStepCount</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SEQUENTIAL_GATE_STEP_COUNT</td>
+<td>$(P)$(R)SequentialGateStepCount, $(P)$(R)SequentialGateStepCount_RBV</td>
+<td>longout
+longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialGateStepIterations</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SEQUENTIAL_GATE_STEP_ITERATIONS</td>
+<td>$(P)$(R)SequentialGateStepIterations, $(P)$(R)SequentialGateStepIterations</td>
+<td>longout
+longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialStartingGate</td>
+<td>TBD Pulse</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SEQUENTIAL_STARTING_GATE</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td colspan="7"><strong>Analog To Digital Conversion</strong></td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcAnalogGain</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ADC_ANALOG_GAIN</td>
+<td>$(P)$(R)AdcAnalogGain, $(P)$(R)AdcAnalogGain_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AdcBitDepth</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ADC_BIT_DEPTH</td>
+<td>$(P)$(R)AdcBitDepth, $(P)$(R)AdcBitDepth_RBV</td>
+<td>mbbo
+mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcEMGain</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ADC_EM_GAIN</td>
+<td>$(P)$(R)AdcEMGain, $(P)$(R)AdcEMGain_RBV</td>
+<td>longin
+longout</td>
+</tr>
+<tr class="row-even"><td>PICAM_AdcQuality</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ADC_QUALITY</td>
+<td><p class="first">$(P)$(R)AdcQuality</p>
+<p class="last">$(P)$(R)AdcQuality_RBV</p>
+</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcSpeed</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ADC_SPEED</td>
+<td>$(P)$(R)AdcSpeed, $(P)$(R)AdcSpeed_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CorrrectPixelBias</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CORRECT_PIXEL_BIAS</td>
+<td>$(P)$(R)CorrectPixelBias, $(P)$(R)CorrectPixelBias_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>Hardware I/O</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_AuxOutput</td>
+<td>TBD Pulse</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_AUX_OUTPUT</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableModulationOutputSignal</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUTPUT_SIGNAL</td>
+<td>$(P)$(R)EnableModulationOutputSignal, $(P)$(R)EnableModulationOutputSignal_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationOutputSignalFreq</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_OUTPUT_SIGNAL_FREQUENCY</td>
+<td>$(P)$(R)ModulationOutputSignalFreq, $(P)$(R)ModulationOutputSignalFreq</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationOutputSignalAmpl</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_OUTPUT_SIGNAL_AMPLITUDE</td>
+<td>$(P)$(R)ModulationOutputSignalAmpl, $(P)$(R)ModulationOutputSignalAmpl_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableSyncMaster</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_SYNC_MASTER</td>
+<td>$(P)$(R)EnableSyncMaster, $(P)$(R)EnableSyncMaster_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_InvertOutputSignal</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_INVERT_OUTPUT_SIGNAL</td>
+<td>$(P)$(R)InvertOutputSignal, $(P)$(R)InvertOutputSignal_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SyncMaster2Delay</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SYNC_MASTER2_DELAY</td>
+<td>$(P)$(R)SyncMaster2Delay, $(P)$(R)SyncMaster2Delay_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerCoupling</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_COUPLING</td>
+<td>$(P)$(R)TriggerCoupling, $(P)$(R)TriggerCoupling_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerDetermination</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_DETERMINATION</td>
+<td>$(P)$(R)TriggerDetermination, $(P)$(R)TriggerDetermination_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerFrequency</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_FREQUENCY</td>
+<td>$(P)$(R)TriggerFrequency, $(P)$(R)TriggerFrequency_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerResponse</td>
+<td>Mapped to
+ADTriggerMode
+from ADDriver</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>$(P)$(R)TriggerMode, $(P)$(R)TriggerMode_RBV
+from ADDriver</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerSource</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_SOURCE</td>
+<td>$(P)$(R)TriggerSource, $(P)$(R)TriggerSource_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerTermination</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_TERMINATION</td>
+<td>$(P)$(R)TriggerTermination, $(P)$(R)TriggerTermination_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerThreshold</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_THRESHOLD</td>
+<td>$(P)$(R)TriggerThreshold, $(P)$(R)TriggerThreshold_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>ReadoutControl</strong></td>
+</tr>
+<tr class="row-odd"><td>PICAM_Accumulations</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACCUMULATIONS</td>
+<td>$(P)$(R)Accumulations, $(P)$(R)Accumulations_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableNondestructiveReadout</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_NONDESTRUCTIVE_READOUT</td>
+<td>$(P)$(R)EnableNondestructiveReadout, $(P)$(R)EnableNondestructiveReadout_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_KineticsWindowHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_KINETICS_WINDOW_HEIGHT</td>
+<td>$(P)$(R)KineticsWindowHeight, $(P)$(R)KineticsWindowHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_NondestructiveReadoutPeriod</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_NONDESTRUCTIVE_READOUT_PERIOD</td>
+<td>$(P)$(R)NondestructiveReadoutPeriod, $(P)$(R)NondestructiveReadoutPeriod_RBV</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutControlMode</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_CONTROL_MODE</td>
+<td>$(P)$(R)ReadoutControlMode, $(P)$(R)ReadoutControlMode_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutOrientation</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_ORIENTATION</td>
+<td>$(P)$(R)READOUT_ORIENTATION</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutPortCount</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_PORT_COUNT</td>
+<td>$(P)$(R)ReadoutPortCount, $(P)$(R)ReadoutPortCount_RBV</td>
+<td>mbbo,mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutTimeCalculation</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_TIME_CALCULATION</td>
+<td>$(P)$(R)ReadoutTimeCalc</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_VerticalShiftRate</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_VERTICAL_SHIFT_RATE</td>
+<td>$(P)$(R)VerticalShiftRate, $(P)$(R)VerticalShiftRate_RBV</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>Data Acquisition</strong></td>
+</tr>
+<tr class="row-odd"><td>PICAM_DisableDataFormatting</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_DISABLE_DATA_FORMATTING</td>
+<td>$(P)$(R)DisableDataFormatting, $(P)$(R)DisableDataFormatting_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ExactReadoutCountMaximum</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EXACT_READOUT_COUNT_MAXIMUM</td>
+<td>$(P)$(R)ExactReadoutCountMaximum</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FrameRateCalc</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_RATE_CALC</td>
+<td>$(P)$(R)FrameRateCalc</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>PICAM_FrameSize</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_SIZE</td>
+<td>$(P)$(R)FrameSize</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FramesPerReadout</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAMES_PER_READOUT</td>
+<td>$(P)$(R)FramesPerReadout</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_FrameStride</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_STRIDE</td>
+<td>$(P)$(R)FrameStride</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FrameTrackingBitDepth</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_TRACKING_BIT_DEPTH</td>
+<td>$(P)$(R)FrameTrackingBitDepth, $(P)$(R)FrameTrackingBitDepth_RBV</td>
+<td>mbbi, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_GateTracking</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_GATE_TRACKING</td>
+<td>$(P)$(R)GateTracking, $(P)$(R)GateTracking_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_GateTrackingBitDepth</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_GATE_TRACKING_BIT_DEPTH</td>
+<td>$(P)$(R)GateTrackingBitDepth, $(P)$(R)GateTrackingBitDepth_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationTracking</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_TRACKING</td>
+<td>$(P)$(R)ModulationTracking, $(P)$(R)ModulationTracking_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationTrackingBitDepth</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_TRACKING_BIT_DEPTH</td>
+<td>$(P)$(R)ModulationTrackingBitDepth, $(P)$(R)ModulationTrackingBitDepth_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_NormalizeOrientation</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_NORMALIZE_ORIENTATION</td>
+<td>$(P)$(R)NormalizeOrientation</td>
+<td>bo
+bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_OnlineReadoutRateCalc</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ONLINE_READOUT_RATE_CALC</td>
+<td>$(P)$(R)OnlineReadoutRateCalc</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>PICAM_Orientation</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ORIENTATION</td>
+<td>$(P)$(R)Orientation</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhotonDetectionMode</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_PHOTON_DETECTION_MODE</td>
+<td>$(P)$(R)PhotonDetectionMode</td>
+<td>mbbo
+mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhotonDetectionThreshold</td>
+<td>asynFloat64</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_PHOTON_DETECTION_THRESHOLD</td>
+<td>$(P)$(R)PhotonDetectionThreshold, $(P)$(R)PhotonDetectionThreshold</td>
+<td>ao, ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelBitDepth</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_BIT_DEPTH</td>
+<td>$(P)$(R)PixelBitDepth</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelFormat</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_FORMAT</td>
+<td>$(P)$(R)PixelFormat, $(P)$(R)PixelFormat_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutCount</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_COUNT</td>
+<td>$(P)$(R)ReadoutCount, $(P)$(R)ReadoutCount_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutRateCalc</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_RATE_CALC</td>
+<td>$(P)$(R)ReadoutRateCalc</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutStride</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_STRIDE</td>
+<td>$(P)$(R)ReadoutStride</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>ROIs</td>
+<td>Handled by ADDriver params &amp; passed into the Rois parameter</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TimeStampBitDepth</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMP_BIT_DEPTH</td>
+<td>$(P)$(R)TimeStampBitDepth, $(P)$(R)TimeStampBitDepth_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TimeStampResolution</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMP_RESOLUTION</td>
+<td>$(P)$(R)TimeStampResolution, $(P)$(R)TimeStampResolution_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TimeStamps</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMPS</td>
+<td>$(P)$(R)TimeStamps, $(P)$(R)TimeStamps_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TrackFrames</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRACK_FRAMES</td>
+<td>$(P)$(R)TrackFrames, $(P)$(R)TrackFrames_RBV</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>Sensor Information</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_CcdCharacteristics</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CCD_CHARACTERISTICS</td>
+<td>$(P)$(R)CcdCharacteristics</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelGapHeight</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_GAP_HEIGHT</td>
+<td>$(P)$(R)PixelGapHeight</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelGapWidth</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_GAP_WIDTH</td>
+<td>$(P)$(R)PixelGapWidth</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelHeight</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_HEIGHT</td>
+<td>$(P)$(R)PixelWidth</td>
+<td>ai</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelWidth</td>
+<td>asynFloat64</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_WIDTH</td>
+<td>$(P)$(R)PixelWidth</td>
+<td>ai</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveBottomMargin</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_BOTTOM_MARGIN</td>
+<td>$(P)$(R)SensorActiveBottomMargin</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveHeight</td>
+<td>Mapped to ADDriver ADMaxSizeY</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveLeftMargin</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_LEFT_MARGIN</td>
+<td>$(P)$(R)SensorActiveLeftMargin</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveRightMargin</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_RIGHT_MARGIN</td>
+<td>$(P)$(R)SensorActiveRightMargin</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveTopMargin</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_TOP_MARGIN</td>
+<td>$(P)$(R)SensorActiveTopMargin</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveWidth</td>
+<td>Mapped to ADDriver ADMaxSizeY</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorMaskedBottomMargin</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASKED_BOTTOM_MARGIN</td>
+<td>$(P)$(R)SensorMaskedBottomMargin</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorMaskedHeight</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASKED_HEIGHT</td>
+<td>$(P)$(R)SensorMaskedHeight</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorMaskedTopMargin</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASKED_TOP_MARGIN</td>
+<td>$(P)$(R)SensorMaskedTopMargin</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorSecondaryActiveHeight</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_SECONDARY_ACTIVE_HEIGHT</td>
+<td>$(P)$(R)SensorSecondaryActiveHeight</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorSecondaryMaskedHeight</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_SECONDARY_MASKED_HEIGHT</td>
+<td>$(P)$(R)SensorSecondaryMaskedHeight</td>
+<td>longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorType</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TYPE</td>
+<td>$(P)$(R)SensorType</td>
+<td>longin</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>Sensor Layout</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveBottomMargin</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_BOTTOM_MARGIN</td>
+<td>$(P)$(R)ActiveBottomMargin
+$(P)$(R)ActiveBottomMargin_RBV</td>
+<td>longin
+longout</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_HEIGHT</td>
+<td>$(P)$(R)ActiveHeight, $(P)$(R)ActiveHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveLeftMargin</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_LEFT_MARGIN</td>
+<td>$(P)$(R)ActiveLeftMargin, $(P)$(R)ActiveLeftMargin_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveRightMargin</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_RIGHT_MARGIN</td>
+<td>$(P)$(R)ActiveRightMargin, $(P)$(R)ActiveRightMargin_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveTopMargin</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_TOP_MARGIN</td>
+<td>$(P)$(R)ActiveTopMargin, $(P)$(R)ActiveTopMargin_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveWidth</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_WIDTH</td>
+<td>$(P)$(R)ActiveWidth, $(P)$(R)ActiveWidth_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_MaskedBottomMargin</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MASKED_BOTTOM_MARGIN</td>
+<td>$(P)$(R)MaskedBottomMargin, $(P)$(R)MaskedBottomMargin_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_MaskedHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MASKED_HEIGHT</td>
+<td>$(P)$(R)MaskedHeight, $(P)$(R)MaskedHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_MaskedTopMargin</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_MASKED_TOP_MARGIN</td>
+<td>$(P)$(R)MaskedTopMargin, $(P)$(R)MaskedTopMargin_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SecondaryActiveHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SECONDARY_ACTIVE_HEIGHT</td>
+<td>$(P)$(R)SecondaryActiveHeight, $(P)$(R)SecondaryActiveHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_SecondaryMaskedHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_SECONDARY_MASKED_HEIGHT</td>
+<td>$(P)$(R)SecondaryMaskedHeight, $(P)$(R)SecondaryMaskedHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>Sensor Cleaning</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanBeforeExposure</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_BEFORE_EXPOSURE</td>
+<td>$(P)$(R)CleanBeforeExposure, $(P)$(R)CleanBeforeExposure_RBV</td>
+<td>mbbo, mbbi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanCycleCount</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_CYCLE_COUNT</td>
+<td>$(P)$(R)CleanCycleCount, $(P)$(R)CleanCycleCount_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanCycleHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_CYCLE_HEIGHT</td>
+<td>$(P)$(R)CleanCycleHeight, $(P)$(R)CleanCycleHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanSectionFinalHeight</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SECTION_FINAL_HEIGHT</td>
+<td>$(P)$(R)CleanSectionFinalHeight, $(P)$(R)CleanSectionFinalHeight_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanSectionFinalHeightCount</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SECTION_FINAL_HEIGHT_COUNT</td>
+<td>$(P)$(R)CleanSectionFinalHeightCount, $(P)$(R)CleanSectionFinalHeightCount_RBV</td>
+<td>longout, longin</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanSerialRegister</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SERIAL_REGISTER</td>
+<td>$(P)$(R)CleanSerialRegister, $(P)$(R)CleanSerialRegister_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanUntilTrigger</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_UNTIL_TRIGGER</td>
+<td>$(P)$(R)CleanUntilTrigger
+$(P)$(R)CleanUntilTrigger_RBV</td>
+<td>bo
+bi</td>
+</tr>
+<tr class="row-odd"><td colspan="7"><strong>SensorTemperature</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_DisableCoolingFan</td>
+<td>asynInt32</td>
+<td>r/w</td>
+<td>&#160;</td>
+<td>PICAM_DISABLE_COOLING_FAN</td>
+<td>$(P)$(R)DisableCoolingFan, $(P)$(R)DisableCoolingFan_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableSensorWindowHeater</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_SENSOR_WINDOW_HEATER</td>
+<td>$(P)$(R)EnableSensorWindowHeater, $(P)$(R)EnableSensorWindowHeater_RBV</td>
+<td>bo, bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorTemperatureReading</td>
+<td>Route to ADDriver ADTemperatureActual</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorTemperatureSetPoint</td>
+<td>Route to ADDriver ADTemperature</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorTemperatureStatus</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_STATUS</td>
+<td>$(P)$(R)SensorTemperatureStatus</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td colspan="5"><strong>Parameter Exists For Detector</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_ExposureTimeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EXPOSURE_TIME_EX</td>
+<td>$(P)$(R)ExposureTime_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ShutterClosingDelayExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_CLOSING_DELAY_EX</td>
+<td>$(P)$(R)ShutterClosingDelay_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ShutterDelayResolutionExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_DELAY_RESOLUTION_EX</td>
+<td>$(P)$(R)ShutterDelayResolution_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ShutterOpeningDelayExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_OPEN_DELAY_EX</td>
+<td>$(P)$(R)ShutterOpenDelay_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ShutterTimingModeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_TIMING_MODE_EX</td>
+<td>$(P)$(R)ShutterTimingMode_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_BracketGatingExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_BRACKET_GATING_EX</td>
+<td>$(P)$(R)BracketGating_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CustomModulationSequenceExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CUSTOM_MODULATION_SEQUENCE_EX</td>
+<td>$(P)$(R)CustomModSeq_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_DifEndingGateExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DIF_END_GATE_EX</td>
+<td>$(P)$(R)DifEndGate_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_DifStartingGateExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DIF_START_GATE_EX</td>
+<td>$(P)$(R)DifStartGate_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EMIccdGainExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EMI_CCD_GAIN_EX</td>
+<td>$(P)$(R)EMIccdGain_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EMIccdGainControlModeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EMI_CCD_GAIN_CTL_MODE_EX</td>
+<td>$(P)$(R)EMIccdGainMode_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableIntensifierExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_INTENSIFIER_EX</td>
+<td>$(P)$(R)EnableIntensifier_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableModulationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_EX</td>
+<td>$(P)$(R)EnableModulation_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_GatingModeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATING_MODE_EX</td>
+<td>$(P)$(R)GatingMode_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_GatingSpeedExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATING_SPEED_EX</td>
+<td>$(P)$(R)GatingSpeed_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_IntensifierDiameterExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_DIAM_EX</td>
+<td>$(P)$(R)IntensifierDiameter_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_IntensifierGainExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_GAIN_EX</td>
+<td>$(P)$(R)IntensifierGain_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_IntensifierOptionsExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_OPTIONS_EX</td>
+<td>$(P)$(R)IntensifierOptions_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_IntensifierStatusExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_STATUS_EX</td>
+<td>$(P)$(R)IntensifierStatus_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationDurationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_DURATION_EX</td>
+<td>$(P)$(R)ModulationDuration_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationFrequencyExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_FREQUENCY_EX</td>
+<td>$(P)$(R)ModulationFrequency_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhosphorDecayDelayExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOSFOR_DECAY_DELAY_EX</td>
+<td>$(P)$(R)PhosphorDecayDelay_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhosphorDecayDelayResolutionExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOSFOR_DELAY_DECAY_RES_EX</td>
+<td>$(P)$(R)PhosphorDecayDelayResolution_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhosphorTypeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOSFOR_TYPE_EX</td>
+<td>$(P)$(R)PhosphorType_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhotocathodeSensitivityExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTOCATHODE_SENSITIVITY_EX</td>
+<td>$(P)$(R)PhotocathodeSensitivity_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_RepetitiveGateExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_REPETITIVE_GATE_EX</td>
+<td>$(P)$(R)RepetitiveGate_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_RepetitiveModulationPhaseExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_REPETITIVE_MODULATION_EX</td>
+<td>$(P)$(R)RepetitiveModulation_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialStartingModulationPhaseExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_STARTING_MODULATION_PHASE_EX</td>
+<td>$(P)$(R)SeqStartModPhase_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialEndingModulationPhaseExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_END_MODULATION_PHASE_EX</td>
+<td>$(P)$(R)SeqEndModPhase_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialEndingGateExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_END_GATE_EX</td>
+<td>$(P)$(R)SeqEndGate_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialGateStepCountExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_GATE_STEP_COUNT_EX</td>
+<td>$(P)$(R)SeqGateStepCount_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialGateStepIterationsExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_GATE_STEP_ITERATIONS_EX</td>
+<td>$(P)$(R)SeqGateStepIters_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialStartingGateExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_START_GATE_EX</td>
+<td>$(P)$(R)SeqStartGate_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcAnalogGainExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_ANALOG_GAIN_EX</td>
+<td>$(P)$(R)AdcAnalogGain_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AdcBitDepthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_BIT_DEPTH_EX</td>
+<td>$(P)$(R)AdcBitDepth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcEMGainExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_EM_GAIN_EX</td>
+<td>$(P)$(R)AdcEMGain_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AdcQualityExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_QUALITY_EX</td>
+<td>$(P)$(R)AdcQuality_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcSpeedExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_SPEED_EX</td>
+<td>$(P)$(R)AdcSpeed_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CorrectPixelBiasExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CORRECT_PIXEL_BIAS_EX</td>
+<td>$(P)$(R)CorrectPixelBias_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AuxOutputExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_AUX_OUTPUT_EX</td>
+<td>$(P)$(R)AuxOutput_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableModulationOutputSignalExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUT_SIGNAL_EX</td>
+<td>$(P)$(R)EnableModOutSig_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableModulationOutputSignalFrequencyExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUT_SIGNAL_FREQ_EX</td>
+<td>$(P)$(R)EnableModOutSigFreq_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableModulationOutputSignalAmplitudeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUT_SIGNAL_AMPL_EX</td>
+<td>$(P)$(R)EnableModOutSigAmpl_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableSyncMasterExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SYNC_MASTER_EX</td>
+<td>$(P)$(R)EnableSyncMaster_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_InvertOutputSignalExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INVERT_OUTPUT_SIGNAL_EX</td>
+<td>$(P)$(R)InvertOutSig_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_OutputSignalExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_OUTPUT_SIGNAL_EX</td>
+<td>$(P)$(R)OutputSignal_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SyncMaster2DelayExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SYNC_MASTER2_DELAY_EX</td>
+<td>$(P)$(R)SyncMaster2Delay_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerCouplingExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_COUPLING_EX</td>
+<td>$(P)$(R)TriggerCoupling_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerDeterminationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_DETERMINATION_EX</td>
+<td>$(P)$(R)TriggerDetermination_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerFrequencyExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_FREQUENCY_EX</td>
+<td>$(P)$(R)TriggerFrequency_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerResponseExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_RESPONSE_EX</td>
+<td>$(P)$(RTriggerResponse_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerSourceExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_SOURCE_EX</td>
+<td>$(P)$(R)TriggerSource_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerTerminationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_TERMINATION_EX</td>
+<td>$(P)$(R)TriggerTermination_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerThresholdExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_THRESHOLD_EX</td>
+<td>$(P)$(R)TriggerThreshold_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AccumulationsExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACCUMULATIONS_EX</td>
+<td>$(P)$(R)PICAM_ACCUMULATIONS_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableNondestructiveReadoutExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_NONDESTRUCT_READOUT_EX</td>
+<td>$(P)$(R)EnableNDReadout_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_KineticsWindowHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_KINETICS_WINDOW_HEIGHT_EX</td>
+<td>$(P)$(R)KineticsWindowHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_NondestructiveReadoutPeriodExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_NONDESTRUCT_READOUT_PERIOD_EX</td>
+<td>$(P)$(R)NDReadoutPeriod_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutControlModeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_CONTROL_MODE_EX</td>
+<td>$(P)$(R)ReadoutCtlMode_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutOrientationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUNT_ORIENTATION_EX</td>
+<td>$(P)$(R)ReadoutOrientation_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutPortCountExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_PORT_COUNT_EX</td>
+<td>$(P)$(R)ReadoutPortCount_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutTimeCalculationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_TIME_CALC_EX</td>
+<td>$(P)$(R)ReadoutTimeCalculation_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_VerticalShiftRateExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_VERTICAL_SHIFT_RATE_EX</td>
+<td>$(P)$(R)VerticalShiftRate_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_DisableDataFormattingExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DISABLE_DATA_FORMATTING_EX</td>
+<td>$(P)$(R)DisableDataFormat_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ExactReadoutCountMaximumExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EXACT_READOUT_COUNT_MAX_EX</td>
+<td>$(P)$(R)ExactRdoutCountMax_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FrameRateCalculationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_RATE_CALC_EX</td>
+<td>$(P)$(R)FrameRateCalc_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_FrameSizeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_SIZE_EX</td>
+<td>$(P)$(R)FrameSize_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FramesPerReadoutExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAMES_PER_READOUT_EX</td>
+<td>$(P)$(R)FramesPerReadout_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_FrameStrideExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_STRIDE_EX</td>
+<td>$(P)$(R)FrameStride_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FrameTrackingBitDepthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_TRK_BIT_DEPTH_EX</td>
+<td>$(P)$(R)FrameTrkBitDepth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_GateTrackingExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATE_TRACKING_EX</td>
+<td>$(P)$(R)GateTracking_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_GateTrackingBitDepthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_TRACKING_BIT_DEPTH_EX</td>
+<td>$(P)$(R)GateTrkBitDepth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationTrackingExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_TRACKING_EX</td>
+<td>$(P)$(R)ModTracking_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationTrackingBitDepthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_TRACKING_BIT_DEPTH_EX</td>
+<td>$(P)$(R)ModTrkBitDepth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_NormalizeOrientationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_NORMALIZE_ORIENTATION_EX</td>
+<td>$(P)$(R)NormalizeOrientation_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_OnlineReadoutRateCalculationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ONLINE_READOUT_RATE_CALC_EX</td>
+<td>$(P)$(R)OnlineReadoutCalc_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_OrientationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ORIENTATION_EX</td>
+<td>$(P)$(R)Orientation_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhotonDetectionModeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTON_DETECTION_MODE_EX</td>
+<td>$(P)$(R)PhotonDetectionMode_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhotonDetectionThresholdExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTON_DETECT_THRESHOLD_EX</td>
+<td>$(P)$(R)PhotonDetectionThreshold_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelBitDepthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_BIT_DEPTH_EX</td>
+<td>$(P)$(R)PixelBitDepth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelFormatExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_FORMAT_EX</td>
+<td>$(P)$(R)PixelFormat_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutCountExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_COUNT_EX</td>
+<td>$(P)$(R)ReadoutCount_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutRateCalculationExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_RATE_CALC_EX</td>
+<td>$(P)$(R)ReadoutRateCalc_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutStrideExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_STRIDE_EX</td>
+<td>$(P)$(R)ReadoutStride_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_RoisExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ROIS_EX</td>
+<td>$(P)$(R)Rois_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TimeStampBitDepthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMP_BIT_DEPTH_EX</td>
+<td>$(P)$(R)TimeStampBitDepth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TimeStampResolutionExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMP_RESOLUTION_EX</td>
+<td>$(P)$(R)TimeStampRes_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TimeStampsExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMPS_EX</td>
+<td>$(P)$(R)TimeStamps_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TrackFramesExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRACK_FRAMES_EX</td>
+<td>$(P)$(R)TrackFrames_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CcdCharacteristicsExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CCD_CHARACTERISTICS_EX</td>
+<td>$(P)$(R)CcdCharacteristics_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelGapHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_GAP_HEIGHT_EX</td>
+<td>$(P)$(R)PixelGapHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelGapWidthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_GAP_WIDTH_EX</td>
+<td>$(P)$(R)PixelGapWidth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_HEIGHT_EX</td>
+<td>$(P)$(R)PixelHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelWidthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_WIDTH_EX</td>
+<td>$(P)$(R)PixelWidth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveBottomMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_BOTTOM_MARGIN_EX</td>
+<td>$(P)$(R)SensActBottomMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_HEIGHT_EX</td>
+<td>$(P)$(R)SensActHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveLeftMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_LEFT_MARGIN_EX</td>
+<td>$(P)$(R)SensActLeftMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveRightMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_RIGHT_MARGIN_EX</td>
+<td>$(P)$(R)SensActRightMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveTopMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_TOP_MARGIN_EX</td>
+<td>$(P)$(R)SensActTopMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveWidthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_WIDTH_EX</td>
+<td>$(P)$(R)SensActWidth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorMaskedBottomMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASK_BOTTOM_MARGIN_EX</td>
+<td>$(P)$(R)SensMaskBottomMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorMaskedHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASK_HEIGHT_EX</td>
+<td>$(P)$(R)SensMaskHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorMaskedTopMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASK_TOP_MARGIN_EX</td>
+<td>$(P)$(R)SensMaskTopMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorSecondaryActiveHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_SECONDARY_ACTIVE_HEIGHT_EX</td>
+<td>$(P)$(R)SensorActiveHeight2_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorSecondaryMaskedHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_SECONDARY_MASK_HEIGHT_EX</td>
+<td>$(P)$(R)SensorMaskHeight2_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorTypeExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TYPE_EX</td>
+<td>$(P)$(R)SensorType_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveBottomMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_BOTTOM_MARGIN_EX</td>
+<td>$(P)$(R)ActiveBottomMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_HEIGHT_EX</td>
+<td>$(P)$(R)ActiveHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveLeftMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_LEFT_MARGIN_EX</td>
+<td>$(P)$(R)ActiveLeftMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveRightMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_RIGHT_MARGIN_EX</td>
+<td>$(P)$(R)ActiveRightMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveTopMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_TOP_MARGIN_EX</td>
+<td>$(P)$(R)ActiveTopMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveWidthExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_WIDTH_EX</td>
+<td>$(P)$(R)ActiveWidth_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_MaskedBottomMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MASK_BOTTOM_MARGIN_EX</td>
+<td>$(P)$(R)MaskBottomMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_MaskedHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MASK_HEIGHT_EX</td>
+<td>$(P)$(R)MaskHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_MaskedTopMarginExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MASK_TOP_MARGIN_EX</td>
+<td>$(P)$(R)MaskTopMargin_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SecondaryActiveHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SECONDARY_ACTIVE_HEIGHT_EX</td>
+<td>$(P)$(R)ActiveHeight2_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SecondaryMaskedHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SECONDARY_MASK_HEIGHT_EX</td>
+<td>$(P)$(R)MaskedHeight2_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanBeforeExposureExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_BEFORE_EXPOSURE_EX</td>
+<td>$(P)$(R)CleanBeforeExp_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanCycleCountExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_CYCLE_COUNT_EX</td>
+<td>$(P)$(R)CleanCycleCount_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanCycleHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_CYCLE_HEIGHT_EX</td>
+<td>$(P)$(R)CleanCycleHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanSectionFinalHeightExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SECTION_FINAL_HEIGHT_EX</td>
+<td>$(P)$(R)CleanSectionFinalHeight_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanSectionFinalHeightCountExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SECTION_FINAL_COUNT_EX</td>
+<td>$(P)$(R)CleanSectionFinalHeightCount_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanSerialRegisterExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SERIAL_REGISTER_EX</td>
+<td>$(P)$(R)CleanSerialRegister_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanUntilTriggerExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_UNTIL_TRIG_EX</td>
+<td>$(P)$(R)CleanUntilTrigger_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_DisableCoolingFanExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DISABLE_COOLING_FAN_EX</td>
+<td>$(P)$(R)DisableCoolingFan_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableSensorWindowHeaterExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_WINDOW_SENSOR_HEATER_EX</td>
+<td>$(P)$(R)EnableWindowHtr_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorTemperatureReadingExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_READING_EX</td>
+<td>$(P)$(R)SensTempReading_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorTemperatureSetPointExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_SETPOINT_EX</td>
+<td>$(P)$(R)SensTempSetpt_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorTemperatureStatusExists</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_STATUS_EX</td>
+<td>$(P)$(R)SensTempStatus_EX</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td colspan="7"><strong>Parameter Relevance</strong></td>
+</tr>
+<tr class="row-even"><td>PICAM_ExposureTimeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EXPOSURE_TIME_PR</td>
+<td>$(P)$(R)ExposureTime_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ShutterClosingDelayRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_CLOSING_DELAY_PR</td>
+<td>$(P)$(R)ShutterClosingDelay_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ShutterDelayResolutionRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_DELAY_RESOLUTION_PR</td>
+<td>$(P)$(R)ShutterDelayResolution_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ShutterOpeningDelayRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_OPEN_DELAY_PR</td>
+<td>$(P)$(R)ShutterOpenDelay_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ShutterTimingModeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SHUTTER_TIMING_MODE_PR</td>
+<td>$(P)$(R)ShutterTimingMode_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_BracketGatingRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_BRACKET_GATING_PR</td>
+<td>$(P)$(R)BracketGating_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CustomModulationSequenceRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CUSTOM_MODULATION_SEQUENCE_PR</td>
+<td>$(P)$(R)CustomModSeq_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_DifEndingGateRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DIF_END_GATE_PR</td>
+<td>$(P)$(R)DifEndGate_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_DifStartingGateRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DIF_START_GATE_PR</td>
+<td>$(P)$(R)DifStartGate_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EMIccdGainRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EMI_CCD_GAIN_PR</td>
+<td>$(P)$(R)EMIccdGain_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EMIccdGainControlModeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EMI_CCD_GAIN_CTL_MODE_PR</td>
+<td>$(P)$(R)EMIccdGainMode_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableIntensifierRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_INTENSIFIER_PR</td>
+<td>$(P)$(R)EnableIntensifier_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableModulationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_PR</td>
+<td>$(P)$(R)EnableModulation_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_GatingModeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATING_MODE_PR</td>
+<td>$(P)$(R)GatingMode_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_GatingSpeedRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATING_SPEED_PR</td>
+<td>$(P)$(R)GatingSpeed_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_IntensifierDiameterRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_DIAM_PR</td>
+<td>$(P)$(R)IntensifierDiameter_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_IntensifierGainRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_GAIN_PR</td>
+<td>$(P)$(R)IntensifierGain_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_IntensifierOptionsRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_OPTIONS_PR</td>
+<td>$(P)$(R)IntensifierOptions_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_IntensifierStatusRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INTENSIFIER_STATUS_PR</td>
+<td>$(P)$(R)IntensifierStatus_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationDurationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_DURATION_PR</td>
+<td>$(P)$(R)ModulationDuration_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationFrequencyRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_FREQUENCY_PR</td>
+<td>$(P)$(R)ModulationFrequency_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhosphorDecayDelayRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOSFOR_DECAY_DELAY_PR</td>
+<td>$(P)$(R)PhosphorDecayDelay_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhosphorDecayDelayResolutionRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOSFOR_DELAY_DECAY_RES_PR</td>
+<td>$(P)$(R)PhosphorDecayDelayResolution_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhosphorTypeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOSFOR_TYPE_PR</td>
+<td>$(P)$(R)PhosphorType_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhotocathodeSensitivityRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTOCATHODE_SENSITIVITY_PR</td>
+<td>$(P)$(R)PhotocathodeSensitivity_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_RepetitiveGateRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_REPETITIVE_GATE_PR</td>
+<td>$(P)$(R)RepetitiveGate_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_RepetitiveModulationPhaseRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_REPETITIVE_MODULATION_PR</td>
+<td>$(P)$(R)RepetitiveModulation_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialStartingModulationPhaseRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_STARTING_MODULATION_PHASE_PR</td>
+<td>$(P)$(R)SeqStartModPhase_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialEndingModulationPhaseRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_END_MODULATION_PHASE_PR</td>
+<td>$(P)$(R)SeqEndModPhase_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialEndingGateRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_END_GATE_PR</td>
+<td>$(P)$(R)SeqEndGate_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialGateStepCountRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_GATE_STEP_COUNT_PR</td>
+<td>$(P)$(R)SeqGateStepCount_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SequentialGateStepIterationsRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_GATE_STEP_ITERATIONS_PR</td>
+<td>$(P)$(R)SeqGateStepIters_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SequentialStartingGateRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SEQ_START_GATE_PR</td>
+<td>$(P)$(R)SeqStartGate_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcAnalogGainRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_ANALOG_GAIN_PR</td>
+<td>$(P)$(R)AdcAnalogGain_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AdcBitDepthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_BIT_DEPTH_PR</td>
+<td>$(P)$(R)AdcBitDepth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcEMGainRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_EM_GAIN_PR</td>
+<td>$(P)$(R)AdcEMGain_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AdcQualityRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_QUALITY_PR</td>
+<td>$(P)$(R)AdcQuality_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AdcSpeedRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ADC_SPEED_PR</td>
+<td>$(P)$(R)AdcSpeed_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CorrectPixelBiasRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CORRECT_PIXEL_BIAS_PR</td>
+<td>$(P)$(R)CorrectPixelBias_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_AuxOutputRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_AUX_OUTPUT_PR</td>
+<td>$(P)$(R)AuxOutput_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableModulationOutputSignalRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUT_SIGNAL_PR</td>
+<td>$(P)$(R)EnableModOutSig_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableModulationOutputSignalFrequencyRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUT_SIGNAL_FREQ_PR</td>
+<td>$(P)$(R)EnableModOutSigFreq_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_EnableModulationOutputSignalAmplitudeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_MODULATION_OUT_SIGNAL_AMPL_PR</td>
+<td>$(P)$(R)EnableModOutSigAmpl_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableSyncMasterRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SYNC_MASTER_PR</td>
+<td>$(P)$(R)EnableSyncMaster_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_InvertOutputSignalRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_INVERT_OUTPUT_SIGNAL_PR</td>
+<td>$(P)$(R)InvertOutSig_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_OutputSignalRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_OUTPUT_SIGNAL_PR</td>
+<td>$(P)$(R)OutputSignal_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SyncMaster2DelayRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SYNC_MASTER2_DELAY_PR</td>
+<td>$(P)$(R)SyncMaster2Delay_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerCouplingRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_COUPLING_PR</td>
+<td>$(P)$(R)TriggerCoupling_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerDeterminationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_DETERMINATION_PR</td>
+<td>$(P)$(R)TriggerDetermination_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerFrequencyRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_FREQUENCY_PR</td>
+<td>$(P)$(R)TriggerFrequency_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerResponseRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_RESPONSE_PR</td>
+<td>$(P)$(RTriggerResponse_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerSourceRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_SOURCE_PR</td>
+<td>$(P)$(R)TriggerSource_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TriggerTerminationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_TERMINATION_PR</td>
+<td>$(P)$(R)TriggerTermination_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TriggerThresholdRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRIGGER_THRESHOLD_PR</td>
+<td>$(P)$(R)TriggerThreshold_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_AccumulationsRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACCUMULATIONS_PR</td>
+<td>$(P)$(R)PICAM_ACCUMULATIONS_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableNondestructiveReadoutRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_NONDESTRUCT_READOUT_PR</td>
+<td>$(P)$(R)EnableNDReadout_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_KineticsWindowHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_KINETICS_WINDOW_HEIGHT_PR</td>
+<td>$(P)$(R)KineticsWindowHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_NondestructiveReadoutPeriodRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_NONDESTRUCT_READOUT_PERIOD_PR</td>
+<td>$(P)$(R)NDReadoutPeriod_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutControlModeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_CONTROL_MODE_PR</td>
+<td>$(P)$(R)ReadoutCtlMode_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutOrientationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUNT_ORIENTATION_PR</td>
+<td>$(P)$(R)ReadoutOrientation_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutPortCountRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_PORT_COUNT_PR</td>
+<td>$(P)$(R)ReadoutPortCount_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutTimeCalculationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_TIME_CALC_PR</td>
+<td>$(P)$(R)ReadoutTimeCalculation_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_VerticalShiftRateRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_VERTICAL_SHIFT_RATE_PR</td>
+<td>$(P)$(R)VerticalShiftRate_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_DisableDataFormattingRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DISABLE_DATA_FORMATTING_PR</td>
+<td>$(P)$(R)DisableDataFormat_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ExactReadoutCountMaximumRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_EXACT_READOUT_COUNT_MAX_PR</td>
+<td>$(P)$(R)ExactRdoutCountMax_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FrameRateCalculationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_RATE_CALC_PR</td>
+<td>$(P)$(R)FrameRateCalc_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_FrameSizeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_SIZE_PR</td>
+<td>$(P)$(R)FrameSize_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FramesPerReadoutRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAMES_PER_READOUT_PR</td>
+<td>$(P)$(R)FramesPerReadout_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_FrameStrideRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_STRIDE_PR</td>
+<td>$(P)$(R)FrameStride_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_FrameTrackingBitDepthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_TRK_BIT_DEPTH_PR</td>
+<td>$(P)$(R)FrameTrkBitDepth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_GateTrackingRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_GATE_TRACKING_PR</td>
+<td>$(P)$(R)GateTracking_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_GateTrackingBitDepthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_FRAME_TRACKING_BIT_DEPTH_PR</td>
+<td>$(P)$(R)GateTrkBitDepth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ModulationTrackingRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_TRACKING_PR</td>
+<td>$(P)$(R)ModTracking_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ModulationTrackingBitDepthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MODULATION_TRACKING_BIT_DEPTH_PR</td>
+<td>$(P)$(R)ModTrkBitDepth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_NormalizeOrientationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_NORMALIZE_ORIENTATION_PR</td>
+<td>$(P)$(R)NormalizeOrientation_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_OnlineReadoutRateCalculationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ONLINE_READOUT_RATE_CALC_PR</td>
+<td>$(P)$(R)OnlineReadoutCalc_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_OrientationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ORIENTATION_PR</td>
+<td>$(P)$(R)Orientation_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PhotonDetectionModeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTON_DETECTION_MODE_PR</td>
+<td>$(P)$(R)PhotonDetectionMode_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PhotonDetectionThresholdRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PHOTON_DETECT_THRESHOLD_PR</td>
+<td>$(P)$(R)PhotonDetectionThreshold_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelBitDepthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_BIT_DEPTH_PR</td>
+<td>$(P)$(R)PixelBitDepth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelFormatRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_FORMAT_PR</td>
+<td>$(P)$(R)PixelFormat_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutCountRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_COUNT_PR</td>
+<td>$(P)$(R)ReadoutCount_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ReadoutRateCalculationRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_RATE_CALC_PR</td>
+<td>$(P)$(R)ReadoutRateCalc_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ReadoutStrideRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_READOUT_STRIDE_PR</td>
+<td>$(P)$(R)ReadoutStride_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_RoisRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ROIS_PR</td>
+<td>$(P)$(R)Rois_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TimeStampBitDepthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMP_BIT_DEPTH_PR</td>
+<td>$(P)$(R)TimeStampBitDepth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TimeStampResolutionRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMP_RESOLUTION_PR</td>
+<td>$(P)$(R)TimeStampRes_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_TimeStampsRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TIME_STAMPS_PR</td>
+<td>$(P)$(R)TimeStamps_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_TrackFramesRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_TRACK_FRAMES_PR</td>
+<td>$(P)$(R)TrackFrames_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CcdCharacteristicsRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CCD_CHARACTERISTICS_PR</td>
+<td>$(P)$(R)CcdCharacteristics_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelGapHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_GAP_HEIGHT_PR</td>
+<td>$(P)$(R)PixelGapHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelGapWidthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_GAP_WIDTH_PR</td>
+<td>$(P)$(R)PixelGapWidth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_PixelHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_HEIGHT_PR</td>
+<td>$(P)$(R)PixelHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_PixelWidthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_PIXEL_WIDTH_PR</td>
+<td>$(P)$(R)PixelWidth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveBottomMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_BOTTOM_MARGIN_PR</td>
+<td>$(P)$(R)SensActBottomMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_HEIGHT_PR</td>
+<td>$(P)$(R)SensActHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveLeftMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_LEFT_MARGIN_PR</td>
+<td>$(P)$(R)SensActLeftMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveRightMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_RIGHT_MARGIN_PR</td>
+<td>$(P)$(R)SensActRightMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorActiveTopMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_TOP_MARGIN_PR</td>
+<td>$(P)$(R)SensActTopMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorActiveWidthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_ACTIVE_WIDTH_PR</td>
+<td>$(P)$(R)SensActWidth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorMaskedBottomMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASK_BOTTOM_MARGIN_PR</td>
+<td>$(P)$(R)SensMaskBottomMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorMaskedHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASK_HEIGHT_PR</td>
+<td>$(P)$(R)SensMaskHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorMaskedTopMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_MASK_TOP_MARGIN_PR</td>
+<td>$(P)$(R)SensMaskTopMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorSecondaryActiveHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_SECONDARY_ACTIVE_HEIGHT_PR</td>
+<td>$(P)$(R)SensorActiveHeight2_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorSecondaryMaskedHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_SECONDARY_MASK_HEIGHT_PR</td>
+<td>$(P)$(R)SensorMaskHeight2_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorTypeRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TYPE_PR</td>
+<td>$(P)$(R)SensorType_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveBottomMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_BOTTOM_MARGIN_PR</td>
+<td>$(P)$(R)ActiveBottomMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_HEIGHT_PR</td>
+<td>$(P)$(R)ActiveHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveLeftMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_LEFT_MARGIN_PR</td>
+<td>$(P)$(R)ActiveLeftMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveRightMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_RIGHT_MARGIN_PR</td>
+<td>$(P)$(R)ActiveRightMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_ActiveTopMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_TOP_MARGIN_PR</td>
+<td>$(P)$(R)ActiveTopMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_ActiveWidthRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ACTIVE_WIDTH_PR</td>
+<td>$(P)$(R)ActiveWidth_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_MaskedBottomMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MASK_BOTTOM_MARGIN_PR</td>
+<td>$(P)$(R)MaskBottomMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_MaskedHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MASK_HEIGHT_PR</td>
+<td>$(P)$(R)MaskHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_MaskedTopMarginRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_MASK_TOP_MARGIN_PR</td>
+<td>$(P)$(R)MaskTopMargin_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SecondaryActiveHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SECONDARY_ACTIVE_HEIGHT_PR</td>
+<td>$(P)$(R)ActiveHeight2_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SecondaryMaskedHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SECONDARY_MASK_HEIGHT_PR</td>
+<td>$(P)$(R)MaskedHeight2_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanBeforeExposureRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_BEFORE_EXPOSURE_PR</td>
+<td>$(P)$(R)CleanBeforeExp_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanCycleCountRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_CYCLE_COUNT_PR</td>
+<td>$(P)$(R)CleanCycleCount_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanCycleHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_CYCLE_HEIGHT_PR</td>
+<td>$(P)$(R)CleanCycleHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanSectionFinalHeightRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SECTION_FINAL_HEIGHT_PR</td>
+<td>$(P)$(R)CleanSectionFinalHeight_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanSectionFinalHeightCountRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SECTION_FINAL_COUNT_PR</td>
+<td>$(P)$(R)CleanSectionFinalHeightCount_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_CleanSerialRegisterRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_SERIAL_REGISTER_PR</td>
+<td>$(P)$(R)CleanSerialRegister_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_CleanUntilTriggerRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_CLEAN_UNTIL_TRIG_PR</td>
+<td>$(P)$(R)CleanUntilTrigger_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_DisableCoolingFanRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_DISABLE_COOLING_FAN_PR</td>
+<td>$(P)$(R)DisableCoolingFan_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_EnableSensorWindowHeaterRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_ENABLE_WINDOW_SENSOR_HEATER_PR</td>
+<td>$(P)$(R)EnableWindowHtr_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorTemperatureReadingRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_READING_PR</td>
+<td>$(P)$(R)SensTempReading_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-odd"><td>PICAM_SensorTemperatureSetPointRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_SETPOINT_PR</td>
+<td>$(P)$(R)SensTempSetpt_PR</td>
+<td>bi</td>
+</tr>
+<tr class="row-even"><td>PICAM_SensorTemperatureStatusRelevant</td>
+<td>asynInt32</td>
+<td>r/o</td>
+<td>&#160;</td>
+<td>PICAM_SENSOR_TEMPERATURE_STATUS_PR</td>
+<td>$(P)$(R)SensTempStatus_PR</td>
+<td>bi</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#id6">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>This driver is configured via the <code class="docutils literal notranslate"><span class="pre">PICamConfig()</span></code> function. If this is
+to be used in an IOC, it must be called before <code class="docutils literal notranslate"><span class="pre">iocInit()</span></code>. It has the
+following signature:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>int adscConfig(const char *portName, int maxBuffers, size_t maxMemory, int priority, int stackSize)
+</pre></div>
+</div>
+<p>The PICam-specific fields in this command are:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">portName</span></code> ASYN port name for the driver instance.</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">maxBuffers</span></code> The maximum number of NDArray buffers that the</dt>
+<dd>NDArrayPool for this driver is allowed to allocate. Set this to 0
+to allow an unlimited number of buffers.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">maxMemory</span></code> The maximum amount of memory that the NDArrayPool for this</dt>
+<dd>driver is allowed to allocate. Set this to 0 to allow an
+unlimited amount of memory.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">priority</span></code> The thread priority for the asyn port driver thread if</dt>
+<dd>ASYN_CANBLOCK is set in asynFlags.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">stackSize</span></code> The stack size for the asyn port driver thread if ASYN_CANBLOCK is</dt>
+<dd>set in asynFlags.</dd>
+</dl>
+</li>
+</ul>
+<p>This configuration will attempt to find cameras supported by PICAM and
+provide a list from which to select the detector to be used. If no
+cameras are found, the driver adds a QuadRO demo camera (soft camera) as
+the current camera. For test purposes, it is possible to add demo
+cameras either before or after <code class="docutils literal notranslate"><span class="pre">iocInit()</span></code> is called. To add a
+detector the method <code class="docutils literal notranslate"><span class="pre">PICamAddDemoCamera()</span></code>. The signiture for this
+call is:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">PICamAddDemoCamera(const</span> <span class="pre">char*</span> <span class="pre">cameraName)</span></code></li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">cameraName</span></code> proper values for cameraName can be found by running</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">asynReport(portName,</span> <span class="pre">details)</span></code> with a <code class="docutils literal notranslate"><span class="pre">details</span> <span class="pre">&gt;</span> <span class="pre">20</span></code>.</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="screenshots">
+<h2><a class="toc-backref" href="#id7">Screenshots</a><a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="picambase-adl">
+<h3><a class="toc-backref" href="#id8">PICAMBase.adl</a><a class="headerlink" href="#picambase-adl" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/PICAMBase.png"><img alt="../_images/PICAMBase.png" class="align-center" src="../_images/PICAMBase.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="picam-adl">
+<h3><a class="toc-backref" href="#id9">PICAM.adl</a><a class="headerlink" href="#picam-adl" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/PICAM.png"><img alt="../_images/PICAM.png" class="align-center" src="../_images/PICAM.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="parameterrelevance-adl">
+<h3><a class="toc-backref" href="#id10">ParameterRelevance.adl</a><a class="headerlink" href="#parameterrelevance-adl" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/PICAM_ParameterRelevance.png"><img alt="../_images/PICAM_ParameterRelevance.png" class="align-center" src="../_images/PICAM_ParameterRelevance.png" style="width: 150%;" /></a>
+</div>
+<div class="section" id="sensorcleaning-adl">
+<h3><a class="toc-backref" href="#id11">SensorCleaning.adl</a><a class="headerlink" href="#sensorcleaning-adl" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/PICAM_SensorCleaning.png"><img alt="../_images/PICAM_SensorCleaning.png" class="align-center" src="../_images/PICAM_SensorCleaning.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="sensorinformation-adl">
+<h3><a class="toc-backref" href="#id12">SensorInformation.adl</a><a class="headerlink" href="#sensorinformation-adl" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/PICAM_SensorInformation.png"><img alt="../_images/PICAM_SensorInformation.png" class="align-center" src="../_images/PICAM_SensorInformation.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="sensorlayout-adl">
+<h3><a class="toc-backref" href="#id13">SensorLayout.adl</a><a class="headerlink" href="#sensorlayout-adl" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/PICAM_SensorLayout.png"><img alt="../_images/PICAM_SensorLayout.png" class="align-center" src="../_images/PICAM_SensorLayout.png" style="width: 75%;" /></a>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Mark Rivers.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

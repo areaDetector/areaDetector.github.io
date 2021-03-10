@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector Releases &#8212; areaDetector 3-10-15-g23bde21 documentation</title>
+    <title>areaDetector Releases &#8212; areaDetector 3-10-20-g7ac14a8 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -80,10 +80,12 @@
 <li class="toctree-l3"><a class="reference internal" href="ADEiger/eiger.html">ADEiger</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADFastCCD/index.html">ADFastCCD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADGenICam/ADGenICam.html">ADGenICam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADLambda/ADLambda.html">areaDetector Lambda driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADLightField/ADLightField.html">ADLightField</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADmarCCD/marCCDDoc.html">ADmarCCD</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADmar345/mar345Doc.html">ADmar345</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADPerkinElmer/PerkinElmerDoc.html">ADPerkinElmer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADPICam/PICamDoc.html">areaDetector PICam driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADPilatus/pilatusDoc.html">ADPilatus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADPixirad/ADPixirad.html">ADPixirad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ADPointGrey/PointGreyDoc.html">ADPointGrey</a></li>
@@ -853,7 +855,7 @@ By setting WITH_PVA=YES and WITH_QSRV=NO IOCs can be built with pvAccess support
 <ul>
 <li><p class="first">configure/EXAMPLE_CONFIG_SITE.local*</p>
 <p>Prior to areaDetector R3-3-1 these files had commented out lines like the following for defining include library paths:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">#HDF5_INCLUDE = -I$(HDF5)/include</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>#<span class="nv">HDF5_INCLUDE</span> <span class="o">=</span> <span class="o">-</span><span class="nv">I</span>$<span class="ss">(</span><span class="nv">HDF5</span><span class="ss">)</span><span class="o">/</span><span class="k">include</span>
 </pre></div>
 </div>
 <p>These examples were incorrect, because the Makefiles in ADCore and driver repositories were adding the -I before
@@ -864,12 +866,12 @@ has been removed from configure/EXAMPLE_CONFIG_SITE.local* files.</p>
 </li>
 <li><p class="first">configure/EXAMPLE_CONFIG_SITE.local</p>
 <p>Changed the definition of the GLIB include files from this</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">GLIB_INC1=/usr/include/glib-2.0</span>
-<span class="err">GLIB_INC2=/usr/lib64/glib-2.0/include</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nv">GLIB_INC1</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="nv">glib</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">0</span>
+<span class="nv">GLIB_INC2</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib64</span><span class="o">/</span><span class="nv">glib</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">0</span><span class="o">/</span><span class="k">include</span>
 </pre></div>
 </div>
 <p>to this:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">GLIB_INCLUDE = /usr/include/glib-2.0 /usr/lib64/glib-2.0/include</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nv">GLIB_INCLUDE</span> <span class="o">=</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="nv">glib</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">0</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib64</span><span class="o">/</span><span class="nv">glib</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">0</span><span class="o">/</span><span class="k">include</span>
 </pre></div>
 </div>
 <p>This is cleaner and is now possible because the Makefile (in ararisGigE) uses addprefix to add the -I to multiple paths.</p>

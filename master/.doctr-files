@@ -57,8 +57,10 @@ master/ADFastCCD/readme.html
 master/ADFastCCD/release.html
 master/ADFastCCD/st_cmd.html
 master/ADGenICam/ADGenICam.html
+master/ADLambda/ADLambda.html
 master/ADLightField/ADLightField.html
 master/ADLightField/st_cmd.html
+master/ADPICam/PICamDoc.html
 master/ADPerkinElmer/PerkinElmerDoc.html
 master/ADPilatus/pilatusDoc.html
 master/ADPixirad/ADPixirad.html
@@ -214,6 +216,12 @@ master/_images/NDStats_unfiltered.png
 master/_images/NDStdArrays.png
 master/_images/NDTimeSeriesPlot.png
 master/_images/NDTransform.png
+master/_images/PICAM.png
+master/_images/PICAMBase.png
+master/_images/PICAM_ParameterRelevance.png
+master/_images/PICAM_SensorCleaning.png
+master/_images/PICAM_SensorInformation.png
+master/_images/PICAM_SensorLayout.png
 master/_images/PY_NTNDA_ColorTable.png
 master/_images/PY_NTNDA_NDCodec.png
 master/_images/PY_NTNDA_Viewer.png
@@ -350,8 +358,10 @@ master/_sources/ADFastCCD/readme.rst.txt
 master/_sources/ADFastCCD/release.rst.txt
 master/_sources/ADFastCCD/st_cmd.rst.txt
 master/_sources/ADGenICam/ADGenICam.rst.txt
+master/_sources/ADLambda/ADLambda.rst.txt
 master/_sources/ADLightField/ADLightField.rst.txt
 master/_sources/ADLightField/st_cmd.rst.txt
+master/_sources/ADPICam/PICamDoc.rst.txt
 master/_sources/ADPerkinElmer/PerkinElmerDoc.rst.txt
 master/_sources/ADPilatus/pilatusDoc.rst.txt
 master/_sources/ADPixirad/ADPixirad.rst.txt
