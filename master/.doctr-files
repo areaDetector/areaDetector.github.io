@@ -89,6 +89,7 @@ master/ADmar345/mar345Doc.html
 master/ADmar345/st_cmd.html
 master/ADmarCCD/marCCDDoc.html
 master/ADmarCCD/st_cmd.html
+master/NDDriverStdArrays/NDDriverStdArraysDoc.html
 master/_images/ADAravis.png
 master/_images/ADAravis_features1.png
 master/_images/ADAravis_features2.png
@@ -151,6 +152,7 @@ master/_images/NDCodec.png
 master/_images/NDCodec_Performance.png
 master/_images/NDCodec_Performance_More.png
 master/_images/NDColorConvert.png
+master/_images/NDDriverStdArrays.png
 master/_images/NDFFT16.png
 master/_images/NDFFTPeaksAbsVal.png
 master/_images/NDFFTPeaksImage.png
@@ -208,6 +210,8 @@ master/_images/NDROIStat.png
 master/_images/NDROIStat8.png
 master/_images/NDROIStatN.png
 master/_images/NDROIStatTimeSeriesMean.png
+master/_images/NDSA_testScanPoint_ROI4.png
+master/_images/NDSA_testScanPoint_ROI4_ImageJ.png
 master/_images/NDScatter.png
 master/_images/NDStats.png
 master/_images/NDStats5.png
@@ -397,6 +401,7 @@ master/_sources/ADmar345/mar345Doc.rst.txt
 master/_sources/ADmar345/st_cmd.rst.txt
 master/_sources/ADmarCCD/marCCDDoc.rst.txt
 master/_sources/ADmarCCD/st_cmd.rst.txt
+master/_sources/NDDriverStdArrays/NDDriverStdArraysDoc.rst.txt
 master/_sources/acknowledgements.rst.txt
 master/_sources/additional_plugins.rst.txt
 master/_sources/detector_drivers.rst.txt
