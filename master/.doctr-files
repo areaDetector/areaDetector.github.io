@@ -1,5 +1,6 @@
 master/ADAndor/andorDoc.html
 master/ADAndor/st_cmd.html
+master/ADAndor3/ADAndorDoc.html
 master/ADAravis/ADAravis.html
 master/ADCSimDetector/ADCSimDetectorDoc.html
 master/ADCompVision/ADCompVision.html
@@ -116,6 +117,7 @@ master/_images/ADVimba_features1.png
 master/_images/ADVimba_features2.png
 master/_images/ADVimba_features3.png
 master/_images/Andor.png
+master/_images/Andor3.png
 master/_images/AndorFile.png
 master/_images/Barcodemain.png
 master/_images/Canny2.png
@@ -306,6 +308,7 @@ master/_images/simDetector_image_display1.png
 master/_images/threshold.png
 master/_sources/ADAndor/andorDoc.rst.txt
 master/_sources/ADAndor/st_cmd.rst.txt
+master/_sources/ADAndor3/ADAndorDoc.rst.txt
 master/_sources/ADAravis/ADAravis.rst.txt
 master/_sources/ADCSimDetector/ADCSimDetectorDoc.rst.txt
 master/_sources/ADCompVision/ADCompVision.rst.txt
