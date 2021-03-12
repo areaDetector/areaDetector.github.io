@@ -71,6 +71,8 @@ master/ADPluginBar/ADPluginBar.html
 master/ADPointGrey/PointGreyDoc.html
 master/ADProsilica/ADProsilica.html
 master/ADProsilica/st_cmd.html
+master/ADPvCam/pvcamDoc.html
+master/ADQImaging/QImagingDoc.html
 master/ADRIXSCam/ADRIXSCam.html
 master/ADSimDetector/simDetector.html
 master/ADSimDetector/st_cmd.html
@@ -248,6 +250,7 @@ master/_images/PY_NTNDA_simDetector.png
 master/_images/PY_NTNDA_simDetectorSetup.png
 master/_images/PY_NTNDA_zoomedImage.png
 master/_images/PerkinElmer.png
+master/_images/QImage_MEDM.png
 master/_images/Shamrock.png
 master/_images/URLDriver.png
 master/_images/URLDriverSetup.png
@@ -286,6 +289,8 @@ master/_images/pointGreyProperties_Grasshopper3.png
 master/_images/prosilica.png
 master/_images/prosilicaMore.png
 master/_images/prosilica_tvscl.jpg
+master/_images/pvCam.png
+master/_images/pvCam_ADBase.png
 master/_images/scatterGatherExample_NDFileNetCDF.png
 master/_images/scatterGatherExample_NDGather.png
 master/_images/scatterGatherExample_NDGatherFull.png
@@ -383,6 +388,8 @@ master/_sources/ADPluginBar/ADPluginBar.rst.txt
 master/_sources/ADPointGrey/PointGreyDoc.rst.txt
 master/_sources/ADProsilica/ADProsilica.rst.txt
 master/_sources/ADProsilica/st_cmd.rst.txt
+master/_sources/ADPvCam/pvcamDoc.rst.txt
+master/_sources/ADQImaging/QImagingDoc.rst.txt
 master/_sources/ADRIXSCam/ADRIXSCam.rst.txt
 master/_sources/ADSimDetector/simDetector.rst.txt
 master/_sources/ADSimDetector/st_cmd.rst.txt
