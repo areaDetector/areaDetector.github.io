@@ -52,9 +52,17 @@ $(function() {
 <li>saveTask()
 : <a class="el" href="classeiger_detector.html#a7eb5550d0f8b426ac36ce2d361f36e04">eigerDetector</a>
 </li>
+<li>sax_parse()
+: <a class="el" href="classnlohmann_1_1basic__json.html#aef9ef0a817ecde8bf270653e8706c150">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1binary__reader.html#ab4afd9ee276bbb15a0f898061aad94dd">nlohmann::detail::binary_reader&lt; BasicJsonType, InputAdapterType, SAX &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1parser.html#a073b8313a5194aac3a7d5da0d935788c">nlohmann::detail::parser&lt; BasicJsonType, InputAdapterType &gt;</a>
+</li>
 <li>ScaledValue()
 : <a class="el" href="class_multi_parameter.html#a280e82814c76108b29935647679967ea">MultiParameter&lt; valueCount, T &gt;</a>
 , <a class="el" href="class_read_only_parameter.html#a8438f42e3fa620de26252c73441885f0">ReadOnlyParameter&lt; T &gt;</a>
+</li>
+<li>scan()
+: <a class="el" href="classnlohmann_1_1detail_1_1lexer.html#a40320a8fef5f1f03b60c8b2f2f40af4d">nlohmann::detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
 </li>
 <li>scramble
 : <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a4b892d500c9e188ad2e39dae2fc2b288">tagCSMAHEAD</a>
@@ -140,6 +148,12 @@ $(function() {
 <li>serial_port
 : <a class="el" href="classpco.html#a4b9701b5af8c5414a9600d27234aa21e">pco</a>
 </li>
+<li>serializer
+: <a class="el" href="structnlohmann_1_1detail_1_1has__from__json_3_01_basic_json_type_00_01_t_00_01enable__if__t_3_01f77b5e367f2d5612b4276a155bf11896.html#ac0718a48961f28e32604e1b16c6f2e8d">nlohmann::detail::has_from_json&lt; BasicJsonType, T, enable_if_t&lt; !is_basic_json&lt; T &gt;::value &gt; &gt;</a>
+, <a class="el" href="structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab072547deb606b69b2d65cb910e223bb8.html#a4bcee5e52902d3011df08cf0233e5e10">nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; !is_basic_json&lt; T &gt;::value &gt; &gt;</a>
+, <a class="el" href="structnlohmann_1_1detail_1_1has__to__json_3_01_basic_json_type_00_01_t_00_01enable__if__t_3_01_96b7bbbe462cd4ff87697dab3bc993a77.html#a7af8dd95a01e7ca32f10075c9934b107">nlohmann::detail::has_to_json&lt; BasicJsonType, T, enable_if_t&lt; !is_basic_json&lt; T &gt;::value &gt; &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1serializer.html#ac010525281d97867ee842da37294fe83">nlohmann::detail::serializer&lt; BasicJsonType &gt;</a>
+</li>
 <li>series
 : <a class="el" href="structstream__frame.html#a1820fb2722186e355aabb3c8e6553204">stream_frame</a>
 , <a class="el" href="structstream__header__t.html#a1bf201340efe35dfa07333da61e30cf9">stream_header_t</a>
@@ -174,6 +188,9 @@ $(function() {
 <li>server_port
 : <a class="el" href="struct_c_o_n_f_i_g.html#a37ac1475af32ae6c18601f83611ed341">CONFIG</a>
 </li>
+<li>set_begin()
+: <a class="el" href="classnlohmann_1_1detail_1_1primitive__iterator__t.html#a9d9b005906106e12aed738f97d7fee42">nlohmann::detail::primitive_iterator_t</a>
+</li>
 <li>set_const_datatype_value()
 : <a class="el" href="classhdf5_1_1_data_source.html#a41b328a16e2e795d821e707a21493d09">hdf5::DataSource</a>
 </li>
@@ -186,11 +203,18 @@ $(function() {
 <li>set_default_ndattr_group()
 : <a class="el" href="classhdf5_1_1_group.html#a49b46793ce93931e5bdffb7eff9e8d7f">hdf5::Group</a>
 </li>
+<li>set_end()
+: <a class="el" href="classnlohmann_1_1detail_1_1iter__impl.html#a23e50ad4c13aa62d9ac7f60a123823ee">nlohmann::detail::iter_impl&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1primitive__iterator__t.html#ad26a823483846a12d890c3feed3097eb">nlohmann::detail::primitive_iterator_t</a>
+</li>
 <li>set_ndattr_name()
 : <a class="el" href="classhdf5_1_1_dataset.html#a4fe7889ad0a6bf9931a6f76e0a91593a">hdf5::Dataset</a>
 </li>
 <li>set_src_default()
 : <a class="el" href="classhdf5_1_1_dataset.html#a85c9a61357dab2c47ffe9c02761c4382">hdf5::Dataset</a>
+</li>
+<li>set_subtype()
+: <a class="el" href="classnlohmann_1_1byte__container__with__subtype.html#a63227e70c8b976fd6f65bb2d2d7dd021">nlohmann::byte_container_with_subtype&lt; BinaryType &gt;</a>
 </li>
 <li>set_target()
 : <a class="el" href="classhdf5_1_1_hard_link.html#a81645c18c4f5ed122ad8be3f204369cd">hdf5::HardLink</a>
@@ -394,6 +418,9 @@ $(function() {
 <li>setUseGates()
 : <a class="el" href="classmythen.html#a3df80dc1f660da4f5a77ff4cbe08fa8b">mythen</a>
 </li>
+<li>setValue
+: <a class="el" href="structbad_pixel__t.html#a4604a73598205fae9d56647c3e7b9551">badPixel_t</a>
+</li>
 <li>SetValue()
 : <a class="el" href="class_multi_parameter.html#ad9870c66c9c0ab80f95cd3326dd73de9">MultiParameter&lt; valueCount, T &gt;</a>
 </li>
@@ -492,11 +519,11 @@ $(function() {
 <li>SimNoise
 : <a class="el" href="classsim_detector.html#a70465559e7df8dd42c61280c46dd07d4">simDetector</a>
 </li>
-<li>SimOffset
-: <a class="el" href="classsim_detector.html#ae99309aee83db66e47aeb83da014636f">simDetector</a>
-</li>
 <li>simOffset
 : <a class="el" href="classsim_detector.html#a6e3a3dd86ff425e644f04a554ccfba9c">simDetector</a>
+</li>
+<li>SimOffset
+: <a class="el" href="classsim_detector.html#ae99309aee83db66e47aeb83da014636f">simDetector</a>
 </li>
 <li>SimPeakHeightVariation
 : <a class="el" href="classsim_detector.html#a7f0e7eeb66bed101c967b0c66df8cc80">simDetector</a>
@@ -581,7 +608,12 @@ $(function() {
 , <a class="el" href="class_n_d_array_ring.html#a4d9289e0797acfb8f1c173fbbf8736b8">NDArrayRing</a>
 , <a class="el" href="struct_n_d_dimension.html#af32ef14ab526ed14d195875fc688f027">NDDimension</a>
 , <a class="el" href="struct_n_d_r_o_i.html#a2678b760ad414cd843c1e92de779c108">NDROI</a>
+, <a class="el" href="classnlohmann_1_1basic__json.html#a33c7c8638bb0b12e6d1b69d8106dd2e0">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
+, <a class="el" href="structnlohmann_1_1detail_1_1integer__sequence.html#a6024bae596d01193397a7396af3aa19a">nlohmann::detail::integer_sequence&lt; T, Ints &gt;</a>
 , <a class="el" href="struct_n_t_n_d_array_info.html#a5095b25de6066b5ea6b90c4df54fb2cd">NTNDArrayInfo</a>
+</li>
+<li>size_type
+: <a class="el" href="classnlohmann_1_1basic__json.html#a3ada29bca70b4965f6fd37ec1c8f85f7">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
 </li>
 <li>SizeX
 : <a class="el" href="struct_n_d_mask.html#acd851b71611e59af2b1297be2b27f9d9">NDMask</a>
@@ -596,6 +628,12 @@ $(function() {
 </li>
 <li>skewY
 : <a class="el" href="struct_n_d_stats.html#a5d291a9bb5032d6f694f2adcd72b78f6">NDStats</a>
+</li>
+<li>skip_bom()
+: <a class="el" href="classnlohmann_1_1detail_1_1lexer.html#a7cd7d55de2cd398660bc243c7229caf9">nlohmann::detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
+</li>
+<li>skip_whitespace()
+: <a class="el" href="classnlohmann_1_1detail_1_1lexer.html#a449f3f3703dfbf8b757e12f002668604">nlohmann::detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
 </li>
 <li>slot_id
 : <a class="el" href="struct_a_c_q___p_r_o_p.html#a0a5790cc227ce589b16e8b9bbfc010a7">ACQ_PROP</a>
@@ -632,6 +670,9 @@ $(function() {
 </li>
 <li>source
 : <a class="el" href="classhdf5_1_1_attribute.html#a23a0b4059675bef010210f2f7a6989cf">hdf5::Attribute</a>
+</li>
+<li>span_input_adapter()
+: <a class="el" href="classnlohmann_1_1detail_1_1span__input__adapter.html#a3a328a45b2c2c87145106ce4b2d02365">nlohmann::detail::span_input_adapter</a>
 </li>
 <li>Spare_1
 : <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a31dd38ea2f448b185805be3ed5dc55bd">tagCSMAHEAD</a>
@@ -742,8 +783,20 @@ $(function() {
 : <a class="el" href="class_expose_data_task.html#a5a0f129d138186870c4daeeef7697cce">ExposeDataTask</a>
 , <a class="el" href="class_n_d_plugin_driver.html#a085bcf8d331f7dedac92af07c94b2d15">NDPluginDriver</a>
 </li>
+<li>start_array()
+: <a class="el" href="classnlohmann_1_1detail_1_1json__sax__acceptor.html#a8238e8090cbb4ed8a22cbc97bfb833a5">nlohmann::detail::json_sax_acceptor&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__callback__parser.html#a5255b98ba8282e3625968f91cff9d3d0">nlohmann::detail::json_sax_dom_callback_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__parser.html#a056b895d011efaf48ea096c024aca0d4">nlohmann::detail::json_sax_dom_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="structnlohmann_1_1json__sax.html#a5c53878cf08d463eb4e7ca0270532572">nlohmann::json_sax&lt; BasicJsonType &gt;</a>
+</li>
 <li>start_expose()
 : <a class="el" href="class_n_d_plugin_attr_plot.html#abd1bd9f5280a98fc509e0a6f6effe299">NDPluginAttrPlot</a>
+</li>
+<li>start_object()
+: <a class="el" href="classnlohmann_1_1detail_1_1json__sax__acceptor.html#a822bbca11a9fea0aa337018e351755f5">nlohmann::detail::json_sax_acceptor&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__callback__parser.html#a040e60243cc7c18a6078c6b83cdb4a81">nlohmann::detail::json_sax_dom_callback_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__parser.html#a9929b4cc92d471c49bd0a92802629f90">nlohmann::detail::json_sax_dom_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="structnlohmann_1_1json__sax.html#a0671528b0debb5a348169d61f0382a0f">nlohmann::json_sax&lt; BasicJsonType &gt;</a>
 </li>
 <li>startCapture()
 : <a class="el" href="class_a_d_aravis.html#a406c3466598cee023c85cdc33c400416">ADAravis</a>
@@ -770,6 +823,9 @@ $(function() {
 </li>
 <li>starty
 : <a class="el" href="structtag_r_o_iinfo.html#a33a1785e7d2ccaed4c36ce9e0cd49d94">tagROIinfo</a>
+</li>
+<li>state
+: <a class="el" href="classnlohmann_1_1detail_1_1serializer.html#a39b0975f219b542d7ca633652e925b4c">nlohmann::detail::serializer&lt; BasicJsonType &gt;</a>
 </li>
 <li>statusTask()
 : <a class="el" href="class_andor_c_c_d.html#ab734ec3a8c34d7dcd8a7e702b808c000">AndorCCD</a>
@@ -856,7 +912,30 @@ $(function() {
 : <a class="el" href="struct_n_t_n_d_array_info.html#a417a3ea61e23ce109bcc8dfbaf8798f4">NTNDArrayInfo</a>
 </li>
 <li>string
-: <a class="el" href="structenum_struct__t.html#a63ae91efc586bac8a49ac1aaea7843e2">enumStruct_t</a>
+: <a class="el" href="structenum_struct__t.html#ac06085f35779376cbe7eb85007769b8f">enumStruct_t</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__acceptor.html#aaa69255e757a6ecc4403a2aa4931fc60">nlohmann::detail::json_sax_acceptor&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__callback__parser.html#ad94e912a67c7b96158937236805b8b47">nlohmann::detail::json_sax_dom_callback_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__parser.html#a851d965082d20a726138f5d0330dc7d8">nlohmann::detail::json_sax_dom_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="structnlohmann_1_1json__sax.html#a07eab82f6c82d606787eee9ad73d2bda">nlohmann::json_sax&lt; BasicJsonType &gt;</a>
+</li>
+<li>string_buffer
+: <a class="el" href="classnlohmann_1_1detail_1_1serializer.html#a9c9b7ca63a66e59e5e7ffe8a2acf5c8f">nlohmann::detail::serializer&lt; BasicJsonType &gt;</a>
+</li>
+<li>string_t
+: <a class="el" href="classnlohmann_1_1basic__json.html#a33593865ffb1860323dcbd52425b90c8">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__acceptor.html#a3a8078bbf865ec355106f6048241609a">nlohmann::detail::json_sax_acceptor&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__callback__parser.html#a00e7d95d82d5d8a43421526a42a8eabc">nlohmann::detail::json_sax_dom_callback_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="classnlohmann_1_1detail_1_1json__sax__dom__parser.html#afd4d961ab2a6b01cbe6e840f7fb90cdc">nlohmann::detail::json_sax_dom_parser&lt; BasicJsonType &gt;</a>
+, <a class="el" href="structnlohmann_1_1json__sax.html#ae01977a9f3c5b3667b7a2929ed91061e">nlohmann::json_sax&lt; BasicJsonType &gt;</a>
+</li>
+<li>string_type
+: <a class="el" href="classnlohmann_1_1detail_1_1iteration__proxy__value.html#a1fc63b88a585fa39942007aab69a74e6">nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</a>
+</li>
+<li>sub()
+: <a class="el" href="structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp.html#aeb26771af54ad73598c1a0430d65d884">nlohmann::detail::dtoa_impl::diyfp</a>
+</li>
+<li>subtype()
+: <a class="el" href="classnlohmann_1_1byte__container__with__subtype.html#ac3ca9d09e55342f9588404e1dc2222f0">nlohmann::byte_container_with_subtype&lt; BinaryType &gt;</a>
 </li>
 <li>supportsMultipleArrays
 : <a class="el" href="class_n_d_plugin_file.html#a6255a7fdddc16d94aab10c7a828cc0eb">NDPluginFile</a>
@@ -866,6 +945,12 @@ $(function() {
 </li>
 <li>sw_version
 : <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a2c6fda13b37806b5d288f0ce86f75e62">tagCSMAHEAD</a>
+</li>
+<li>swap()
+: <a class="el" href="classnlohmann_1_1basic__json.html#aac916df9561daf4eaf2372119fe91899">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
+</li>
+<li>switch()
+: <a class="el" href="classnlohmann_1_1detail_1_1iter__impl.html#abc2f80067020fae59d7fbccf39f1547a">nlohmann::detail::iter_impl&lt; BasicJsonType &gt;</a>
 </li>
 <li>SWmade
 : <a class="el" href="structtag_c_s_m_a_h_e_a_d.html#a18db993759a2afdef72d79e17bbfd90f">tagCSMAHEAD</a>
