@@ -63,9 +63,9 @@ Inheritance diagram for NDPluginBadPixel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6c04d105e88a07d0188cc25d8c1ef305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_bad_pixel.html#a6c04d105e88a07d0188cc25d8c1ef305">NDPluginBadPixel</a> (const char *portName, int queueSize, int blockingCallbacks, const char *NDArrayPort, int NDArrayAddr, int maxBuffers, size_t maxMemory, int priority, int stackSize)</td></tr>
-<tr class="memdesc:a6c04d105e88a07d0188cc25d8c1ef305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_n_d_plugin_bad_pixel.html">NDPluginBadPixel</a>; most parameters are simply passed to <a class="el" href="class_n_d_plugin_driver.html#a64f942bde94593fdb0b5ff5c677197d4" title="Constructor for NDPluginDriver; most parameters are simply passed to asynNDArrayDriver::asynNDArrayDr...">NDPluginDriver::NDPluginDriver</a>.  <a href="#a6c04d105e88a07d0188cc25d8c1ef305">More...</a><br /></td></tr>
-<tr class="separator:a6c04d105e88a07d0188cc25d8c1ef305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae864d966e0acfe28e0086ea9b95068d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_bad_pixel.html#ae864d966e0acfe28e0086ea9b95068d5">NDPluginBadPixel</a> (const char *portName, int queueSize, int blockingCallbacks, const char *NDArrayPort, int NDArrayAddr, int maxBuffers, size_t maxMemory, int priority, int stackSize, int maxThreads)</td></tr>
+<tr class="memdesc:ae864d966e0acfe28e0086ea9b95068d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_n_d_plugin_bad_pixel.html">NDPluginBadPixel</a>; most parameters are simply passed to <a class="el" href="class_n_d_plugin_driver.html#a64f942bde94593fdb0b5ff5c677197d4" title="Constructor for NDPluginDriver; most parameters are simply passed to asynNDArrayDriver::asynNDArrayDr...">NDPluginDriver::NDPluginDriver</a>.  <a href="#ae864d966e0acfe28e0086ea9b95068d5">More...</a><br /></td></tr>
+<tr class="separator:ae864d966e0acfe28e0086ea9b95068d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5f4ab5b4080f72692a844aac47f54ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_bad_pixel.html#ae5f4ab5b4080f72692a844aac47f54ff">processCallbacks</a> (<a class="el" href="class_n_d_array.html">NDArray</a> *pArray)</td></tr>
 <tr class="memdesc:ae5f4ab5b4080f72692a844aac47f54ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function that is called by the <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> driver with new <a class="el" href="class_n_d_array.html" title="N-dimensional array class; each array has a set of dimensions, a data type, pointer to data,...">NDArray</a> data.  <a href="#ae5f4ab5b4080f72692a844aac47f54ff">More...</a><br /></td></tr>
 <tr class="separator:ae5f4ab5b4080f72692a844aac47f54ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,8 +356,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ae6b1a0c91170c2ef73546fcc4a78ac27 inherit pro_methods_class_n_d_plugin_driver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6c04d105e88a07d0188cc25d8c1ef305"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c04d105e88a07d0188cc25d8c1ef305">&#9670;&nbsp;</a></span>NDPluginBadPixel()</h2>
+<a id="ae864d966e0acfe28e0086ea9b95068d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae864d966e0acfe28e0086ea9b95068d5">&#9670;&nbsp;</a></span>NDPluginBadPixel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,7 +414,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>stackSize</em>&#160;</td>
+          <td class="paramname"><em>stackSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxThreads</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

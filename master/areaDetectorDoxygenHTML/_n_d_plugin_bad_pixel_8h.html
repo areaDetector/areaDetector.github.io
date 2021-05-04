@@ -47,6 +47,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">NDPluginBadPixel.h File Reference</div>  </div>
@@ -61,7 +62,10 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpixel_coordinate.html">pixelCoordinate</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbad_pixel__t.html">badPixel_t</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbad_pixel.html">badPixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bad pixel structure for Pilatus detector.  <a href="classbad_pixel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbad_pix_dim_info__t.html">badPixDimInfo_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_d_plugin_bad_pixel.html">NDPluginBadPixel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -72,6 +76,11 @@ Macros</h2></td></tr>
 <tr class="separator:aa4e0feb1b29dbc114907485baa841338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8b24fcf3bb6525aa210c513b86d7de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_d_plugin_bad_pixel_8h.html#a9f8b24fcf3bb6525aa210c513b86d7de">FIRST_NDPLUGIN_BAD_PIXEL_PARAM</a>&#160;&#160;&#160;NDPluginBadPixelFileName</td></tr>
 <tr class="separator:a9f8b24fcf3bb6525aa210c513b86d7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:abf634d62cfd5b18691dd20e04e107b8b"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; <a class="el" href="classbad_pixel.html">badPixel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_n_d_plugin_bad_pixel_8h.html#abf634d62cfd5b18691dd20e04e107b8b">badPixelList_t</a></td></tr>
+<tr class="separator:abf634d62cfd5b18691dd20e04e107b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -104,6 +113,21 @@ Enumerations</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define NDPluginBadPixelFileNameString&#160;&#160;&#160;&quot;BAD_PIXEL_FILE_NAME&quot;    /* (asynOctet,   r/w) Name of the bad pixel file */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="abf634d62cfd5b18691dd20e04e107b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf634d62cfd5b18691dd20e04e107b8b">&#9670;&nbsp;</a></span>badPixelList_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classbad_pixel.html">badPixel</a>&gt; <a class="el" href="_n_d_plugin_bad_pixel_8h.html#abf634d62cfd5b18691dd20e04e107b8b">badPixelList_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

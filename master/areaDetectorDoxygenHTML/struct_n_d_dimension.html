@@ -100,7 +100,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The offset relative to the origin of the original data source (detector, for example). </p>
-<p>If a selected region of the detector is being read, then this value may be &gt; 0. The offset value is cumulative, so if a plugin such as <a class="el" href="class_n_d_plugin_r_o_i.html" title="Extract Regions-Of-Interest (ROI) from NDArray data; the plugin can be a source of NDArray callbacks ...">NDPluginROI</a> further selects a subregion, the offset is relative to the first element in the detector, and not to the first element of the region passed to <a class="el" href="class_n_d_plugin_r_o_i.html" title="Extract Regions-Of-Interest (ROI) from NDArray data; the plugin can be a source of NDArray callbacks ...">NDPluginROI</a>. </p>
+<p>If a selected region of the detector is being read, then this value may be &gt; 0. The offset value is specified in unbinned pixels, and in the default orientation, not reversed. The offset value is cumulative, so if a plugin such as <a class="el" href="class_n_d_plugin_r_o_i.html" title="Extract Regions-Of-Interest (ROI) from NDArray data; the plugin can be a source of NDArray callbacks ...">NDPluginROI</a> further selects a subregion, the offset is relative to the first element in the detector, and not to the first element of the region passed to <a class="el" href="class_n_d_plugin_r_o_i.html" title="Extract Regions-Of-Interest (ROI) from NDArray data; the plugin can be a source of NDArray callbacks ...">NDPluginROI</a>. </p>
 
 </div>
 </div>

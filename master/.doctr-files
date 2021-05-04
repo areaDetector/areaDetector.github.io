@@ -1039,6 +1039,8 @@ master/areaDetectorDoxygenHTML/classarv_feature.png
 master/areaDetectorDoxygenHTML/classasyn_n_d_array_driver-members.html
 master/areaDetectorDoxygenHTML/classasyn_n_d_array_driver.html
 master/areaDetectorDoxygenHTML/classasyn_n_d_array_driver.png
+master/areaDetectorDoxygenHTML/classbad_pixel-members.html
+master/areaDetectorDoxygenHTML/classbad_pixel.html
 master/areaDetectorDoxygenHTML/classeiger_detector-members.html
 master/areaDetectorDoxygenHTML/classeiger_detector.html
 master/areaDetectorDoxygenHTML/classeiger_detector.png
@@ -1803,10 +1805,8 @@ master/areaDetectorDoxygenHTML/struct_to_thread_message__t-members.html
 master/areaDetectorDoxygenHTML/struct_to_thread_message__t.html
 master/areaDetectorDoxygenHTML/structacquisition__t-members.html
 master/areaDetectorDoxygenHTML/structacquisition__t.html
-master/areaDetectorDoxygenHTML/structbad_pixel-members.html
-master/areaDetectorDoxygenHTML/structbad_pixel.html
-master/areaDetectorDoxygenHTML/structbad_pixel__t-members.html
-master/areaDetectorDoxygenHTML/structbad_pixel__t.html
+master/areaDetectorDoxygenHTML/structbad_pix_dim_info__t-members.html
+master/areaDetectorDoxygenHTML/structbad_pix_dim_info__t.html
 master/areaDetectorDoxygenHTML/structbin__lookup-members.html
 master/areaDetectorDoxygenHTML/structbin__lookup.html
 master/areaDetectorDoxygenHTML/structcam_linked_list-members.html
