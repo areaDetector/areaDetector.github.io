@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>NDPluginBadPixel &#8212; areaDetector 3-10-46-g614592f documentation</title>
+    <title>NDPluginBadPixel &#8212; areaDetector 3-10-47-ge97dfac documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -651,8 +651,9 @@ The plugin checks for this, and if it is not a valid location the replacement is
 </ul>
 <p>Notes for Median mode:</p>
 <ul class="simple">
-<li>If the pixels used in the median calculation include other bad pixels then they will not be used,
-and the median calculation will be performed with fewer pixels.</li>
+<li>If the pixels used in the median calculation include other bad pixels then the plugin prints a
+warning message with ASYN_TRACE_WARNING, the bad pixels will not be used, and the median calculation
+will be performed with fewer pixels.</li>
 <li>The median calculation will use fewer pixels if the bad pixel is too close to the border.
 For example with a medianSize=[1,1] the plugin normally uses 8 pixels in calculating the median
 (3x3 minus the bad pixel itself). A bad pixel on any edge of the image will only use 5 pixels to
