@@ -43,11 +43,11 @@ $(function() {
 &#160;
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>rbegin()
-: <a class="el" href="classnlohmann_1_1basic__json.html#aff8e38cd973bc94557fa8d36433c0e4c">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
-</li>
 <li>read()
 : <a class="el" href="class_gen_i_cam_feature.html#a8cb014b78e41bb0cdad776d245d27a1e">GenICamFeature</a>
+</li>
+<li>readAcquisitionData()
+: <a class="el" href="class_specs_analyser.html#a631359fc9fc8a18a713e3326cd41797f">SpecsAnalyser</a>
 </li>
 <li>readAll()
 : <a class="el" href="class_gen_i_cam_feature_set.html#ae2af6786a1c9c86883eedb98678c9c7c">GenICamFeatureSet</a>
@@ -67,6 +67,9 @@ $(function() {
 <li>readDetectorCondition()
 : <a class="el" href="classadsc.html#a1fee9fc60c4966f60b28d05149299cae">adsc</a>
 </li>
+<li>readDeviceVisibleName()
+: <a class="el" href="class_specs_analyser.html#a19ec76f1f23a17b94e3c0a4813a44e5a">SpecsAnalyser</a>
+</li>
 <li>readDimensions()
 : <a class="el" href="class_n_d_pos_plugin_file_reader.html#a325582b17710f18f84baca7149949e3a">NDPosPluginFileReader</a>
 </li>
@@ -75,6 +78,9 @@ $(function() {
 , <a class="el" href="class_gen_i_cam_feature.html#a60dcfd3f3f38d792c3f74c0d9ddca91c">GenICamFeature</a>
 , <a class="el" href="class_s_p_feature.html#a3f5445cae3e3de3a9186457f1ea612f0">SPFeature</a>
 , <a class="el" href="class_vimba_feature.html#a0aa3ff746fe41efae248b8562f251220">VimbaFeature</a>
+</li>
+<li>readDoubleData()
+: <a class="el" href="class_specs_analyser.html#aca11278c7aa865f84394d186f25a0c8a">SpecsAnalyser</a>
 </li>
 <li>readDoubleMax()
 : <a class="el" href="classarv_feature.html#a44d52c975210230c22b1137602500f88">arvFeature</a>
@@ -102,6 +108,7 @@ $(function() {
 , <a class="el" href="classpoint_grey.html#ae04c0fe04d64c357673002f03712f130">pointGrey</a>
 , <a class="el" href="class_p_s_l.html#af1c4d170c8b49c0f4c023f6dcee17142">PSL</a>
 , <a class="el" href="class_q_image.html#afa82e0580e3c6aaf908fca692fea3f22">QImage</a>
+, <a class="el" href="class_specs_analyser.html#a2e32bcd17e5a54031bf7ab760a5bb236">SpecsAnalyser</a>
 </li>
 <li>readEnumChoices()
 : <a class="el" href="classarv_feature.html#aa4d8878fd65d7c425627ddd30b4ee69f">arvFeature</a>
@@ -181,6 +188,9 @@ $(function() {
 , <a class="el" href="class_s_p_feature.html#a4e62ad63eaf367f635ab1644ba29af18">SPFeature</a>
 , <a class="el" href="class_vimba_feature.html#af5db69bcfa880b204e4b3ac2580fc8f9">VimbaFeature</a>
 </li>
+<li>readIntegerData()
+: <a class="el" href="class_specs_analyser.html#a9c8cc5aab8081f61d43bde6560a37f76">SpecsAnalyser</a>
+</li>
 <li>readIntegerMax()
 : <a class="el" href="classarv_feature.html#a3287d33386a12e3ab74080561d52daba">arvFeature</a>
 , <a class="el" href="class_gen_i_cam_feature.html#a0de309ab1eb33fcf18dbbd660ebc8a29">GenICamFeature</a>
@@ -204,10 +214,19 @@ $(function() {
 , <a class="el" href="class_a_d_p_i_cam.html#a596c73f284545d2242c500b82a2a8122">ADPICam</a>
 </li>
 <li>ReadOnlyParameter()
-: <a class="el" href="class_read_only_parameter.html#ad888d22d29ada9fe358f144f2aaa03c2">ReadOnlyParameter&lt; T &gt;</a>
+: <a class="el" href="class_read_only_parameter.html#a269680abc3b8736d2d93d043b0c31998">ReadOnlyParameter&lt; T &gt;</a>
 </li>
 <li>readPositions()
 : <a class="el" href="class_n_d_pos_plugin_file_reader.html#a5f8f9e898ec284c3b07e85592f9794b8">NDPosPluginFileReader</a>
+</li>
+<li>readRunModes()
+: <a class="el" href="class_specs_analyser.html#a0e5d01283bb93950f7b1bea1455559ba">SpecsAnalyser</a>
+</li>
+<li>readSpectrumDataInfo()
+: <a class="el" href="class_specs_analyser.html#a7ee15e73df109d8c432506b2dc15831d">SpecsAnalyser</a>
+</li>
+<li>readSpectrumParameter()
+: <a class="el" href="class_specs_analyser.html#a4ebd1ae9d439ca83159f357a46d4d308">SpecsAnalyser</a>
 </li>
 <li>readStatus()
 : <a class="el" href="class_a_d_gen_i_cam.html#ae5402c10191161fb0b345191fc23a6ed">ADGenICam</a>
@@ -233,9 +252,6 @@ $(function() {
 </li>
 <li>remove()
 : <a class="el" href="class_n_d_attribute_list.html#aa7fc3f2e1c55eb6fce1e34d9ac34d7e3">NDAttributeList</a>
-</li>
-<li>rend()
-: <a class="el" href="classnlohmann_1_1basic__json.html#a7a328b29b290cc300345376c54f618cb">nlohmann::basic_json&lt; ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType &gt;</a>
 </li>
 <li>report()
 : <a class="el" href="class_a_d_aravis.html#aa149564669106db7b3456e6a9f05241d">ADAravis</a>
@@ -317,7 +333,7 @@ $(function() {
 : <a class="el" href="class_a_d_gen_i_cam.html#a45ada9c170dbbb222903ed829e7ca5f9">ADGenICam</a>
 </li>
 <li>Root()
-: <a class="el" href="classhdf5_1_1_root.html#a33da307e9795d5382591a2dd393acd67">hdf5::Root</a>
+: <a class="el" href="classhdf5_1_1_root.html#a0a894f82e73c1fd43b395c2f6bd20c6b">hdf5::Root</a>
 </li>
 <li>roper()
 : <a class="el" href="classroper.html#ae2988818d05494ef41a7bb64be44b033">roper</a>
