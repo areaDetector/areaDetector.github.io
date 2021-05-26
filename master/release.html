@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>areaDetector Releases &#8212; areaDetector 3-10-60-g9602c51 documentation</title>
+    <title>areaDetector Releases &#8212; areaDetector 3-11 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -39,7 +39,7 @@
         </button>
         <a class="navbar-brand" href="index.html">
           areaDetector</a>
-        <span class="navbar-text navbar-version pull-left"><b>3-10</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>3-11</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -193,6 +193,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Top-level Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#versions">Versions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#r3-11-may-26-2021">R3-11 (May 26, 2021)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-10-september-20-2020">R3-10 (September 20, 2020)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-9-february-24-2020">R3-9 (February 24, 2020)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
@@ -518,6 +519,7 @@
 <li><a class="reference internal" href="#">areaDetector Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#versions">Versions</a><ul>
+<li><a class="reference internal" href="#r3-11-may-26-2021">R3-11 (May 26, 2021)</a></li>
 <li><a class="reference internal" href="#r3-10-september-20-2020">R3-10 (September 20, 2020)</a></li>
 <li><a class="reference internal" href="#r3-9-february-24-2020">R3-9 (February 24, 2020)</a></li>
 <li><a class="reference internal" href="#r3-8-october-22-2019">R3-8 (October 22, 2019)</a></li>
@@ -612,6 +614,60 @@ files respectively, in the appropriate release of the
 <h2>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h2>
 <p>Each submodule contains detailed release notes for each release of that submodule.  The release notes below
 only provide a short summary of the most significant items from the submodules.</p>
+<div class="section" id="r3-11-may-26-2021">
+<h3>R3-11 (May 26, 2021)<a class="headerlink" href="#r3-11-may-26-2021" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ADSupport R1-9-1, R1-10<ul>
+<li>Changed the support for reading MJPEG streams in GraphicsMagickSrc and xml2Src.</li>
+<li>Fixed compilation errors with EPICS base 7.0.5 which changed the use of undefined functions
+from being a warning to being an error.</li>
+</ul>
+</li>
+<li>ADCore R3-11<ul>
+<li>New plugin NDPluginBadPixel.</li>
+</ul>
+</li>
+<li>ADGenICam R1-6, R1-7, and R1-7-1<ul>
+<li>Added support for converting Mono12p and Mono12Packed formats to Mono16,
+with optional left-shift operation.</li>
+<li>Fixed memory leak.</li>
+</ul>
+</li>
+<li>ADAravis R2-1, R2-2, R2-2-1<ul>
+<li>Added support for PixelFormat=Mono12Packed and Mono12p.</li>
+<li>Added new ConvertPixelFormat mbbo record with choices of Mono16Low and Mono16High.
+This record controls how Mono12Packed and Mono12p pixel formats are decompressed.</li>
+<li>Added continuous integration via Github Actions.  Thanks to Michael Davidsaver for this.</li>
+<li>Improve error reporting by fetching the underlying error from aravis.</li>
+</ul>
+</li>
+<li>ADSpinnaker R3-1, R3-2<ul>
+<li>Added support for specifying the number of transport layer buffers in the configuration command.
+This may require changes to startup scripts.</li>
+<li>Improved reporting of transport layer statistics.</li>
+<li>Updated Spinnaker version from 2.0.0.147 to 2.4.0.147.</li>
+</ul>
+</li>
+<li>ADURL R2-3<ul>
+<li>Converted documentation to ReST, include in documentation on github.io.</li>
+<li>Added autoconverted OPI files for css/BOY, css/Phoebus, edm, and caQtDM.</li>
+<li>Fix to release the lock at least briefly between each image, otherwise EPICS puts don’t get processed.</li>
+</ul>
+</li>
+<li>ADVimba R1-3<ul>
+<li>Updated the version of the Vimba SDK being used to 4.0 (Windows) and 4.1 (Linux).</li>
+<li>Added automatic packet size negotiation for GigE cameras in the constructor.
+Previously cameras would default to jumbo packets, and if the network did not support that
+then streaming would fail until the packet size feature was decreased.</li>
+</ul>
+</li>
+<li>ADViewers R1-7<ul>
+<li>Many enhancements to the Python PY_NTNDA_Viewer.</li>
+<li>Updated to the latest versions of the EPICS Java libraries.</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="r3-10-september-20-2020">
 <h3>R3-10 (September 20, 2020)<a class="headerlink" href="#r3-10-september-20-2020" title="Permalink to this headline">¶</a></h3>
 <ul>
