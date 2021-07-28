@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADCore Releases &#8212; areaDetector 3-11 documentation</title>
+    <title>ADCore Releases &#8212; areaDetector 3-11-2-gf866e7e documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -220,6 +220,10 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADCore Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r3-12-july-xxx-2021"><strong>R3-12 (July XXX, 2021)</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adautosavemenu-req">ADAutoSaveMenu.req</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#r3-11-may-26-2021"><strong>R3-11 (May 26, 2021)</strong></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ndpluginbadpixel">NDPluginBadPixel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ndfilehdf">NDFileHDF</a></li>
@@ -518,6 +522,10 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ADCore Releases</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#r3-12-july-xxx-2021"><strong>R3-12 (July XXX, 2021)</strong></a><ul>
+<li><a class="reference internal" href="#adautosavemenu-req">ADAutoSaveMenu.req</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#r3-11-may-26-2021"><strong>R3-11 (May 26, 2021)</strong></a><ul>
 <li><a class="reference internal" href="#ndpluginbadpixel">NDPluginBadPixel</a></li>
 <li><a class="reference internal" href="#ndfilehdf">NDFileHDF</a></li>
@@ -837,6 +845,22 @@ in the areaDetector releases available via links at
 the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE_PRODS.local
 files respectively, in the configure/ directory of the appropriate release of the
 <a class="reference external" href="https://github.com/areaDetector/areaDetector">top-level areaDetector</a> repository.</p>
+</div>
+<div class="section" id="r3-12-july-xxx-2021">
+<h2><strong>R3-12 (July XXX, 2021)</strong><a class="headerlink" href="#r3-12-july-xxx-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="adautosavemenu-req">
+<h3>ADAutoSaveMenu.req<a class="headerlink" href="#adautosavemenu-req" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>New file to be used with the configMenu utility in autosave.
+It saves all of the camera and plugin settings defined in iocBoot/iocXXX/auto_settings.req.
+This allows manually saving and loading different configurations for different setups with the same IOC.
+It also allows saving and then loading the settings when a camera is reset or restarted,
+without restarting the IOC.
+### ADPlugins OPI sub-screen.</li>
+<li>Added a related display “Plugins/Other #2/AS configMenu” which allows manually saving and loading
+configurations that use ADAutoSaveMenu.req described above.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="r3-11-may-26-2021">
 <h2><strong>R3-11 (May 26, 2021)</strong><a class="headerlink" href="#r3-11-may-26-2021" title="Permalink to this headline">¶</a></h2>
